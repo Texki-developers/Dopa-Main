@@ -1,0 +1,17 @@
+.maximise_potential {
+
+  display: flex;
+gap: 2rem;
+  align-items: center;
+ 
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  width: 100%;
+  img {
+    width: 30%;
+    height: fit-content;
+    object-fit: contain;
+  }
+  
+}

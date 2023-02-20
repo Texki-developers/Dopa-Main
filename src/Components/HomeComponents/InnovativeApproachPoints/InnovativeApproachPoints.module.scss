@@ -1,0 +1,21 @@
+.points-wrapper{
+    display: flex;
+    flex-direction: column;
+    p{
+        color: #696969;
+    }
+}
+.title-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: center;
+    img{
+        height: 3rem;
+        width: auto;
+    }
+    span{
+        font-size: 1.1rem;
+        max-width: 7rem;
+    }
+}
