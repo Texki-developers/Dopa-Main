@@ -1,0 +1,76 @@
+import React from "react";
+import styles from "../../../styles/courses/neet.module.scss";
+import DopaBg from "../../../../public/Assets/courses/dopabg.png";
+import dopaTeacher from "../../../../public/Assets/courses/repeater.png";
+import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseFeatures";
+import education from "../../../../public/Assets/courses/education.png";
+import live from "../../../../public/Assets/courses/livechat.png";
+import potential from "../../../../public/Assets/courses/dopaNeetPotential.png";
+import Pricing from "@/Components/CourseComponents/Pricing/Pricing";
+import dopaDoctor from "../../../../public/Assets/courses/dopadoctor.png";
+import MaximisePotential from "@/Components/CourseComponents/Banners/MaximisePotential/MaximisePotential";
+import Landing from "@/Components/CourseComponents/Landing/Landing";
+import MainLayout from "@/Layouts/MainLayout";
+export default function index() {
+  console.log(DopaBg, "image");
+
+  let DataArray = [
+    {
+      image: education,
+      title: "video <br/> Lectures",
+    },
+    {
+      image: live,
+      title: "Live <br/> Classes",
+    },
+    {
+      image: live,
+      title: "Test <br/> Series",
+    },
+    {
+      image: live,
+      title: "Question <br/> Bank",
+    },
+    {
+      image: education,
+      title: "Dopa <br/> quizzes",
+    },
+  ];
+
+  let coursePlans = [];
+
+  let paraArray = ["ONLINE & OFFLINE CLASSES", "MENTORSHIP BY DOCTORS"];
+
+  return (
+    <MainLayout>
+      <main className={styles.neet_container}>
+        <Landing
+          image={dopaTeacher}
+          bg={DopaBg}
+          head="+1/+2 <br/> NEET COACHING"
+          para={paraArray}
+        />
+
+        <CourseFeatures data={DataArray} />
+        <div className={styles.pricing}>
+          <Pricing coursePlans={coursePlans} />
+        </div>
+        <MaximisePotential
+          width="18%"
+          icon={potential}
+          para="Maximize your NEET potential with <br/> personalized coaching from a doctor"
+          btn="Download"
+          bg="#ffff"
+        />
+        <MaximisePotential
+          width="10%"
+          icon={dopaDoctor}
+          para="Take your NEET preparation to the next level"
+          btn="Book a Free Trial"
+          bg="#e2faf8;
+"
+        />
+      </main>
+    </MainLayout>
+  );
+}
