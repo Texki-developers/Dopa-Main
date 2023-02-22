@@ -11,6 +11,10 @@
 .btnBlueGradient{
     background: var(--aqua-gradient);
 }
+
+.buy-now{
+    padding: 0;
+}
 @media only screen and (max-width: 1300px) {
     .btnPrimary{
         padding: 0.7rem 1.5rem;

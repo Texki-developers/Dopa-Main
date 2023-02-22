@@ -37,8 +37,22 @@ export default function index() {
     },
   ];
 
-  let coursePlans = [];
+  let features = [
+    " Lectures by Elite teachers",
+    "LIVE Classes & in-class doubt solving",
+    "Dopa quizzes and leader board",
+    "DOPA Exclusive Test series",
+    "LIVE Discussions",
+    "Mentorship by Doctors",
+    "24x7 Doubt Clearance",
+    "Assignments and class notes",
+    "Study Materials",
+    "DOPA App Premium Subscription",
+  ];
 
+
+  let p1= [true, true, true, true, true, true, true, true,"DOPA Tab - ₹ 12,000","Capsule - ₹ 2,000"]
+  let p2 = [true, true, true, true, true, true, true,"DOPA Notes - ₹ 3,500","DOPA Tab - ₹ 12,000","Capsule - ₹ 2,000"]
   let paraArray = ["ONLINE & OFFLINE CLASSES", "MENTORSHIP BY DOCTORS"];
 
   return (
@@ -53,7 +67,7 @@ export default function index() {
 
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
-          <Pricing coursePlans={coursePlans} />
+          <Pricing features={features}  p1={p1} p2={p2} p3="" p1name="DOPA offline" p2name="DOPA Online" price1="52,500" price2="9,999"/>
         </div>
         <MaximisePotential
           width="18%"
