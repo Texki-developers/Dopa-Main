@@ -3,6 +3,7 @@ import styles from "./Landing.module.scss";
 import { MdOutlineDone } from "react-icons/md";
 
 export default function Landing({ image, bg, head, para }) {
+let className = `${styles.dopa_students} ${styles.dopa_students_capsule}`
   return (
     <div className={styles.dopa_landing}>
       <div className={styles.dopa_bg}>
@@ -25,7 +26,7 @@ export default function Landing({ image, bg, head, para }) {
               </div>
             ))}
         </div>
-        <div className={styles.dopa_students}>
+        <div className={head == "CAPSULE 3.0" ? className :styles.dopa_students }>
           <img src={image.src} alt="" />
         </div>
       </div>

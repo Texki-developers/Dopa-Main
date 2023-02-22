@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../styles/courses/neet.module.scss";
 import DopaBg from "../../../../public/Assets/courses/dopabg.png";
-import dopaTeacher from "../../../../public/Assets/courses/repeater.png";
+import dopaTeacher from "../../../../public/Assets/courses/dopa_neet.png";
 import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseFeatures";
 import education from "../../../../public/Assets/courses/education.png";
 import live from "../../../../public/Assets/courses/livechat.png";
@@ -61,7 +61,7 @@ export default function index() {
         <Landing
           image={dopaTeacher}
           bg={DopaBg}
-          head="+1/+2 <br/> NEET COACHING"
+          head="+1/+2  NEET COACHING"
           para={paraArray}
         />
 
