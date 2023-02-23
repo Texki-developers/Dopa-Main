@@ -67,7 +67,7 @@ export default function index() {
 
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
-          <Pricing features={features}  p1={p1} p2={p2} p3="" p1name="DOPA offline" p2name="DOPA Online" price1="52,500" price2="9,999"/>
+          <Pricing features={features}  p1={p1} p2={p2} p3={p2} p1name="DOPA offline" p2name="DOPA Online"  p3name="DOPA Online" price1="52,500" price2="9,999"  price3="9,999"/>
         </div>
         <MaximisePotential
           width="18%"

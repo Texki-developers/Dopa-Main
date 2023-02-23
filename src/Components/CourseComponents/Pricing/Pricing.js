@@ -7,6 +7,7 @@ export default function Pricing({ features,p1,p2,p3,p1name,p2name,p3name ,price1
 
 const [active,setActive] = useState(0)
 
+let valueBoxClassNames = `${styles.features_container} ${styles.features_mobile}`
   return (
     <div className={styles.pricing_main_container}>
       <div className={styles.pricing_header_container}>
@@ -47,7 +48,7 @@ const [active,setActive] = useState(0)
           ))}
       </div>
       {/* first pricing */}
-     {p1 ? <div  onClick={()=>setActive(0)}   style={{border: active === 0 ?  '3px solid #70D4FF' :''}}  className={styles.features_container}>
+     {p1 ? <div  onClick={()=>setActive(0)}   style={{border: active === 0 ?  '3px solid #70D4FF' :''}}  className={valueBoxClassNames}>
        
 
         {p1 &&
@@ -72,7 +73,7 @@ const [active,setActive] = useState(0)
       </div>:''}
 
     {/* second pricing */}
-    {p2 ?  <div style={{border: active === 1 ?  '3px solid #70D4FF' :''}}   className={styles.features_container}>
+    {p2 ?  <div style={{border: active === 1 ?  '3px solid #70D4FF' :''}}   className={valueBoxClassNames}>
        
 
        {p2 &&
@@ -99,7 +100,7 @@ const [active,setActive] = useState(0)
 
 
     {/* third pricing */}
-    {p3 ? <div   onClick={()=>setActive(2)}  style={{border: active === 2 ?  '3px solid #70D4FF' :''}} className={styles.features_container}>
+    {p3 ? <div   onClick={()=>setActive(2)}  style={{border: active === 2 ?  '3px solid #70D4FF' :''}} className={valueBoxClassNames}>
        
 
        {p3 &&

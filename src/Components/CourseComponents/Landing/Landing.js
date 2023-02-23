@@ -15,7 +15,7 @@ let className = `${styles.dopa_students} ${styles.dopa_students_capsule}`
             className={head == "CAPSULE 3.0" ? styles.mainHead : ""}
             dangerouslySetInnerHTML={{ __html: head.replace(/\n/g, "<br>") }}
           ></h1>
-          {head == "CAPSULE 3.0" ? <h2>NEET 2023 CRASH COURSE</h2> : ""}
+          {head == "CAPSULE 3.0" ? <h2 className={styles.mainPara}>NEET 2023 CRASH COURSE</h2> : ""}
           {para &&
             para?.map((items) => (
               <div className={styles.online_mentor_para}>

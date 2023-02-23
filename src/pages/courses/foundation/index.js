@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/courses/neet.module.scss";
-import DopaBg from "../../../../public/Assets/courses/dopabg.png";
+import DopaBg from "../../../../public/Assets/courses/foundation.png";
 import dopaTeacher from "../../../../public/Assets/courses/dopaStudent.png";
 import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseFeatures";
 import education from "../../../../public/Assets/courses/education.png";

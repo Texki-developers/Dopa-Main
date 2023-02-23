@@ -1,17 +1,127 @@
 .maximise_potential {
-
   display: flex;
-gap: 2rem;
+  gap: 2rem;
   align-items: center;
- 
+
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: #000000;
   width: 100%;
   img {
-    width: 30%;
+    width: 27rem;
     height: fit-content;
     object-fit: contain;
   }
-  
+
+  .banner_image {
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .maximise_potential {
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .maximise_potential {
+    img {
+      width: 21rem 
+    }
+    .banner_image{
+      width: 12rem;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 908px) {
+  .maximise_potential {
+    padding-right: 2rem;
+    img {
+      width: 18rem 
+    }
+
+    h2{
+      font-size: 1rem;
+    }
+    .banner_image{
+      width: 10rem;
+    }
+
+    button{
+      padding: 0.5rem 3%;
+      font-size: 1rem;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 770px) {
+  .maximise_potential {
+ 
+    img {
+      width: 15rem 
+    }
+
+    h2{
+      font-size: 0.8rem;
+    }
+    .banner_image{
+      width: 8.5rem;
+    }
+
+    button{
+      padding: 0.3rem 3%;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 590px) {
+  .maximise_potential {
+ padding-right: 1rem;
+    img {
+      width: 12rem 
+    }
+
+    h2{
+      font-size: 0.7rem;
+    }
+    .banner_image{
+      width: 7.5rem;
+    }
+
+    button{
+      padding: 0.3rem 3%;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 540px) {
+  .maximise_potential {
+    padding-right: 0.3rem;
+    img {
+      width: 9rem 
+    }
+
+    h2{
+      font-size: 0.7rem;
+    }
+    .banner_image{
+      width: 5.5rem;
+    }
+
+    button{
+      padding: 0.3rem 1.5%;
+      font-size: 0.7rem;
+    }
+  }
 }

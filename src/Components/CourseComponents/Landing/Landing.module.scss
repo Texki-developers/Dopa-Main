@@ -88,7 +88,7 @@
     object-fit: contain;
     object-position: center;
   }
-  .dopa_students_capsule{
+  .dopa_students_capsule {
     width: 70%;
   }
 }
@@ -203,15 +203,124 @@
         margin-bottom: 1.5rem;
       }
     }
-    .dopa_students{
+    .dopa_students {
       width: 17rem;
     }
 
-    .dopa_students_capsule{
+    .dopa_students_capsule {
       width: 15rem;
     }
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .dopa_landing {
+    height: 28rem;
+    h1 {
+      font-size: 2.5rem;
+      line-height: 35px;
+    }
+    .dopa_landing__wrapper {
+      padding: 1.5rem 10%;
 
+      .mainHead {
+        font-size: 3.5rem;
+      }
+    }
+    .dopa_students {
+      width: 20rem;
+    }
+    .dopa_students_capsule {
+      width: 15rem;
+    }
+  }
+}
 
+@media only screen and (max-width: 540px) {
+  .dopa_landing {
+    h1 {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .dopa_landing {
+    h1 {
+      font-size: 2rem;
+    }
+    .dopa_landing__wrapper {
+      .mainHead {
+        font-size: 3.5rem;
+      }
+    }
+    .online_mentor_para {
+      svg {
+        font-size: 1.3rem !important;
+      }
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .dopa_landing {
+    h1{
+      font-size: 1.8rem;
+    }
+    .dopa_landing__wrapper {
+      .mainHead {
+        font-size: 2.5rem;
+      }
+    }
+
+    .dopa_students {
+      width: 15rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .dopa_landing {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .dopa_landing__wrapper {
+      .mainHead {
+        font-size: 2.5rem;
+      }
+    }
+
+    .dopa_students {
+      width: 15rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .dopa_landing {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .dopa_landing__wrapper {
+      .mainHead {
+        font-size: 2.3rem;
+      }
+      .mainPara {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .dopa_landing {
+    .dopa_students {
+      width: 12rem;
+    }
+  }
+}
