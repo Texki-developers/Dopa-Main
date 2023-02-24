@@ -83,32 +83,33 @@ export default function Pricing({
                           color: active === 0 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    ) :  features === "box" ? (
+                    ) : features === "box" ? (
                       <input type="checkbox" />
-                    ) :  (
+                    ) : (
                       <div
-                      className={
-                        features !== true ? styles.feature_fields_items : ""
-                      }
-                    >
-                      <input type="checkbox" />
-                      <div>
-                        {" "}
-                        <p className={styles.feature_fields_head}>
-                          {features}
-                        </p>
-                        {features === "Capsule - ₹2,000" ? (
-                          <p className={styles.feature_fields_para}>
-                            Books,Classes are complimentary
+                        className={
+                          features !== true ? styles.feature_fields_items : ""
+                        }
+                      >
+                        <input type="checkbox" />
+                        <div>
+                          {" "}
+                          <p className={styles.feature_fields_head}>
+                            {features}
                           </p>
-                        ) : features === "DOPA Notes - ₹3,500" ? (
-                          <p className={styles.feature_fields_para}>
-                            for One year
-                          </p>
-                        ) : ''}
+                          {features === "Capsule - ₹2,000" ? (
+                            <p className={styles.feature_fields_para}>
+                              Books,Classes are complimentary
+                            </p>
+                          ) : features === "DOPA Notes - ₹3,500" ? (
+                            <p className={styles.feature_fields_para}>
+                              for One year
+                            </p>
+                          ) : (
+                            ""
+                          )}
+                        </div>
                       </div>
-                    </div>
-
                     )}
                   </div>
                 </div>
@@ -166,32 +167,33 @@ export default function Pricing({
                           color: active === 1 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    ) :  features === "box" ? (
+                    ) : features === "box" ? (
                       <input type="checkbox" />
-                    ) :  (
+                    ) : (
                       <div
-                      className={
-                        features !== true ? styles.feature_fields_items : ""
-                      }
-                    >
-                      <input type="checkbox" />
-                      <div>
-                        {" "}
-                        <p className={styles.feature_fields_head}>
-                          {features}
-                        </p>
-                        {features === "Capsule - ₹2,000" ? (
-                          <p className={styles.feature_fields_para}>
-                            Books,Classes are complimentary
+                        className={
+                          features !== true ? styles.feature_fields_items : ""
+                        }
+                      >
+                        <input type="checkbox" />
+                        <div>
+                          {" "}
+                          <p className={styles.feature_fields_head}>
+                            {features}
                           </p>
-                        ) : features === "DOPA Notes - ₹3,500" ? (
-                          <p className={styles.feature_fields_para}>
-                            for One year
-                          </p>
-                        ) : ''}
+                          {features === "Capsule - ₹2,000" ? (
+                            <p className={styles.feature_fields_para}>
+                              Books,Classes are complimentary
+                            </p>
+                          ) : features === "DOPA Notes - ₹3,500" ? (
+                            <p className={styles.feature_fields_para}>
+                              for One year
+                            </p>
+                          ) : (
+                            ""
+                          )}
+                        </div>
                       </div>
-                    </div>
-
                     )}
                   </div>
                 </div>
@@ -247,32 +249,33 @@ export default function Pricing({
                           color: active === 2 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    ) :  features === "box" ? (
+                    ) : features === "box" ? (
                       <input type="checkbox" />
-                    ) :  (
+                    ) : (
                       <div
-                      className={
-                        features !== true ? styles.feature_fields_items : ""
-                      }
-                    >
-                      <input type="checkbox" />
-                      <div>
-                        {" "}
-                        <p className={styles.feature_fields_head}>
-                          {features}
-                        </p>
-                        {features === "Capsule - ₹2,000" ? (
-                          <p className={styles.feature_fields_para}>
-                            Books,Classes are complimentary
+                        className={
+                          features !== true ? styles.feature_fields_items : ""
+                        }
+                      >
+                        <input type="checkbox" />
+                        <div>
+                          {" "}
+                          <p className={styles.feature_fields_head}>
+                            {features}
                           </p>
-                        ) : features === "DOPA Notes - ₹3,500" ? (
-                          <p className={styles.feature_fields_para}>
-                            for One year
-                          </p>
-                        ) : ''}
+                          {features === "Capsule - ₹2,000" ? (
+                            <p className={styles.feature_fields_para}>
+                              Books,Classes are complimentary
+                            </p>
+                          ) : features === "DOPA Notes - ₹3,500" ? (
+                            <p className={styles.feature_fields_para}>
+                              for One year
+                            </p>
+                          ) : (
+                            ""
+                          )}
+                        </div>
                       </div>
-                    </div>
-
                     )}
                   </div>
                 </div>
