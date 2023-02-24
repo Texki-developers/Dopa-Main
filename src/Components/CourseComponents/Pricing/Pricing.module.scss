@@ -210,7 +210,7 @@ box-shadow: none;
       padding: 0.5rem 1.5rem;
     }
     .features_mobile {
-      width: 20%;
+      width: 50%;
     }
     .feature_fields_items{
       gap: 0.3rem;
@@ -252,9 +252,7 @@ box-shadow: none;
 
 
 
-    .features_mobile{
-width: 30%;
-    }
+  
 
     .feature_fields_tick{
       height: 2.9rem;
@@ -296,6 +294,9 @@ width: 30%;
       height: 3.5rem;
    
     }
+    .features_mobile{
+      width: 100%;
+    }
   }
 }
 
@@ -309,16 +310,14 @@ width: 30%;
       }
     }
     .feature_fields_items{
-      width: 6rem;
+     
       word-break: break-word;
     }
     .features_final_prices{
       padding-left: 0.2rem;
     }
 
-    .features_mobile{
-      width: 100%;
-    }
+   
   }
 }
 
@@ -347,9 +346,7 @@ width: 30%;
    
     }
     
-    .feature_fields_items{
-      width: 5rem;
-    }
+  
     .features_final_prices{
    h3{
       word-wrap: break-word;
@@ -384,7 +381,7 @@ width: 30%;
       }
     }
     .feature_fields_items{
-      width: 4rem;
+      width: 6rem;
     }
  
   }
