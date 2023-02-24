@@ -51,8 +51,8 @@ export default function index() {
   ];
 
 
-  let p1= [true, true, true, true, true, true, true, true,"DOPA Tab - ₹ 12,000","Capsule - ₹ 2,000"]
-  let p2 = [true, true, true, true, true, true, true,"DOPA Notes - ₹ 3,500","DOPA Tab - ₹ 12,000","Capsule - ₹ 2,000"]
+  let p1= [true, true, true, true, true, true, true, true,"DOPA Tab - ₹12,000","Capsule - ₹2,000"]
+  let p2 = [true, true, true, true, true, true, true,"DOPA Notes - ₹3,500","DOPA Tab - ₹12,000","Capsule - ₹2,000"]
   let paraArray = ["ONLINE & OFFLINE CLASSES", "MENTORSHIP BY DOCTORS"];
 
   return (

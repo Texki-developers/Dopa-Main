@@ -60,7 +60,7 @@ let valueBoxClassNames = `${styles.features_container} ${styles.features_mobile}
              
             >
               {features ===true ?  <MdOutlineDone style={{ fontSize: "1.5rem" }} /> 
-           :   <div className={features !== true ? styles.feature_fields_items : ''} ><input type="checkbox" /><div> <p className={styles.feature_fields_head} >{features}</p>{features === "Capsule - ₹ 2,000" && <p className={styles.feature_fields_para}>Books,Classes are complimentary</p>}</div></div>
+           :   <div className={features !== true ? styles.feature_fields_items : ''} ><input type="checkbox" /><div> <p className={styles.feature_fields_head} >{features}</p>{features === "Capsule - ₹2,000" && <p className={styles.feature_fields_para}>Books,Classes are complimentary</p>}</div></div>
            }
             </div>
             </div>
@@ -85,7 +85,7 @@ let valueBoxClassNames = `${styles.features_container} ${styles.features_mobile}
            >
              
              {features ===true ?  <MdOutlineDone style={{ fontSize: "1.5rem" }} /> 
-           :   <div className={features !== true ? styles.feature_fields_items : ''} ><input type="checkbox" /><div> <p className={styles.feature_fields_head} >{features}</p>{features === "Capsule - ₹ 2,000" && <p className={styles.feature_fields_para}>Books,Classes are complimentary</p>}</div></div>
+           :   <div className={features !== true ? styles.feature_fields_items : ''} ><input type="checkbox" /><div> <p className={styles.feature_fields_head} >{features}</p>{features === "Capsule - ₹2,000" && <p className={styles.feature_fields_para}>Books,Classes are complimentary</p>}</div></div>
            }
            </div>
            </div>
@@ -113,7 +113,7 @@ let valueBoxClassNames = `${styles.features_container} ${styles.features_mobile}
            >
              
              {features ===true ?  <MdOutlineDone style={{ fontSize: "1.5rem" }} /> 
-           :   <div className={features !== true ? styles.feature_fields_items :''} ><input type="checkbox" /><div> <p className={styles.feature_fields_head} >{features}</p>{features === "Capsule - ₹ 2,000" && <p className={styles.feature_fields_para}>Books,Classes are complimentary</p>}</div></div>
+           :   <div className={features !== true ? styles.feature_fields_items :''} ><input type="checkbox" /><div> <p className={styles.feature_fields_head} >{features}</p>{features === "Capsule - ₹2,000" && <p className={styles.feature_fields_para}>Books,Classes are complimentary</p>}</div></div>
            }
            </div>
            </div>
