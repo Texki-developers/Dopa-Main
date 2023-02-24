@@ -7,7 +7,7 @@ import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseF
 import education from "../../../../public/Assets/home/video lecture.png";
 import live from "../../../../public/Assets/home/live class.png";
 import bank from "../../../../public/Assets/home/question bank.png";
-import quiz from "../../../../public/Assets/home/dopa quiz.png"
+import quiz from "../../../../public/Assets/home/dopa quiz.png";
 import potential from "../../../../public/Assets/courses/dopaNeetPotential.png";
 import Pricing from "@/Components/CourseComponents/Pricing/Pricing";
 import dopaDoctor from "../../../../public/Assets/courses/dopadoctor.png";
@@ -53,9 +53,30 @@ export default function index() {
     "DOPA App Premium Subscription",
   ];
 
-
-  let p1= [true, true, true, true, true, true, true, true,"DOPA Tab - ₹12,000","Capsule - ₹2,000"]
-  let p2 = [true, true, true, true, true, true, true,"DOPA Notes - ₹3,500","DOPA Tab - ₹12,000","Capsule - ₹2,000"]
+  let p1 = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    "DOPA Tab - ₹12,000",
+    "Capsule - ₹2,000",
+  ];
+  let p2 = [
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    "DOPA Notes - ₹3,500",
+    "DOPA Tab - ₹12,000",
+    "Capsule - ₹2,000",
+  ];
   let paraArray = ["ONLINE & OFFLINE CLASSES", "MENTORSHIP BY DOCTORS"];
 
   return (
@@ -70,7 +91,20 @@ export default function index() {
 
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
-          <Pricing features={features}  p1={p1} p2={p2} p3={p2} p1name="DOPA offline" p2name="DOPA Online"  p3name="DOPA Online" price1="52,500" price2="9,999"  price3="9,999"/>
+          <Pricing
+            features={features}
+            courseName="NEET COACHING"
+            subjects={"Physics  Chemistry  Biology  Mathematics"}
+            className={"Class11 and 12"}
+            p1={p1}
+            p2={p2}
+            p1name="DOPA offline"
+            p2name="DOPA Online"
+            p3name="DOPA Online"
+            price1="52,500"
+            price2="9,999"
+            price3="9,999"
+          />
         </div>
         <MaximisePotential
           width="18%"

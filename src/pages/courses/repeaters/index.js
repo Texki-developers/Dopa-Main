@@ -39,7 +39,65 @@ export default function index() {
       title: "DOPA <br/> Notes",
     },
   ];
-  let coursePlans = [];
+  let features = [
+   " Offline Lectures by Elite teachers",
+ "   LIVE Classes & in-class doubt solving",
+    "Dopa quizzes and leader board",
+   " DOPA Exclusive Test series",
+   " LIVE Discussions",
+    "Mentorship by Doctors",
+  "  24x7 Doubt Clearance",
+    "Hostel facility and Food ",
+"    DOPA Notes ",
+"DOPA Tab",
+"DOPA Exclusive Crash - CAPSULE",
+"DOPA App Premium Subscription"
+  ];
+
+  let p1 = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+
+  ];
+  let p2 = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    "box",
+    "box",
+    true,
+    true
+  ]
+  ;
+  let p3 = [
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    "box",
+    "box",
+    true,
+    true
+  ];
 
   let paraArray = ["OFFLINE CLASSES","DOPA LIBRARY","HOSTEL FACILITY"];
 
@@ -55,7 +113,7 @@ export default function index() {
 
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
-          <Pricing coursePlans={coursePlans} />
+          <Pricing features={features}  p1={p1} p2={p2} p3={p3} className="" courseName="REPEATERS PROGRAMS" subjects="Physics  Chemistry  Biology"  p1name={'RESIDENTIAL PROGRAM'}  p2name="OFFLINE" p3name="ONLINE" price1={"65,500"} price2="54,000" price3={"24599"}/>
         </div>
         <MaximisePotential
           width="18%"
