@@ -2,9 +2,12 @@ import React from "react";
 import styles from "../../../styles/courses/neet.module.scss";
 import DopaBg from "../../../../public/Assets/courses/dopabg.png";
 import dopaTeacher from "../../../../public/Assets/courses/dopa_neet.png";
+import question from "../../../../public/Assets/home/test series.png";
 import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseFeatures";
-import education from "../../../../public/Assets/courses/education.png";
-import live from "../../../../public/Assets/courses/livechat.png";
+import education from "../../../../public/Assets/home/video lecture.png";
+import live from "../../../../public/Assets/home/live class.png";
+import bank from "../../../../public/Assets/home/question bank.png";
+import quiz from "../../../../public/Assets/home/dopa quiz.png"
 import potential from "../../../../public/Assets/courses/dopaNeetPotential.png";
 import Pricing from "@/Components/CourseComponents/Pricing/Pricing";
 import dopaDoctor from "../../../../public/Assets/courses/dopadoctor.png";
@@ -24,15 +27,15 @@ export default function index() {
       title: "Live <br/> Classes",
     },
     {
-      image: live,
+      image: question,
       title: "Test <br/> Series",
     },
     {
-      image: live,
+      image: bank,
       title: "Question <br/> Bank",
     },
     {
-      image: education,
+      image: quiz,
       title: "Dopa <br/> quizzes",
     },
   ];

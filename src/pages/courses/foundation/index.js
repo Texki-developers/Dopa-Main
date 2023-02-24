@@ -3,8 +3,8 @@ import styles from "../../../styles/courses/neet.module.scss";
 import DopaBg from "../../../../public/Assets/courses/foundation.png";
 import dopaTeacher from "../../../../public/Assets/courses/dopaStudent.png";
 import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseFeatures";
-import education from "../../../../public/Assets/courses/education.png";
-import live from "../../../../public/Assets/courses/livechat.png";
+// import education from "../../../../public/Assets/courses/education.png";
+// import live from "../../../../public/Assets/courses/livechat.png";
 import potential from "../../../../public/Assets/courses/dopaNeetPotential.png";
 import Pricing from "@/Components/CourseComponents/Pricing/Pricing";
 import dopaDoctor from "../../../../public/Assets/courses/dopadoctor.png";
@@ -14,28 +14,28 @@ import MainLayout from "@/Layouts/MainLayout";
 export default function index() {
   console.log(DopaBg, "image");
 
-  let DataArray = [
-    {
-      image: education,
-      title: "DOPA <br/> library",
-    },
-    {
-      image: live,
-      title: "Hostel <br/> facility",
-    },
-    {
-      image: live,
-      title: "Study <br/> Room",
-    },
-    {
-      image: live,
-      title: "DOPA App<br/> Subscription",
-    },
-    {
-      image: education,
-      title: "DOPA <br/> Notes",
-    },
-  ];
+  // let DataArray = [
+  //   {
+  //     image: education,
+  //     title: "DOPA <br/> library",
+  //   },
+  //   {
+  //     image: live,
+  //     title: "Hostel <br/> facility",
+  //   },
+  //   {
+  //     image: live,
+  //     title: "Study <br/> Room",
+  //   },
+  //   {
+  //     image: live,
+  //     title: "DOPA App<br/> Subscription",
+  //   },
+  //   {
+  //     image: education,
+  //     title: "DOPA <br/> Notes",
+  //   },
+  // ];
 
   let coursePlans = [];
 
@@ -51,7 +51,7 @@ export default function index() {
           para={paraArray}
         />
 
-        <CourseFeatures data={DataArray} />
+        {/* <CourseFeatures data={DataArray} /> */}
         <div className={styles.pricing}>
           <Pricing coursePlans={coursePlans} />
         </div>
