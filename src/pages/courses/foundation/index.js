@@ -37,9 +37,59 @@ export default function index() {
   //   },
   // ];
 
-  let coursePlans = [];
+  let features = [
+    " Lectures by Elite teachers",
+    "LIVE Classes & in-class doubt solving",
+    "Dopa quizzes and leader board",
+    "DOPA Exclusive Test series",
+    "LIVE Discussions",
+    "Mentorship by Doctors",
+    "24x7 Doubt Clearance",
+    "Assignments and class notes",
+    "Study Materials",
+    "DOPA App Premium Subscription",
+  ];
 
-  let paraArray = ["OFFLINE CLASSES","DOPA LIBRARY","HOSTEL FACILITY"];
+  let p1 = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ];
+  let p2 = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ];
+
+  let p3 = [
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ];
+
+
+  let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY"];
 
   return (
     <MainLayout>
@@ -53,7 +103,21 @@ export default function index() {
 
         {/* <CourseFeatures data={DataArray} /> */}
         <div className={styles.pricing}>
-          <Pricing coursePlans={coursePlans} />
+          <Pricing
+            features={features}
+            courseName="FOUNDATION BATCH"
+            subjects={"Aptitude  Physics  Chemistry  Biology"}
+            className={"For 8th,9th,10th"}
+            p1={p1}
+            p2={p2}
+            p3={p3}
+            p1name="Spider 8 (3 year Program)"
+            p2name="Hybrid Classes"
+            p3name="Online Classes"
+            price1="42,000"
+            price2="10,000"
+            price3="4,000"
+          />
         </div>
         <MaximisePotential
           width="18%"

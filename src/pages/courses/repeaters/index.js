@@ -40,18 +40,18 @@ export default function index() {
     },
   ];
   let features = [
-   " Offline Lectures by Elite teachers",
- "   LIVE Classes & in-class doubt solving",
+    " Offline Lectures by Elite teachers",
+    "   LIVE Classes & in-class doubt solving",
     "Dopa quizzes and leader board",
-   " DOPA Exclusive Test series",
-   " LIVE Discussions",
+    " DOPA Exclusive Test series",
+    " LIVE Discussions",
     "Mentorship by Doctors",
-  "  24x7 Doubt Clearance",
+    "  24x7 Doubt Clearance",
     "Hostel facility and Food ",
-"    DOPA Notes ",
-"DOPA Tab",
-"DOPA Exclusive Crash - CAPSULE",
-"DOPA App Premium Subscription"
+    "    DOPA Notes ",
+    "DOPA Tab",
+    "DOPA Exclusive Crash - CAPSULE",
+    "DOPA App Premium Subscription",
   ];
 
   let p1 = [
@@ -67,7 +67,6 @@ export default function index() {
     true,
     true,
     true,
-
   ];
   let p2 = [
     true,
@@ -78,12 +77,11 @@ export default function index() {
     true,
     true,
     false,
-    "box",
-    "box",
+    "DOPA Notes - ₹3,500",
+    "DOPA Tab - ₹12,000",
     true,
-    true
-  ]
-  ;
+    true,
+  ];
   let p3 = [
     false,
     true,
@@ -93,13 +91,13 @@ export default function index() {
     true,
     true,
     false,
-    "box",
-    "box",
+    "DOPA Notes - ₹3,500",
+    "DOPA Tab - ₹12,000",
     true,
-    true
+    true,
   ];
 
-  let paraArray = ["OFFLINE CLASSES","DOPA LIBRARY","HOSTEL FACILITY"];
+  let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY"];
 
   return (
     <MainLayout>
@@ -113,7 +111,24 @@ export default function index() {
 
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
-          <Pricing features={features}  p1={p1} p2={p2} p3={p3} className="" courseName="REPEATERS PROGRAMS" subjects="Physics  Chemistry  Biology"  p1name={'RESIDENTIAL PROGRAM'}  p2name="OFFLINE" p3name="ONLINE" price1={"65,500"} price2="54,000" price3={"24599"}/>
+          <Pricing
+            features={features}
+            p1={p1}
+            p2={p2}
+            p3={p3}
+            className=""
+            courseName="REPEATERS PROGRAMS"
+            subjects="Physics  Chemistry  Biology"
+            p1name={"RESIDENTIAL PROGRAM"}
+            p2name="OFFLINE"
+            p3name="ONLINE"
+            price1={"65,500"}
+            price2="54,000"
+            price3={"24599"}
+            Notes={`*Hostel facility and Food have separate fees <br/>
+            DOPA TAB  -  ₹ 12000 <br/>
+            DOPA NOTES  - ₹ 5000 `}
+          />
         </div>
         <MaximisePotential
           width="18%"

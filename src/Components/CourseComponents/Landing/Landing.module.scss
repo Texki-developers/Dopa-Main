@@ -3,18 +3,19 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: calc(100vh - 2rem);
+  height: 42rem;
   overflow: hidden;
   width: 100%;
   justify-content: space-between;
   h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 84px;
   }
   p {
     font-size: 1rem;
   }
 }
+
 
 .dopa_landing__wrapper {
   display: grid;
@@ -41,6 +42,9 @@
   }
 }
 
+.dopa_landing_headers_wrapper{
+margin-bottom: 5rem;
+}
 .dopa_bg {
   position: absolute;
   width: 100%;
@@ -71,6 +75,10 @@
   align-items: center;
   gap: 1rem;
   margin-left: 0.8rem;
+}
+
+.foundation_image{
+  width: 25rem;
 }
 
 .dopa_students {
@@ -115,9 +123,21 @@
     }
   }
 }
+@media only screen and (max-width: 1500px) {
+  .dopa_landing {
+    height: 30rem;
+   
+    .foundation_image{
+      width: 22rem;
+    }
+
+  }
+}
+
 
 @media only screen and (max-width: 1350px) {
   .dopa_landing {
+    height: 30rem;
     h1 {
       font-size: 3.5rem;
       line-height: 70px;

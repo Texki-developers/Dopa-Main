@@ -10,7 +10,7 @@ let className = `${styles.dopa_students} ${styles.dopa_students_capsule}`
         <img src={bg.src} alt="" />
       </div>
       <div className={styles.dopa_landing__wrapper}>
-        <div>
+        <div className={styles.dopa_landing_headers_wrapper}>
           <h1
             className={head == "CAPSULE 3.0" ? styles.mainHead : ""}
             dangerouslySetInnerHTML={{ __html: head.replace(/\n/g, "<br>") }}
@@ -27,7 +27,7 @@ let className = `${styles.dopa_students} ${styles.dopa_students_capsule}`
             ))}
         </div>
         <div className={head == "CAPSULE 3.0" ? className :styles.dopa_students }>
-          <img src={image.src} alt="" />
+          <img className={head == "DOPA <br/> FOUNDATION COURSE" ? styles.foundation_image : ''} src={image.src} alt="" />
         </div>
       </div>
     </div>

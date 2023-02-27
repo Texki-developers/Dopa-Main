@@ -17,15 +17,16 @@ export default function Pricing({
   className,
   courseName,
   subjects,
+  Notes
 }) {
   const [active, setActive] = useState(0);
 
   let valueBoxClassNames = `${styles.features_container} ${styles.features_mobile}`;
   return (
-    <div className={styles.pricing_main_container}>
+    <div style={{marginTop:courseName == "FOUNDATION BATCH" ? "1.5rem" : '-1rem'}} className={styles.pricing_main_container}>
       <div className={styles.pricing_header_container}>
         <p>{className}</p>
-        <h1>{courseName}</h1>
+        <h1 dangerouslySetInnerHTML={{ __html: courseName.replace(/\n/g, "<br>") }}></h1>
       </div>
 
       <div className={styles.subject_details_wrapper}>
@@ -56,6 +57,12 @@ export default function Pricing({
                 </div>
               </div>
             ))}
+                {Notes &&  <div
+
+              className={styles.notes_features}
+            >
+              <p dangerouslySetInnerHTML={{ __html: Notes.replace(/\n/g, "<br>") }}></p>
+            </div>}
         </div>
         {/* first pricing */}
         {p1 ? (
@@ -83,9 +90,7 @@ export default function Pricing({
                           color: active === 0 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    ) : features === "box" ? (
-                      <input type="checkbox" />
-                    ) : (
+                    )  : (
                       <div
                         className={
                           features !== true ? styles.feature_fields_items : ""
@@ -167,9 +172,7 @@ export default function Pricing({
                           color: active === 1 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    ) : features === "box" ? (
-                      <input type="checkbox" />
-                    ) : (
+                    )  : (
                       <div
                         className={
                           features !== true ? styles.feature_fields_items : ""
@@ -249,9 +252,8 @@ export default function Pricing({
                           color: active === 2 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    ) : features === "box" ? (
-                      <input type="checkbox" />
-                    ) : (
+                    ) 
+                    : (
                       <div
                         className={
                           features !== true ? styles.feature_fields_items : ""

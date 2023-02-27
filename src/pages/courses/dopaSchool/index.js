@@ -40,7 +40,36 @@ export default function index() {
     },
   ];
 
-  let coursePlans = [];
+ let  features=[
+"Offline Lectures by Elite teachers",
+"LIVE Classes & in-class doubt solving",
+"Dopa quizzes and leader board",
+"DOPA Exclusive Test series",
+"LIVE Discussions",
+"Mentorship by Doctors",
+"24x7 Doubt Clearance",
+"Hostel facility and Food",
+"DOPA Notes ",
+"DOPA Tab",
+"DOPA Exclusive Crash - CAPSULE",
+"DOPA App Premium Subscription"
+ ]
+
+  let p1 = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+
+  ];
 
   let paraArray = ["OFFLINE CLASSES","DOPA LIBRARY","HOSTEL FACILITY"];
 
@@ -56,7 +85,14 @@ export default function index() {
 
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
-          <Pricing coursePlans={coursePlans} />
+          <Pricing    features={features}
+            courseName="NEET SCHOOL"
+            subjects={"Physics  Chemistry  Biology"}
+            className={"+1,+2 Integrated NEET school"}
+            p1={p1} 
+            p1name="NEET SCHOOL (2 YEARS)"
+            price1="1,25,000"
+            />
         </div>
         <MaximisePotential
           width="18%"
