@@ -266,9 +266,14 @@ margin-bottom: 5rem;
 
 @media only screen and (max-width: 500px) {
   .dopa_landing {
+
     h1 {
+     
       font-size: 2rem;
     }
+    .dopa_landing_headers_wrapper{
+      margin-bottom: 0;
+      }
     .dopa_landing__wrapper {
       .mainHead {
         font-size: 3.5rem;
