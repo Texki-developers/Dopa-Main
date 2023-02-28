@@ -19,3 +19,17 @@
         max-width: 7rem;
     }
 }
+@media only screen and (max-width: 768px) {
+    .points-wrapper{
+        p{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .points-wrapper{
+        span{
+            font-size: 0.9rem;
+        }
+    }
+}

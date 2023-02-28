@@ -1,0 +1,70 @@
+.tutor_card{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(145.62deg, #33CCCC 20.31%, #1987A4 138.1%);
+}
+.tutor_card_second{
+    background: linear-gradient(145.62deg, #43A0B7 20.31%, #002129 138.1%);
+}
+.tutor_profile_wrapper{
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 1rem;
+}
+.tutor_card_img{
+    width: 100%;
+    height: auto;
+}
+.tutor_name{
+    font-size: 1.3rem;
+}
+.tutor_details_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.tutor_designation{
+    font-size: 1.1rem;
+}
+.tutor_experience{
+    background: rgba(217, 217, 217, 0.5);
+    border-radius: 19px;
+    padding: 3px 5px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .tutor_name{
+        font-size: 1.1rem;
+    }
+    .tutor_designation{
+        font-size: 0.9rem;
+    }
+    .tutor_experience{
+        font-size: 0.8rem;
+    }
+    .tutor_profile_wrapper{
+        width: 7rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .tutor_name{
+        font-size: 1rem;
+    }
+    .tutor_designation{
+        font-size: 0.8rem;
+    }
+    .tutor_experience{
+        font-size: 0.7rem;
+    }
+    .tutor_profile_wrapper{
+        width: 6.5rem;
+    }
+}
