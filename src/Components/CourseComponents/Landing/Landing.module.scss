@@ -1,0 +1,346 @@
+.dopa_landing {
+  gap: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 42rem;
+  overflow: hidden;
+  width: 100%;
+  justify-content: space-between;
+  h1 {
+    font-size: 6rem;
+    line-height: 84px;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+
+.dopa_landing__wrapper {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 69% 31%;
+  grid-template-areas: "head image";
+  justify-content: space-between;
+  z-index: 0;
+  padding-top: 3rem;
+  margin-top: -1rem;
+  place-items: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-left: 0.8rem;
+    font-weight: 800;
+    margin-top: -2rem;
+    padding-bottom: 1rem;
+  }
+  .mainHead {
+    font-size: 8rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.dopa_landing_headers_wrapper{
+margin-bottom: 5rem;
+}
+.dopa_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.online_mentor_para {
+  grid-area: head;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.online_mentor_para_inside {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 0.8rem;
+}
+
+.foundation_image{
+  width: 25rem;
+}
+
+.dopa_students {
+  grid-area: image;
+  width: 70%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  margin-top: 1rem;
+  align-items: flex-end;
+
+  img {
+    display: flex;
+    align-items: flex-end;
+    object-fit: contain;
+    object-position: center;
+  }
+  .dopa_students_capsule {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .dopa_landing {
+    h1 {
+      font-size: 4rem;
+    }
+
+    .dopa_landing__wrapper {
+      grid-template-columns: 65% 35%;
+      .mainHead {
+        font-size: 6rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        margin-left: 0.8rem;
+        font-weight: 800;
+        margin-top: -1rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .dopa_landing {
+    height: 30rem;
+   
+    .foundation_image{
+      width: 22rem;
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 1350px) {
+  .dopa_landing {
+    height: 30rem;
+    h1 {
+      font-size: 3.5rem;
+      line-height: 70px;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+    .dopa_landing__wrapper {
+      grid-template-columns: 60% 40%;
+      .mainHead {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1148px) {
+  .dopa_landing {
+    h1 {
+      font-size: 3rem;
+      line-height: 70px;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+    .dopa_landing__wrapper {
+      grid-template-columns: 70% 30%;
+      .mainHead {
+        font-size: 3rem;
+      }
+    }
+    .dopa_students {
+      width: 100%;
+      img {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .dopa_landing {
+    height: 35rem;
+    h1 {
+      font-size: 2.8rem;
+      line-height: 50px;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+    .dopa_landing__wrapper {
+      grid-template-columns: 65% 35%;
+      .mainHead {
+        font-size: 4rem;
+      }
+    }
+    .dopa_students {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .dopa_landing {
+    h1 br {
+      display: none;
+    }
+
+    .dopa_landing__wrapper {
+      grid-template-areas:
+        "head "
+        "image";
+      grid-template-columns: 100%;
+      justify-items: center;
+      align-items: center;
+      .mainHead {
+        margin-bottom: 1.5rem;
+      }
+    }
+    .dopa_students {
+      width: 17rem;
+    }
+
+    .dopa_students_capsule {
+      width: 15rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .dopa_landing {
+    height: 28rem;
+    h1 {
+      font-size: 2.5rem;
+      line-height: 35px;
+    }
+    .dopa_landing__wrapper {
+      padding: 1.5rem 10%;
+
+      .mainHead {
+        font-size: 3.5rem;
+      }
+    }
+    .dopa_students {
+      width: 20rem;
+    }
+    .dopa_students_capsule {
+      width: 15rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .dopa_landing {
+    h1 {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .dopa_landing {
+    h1 {
+      font-size: 2rem;
+    }
+    .dopa_landing__wrapper {
+      .mainHead {
+        font-size: 3.5rem;
+      }
+    }
+    .online_mentor_para {
+      svg {
+        font-size: 1.3rem !important;
+      }
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .dopa_landing {
+    h1{
+      font-size: 1.8rem;
+    }
+    .dopa_landing__wrapper {
+      .mainHead {
+        font-size: 2.5rem;
+      }
+    }
+
+    .dopa_students {
+      width: 15rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .dopa_landing {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .dopa_landing__wrapper {
+      .mainHead {
+        font-size: 2.5rem;
+      }
+    }
+
+    .dopa_students {
+      width: 15rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .dopa_landing {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .dopa_landing__wrapper {
+      .mainHead {
+        font-size: 2.3rem;
+      }
+      .mainPara {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .dopa_landing {
+    .dopa_students {
+      width: 12rem;
+    }
+  }
+}
