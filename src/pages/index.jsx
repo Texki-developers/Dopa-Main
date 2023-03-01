@@ -42,13 +42,29 @@ import bannerBgSecondary from '../../public/Assets/home/home banner bg secondary
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0)
+  const [resultNavigator,setResultNavigator] = useState(0)
+  const [tutorNavigator,setTutorNavigator] = useState(0)
   const [isMobile, setMobile] = useState(false)
   const [isTab, setTab] = useState(false)
 
-  const handleNavigation = (dir) => {
-    setNavigator(dir)
+  const handleNavigation = (dir,type) => {
+    switch(type){
+      case 'update':
+        setNavigator(dir);
+        break;
+      case 'result':
+        setResultNavigator(dir);
+        break;
+      case 'tutor':
+        setTutorNavigator(dir);
+        break;
+      default:
+        break;
+    }
     setTimeout(() => {
       setNavigator(0)
+      setResultNavigator(0)
+      setTutorNavigator(0)
     }, 100)
   }
 
@@ -124,8 +140,8 @@ export default function Home() {
             <h4>What's been happening?</h4>
           </div>
           <div className={styles.dopa_updates_carousel_wrapper}>
-            <SlArrowLeft onClick={() => handleNavigation(1)} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
-            <SlArrowRight onClick={() => handleNavigation(-1)} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
+            <SlArrowLeft onClick={() => handleNavigation(1,'update')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
+            <SlArrowRight onClick={() => handleNavigation(-1,'update')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
             <Carousel itemsPerWindow={isMobile ? 1.2 : 2} gap={isMobile ? 10 : 16} navigator={navigator} setNavigator={setNavigator}>
               <Image src={du1} alt="Dopa updates" className={styles.dopa_updates_carousel_item} />
               <Image src={du2} alt="Dopa updates" className={styles.dopa_updates_carousel_item} />
@@ -165,9 +181,9 @@ export default function Home() {
               <Image className={styles.main_result_img} alt="Dopa rank 16" src={result16} />
             </div>
             <div className={styles.dopa_updates_carousel_wrapper}>
-              <SlArrowLeft onClick={() => handleNavigation(1)} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
-              <SlArrowRight onClick={() => handleNavigation(-1)} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
-              <Carousel itemsPerWindow={1} gap={isMobile ? 10 : 16} navigator={navigator} setNavigator={setNavigator}>
+              <SlArrowLeft onClick={() => handleNavigation(1,'result')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
+              <SlArrowRight onClick={() => handleNavigation(-1,'result')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
+              <Carousel itemsPerWindow={1} gap={isMobile ? 10 : 16} navigator={resultNavigator} setNavigator={setResultNavigator}>
                 <Image src={result1} alt="Dopa updates" className={styles.dopa_result_secondary_img} />
                 <Image src={result2} alt="Dopa updates" className={styles.dopa_result_secondary_img} />
                 <Image src={result3} alt="Dopa updates" className={styles.dopa_result_secondary_img} />
@@ -203,9 +219,9 @@ export default function Home() {
           </div>
 
           <div className={styles.dopa_updates_carousel_wrapper}>
-            <SlArrowLeft onClick={() => handleNavigation(1)} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
-            <SlArrowRight onClick={() => handleNavigation(-1)} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
-            <Carousel itemsPerWindow={isMobile ? 1 : isTab ? 2 : 3} gap={isMobile ? 10 : 16} navigator={navigator} setNavigator={setNavigator}>
+            <SlArrowLeft onClick={() => handleNavigation(1,'tutor')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
+            <SlArrowRight onClick={() => handleNavigation(-1,'tutor')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
+            <Carousel itemsPerWindow={isMobile ? 1 : isTab ? 2 : 3} gap={isMobile ? 10 : 16} navigator={tutorNavigator} setNavigator={setTutorNavigator}>
               {
                 tutotForHome.map((tutor, index) => (
                   <TutorCard index={index} key={index} data={tutor} />
