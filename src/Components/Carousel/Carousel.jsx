@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
 import styles from './Carousel.module.scss'
 
-export const Carousel = ({ children, itemsPerWindow, gap = 16 }) => {
+export const Carousel = ({ children, itemsPerWindow, gap = 16, dots, navigator, setNavigator }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [translateValue, setTranslateValue] = useState(0);
     const [gridWidth, setGridWidth] = useState(0)
@@ -11,6 +11,20 @@ export const Carousel = ({ children, itemsPerWindow, gap = 16 }) => {
     const startXRef = useRef(0);
     const carouselRef = useRef(null);
     const sliderRef = useRef(null);
+
+    useEffect(() => {
+        console.log(navigator,'this is navigator');
+        if(navigator === -1){
+            setCurrentIndex((prevIndex) =>
+                prevIndex === lengthRef.current - 1 ? 0 : prevIndex + 1
+            )
+        }else if(navigator === 1){
+            setCurrentIndex((prevIndex) =>
+                prevIndex === 0 ? lengthRef.current - 1 : prevIndex - 1
+            );
+        }
+        // setNavigator(0)
+    },[navigator])
 
     useEffect(() => {
         carouselRef.current.addEventListener("mousedown", handleMouseDown);
@@ -39,15 +53,15 @@ export const Carousel = ({ children, itemsPerWindow, gap = 16 }) => {
     }, [sliderRef])
 
     useEffect(() => {
-        if(itemsPerWindow){
-            console.log(currentIndex,lengthRef);
-            if(itemsPerWindow % 2 !== 0){
+        if (itemsPerWindow) {
+            console.log(currentIndex, lengthRef);
+            if (itemsPerWindow % 2 !== 0 && itemsPerWindow % 2 !== 1) {
                 setTranslateValue(-(currentIndex * ((carouselRef.current.clientWidth / itemsPerWindow))))
                 return
             }
-            if(currentIndex < lengthRef.current - 1){
+            if (currentIndex < lengthRef.current - (itemsPerWindow - 1)) {
                 setTranslateValue(-(currentIndex * (carouselRef.current.clientWidth / itemsPerWindow)))
-            }else{
+            } else {
                 setCurrentIndex(0);
             }
             return
@@ -55,24 +69,29 @@ export const Carousel = ({ children, itemsPerWindow, gap = 16 }) => {
         setTranslateValue(-(currentIndex * carouselRef.current.clientWidth));
     }, [currentIndex])
 
+    useEffect(() => { console.log(itemsPerWindow, 'ipv check'); }, [itemsPerWindow])
+
     const handleMouseDown = (event) => {
         startXRef.current = event.clientX;
     };
 
     useEffect(() => {
-        if(itemsPerWindow){
-            let sliderItem = sliderRef.current.childNodes
-            console.log(sliderItem[0],sliderItem.length);
-            for(let i=0;i<sliderItem.length;i++){
-                console.log(((carouselRef.current.clientWidth / itemsPerWindow) - gap),'width');
+        let sliderItem = sliderRef.current.childNodes
+        if (itemsPerWindow) {
+            for (let i = 0; i < sliderItem.length; i++) {
                 sliderRef.current.childNodes[i].style.width = `${((carouselRef.current.clientWidth / itemsPerWindow) - gap)}px`
-                sliderRef.current.childNodes[i].style.paddingLeft = gap/2 + "px"
-                sliderRef.current.childNodes[i].style.paddingRight = gap/2 + "px"
+                sliderRef.current.childNodes[i].style.marginLeft = gap / 2 + "px"
+                sliderRef.current.childNodes[i].style.marginRight = gap / 2 + "px"
             }
             setGridWidth(carouselRef.current.clientWidth / itemsPerWindow);
-            
+        } else {
+            for (let i = 0; i < sliderItem.length; i++) {
+                sliderRef.current.childNodes[i].style.width = `100%`
+                sliderRef.current.childNodes[i].style.marginLeft = 0 + "px"
+                sliderRef.current.childNodes[i].style.marginRight = 0 + "px"
+            }
         }
-    },[itemsPerWindow, gap])
+    }, [itemsPerWindow, gap])
 
     const handleMouseUp = (event) => {
         const endX = event.clientX;
@@ -99,7 +118,7 @@ export const Carousel = ({ children, itemsPerWindow, gap = 16 }) => {
             setCurrentIndex((prevIndex) =>
                 prevIndex === lengthRef.current - 1 ? 0 : prevIndex + 1
             );
-        } else if(difference < -50){
+        } else if (difference < -50) {
             setCurrentIndex((prevIndex) =>
                 prevIndex === 0 ? lengthRef.current - 1 : prevIndex - 1
             );
@@ -130,7 +149,7 @@ export const Carousel = ({ children, itemsPerWindow, gap = 16 }) => {
                 style={{
                     transform: `translateX(${translateValue}px)`,
                     transition: "transform ease-out 0.45s",
-                    gridTemplateColumns: `repeat(${lengthRef.current}, ${itemsPerWindow ? gridWidth+'px' : "100%"})`
+                    gridTemplateColumns: `repeat(${lengthRef.current}, ${itemsPerWindow ? gridWidth + 'px' : "100%"})`
                 }}
             >
                 {children}
@@ -138,15 +157,18 @@ export const Carousel = ({ children, itemsPerWindow, gap = 16 }) => {
                     <Image key={index} src={image} className={styles.image} alt={`Image ${index + 1}`} />
                 ))} */}
             </div>
-            <div className={styles["dots-container"]}>
-                {[...Array(lengthRef.current)].map((_, index) => (
-                    <div
-                        key={index}
-                        className={`${styles['dot']} ${styles[currentIndex === index ? "dot--active" : ""]}`}
-                        onClick={() => handleDotClick(index)}
-                    />
-                ))}
-            </div>
+            {
+                dots &&
+                <div className={styles["dots-container"]}>
+                    {[...Array(lengthRef.current)].map((_, index) => (
+                        <div
+                            key={index}
+                            className={`${styles['dot']} ${styles[currentIndex === index ? "dot--active" : ""]}`}
+                            onClick={() => handleDotClick(index)}
+                        />
+                    ))}
+                </div>
+            }
         </div>
     );
 };
