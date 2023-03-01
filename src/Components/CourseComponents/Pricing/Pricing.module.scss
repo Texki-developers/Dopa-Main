@@ -195,6 +195,12 @@
         font-size: 0.7rem;
       }
     }
+
+    .features_wrapper{
+      h3{
+        font-size: 0.9rem;
+      }
+    }
     .feature_fields_tick {
       height: 1.9rem;
     }
@@ -215,6 +221,15 @@ box-shadow: none;
 .features_final_prices{
   h3{
     font-size: 0.9rem;
+  }
+}
+
+.features_wrapper{
+
+  h3{
+    height: 1.9rem;
+    font-size: 0.7rem;
+    align-items: center;
   }
 }
     .subject_details_wrapper {

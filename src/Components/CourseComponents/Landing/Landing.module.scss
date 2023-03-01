@@ -109,6 +109,7 @@ margin-bottom: 5rem;
 
     .dopa_landing__wrapper {
       grid-template-columns: 65% 35%;
+      margin-top: -6rem;
       .mainHead {
         font-size: 6rem;
       }
@@ -211,7 +212,9 @@ margin-bottom: 5rem;
     h1 br {
       display: none;
     }
-
+.dopa_landing_headers_wrapper{
+  margin-bottom: 0;
+}
     .dopa_landing__wrapper {
       grid-template-areas:
         "head "
@@ -219,6 +222,7 @@ margin-bottom: 5rem;
       grid-template-columns: 100%;
       justify-items: center;
       align-items: center;
+      margin-top: -1rem;
       .mainHead {
         margin-bottom: 1.5rem;
       }
