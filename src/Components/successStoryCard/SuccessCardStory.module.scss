@@ -1,0 +1,56 @@
+.success_story_card{
+    padding: 1rem;
+    border-radius: 15px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.success_person_wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.success_person_profile{
+    width: 3rem;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.success_person_details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.name_and_designation_wrapper{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.success_person_name{
+    font-size: 1.2rem;
+}
+.success_person_designation{
+    padding: 3px 5px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    background: var(--color-primary);
+    color: #fff;
+}
+.mark_and_exam{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media only screen and (max-width:768px) {
+    .success_story{
+        font-size: 0.9rem;
+    }   
+    .success_person_name{
+        font-size: 1rem;
+    }
+}

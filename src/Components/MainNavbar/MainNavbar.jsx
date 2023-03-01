@@ -1,11 +1,18 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import style from './MainNavbar.module.scss'
 import logo from '../../../public/Assets/logo.png'
 import Link from 'next/link'
 import PrimaryButton from '../Buttons/PrimaryButton/PrimaryButton'
 
 export default function MainNavbar() {
+    const [activeMObileSubMenu, setActiveMobileSubMenu] = useState(null)
+    
+    const handleActivationOfMobileMenu = (id) => {
+        if(window.innerWidth <= 768){
+            setActiveMobileSubMenu(activeMObileSubMenu ? false : id)
+        }
+    }
     return (
         <header className={style.mainHeader}>
             <label htmlFor="check" className={style.hamburger}>
@@ -17,7 +24,21 @@ export default function MainNavbar() {
             <Image src={logo} className={style.headerLogo} placeholder='blur' />
             <ul className={style.navLinks}>
                 <li>
-                    <Link href="">Courses</Link>
+                    <span onClick={() => handleActivationOfMobileMenu(1)} className={style.arrow_link+" "+(activeMObileSubMenu === 1 ? style.arrow_link_active: '')}>Courses</span>
+                    <ul className={style.sublinks_list} style={{display: activeMObileSubMenu === 1 ? "block" : 'none'}}>
+                        <li>
+                            <Link href='/'>Dopa Capsules</Link>
+                        </li>
+                        <li>
+                            <Link href='/'>Dopa Capsules</Link>
+                        </li>
+                        <li>
+                            <Link href='/'>Dopa Capsules</Link>
+                        </li>
+                        <li>
+                            <Link href='/'>Dopa Capsules</Link>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <Link href="">Results</Link>

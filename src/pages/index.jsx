@@ -31,6 +31,14 @@ import no1Vector from '../../public/Assets/home/No 1 vector.png'
 import downloadAppStore from '../../public/Assets/home/download-appstore.png'
 import downloadPlayStore from '../../public/Assets/home/download-playstore.png'
 import no1Mobile from '../../public/Assets/home/innovative phone.png'
+import HomeSuccessSection from '@/Components/HomeSuccessSection/HomeSuccessSection'
+import insightIcon from '../../public/Assets/home/insight.png'
+import viewsStatics from '../../public/Assets/home/views statics.png'
+import admissionStatics from '../../public/Assets/home/admission statics.png'
+import learningStatics from '../../public/Assets/home/learning statics.png'
+import studentsStatics from '../../public/Assets/home/students statics.png'
+import bannerBgPrimary from '../../public/Assets/home/home banner bg primary.png'
+import bannerBgSecondary from '../../public/Assets/home/home banner bg secondary.png'
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0)
@@ -61,16 +69,20 @@ export default function Home() {
     <MainLayout>
       <main className={styles.main}>
         <section className={styles.banner}>
-          <div className={styles['banner-content']}>
-            <h1>Unleashing your potential <br /> to succeed in NEET.</h1>
-            <p>Become a doctor with experienced mentor support.</p>
-            <button>
-              <span>
-                <strong>Join with DOPA Capsule 3.0</strong> <br /> NEET2023 Exclusive Crash Course
-              </span>
-            </button>
+          <div className={styles.banner_wrapper_main}>
+            <div className={styles['banner-content']}>
+              <h1>Unleashing your potential <br /> to succeed in NEET.</h1>
+              <p>Become a doctor with experienced mentor support.</p>
+              <button>
+                <span>
+                  <strong>Join with DOPA Capsule 3.0</strong> <br /> NEET2023 Exclusive Crash Course
+                </span>
+              </button>
+            </div>
+            <Image src={bannerFace} className={styles.bannerImage} />
+            <Image src={bannerBgPrimary} className={styles.banner_bg_primary} />
+            <Image src={bannerBgSecondary} className={styles.banner_bg_secondary} />
           </div>
-          <Image src={bannerFace} className={styles.bannerImage} />
         </section>
 
         <section className={styles.courseSection}>
@@ -164,6 +176,7 @@ export default function Home() {
           </div>
         </section>
 
+        <HomeSuccessSection />
 
         <section className={styles.tutor_section}>
           <div className={styles.result_header_wrapper + " " + styles.tutor_header_wrapper}>
@@ -204,6 +217,49 @@ export default function Home() {
         </section>
 
 
+        <section className={styles.insight_section}>
+          <div className={styles.insight_header_wrapper}>
+            <div className={styles.icon_and_heading}>
+              <Image src={insightIcon} className={styles.insight_icon} />
+              <h3>Insightful Insights</h3>
+            </div>
+            <h4>Bridging the Gap to Affordable and Accessible Learning.</h4>
+          </div>
+
+          <div className={styles.statics_wrapper}>
+            <div className={styles.statics_card}>
+              <Image className={styles.statics_icon} src={studentsStatics} />
+              <div className={styles.statics_details_wrapper}>
+                <h3>20k+</h3>
+                <p>Students impacted</p>
+              </div>
+            </div>
+            <div className={styles.statics_card}>
+              <Image className={styles.statics_icon} src={learningStatics} />
+              <div className={styles.statics_details_wrapper}>
+                <h3>2+ Million</h3>
+                <p>hours of LIVE learning</p>
+              </div>
+            </div>
+            <div className={styles.statics_card}>
+              <Image className={styles.statics_icon} src={viewsStatics} />
+              <div className={styles.statics_details_wrapper}>
+                <h3>1+ Million</h3>
+                <p>Monthly YouTube Views</p>
+              </div>
+            </div>
+            <div className={styles.statics_card}>
+              <Image className={styles.statics_icon} src={admissionStatics} />
+              <div className={styles.statics_details_wrapper}>
+                <h3>1k+ </h3>
+                <p>Admissions in Top-colleges</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+
         <section className={styles.no_one_section}>
           <Image className={styles.no_one_vector_bg} src={no1Vector} />
           <div className={styles.no_one_content_wrapper}>
@@ -214,7 +270,7 @@ export default function Home() {
                 <Image src={downloadPlayStore} className={styles['download-img']} alt="Download Dopa playstore" />
               </div>
             </div>
-             <Image src={no1Mobile} className={styles.no_one_phone_img} alt="No 1 in India" />
+            <Image src={no1Mobile} className={styles.no_one_phone_img} alt="No 1 in India" />
           </div>
         </section>
 

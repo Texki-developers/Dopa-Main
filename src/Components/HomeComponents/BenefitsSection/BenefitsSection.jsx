@@ -84,6 +84,10 @@ export default function BenefitsSection() {
 
         <div className={styles.benefit_slider_container}>
           <div className={styles.benefit_slider_wrapper} style={{ transform: `translateX(${sliderStatus[1]}px)` }}>
+            <Carousel dots={true}>
+              <InnovativeApproach />
+            </Carousel>
+
             <div className={styles.benefit_child} ref={sliderChildRef}>
               <div className={styles.benefit_left}>
                 <div className={styles.benefits_title_wrapper}>
@@ -123,7 +127,7 @@ export default function BenefitsSection() {
               </div>
             </div>
 
-            <Carousel>
+            <Carousel dots={true}>
               <div className={styles.benefit_child}>
                 <div className={styles.benefit_left}>
                   <div className={styles.benefits_title_wrapper}>
@@ -144,9 +148,7 @@ export default function BenefitsSection() {
                 <iframe src="https://www.youtube.com/embed/Bf8a6IC1dE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </Carousel>
-            <Carousel>
-              <InnovativeApproach />
-            </Carousel>
+
           </div>
         </div>
       </div>
@@ -288,8 +290,8 @@ export default function BenefitsSection() {
                     </div>
                     : null
           }
+        </div>
       </div>
-    </div>
     </section >
   )
 }

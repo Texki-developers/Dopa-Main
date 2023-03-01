@@ -1,10 +1,27 @@
-.banner{
+.banner_wrapper_main{
     width: 100%;
     height: 100vh;
     padding: var(--padding-primary);
     padding-top: 5rem;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
+    position: relative;
+    overflow: hidden;
+}
+.banner_bg_primary{
+    width: 80%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: auto;
+    z-index: 2;
+}
+.banner_bg_secondary{
+    width: 15rem;
+    position: absolute;
+    bottom: -4rem;
+    left: 0;
+    height: auto;
 }
 .banner-content{
     justify-self: flex-start;
@@ -43,6 +60,8 @@
     margin-top: auto;
     height: 90%;
     width: auto;
+    z-index: 3;
+    position: relative;
 }
 
 .courseSection{
@@ -280,6 +299,66 @@
     font-size: 2rem;
     font-weight: 500;
 }
+.insight_section{
+    padding: var(--padding-primary);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.statics_wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.statics_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.statics_icon{
+    width: 13rem;
+    height: auto;
+}
+.statics_details_wrapper{
+    width: max-content;
+    h3{
+        font-size: 1.8rem;
+    }
+    p{
+        font-weight: 600;
+    }
+}
+.insight_header_wrapper{
+    display: flex;
+    flex-direction: column;
+    grid-area: 5px;
+    h3{
+        font-size: var(--main-title-size);
+        color: var(--color-primary);
+    }
+    h4{
+        font-size: var(--sub-title-size);
+        font-weight: 500;
+        background: #33cccc1d;
+        border-radius: 18.4475px;
+        border-radius: 0 15px 15px 0;
+        width: max-content;
+        padding: 2px 5px;
+    }
+}
+.icon_and_heading{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.insight_icon{
+    width: 3rem;
+    height: auto;
+}
 @media only screen and (max-width: 1400px) {
     .banner-content{
         h1{
@@ -295,7 +374,7 @@
             font-size: 1.2rem;
         }
     }
-    .banner{
+    .banner_wrapper_main{
         width: 100%;
         height: 100vh;
         grid-template-columns: 2fr 1fr;
@@ -308,8 +387,25 @@
 
 @media only screen and (max-width: 768px) {
     .banner{
+        padding: 1rem;
+        padding-top: 5rem;
+        padding-bottom: 0;
+    }
+    .banner_wrapper_main{
         grid-template-columns: 1fr;
-        padding-top: 4rem;
+        height: max-content;
+        background: #D9D9D940;
+        border-radius: 10px 10px 0 0;
+    }
+    .banner_bg_secondary{
+        width: 10rem;
+        bottom: initial;
+        left: initial;
+        top: -3rem;
+        right: -3rem;
+    }
+    .banner_bg_primary{
+        width: 100%;
     }
     .bannerImage{
         height: auto;
@@ -322,6 +418,13 @@
         justify-self: center;
         text-align: center;
         gap: 0.5rem;
+        button{
+            padding: 0;
+        }
+        span{
+            background: linear-gradient(118.99deg, #33CCCC 7.99%, #1987A4 46.02%, #003442 116.48%);
+            color: #fff;
+        }
     }
     .cards-wrapper{
         display: flex;
@@ -355,10 +458,33 @@
     .no_one_download_wrapper{
         justify-content: center;
     }
+    .statics_icon{
+        width: 8rem;
+    }
+    .statics_details_wrapper{
+        width: 100%;
+        text-align: center;
+        h3{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+    }
+    .statics_wrapper{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1rem;
+    }
 }
 
 @media only screen and (max-width: 500px) {
     .banner{
+        padding: 0.5rem;
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+    }
+    .banner_wrapper_main{
         grid-template-columns: 1fr;
         gap: 1rem;
         height: auto;
@@ -376,7 +502,7 @@
         gap: 0.5rem;
 
         h1{
-            font-size: 1.7rem;
+            font-size: 1.6rem;
             line-height: 33px;
         }
 
@@ -387,6 +513,9 @@
 
         span{
             padding: 0.5rem 1rem;
+        }
+        p{
+            font-size: 1rem;
         }
     }
 
@@ -448,5 +577,27 @@
     }
     .no_one_content{
         gap: 1rem;
+    }
+    .statics_wrapper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+    .insight_header_wrapper{
+        h4{
+            font-size: 0.9rem;
+            width: 100%;
+        }
+    }
+    .insight_icon{
+        width: 2rem;
+    }
+    .statics_details_wrapper{
+        h3{
+            font-size: 1.1rem;
+        }
+        p{
+            font-size: 0.8rem;
+        }
     }
 }
