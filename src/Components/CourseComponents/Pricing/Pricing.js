@@ -17,16 +17,44 @@ export default function Pricing({
   className,
   courseName,
   subjects,
-  Notes
+  Notes,
 }) {
   const [active, setActive] = useState(0);
+  const [p1Price, setP1price] = useState(price1 ? price1 : 0);
+  const [p2Price, setP2price] = useState(price2 ? price2 : 0);
+  const [p3Price, setP3price] = useState(price3 ? price3 : 0);
+  const [checkbox1Selected, setCheckbox1Selected] = useState(false);
+  const [checkbox2Selected, setCheckbox2Selected] = useState(false);
+
+  const handleCheckbox1Change = () => {
+    setCheckbox1Selected(!checkbox1Selected);
+    setP1price((prevTotalPrice) =>
+      checkbox1Selected ? prevTotalPrice - 100 : prevTotalPrice + 100
+    );
+  };
+
+  const handleCheckbox2Change = () => {
+    setCheckbox2Selected(!checkbox2Selected);
+    setP2price((prevTotalPrice) =>
+      checkbox2Selected ? prevTotalPrice - 200 : prevTotalPrice + 200
+    );
+  };
 
   let valueBoxClassNames = `${styles.features_container} ${styles.features_mobile}`;
   return (
-    <div style={{marginTop:courseName == "FOUNDATION BATCH" ? "1.5rem" : '-1rem'}} className={styles.pricing_main_container}>
+    <div
+      style={{
+        marginTop: courseName == "FOUNDATION BATCH" ? "1.5rem" : "-1rem",
+      }}
+      className={styles.pricing_main_container}
+    >
       <div className={styles.pricing_header_container}>
         <p>{className}</p>
-        <h1 dangerouslySetInnerHTML={{ __html: courseName.replace(/\n/g, "<br>") }}></h1>
+        <h1
+          dangerouslySetInnerHTML={{
+            __html: courseName.replace(/\n/g, "<br>"),
+          }}
+        ></h1>
       </div>
 
       <div className={styles.subject_details_wrapper}>
@@ -57,12 +85,15 @@ export default function Pricing({
                 </div>
               </div>
             ))}
-                {Notes &&  <div
-
-              className={styles.notes_features}
-            >
-              <p dangerouslySetInnerHTML={{ __html: Notes.replace(/\n/g, "<br>") }}></p>
-            </div>}
+          {Notes && (
+            <div className={styles.notes_features}>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: Notes.replace(/\n/g, "<br>"),
+                }}
+              ></p>
+            </div>
+          )}
         </div>
         {/* first pricing */}
         {p1 ? (
@@ -90,13 +121,17 @@ export default function Pricing({
                           color: active === 0 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    )  : (
+                    ) : (
                       <div
                         className={
                           features !== true ? styles.feature_fields_items : ""
                         }
                       >
-                        <input type="checkbox" />
+                        <input
+                          checked={checkbox1Selected}
+                          onChange={handleCheckbox1Change}
+                          type="checkbox"
+                        />
                         <div>
                           {" "}
                           <p className={styles.feature_fields_head}>
@@ -129,7 +164,7 @@ export default function Pricing({
                   textAlign: "center",
                 }}
               >
-                Total <br /> ₹ {price1} + GST
+                Total <br /> ₹ {p1Price} + GST
               </h3>
               {active === 0 && <p>Few seats Left</p>}
               <PrimaryButton
@@ -172,7 +207,7 @@ export default function Pricing({
                           color: active === 1 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    )  : (
+                    ) : (
                       <div
                         className={
                           features !== true ? styles.feature_fields_items : ""
@@ -211,7 +246,7 @@ export default function Pricing({
                   textAlign: "center",
                 }}
               >
-                Total <br /> ₹ {price2} + GST
+                Total <br /> ₹ {p2Price} + GST
               </h3>
               {active === 1 && <p>Few seats Left</p>}
               <PrimaryButton
@@ -252,8 +287,7 @@ export default function Pricing({
                           color: active === 2 ? "#00CAFF" : "#000000",
                         }}
                       />
-                    ) 
-                    : (
+                    ) : (
                       <div
                         className={
                           features !== true ? styles.feature_fields_items : ""
@@ -293,7 +327,7 @@ export default function Pricing({
                   textAlign: "center",
                 }}
               >
-                Total <br /> ₹ {price3} + GST
+                Total <br /> ₹ {p3Price} + GST
               </h3>
               {active === 2 && <p>Few seats Left</p>}
               <PrimaryButton

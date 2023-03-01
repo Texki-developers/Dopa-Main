@@ -1,3 +1,4 @@
+import Footer from '@/Components/Footer/Footer'
 import MainNavbar from '@/Components/MainNavbar/MainNavbar'
 import Head from 'next/head'
 
@@ -12,6 +13,7 @@ export default function MainLayout({ children }) {
             </Head>
             <MainNavbar />
             {children}
+            <Footer/>
         </>
     )
 }

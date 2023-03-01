@@ -14,6 +14,7 @@ import dopaDoctor from "../../../../public/Assets/courses/dopadoctor.png";
 import MaximisePotential from "@/Components/CourseComponents/Banners/MaximisePotential/MaximisePotential";
 import Landing from "@/Components/CourseComponents/Landing/Landing";
 import MainLayout from "@/Layouts/MainLayout";
+import Footer from "@/Components/Footer/Footer";
 export default function index() {
   console.log(DopaBg, "image");
 
