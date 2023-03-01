@@ -122,9 +122,9 @@ export default function index() {
             p1name={"RESIDENTIAL PROGRAM"}
             p2name="OFFLINE"
             p3name="ONLINE"
-            price1={"65,500"}
-            price2="54,000"
-            price3={"24599"}
+            price1={65500}
+            price2={54000}
+            price3={24599}
             Notes={`*Hostel facility and Food have separate fees <br/>
             DOPA TAB  -  ₹ 12000 <br/>
             DOPA NOTES  - ₹ 5000 `}

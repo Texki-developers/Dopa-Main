@@ -50,44 +50,10 @@ export default function index() {
     "DOPA App Premium Subscription",
   ];
 
-  let p1 = [
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true
-  ];
-  let p2 = [
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true
-  ];
+  let p1 = [true, true, true, true, true, true, true, true, true, true];
+  let p2 = [true, true, true, true, true, true, true, true, true, true];
 
-  let p3 = [
-    false,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true
-  ];
-
+  let p3 = [false, true, true, true, true, true, true, true, true, true];
 
   let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY"];
 
@@ -114,9 +80,9 @@ export default function index() {
             p1name="Spider 8 (3 year Program)"
             p2name="Hybrid Classes"
             p3name="Online Classes"
-            price1="42,000"
-            price2="10,000"
-            price3="4,000"
+            price1={42000}
+            price2={1000}
+            price3={4000}
           />
         </div>
         <MaximisePotential

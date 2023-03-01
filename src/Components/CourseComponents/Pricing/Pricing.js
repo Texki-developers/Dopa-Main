@@ -23,22 +23,67 @@ export default function Pricing({
   const [p1Price, setP1price] = useState(price1 ? price1 : 0);
   const [p2Price, setP2price] = useState(price2 ? price2 : 0);
   const [p3Price, setP3price] = useState(price3 ? price3 : 0);
-  const [checkbox1Selected, setCheckbox1Selected] = useState(false);
-  const [checkbox2Selected, setCheckbox2Selected] = useState(false);
+  let firstBox = [];
+  let secondBox = [];
+  let thirdBox = [];
 
-  const handleCheckbox1Change = () => {
-    setCheckbox1Selected(!checkbox1Selected);
-    setP1price((prevTotalPrice) =>
-      checkbox1Selected ? prevTotalPrice - 100 : prevTotalPrice + 100
-    );
+
+
+  const pricePush = (event,data, type) => {
+   
+    if (type == "p1") {
+      firstBox.push(data);
+     
+      calculations(firstBox,type,event.target.checked)
+    } else if (type == "p2") {
+      secondBox.push(data);
+      calculations(secondBox,type,event.target.checked)
+    } else if (type == "p3") {
+      thirdBox.push(data);
+      calculations(thirdBox,type,event.target.checked)
+    }
   };
 
-  const handleCheckbox2Change = () => {
-    setCheckbox2Selected(!checkbox2Selected);
-    setP2price((prevTotalPrice) =>
-      checkbox2Selected ? prevTotalPrice - 200 : prevTotalPrice + 200
-    );
-  };
+  const calculations = (data,type,checked)=>{
+    
+    data && data?.map((items)=>{
+      let total = 0
+
+      if(type == "p1"){
+        if(checked){
+          total = p1Price + items
+          setP1price(total)
+        }else{
+          total = p1Price - items
+          setP1price(total)
+        }
+     
+      }
+      if(type == "p2"){
+        if(checked){
+          total = p2Price + items
+          setP2price(total)
+        }else{
+          total = p2Price - items
+          setP2price(total)
+        }
+        
+      }
+      if(type == "p3"){
+        if(checked){
+          total = p3Price + items
+          setP3price(total)
+        }else{
+          total = p3Price - items
+          setP3price(total)
+        }
+
+      }
+    })
+
+  }
+
+
 
   let valueBoxClassNames = `${styles.features_container} ${styles.features_mobile}`;
   return (
@@ -128,8 +173,8 @@ export default function Pricing({
                         }
                       >
                         <input
-                          checked={checkbox1Selected}
-                          onChange={handleCheckbox1Change}
+                   
+                          onChange={(event)=>pricePush(event,features === "DOPA Notes - ₹3,500" ? 3500 : 12000, "p1")}
                           type="checkbox"
                         />
                         <div>
@@ -213,7 +258,10 @@ export default function Pricing({
                           features !== true ? styles.feature_fields_items : ""
                         }
                       >
-                        <input type="checkbox" />
+                        <input
+                          onChange={(event)=>pricePush(event,features === "DOPA Notes - ₹3,500" ? 3500 : 12000, "p2")}
+                          type="checkbox"
+                        />
                         <div>
                           {" "}
                           <p className={styles.feature_fields_head}>
@@ -293,7 +341,10 @@ export default function Pricing({
                           features !== true ? styles.feature_fields_items : ""
                         }
                       >
-                        <input type="checkbox" />
+                        <input
+                          onChange={(event)=>pricePush(event,features === "DOPA Notes - ₹3,500" ? 3500 : 12000, "p3")}
+                          type="checkbox"
+                        />
                         <div>
                           {" "}
                           <p className={styles.feature_fields_head}>

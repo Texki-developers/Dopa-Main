@@ -101,11 +101,12 @@ export default function index() {
             p1name="DOPA offline"
             p2name="DOPA Online"
             p3name="DOPA Online"
-            price1="52,500"
-            price2="9,999"
-            price3="9,999"
+            price1={52500}
+            price2={9999}
+            price3={9999}
           />
         </div>
+    
         <MaximisePotential
           width="18%"
           icon={potential}

@@ -41,41 +41,11 @@ export default function index() {
     },
   ];
 
-  let p1 = [
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-  ];
-  let p2 = [
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    false,
-    false,
-    true,
-  ];
-  let p3 = [
-    false,
-    true,
-    true,
-    true,
-    true,
-    true,
-    false,
-    false,
-    true,
-  ];
+  let p1 = [true, true, true, true, true, true, true, true, true];
+  let p2 = [true, true, true, true, true, true, false, false, true];
+  let p3 = [false, true, true, true, true, true, false, false, true];
 
-  let  features=[
+  let features = [
     "Offline Lectures by Elite teachers",
     "LIVE Classes & in-class doubt solving",
     "Dopa quizzes and leader board",
@@ -85,10 +55,9 @@ export default function index() {
     "24x7 Doubt Clearance",
     "Hostel facility and Food",
     "Capsule Notes ",
-     ]
+  ];
 
-
-  let paraArray = ["OFFLINE CLASSES","DOPA LIBRARY","HOSTEL FACILITY"];
+  let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY"];
 
   return (
     <MainLayout>
@@ -102,7 +71,8 @@ export default function index() {
 
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
-          <Pricing    features={features}
+          <Pricing
+            features={features}
             p1={p1}
             p2={p2}
             p3={p3}
@@ -115,8 +85,8 @@ export default function index() {
             price1={"18,000"}
             price2="12,000"
             Notes="*Hostel facility and Food have separate fees"
-            price3={"6,000"}/>
-
+            price3={"6,000"}
+          />
         </div>
         <MaximisePotential
           width="18%"
