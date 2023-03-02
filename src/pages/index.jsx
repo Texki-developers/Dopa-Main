@@ -16,17 +16,11 @@ import { Carousel } from '@/Components/Carousel/Carousel'
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
 import { useEffect, useState } from 'react'
 import resultHeaderIcon from '../../public/Assets/home/result icon.png'
-import tutorHeaderIcon from '../../public/Assets/home/tutor icon.png'
-import tutorSpeciality1 from '../../public/Assets/home/tutor speciality 1.png'
-import tutorSpeciality2 from '../../public/Assets/home/tutor speciality 2.png'
-import tutorSpeciality3 from '../../public/Assets/home/tutor speciality 3.png'
 import result11 from '../../public/Assets/home/result 11.png'
 import result16 from '../../public/Assets/home/result 16.png'
 import result1 from '../../public/Assets/home/result 1.png'
 import result2 from '../../public/Assets/home/result 2.png'
 import result3 from '../../public/Assets/home/result 3.png'
-import TutorCard from '@/Components/tutorCard/TutorCard'
-import tutotForHome from '@/JSON_DB/tutotForHome'
 import no1Vector from '../../public/Assets/home/No 1 vector.png'
 import downloadAppStore from '../../public/Assets/home/download-appstore.png'
 import downloadPlayStore from '../../public/Assets/home/download-playstore.png'
@@ -39,11 +33,11 @@ import learningStatics from '../../public/Assets/home/learning statics.png'
 import studentsStatics from '../../public/Assets/home/students statics.png'
 import bannerBgPrimary from '../../public/Assets/home/home banner bg primary.png'
 import bannerBgSecondary from '../../public/Assets/home/home banner bg secondary.png'
+import EliteTutorsSection from '@/Components/EliteTutorsSectino/EliteTutorsSection'
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0)
   const [resultNavigator,setResultNavigator] = useState(0)
-  const [tutorNavigator,setTutorNavigator] = useState(0)
   const [isMobile, setMobile] = useState(false)
   const [isTab, setTab] = useState(false)
 
@@ -194,43 +188,7 @@ export default function Home() {
 
         <HomeSuccessSection />
 
-        <section className={styles.tutor_section}>
-          <div className={styles.result_header_wrapper + " " + styles.tutor_header_wrapper}>
-            <Image className={styles.result_header_icon} src={tutorHeaderIcon} alt="Results of Dopa" />
-            <div className={styles.result_header}>
-              <h3>Elite Tutors of DOPA.</h3>
-              <h4>A path to achieve your dreams</h4>
-            </div>
-          </div>
-
-          <div className={styles.tutors_specialities_wrapper}>
-            <div className={styles.tutors_speciality}>
-              <Image className={styles.speciality_icon} alt="Speciality Icon" src={tutorSpeciality1} />
-              <p>From the Top-notch institutions with relevant experience.</p>
-            </div>
-            <div className={styles.tutors_speciality}>
-              <Image className={styles.speciality_icon} alt="Speciality Icon" src={tutorSpeciality2} />
-              <p>Expertly prepared educators to unlock the full potential of each learner.</p>
-            </div>
-            <div className={styles.tutors_speciality}>
-              <Image className={styles.speciality_icon} alt="Speciality Icon" src={tutorSpeciality3} />
-              <p>Excel in NEET with Doctor-Guided Lessons, Your Path to Medical School Starts Here</p>
-            </div>
-          </div>
-
-          <div className={styles.dopa_updates_carousel_wrapper}>
-            <SlArrowLeft onClick={() => handleNavigation(1,'tutor')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
-            <SlArrowRight onClick={() => handleNavigation(-1,'tutor')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
-            <Carousel itemsPerWindow={isMobile ? 1 : isTab ? 2 : 3} gap={isMobile ? 10 : 16} navigator={tutorNavigator} setNavigator={setTutorNavigator}>
-              {
-                tutotForHome.map((tutor, index) => (
-                  <TutorCard index={index} key={index} data={tutor} />
-                ))
-              }
-
-            </Carousel>
-          </div>
-        </section>
+        <EliteTutorsSection />
 
 
         <section className={styles.insight_section}>
