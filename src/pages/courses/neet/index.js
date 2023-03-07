@@ -15,6 +15,7 @@ import MaximisePotential from "@/Components/CourseComponents/Banners/MaximisePot
 import Landing from "@/Components/CourseComponents/Landing/Landing";
 import MainLayout from "@/Layouts/MainLayout";
 import EliteTutorsSection from "@/Components/EliteTutorsSectino/EliteTutorsSection";
+import ResultBanner from "@/Components/CourseComponents/Banners/resultBanner/ResultBanner";
 export default function index() {
   console.log(DopaBg, "image");
 
@@ -107,7 +108,7 @@ export default function index() {
             price3={9999}
           />
         </div>
-    
+    <ResultBanner/>
         <MaximisePotential
           width="18%"
           icon={potential}
