@@ -103,13 +103,14 @@ margin-bottom: 5rem;
 
 @media only screen and (max-width: 1600px) {
   .dopa_landing {
+    
     h1 {
       font-size: 4rem;
     }
 
     .dopa_landing__wrapper {
       grid-template-columns: 65% 35%;
-      margin-top: -6rem;
+      margin-top:0;
       .mainHead {
         font-size: 6rem;
       }
@@ -122,15 +123,17 @@ margin-bottom: 5rem;
         padding-bottom: 1rem;
       }
     }
+
+    .foundation_image{
+      width: 24rem;
+    }
   }
 }
 @media only screen and (max-width: 1500px) {
   .dopa_landing {
-    height: 30rem;
+    height: 33rem;
    
-    .foundation_image{
-      width: 22rem;
-    }
+ 
 
   }
 }
@@ -348,8 +351,12 @@ margin-bottom: 5rem;
 
 @media only screen and (max-width: 320px) {
   .dopa_landing {
+    height: 23rem;
     .dopa_students {
       width: 12rem;
+    }
+    .dopa_students_capsule{
+      width: 8rem;
     }
   }
 }
