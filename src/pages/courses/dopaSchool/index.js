@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../styles/courses/neet.module.scss";
 import DopaBg from "../../../../public/Assets/courses/dopaneet school.png";
 import dopaTeacher from "../../../../public/Assets/courses/dopaSchool.png";
@@ -13,9 +13,40 @@ import Pricing from "@/Components/CourseComponents/Pricing/Pricing";
 import dopaDoctor from "../../../../public/Assets/courses/dopadoctor.png";
 import MaximisePotential from "@/Components/CourseComponents/Banners/MaximisePotential/MaximisePotential";
 import Landing from "@/Components/CourseComponents/Landing/Landing";
+import EliteTutorsSection from "@/Components/EliteTutorsSectino/EliteTutorsSection";
+import ResultBanner from "@/Components/CourseComponents/Banners/resultBanner/ResultBanner";
 import MainLayout from "@/Layouts/MainLayout";
+import { Carousel } from "@/Components/Carousel/Carousel";
+import result1 from "../../../../public/Assets/courses/results/result1.png";
+import result2 from "../../../../public/Assets/courses/results/result2.png";
+
 export default function index() {
   console.log(DopaBg, "image");
+  const [isMobile, setMobile] = useState(false);
+  const [isTab, setTab] = useState(false);
+  const [tutorNavigator, setTutorNavigator] = useState(0);
+  const handleNavigation = (dir, type) => {
+    setTutorNavigator(dir);
+    setTimeout(() => {
+      setTutorNavigator(0);
+    }, 100);
+  };
+
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+
+    if (window.innerWidth < 769) {
+      setTab(true);
+    } else {
+      setTab(false);
+    }
+  }, []);
+  let images = [result1, result2];
+  
 
   let DataArray = [
     {
@@ -94,6 +125,7 @@ export default function index() {
             price1="1,25,000"
             />
         </div>
+        <ResultBanner/>
         <MaximisePotential
           width="18%"
           icon={potential}
@@ -101,6 +133,15 @@ export default function index() {
           btn="Download"
           bg="#ffff"
         />
+           <div className={styles.our_results_container}>
+          <div className={styles.our_results_header}>
+            <h1>Our Results</h1>
+          </div>
+
+          <Carousel itemsPerWindow={isMobile ? 1 : isTab ? 2 : 2} navigator={tutorNavigator} setNavigator={setTutorNavigator}>
+            {images && images.map((img) => <img src={img.src} alt="" />)}
+          </Carousel>
+        </div>
         <MaximisePotential
           width="10%"
           icon={dopaDoctor}
@@ -109,6 +150,9 @@ export default function index() {
           bg="#e2faf8;
 "
         />
+        <div className={styles.elite_tutor_wrapper}>
+        <EliteTutorsSection isHideSubHeading={true}/>
+        </div>
       </main>
     </MainLayout>
   );

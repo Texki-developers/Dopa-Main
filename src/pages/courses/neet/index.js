@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../styles/courses/neet.module.scss";
 import DopaBg from "../../../../public/Assets/courses/dopabg.png";
 import dopaTeacher from "../../../../public/Assets/courses/dopa_neet.png";
@@ -16,9 +16,34 @@ import Landing from "@/Components/CourseComponents/Landing/Landing";
 import MainLayout from "@/Layouts/MainLayout";
 import EliteTutorsSection from "@/Components/EliteTutorsSectino/EliteTutorsSection";
 import ResultBanner from "@/Components/CourseComponents/Banners/resultBanner/ResultBanner";
+import { Carousel } from "@/Components/Carousel/Carousel";
+import result1 from "../../../../public/Assets/courses/results/result1.png";
+import result2 from "../../../../public/Assets/courses/results/result2.png";
 export default function index() {
   console.log(DopaBg, "image");
+  const [isMobile, setMobile] = useState(false)
+  const [isTab, setTab] = useState(false)
+  const [tutorNavigator,setTutorNavigator] = useState(0)
+  const handleNavigation = (dir,type) => {
+    setTutorNavigator(dir)
+setTimeout(() => {
+  setTutorNavigator(0)
+}, 100)
+}
 
+useEffect(() => {
+if (window.innerWidth < 500) {
+  setMobile(true)
+} else {
+  setMobile(false)
+}
+
+if (window.innerWidth < 769) {
+  setTab(true)
+} else {
+  setTab(false)
+}
+}, [])
   let DataArray = [
     {
       image: education,
@@ -81,6 +106,7 @@ export default function index() {
   ];
   let paraArray = ["ONLINE & OFFLINE CLASSES", "MENTORSHIP BY DOCTORS"];
 
+  let images = [result1, result2];
   return (
     <MainLayout>
       <main className={styles.neet_container}>
@@ -108,7 +134,7 @@ export default function index() {
             price3={9999}
           />
         </div>
-    <ResultBanner/>
+        <ResultBanner />
         <MaximisePotential
           width="18%"
           icon={potential}
@@ -116,18 +142,25 @@ export default function index() {
           btn="Download"
           bg="#ffff"
         />
+        <div className={styles.our_results_container}>
+          <div className={styles.our_results_header}>
+            <h1>Our Results</h1>
+          </div>
+
+          <Carousel itemsPerWindow={isMobile ? 1 : isTab ? 2 : 2} navigator={tutorNavigator} setNavigator={setTutorNavigator}>
+            {images && images.map((img) => <img src={img.src} alt="" />)}
+          </Carousel>
+        </div>
         <MaximisePotential
           width="10%"
           icon={dopaDoctor}
           para="Take your NEET preparation to the next level"
           btn="Book a Free Trial"
-          bg="#e2faf8;
-"
+          bg="#e2faf8;"
         />
         <div className={styles.elite_tutor_wrapper}>
-        <EliteTutorsSection isHideSubHeading={true}/>
+          <EliteTutorsSection isHideSubHeading={true} />
         </div>
-       
       </main>
     </MainLayout>
   );
