@@ -4,9 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+
     ////LANDING
     .neet_landing {
+      
       gap: 1.5rem;
       position: relative;
       display: flex;
@@ -79,6 +80,10 @@
     .pricing {
       width: 100%;
       padding: 0 10%;
+    }
+
+    .elite_tutor_wrapper{
+      width: 100%;
     }
   }
   

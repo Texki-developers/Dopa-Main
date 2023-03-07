@@ -37,7 +37,7 @@ export default function EliteTutorsSection({isHideSubHeading}) {
   }, [])
   return (
     <section className={styles.tutor_section}>
-      <div className={'icon-header-wrapper' + " " + styles.tutor_header_wrapper}>
+      <div style={{marginBottom:isHideSubHeading && '1.5rem'}} className={'icon-header-wrapper' + " " + styles.tutor_header_wrapper}>
         <Image className='header-icon' src={tutorHeaderIcon} alt="Results of Dopa" />
         <div className={styles.result_header}>
           <h3>Elite Tutors of DOPA.</h3>
@@ -45,7 +45,7 @@ export default function EliteTutorsSection({isHideSubHeading}) {
         </div>
       </div>
 
-      <div className={styles.tutors_specialities_wrapper}>
+    {!isHideSubHeading &&  <div className={styles.tutors_specialities_wrapper}>
         <div className={styles.tutors_speciality}>
           <Image className={styles.speciality_icon} alt="Speciality Icon" src={tutorSpeciality1} />
           <p>From the Top-notch institutions with relevant experience.</p>
@@ -58,7 +58,7 @@ export default function EliteTutorsSection({isHideSubHeading}) {
           <Image className={styles.speciality_icon} alt="Speciality Icon" src={tutorSpeciality3} />
           <p>Excel in NEET with Doctor-Guided Lessons, Your Path to Medical School Starts Here</p>
         </div>
-      </div>
+      </div>}
 
       <div className={styles.dopa_updates_carousel_wrapper}>
         <SlArrowLeft onClick={() => handleNavigation(1, 'tutor')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />

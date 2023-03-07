@@ -14,6 +14,7 @@ import dopaDoctor from "../../../../public/Assets/courses/dopadoctor.png";
 import MaximisePotential from "@/Components/CourseComponents/Banners/MaximisePotential/MaximisePotential";
 import Landing from "@/Components/CourseComponents/Landing/Landing";
 import MainLayout from "@/Layouts/MainLayout";
+import EliteTutorsSection from "@/Components/EliteTutorsSectino/EliteTutorsSection";
 export default function index() {
   console.log(DopaBg, "image");
 
@@ -122,6 +123,10 @@ export default function index() {
           bg="#e2faf8;
 "
         />
+        <div className={styles.elite_tutor_wrapper}>
+        <EliteTutorsSection isHideSubHeading={true}/>
+        </div>
+       
       </main>
     </MainLayout>
   );
