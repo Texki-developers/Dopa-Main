@@ -37,6 +37,7 @@ export default function EliteTutorsSection({isHideSubHeading}) {
   }, [])
   return (
     <section className={styles.tutor_section}>
+      
       <div style={{marginBottom:isHideSubHeading && '1.5rem'}} className={'icon-header-wrapper' + " " + styles.tutor_header_wrapper}>
         <Image className='header-icon' src={tutorHeaderIcon} alt="Results of Dopa" />
         <div className={styles.result_header}>
