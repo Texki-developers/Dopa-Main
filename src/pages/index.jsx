@@ -21,10 +21,6 @@ import result16 from '../../public/Assets/home/result 16.png'
 import result1 from '../../public/Assets/home/result 1.png'
 import result2 from '../../public/Assets/home/result 2.png'
 import result3 from '../../public/Assets/home/result 3.png'
-import no1Vector from '../../public/Assets/home/No 1 vector.png'
-import downloadAppStore from '../../public/Assets/home/download-appstore.png'
-import downloadPlayStore from '../../public/Assets/home/download-playstore.png'
-import no1Mobile from '../../public/Assets/home/innovative phone.png'
 import HomeSuccessSection from '@/Components/HomeSuccessSection/HomeSuccessSection'
 import insightIcon from '../../public/Assets/home/insight.png'
 import viewsStatics from '../../public/Assets/home/views statics.png'
@@ -34,6 +30,7 @@ import studentsStatics from '../../public/Assets/home/students statics.png'
 import bannerBgPrimary from '../../public/Assets/home/home banner bg primary.png'
 import bannerBgSecondary from '../../public/Assets/home/home banner bg secondary.png'
 import EliteTutorsSection from '@/Components/EliteTutorsSectino/EliteTutorsSection'
+import AppDownloadSection from '@/Components/appDownloadSection/AppDownloadSection'
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0)
@@ -233,21 +230,7 @@ export default function Home() {
 
         </section>
 
-
-        <section className={styles.no_one_section}>
-          <Image className={styles.no_one_vector_bg} src={no1Vector} />
-          <div className={styles.no_one_content_wrapper}>
-            <div className={styles.no_one_content}>
-              <h2 className={styles.no_one_text}>Download India’s First NEET coaching App By Doctors.</h2>
-              <div className={styles.no_one_download_wrapper}>
-                <Image src={downloadAppStore} className={styles['download-img']} alt="Download Dopa appstore" />
-                <Image src={downloadPlayStore} className={styles['download-img']} alt="Download Dopa playstore" />
-              </div>
-            </div>
-            <Image src={no1Mobile} className={styles.no_one_phone_img} alt="No 1 in India" />
-          </div>
-        </section>
-
+        <AppDownloadSection />
       </main>
     </MainLayout>
   )

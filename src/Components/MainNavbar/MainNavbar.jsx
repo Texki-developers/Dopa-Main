@@ -8,6 +8,7 @@ import PrimaryButton from "../Buttons/PrimaryButton/PrimaryButton";
 export default function MainNavbar() {
   const [activeMObileSubMenu, setActiveMobileSubMenu] = useState(null);
   const [windowWidth, setWindowWidth] = useState(null);
+
   const handleActivationOfMobileMenu = (id) => {
     if (window.innerWidth <= 768) {
       setActiveMobileSubMenu(activeMObileSubMenu ? false : id);
@@ -25,7 +26,9 @@ export default function MainNavbar() {
         <span></span>
         <span></span>
       </label>
-      <Image src={logo} className={style.headerLogo} placeholder="blur" />
+      <Link href='/'>
+        <Image src={logo} className={style.headerLogo} placeholder="blur" />
+      </Link>
       {windowWidth && (
         <ul className={style.navLinks}>
           <li>
@@ -70,7 +73,7 @@ export default function MainNavbar() {
             </ul>
           </li>
           <li>
-            <Link href="">Results</Link>
+            <Link href="/results">Results</Link>
           </li>
           <li>
             <Link href="">Resources</Link>
