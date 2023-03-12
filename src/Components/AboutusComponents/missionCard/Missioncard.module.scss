@@ -1,0 +1,18 @@
+.mission_card_container {
+  background: #ffffff;
+  border-radius: 40px;
+  width: 100%;
+  padding: 2rem;
+  .mission_card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3rem;
+    height: 10rem;
+   h2{
+        font-weight: 800;
+        color: var(--color-primary);
+      margin-top: 5rem;
+    }
+  }
+}

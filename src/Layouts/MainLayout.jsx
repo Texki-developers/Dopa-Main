@@ -13,7 +13,7 @@ export default function MainLayout({ children }) {
             </Head>
             <MainNavbar />
             {children}
-            <Footer/>
+      /
         </>
     )
 }
