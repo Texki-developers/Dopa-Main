@@ -145,7 +145,7 @@ export default function BenefitsSection() {
                 </div>
               </div>
               <div className={styles.benefit_video_wrapper}>
-                <iframe src="https://www.youtube.com/embed/Bf8a6IC1dE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/UDONpqGU4gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </Carousel>
 
@@ -250,7 +250,7 @@ export default function BenefitsSection() {
                     </div>
 
                     <div className={styles.benefit_video_wrapper}>
-                      <iframe src="https://www.youtube.com/embed/Bf8a6IC1dE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      <iframe src="https://www.youtube.com/embed/UDONpqGU4gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                   </Carousel>
                 </div>
@@ -284,7 +284,7 @@ export default function BenefitsSection() {
                         </div>
 
                         <div className={styles.benefit_video_wrapper}>
-                          <iframe src="https://www.youtube.com/embed/Bf8a6IC1dE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                          <iframe src="https://www.youtube.com/embed/UDONpqGU4gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                       </Carousel>
                     </div>

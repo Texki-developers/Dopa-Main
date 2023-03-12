@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 import SuccessStoryCard from '../successStoryCard/SuccessStoryCard';
+import successTestimonial from '@/JSON_DB/successTestimonial';
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -49,45 +50,28 @@ export default function HomeSuccessSection() {
       {
         swiperParams &&
         <div className={styles.carousel_wrapper}>
-          <Swiper {...swiperParams}>
-            <SwiperSlide >
-              <div className={styles.success_video_and_card}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YlHwwcIwfJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <SuccessStoryCard />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide >
-              <div className={styles.success_video_and_card}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YlHwwcIwfJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <SuccessStoryCard />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide >
-              <div className={styles.success_video_and_card}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YlHwwcIwfJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <SuccessStoryCard />
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide >
-              <div className={styles.success_video_and_card}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YlHwwcIwfJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <SuccessStoryCard />
-              </div>
-            </SwiperSlide>
-
+          <Swiper {...swiperParams} autoHeight={true}>
+            {
+              successTestimonial.map((testimonial, index) => (
+                <SwiperSlide key={index}>
+                  <div className={styles.success_video_and_card}>
+                    <iframe width="560" height="315" src={testimonial.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <SuccessStoryCard data={testimonial}/>
+                  </div>
+                </SwiperSlide>
+              ))
+            }
           </Swiper>
           {
             window.innerWidth > 500 ?
-            <>
-              <div className="swiper-button-prev" style={{ color: 'white' }}></div>
-          <div className="swiper-button-next" style={{ color: 'white' }}></div>
-            </>
-            :
-            <div className={styles.swiper_pagination_success + " swiper-pagination"}></div>
+              <>
+                <div className="swiper-button-prev" style={{ color: 'white' }}></div>
+                <div className="swiper-button-next" style={{ color: 'white' }}></div>
+              </>
+              :
+              <div className={styles.swiper_pagination_success + " swiper-pagination"}></div>
           }
-          
+
         </div>
       }
     </section>

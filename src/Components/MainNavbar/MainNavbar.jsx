@@ -75,7 +75,7 @@ export default function MainNavbar() {
           <li>
             <Link href="/results">Results</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="">Resources</Link>
           </li>
           <li>
@@ -83,7 +83,7 @@ export default function MainNavbar() {
           </li>
           <li>
             <Link href="">About Us</Link>
-          </li>
+          </li> */}
           <li>
             <PrimaryButton addon={"btnBlueGradient"}>
               Book a Free Trial
