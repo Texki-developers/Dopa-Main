@@ -1,22 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '@/styles/results.module.scss'
 import MainLayout from '@/Layouts/MainLayout'
 import resultBannerBG from '../../../public/Assets/results/result landing.png'
+import resultBannerBGMboile from '../../../public/Assets/results/result landing mobile.png'
 import Image from 'next/image'
 import admissionImage from '../../../public/Assets/results/admission.png'
 import HomeSuccessSection from '@/Components/HomeSuccessSection/HomeSuccessSection'
-import dopaMagic from '../../../public/Assets/results/dopa magic.png'
 import EliteTutorsSection from '@/Components/EliteTutorsSectino/EliteTutorsSection'
 import AppDownloadSection from '@/Components/appDownloadSection/AppDownloadSection'
+import FreeTrialComponent from '@/Components/FreeTrialComponent/FreeTrialComponent'
 
 export default function index() {
+  const [isMobile,setMobile] = useState(false)
+  useEffect(() => {
+    if (window.innerWidth < 550) {
+      setMobile(true);
+    }
+  },[])
   return (
     <MainLayout>
       <div className={styles.result_page}>
         <div className={styles.result_banner}>
           <h1>OUT STANDING RESULTS IN NEET 2022</h1>
           <h5>250+ ADMISSIONS IN TOP COLLEGES OF INDIA</h5>
-          <Image src={resultBannerBG} alt="" className={styles.result_banner_img} />
+          <Image src={isMobile ? resultBannerBGMboile : resultBannerBG} alt="" className={styles.result_banner_img} />
         </div>
         
         <div className={styles.admission_2022}>
@@ -26,11 +33,7 @@ export default function index() {
 
         <HomeSuccessSection />   
 
-        <div className={styles.magic_of_dopa}>
-          <Image src={dopaMagic} className={styles.dopa_magic_img}/>
-          <h2 className={styles.dopa_magic_heading}>Experience the Magic of DOPA's Comprehensive NEET Package and Expert Doctor Mentorship</h2>
-          <button className={styles.btn_dopa_magic}>Book a Free Trial</button>
-        </div>    
+        <FreeTrialComponent />
 
         <EliteTutorsSection /> 
 
