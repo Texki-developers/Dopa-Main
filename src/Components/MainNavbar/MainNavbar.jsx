@@ -84,7 +84,7 @@ export default function MainNavbar() {
           <li>
             <Link href="">About Us</Link>
           </li> */}
-          <li>
+          <li onClick={()=> window.location.href="https://dopaclass.com"}>
             <PrimaryButton addon={"btnBlueGradient"}>
               Book a Free Trial
             </PrimaryButton>
@@ -94,7 +94,7 @@ export default function MainNavbar() {
           </li>
         </ul>
       )}
-      <div className={style.btnWrapperMobile}>
+      <div onClick={()=> window.location.href="https://dopaclass.com"} className={style.btnWrapperMobile}>
         <PrimaryButton addon={"btnBlueGradient"}>
           Book a Free Trial
         </PrimaryButton>

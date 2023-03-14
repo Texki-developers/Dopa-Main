@@ -31,6 +31,7 @@ import bannerBgPrimary from '../../public/Assets/home/home banner bg primary.png
 import bannerBgSecondary from '../../public/Assets/home/home banner bg secondary.png'
 import EliteTutorsSection from '@/Components/EliteTutorsSectino/EliteTutorsSection'
 import AppDownloadSection from '@/Components/appDownloadSection/AppDownloadSection'
+import Link from 'next/link'
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0)
@@ -81,9 +82,11 @@ export default function Home() {
               <h1>Unleashing your potential <br /> to succeed in NEET.</h1>
               <p>Become a doctor with experienced mentor support.</p>
               <button>
-                <span>
+                <Link  href="/courses/capsule" >
+                <span >
                   <strong>Join with DOPA Capsule 3.0</strong> <br /> NEET2023 Exclusive Crash Course
                 </span>
+                </Link>
               </button>
             </div>
             <Image src={bannerFace} className={styles.bannerImage} />
@@ -99,26 +102,31 @@ export default function Home() {
               icon={neetIcon}
               alt="+1/+2 Neet Coaching"
               cardTitle="+1/+2 Neet Coaching"
+              to="/courses/neet"
             />
             <HomeCourseCard
               icon={repeaterIcon}
               alt="Repeater's programs"
               cardTitle="Repeater's programs"
+              to="/courses/repeaters"
             />
             <HomeCourseCard
               icon={neetSchoolIcon}
               alt="NEET School"
               cardTitle="NEET School"
+              to="/courses/dopaSchool"
             />
             <HomeCourseCard
               icon={neetFoundationIcon}
               alt="NEET Foundation"
               cardTitle="NEET Foundation"
+              to="/courses/foundation"
             />
             <HomeCourseCard
               icon={capsuleCrash}
               alt="Capsule Crash Course for Neet"
               cardTitle="Capsule Crash Course"
+              to="/courses/capsule"
             />
           </div>
         </section>
