@@ -20,7 +20,7 @@ export default function SuccessStoryCard({ data }) {
                                 <p className={styles.success_person_designation}>Student</p>
                             </div>
                             <div className={styles.mark_and_exam}>
-                                <strong className={styles.mark}>{data.score}/{data.score}</strong>
+                                <strong className={styles.mark}>{data.score}/{data.outOf}</strong>
                                 <p className="styles exam">{data.exam}</p>
                             </div>
                         </div>
