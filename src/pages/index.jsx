@@ -1,108 +1,150 @@
-import Image from 'next/image'
-import styles from '@/styles/Home.module.scss'
-import bannerFace from '../../public/Assets/home/banner-face.png'
-import HomeCourseCard from '@/Components/Cards/HomeCourseCard/HomeCourseCard'
-import neetIcon from '../../public/Assets/home/neet.png'
-import repeaterIcon from '../../public/Assets/home/repeater.png'
-import neetSchoolIcon from '../../public/Assets/home/neet school.png'
-import neetFoundationIcon from '../../public/Assets/home/neet foundation.png'
-import capsuleCrash from '../../public/Assets/home/capsule crash.png'
-import BenefitsSection from '@/Components/HomeComponents/BenefitsSection/BenefitsSection'
-import MainLayout from '@/Layouts/MainLayout'
-import du1 from '../../public/Assets/temp/du 1.png'
-import du2 from '../../public/Assets/temp/du 2.png'
-import aboutDopa from '../../public/Assets/home/about dopa.png'
-import { Carousel } from '@/Components/Carousel/Carousel'
-import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
-import { useEffect, useState } from 'react'
-import resultHeaderIcon from '../../public/Assets/home/result icon.png'
-import result11 from '../../public/Assets/home/result 11.png'
-import result16 from '../../public/Assets/home/result 16.png'
-import result1 from '../../public/Assets/home/result 1.png'
-import result2 from '../../public/Assets/home/result 2.png'
-import result3 from '../../public/Assets/home/result 3.png'
-import HomeSuccessSection from '@/Components/HomeSuccessSection/HomeSuccessSection'
-import insightIcon from '../../public/Assets/home/insight.png'
-import viewsStatics from '../../public/Assets/home/views statics.png'
-import admissionStatics from '../../public/Assets/home/admission statics.png'
-import learningStatics from '../../public/Assets/home/learning statics.png'
-import studentsStatics from '../../public/Assets/home/students statics.png'
-import bannerBgPrimary from '../../public/Assets/home/home banner bg primary.png'
-import bannerBgSecondary from '../../public/Assets/home/home banner bg secondary.png'
-import EliteTutorsSection from '@/Components/EliteTutorsSectino/EliteTutorsSection'
-import AppDownloadSection from '@/Components/appDownloadSection/AppDownloadSection'
-import Link from 'next/link'
+import Image from "next/image";
+import styles from "@/styles/Home.module.scss";
+import bannerFace from "../../public/Assets/home/banner-face.png";
+import HomeCourseCard from "@/Components/Cards/HomeCourseCard/HomeCourseCard";
+import neetIcon from "../../public/Assets/home/neet.png";
+import repeaterIcon from "../../public/Assets/home/repeater.png";
+import neetSchoolIcon from "../../public/Assets/home/neet school.png";
+import neetFoundationIcon from "../../public/Assets/home/neet foundation.png";
+import capsuleCrash from "../../public/Assets/home/capsule crash.png";
+import BenefitsSection from "@/Components/HomeComponents/BenefitsSection/BenefitsSection";
+import MainLayout from "@/Layouts/MainLayout";
+import du1 from "../../public/Assets/temp/du 1.png";
+import du2 from "../../public/Assets/temp/du 2.png";
+import aboutDopa from "../../public/Assets/home/about dopa.png";
+import { Carousel } from "@/Components/Carousel/Carousel";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { useEffect, useRef, useState } from "react";
+import resultHeaderIcon from "../../public/Assets/home/result icon.png";
+import result11 from "../../public/Assets/home/result 11.png";
+import result16 from "../../public/Assets/home/result 16.png";
+import result1 from "../../public/Assets/home/result 1.png";
+import result2 from "../../public/Assets/home/result 2.png";
+import result3 from "../../public/Assets/home/result 3.png";
+import HomeSuccessSection from "@/Components/HomeSuccessSection/HomeSuccessSection";
+import insightIcon from "../../public/Assets/home/insight.png";
+import viewsStatics from "../../public/Assets/home/views statics.png";
+import admissionStatics from "../../public/Assets/home/admission statics.png";
+import learningStatics from "../../public/Assets/home/learning statics.png";
+import studentsStatics from "../../public/Assets/home/students statics.png";
+import bannerBgPrimary from "../../public/Assets/home/home banner bg primary.png";
+import bannerBgSecondary from "../../public/Assets/home/home banner bg secondary.png";
+import EliteTutorsSection from "@/Components/EliteTutorsSectino/EliteTutorsSection";
+import AppDownloadSection from "@/Components/appDownloadSection/AppDownloadSection";
+import Link from "next/link";
+import Popup from "@/Components/popupLayout/Popup";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const [navigator, setNavigator] = useState(0)
-  const [resultNavigator,setResultNavigator] = useState(0)
-  const [isMobile, setMobile] = useState(false)
-  const [isTab, setTab] = useState(false)
+  const [navigator, setNavigator] = useState(0);
+  const [resultNavigator, setResultNavigator] = useState(0);
+  const [isMobile, setMobile] = useState(false);
+  const [isTab, setTab] = useState(false);
+  const popRef = useRef();
 
-  const handleNavigation = (dir,type) => {
-    switch(type){
-      case 'update':
+  const handlePopup = (type) => {
+    if (type == 1) {
+      popRef.current.style.display = "flex";
+    } else {
+      popRef.current.style.display = "none";
+    }
+  };
+
+const {push} = useRouter()
+
+  const handleNavigation = (dir, type) => {
+    switch (type) {
+      case "update":
         setNavigator(dir);
         break;
-      case 'result':
+      case "result":
         setResultNavigator(dir);
         break;
-      case 'tutor':
+      case "tutor":
         setTutorNavigator(dir);
         break;
       default:
         break;
     }
     setTimeout(() => {
-      setNavigator(0)
-      setResultNavigator(0)
-      setTutorNavigator(0)
-    }, 100)
+      setNavigator(0);
+      setResultNavigator(0);
+      setTutorNavigator(0);
+    }, 100);
+  };
+
+  const handleRedirectToNeet = (data)=>{
+    localStorage.setItem('class',data)
+    push('/courses/neet')
   }
 
   useEffect(() => {
     if (window.innerWidth < 500) {
-      setMobile(true)
+      setMobile(true);
     } else {
-      setMobile(false)
+      setMobile(false);
     }
 
     if (window.innerWidth < 769) {
-      setTab(true)
+      setTab(true);
     } else {
-      setTab(false)
+      setTab(false);
     }
-  }, [])
+  }, []);
   return (
     <MainLayout>
       <main className={styles.main}>
+        <Popup action={handlePopup} refs={popRef}>
+          <div className={styles.popup_container_home}>
+            <h3>Which class are you Preparing for ?</h3>
+            <div
+              onClick={() => handleRedirectToNeet("plusOne")}
+              className={styles.popup_class_container}
+            >
+              <p>Plus One</p>
+            </div>
+            <div
+              onClick={() => handleRedirectToNeet("plusTwo")}
+              className={styles.popup_class_container}
+            >
+              <p>Plus Two</p>
+            </div>
+          </div>
+        </Popup>
         <section className={styles.banner}>
           <div className={styles.banner_wrapper_main}>
-            <div className={styles['banner-content']}>
-              <h1>Unleashing your potential <br /> to succeed in NEET.</h1>
+            <div className={styles["banner-content"]}>
+              <h1>
+                Unleashing your potential <br /> to succeed in NEET.
+              </h1>
               <p>Become a doctor with experienced mentor support.</p>
               <button>
-                <Link  href="/courses/capsule" >
-                <span >
-                  <strong>Join with DOPA Capsule 3.0</strong> <br /> NEET2023 Exclusive Crash Course
-                </span>
+                <Link href="/courses/capsule">
+                  <span>
+                    <strong>Join with DOPA Capsule 3.0</strong> <br /> NEET2023
+                    Exclusive Crash Course
+                  </span>
                 </Link>
               </button>
             </div>
             <Image src={bannerFace} className={styles.bannerImage} />
             <Image src={bannerBgPrimary} className={styles.banner_bg_primary} />
-            <Image src={bannerBgSecondary} className={styles.banner_bg_secondary} />
+            <Image
+              src={bannerBgSecondary}
+              className={styles.banner_bg_secondary}
+            />
           </div>
         </section>
 
         <section className={styles.courseSection}>
           <h1 className={styles.sectionTitle}>Our Courses</h1>
-          <div className={styles['cards-wrapper']}>
+          <div className={styles["cards-wrapper"]}>
             <HomeCourseCard
               icon={neetIcon}
               alt="+1/+2 Neet Coaching"
               cardTitle="+1/+2 Neet Coaching"
-              to="/courses/neet"
+              to=""
+              action={() => handlePopup(1)}
             />
             <HomeCourseCard
               icon={repeaterIcon}
@@ -139,36 +181,101 @@ export default function Home() {
             <h4>What's been happening?</h4>
           </div>
           <div className={styles.dopa_updates_carousel_wrapper}>
-            <SlArrowLeft onClick={() => handleNavigation(1,'update')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
-            <SlArrowRight onClick={() => handleNavigation(-1,'update')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
-            <Carousel itemsPerWindow={isMobile ? 1.2 : 2} gap={isMobile ? 10 : 16} navigator={navigator} setNavigator={setNavigator}>
-              <Image src={du1} alt="Dopa updates" className={styles.dopa_updates_carousel_item} />
-              <Image src={du2} alt="Dopa updates" className={styles.dopa_updates_carousel_item} />
-              <Image src={du1} alt="Dopa updates" className={styles.dopa_updates_carousel_item} />
-              <Image src={du2} alt="Dopa updates" className={styles.dopa_updates_carousel_item} />
-              <Image src={du1} alt="Dopa updates" className={styles.dopa_updates_carousel_item} />
-              <Image src={du2} alt="Dopa updates" className={styles.dopa_updates_carousel_item} />
+            <SlArrowLeft
+              onClick={() => handleNavigation(1, "update")}
+              className={
+                styles.dopa_update_navigator +
+                " " +
+                styles.dopa_update_navigator_left
+              }
+            />
+            <SlArrowRight
+              onClick={() => handleNavigation(-1, "update")}
+              className={
+                styles.dopa_update_navigator +
+                " " +
+                styles.dopa_update_navigator_right
+              }
+            />
+            <Carousel
+              itemsPerWindow={isMobile ? 1.2 : 2}
+              gap={isMobile ? 10 : 16}
+              navigator={navigator}
+              setNavigator={setNavigator}
+            >
+              <Image
+                src={du1}
+                alt="Dopa updates"
+                className={styles.dopa_updates_carousel_item}
+              />
+              <Image
+                src={du2}
+                alt="Dopa updates"
+                className={styles.dopa_updates_carousel_item}
+              />
+              <Image
+                src={du1}
+                alt="Dopa updates"
+                className={styles.dopa_updates_carousel_item}
+              />
+              <Image
+                src={du2}
+                alt="Dopa updates"
+                className={styles.dopa_updates_carousel_item}
+              />
+              <Image
+                src={du1}
+                alt="Dopa updates"
+                className={styles.dopa_updates_carousel_item}
+              />
+              <Image
+                src={du2}
+                alt="Dopa updates"
+                className={styles.dopa_updates_carousel_item}
+              />
             </Carousel>
           </div>
         </div>
 
         <div className={styles.about_dopa_section}>
           <div className={styles.about_dopa_left}>
-            <h4 className={styles.about_dopa_head}>Dare to dream big with DOPA</h4>
-            <p className={styles.about_dopa_content}>“ DOPA offers medical entrance coaching that is accessible and affordable for all students. Our innovative, online program is designed to help students succeed on exams like NEET, regardless of their socio-economic background. Our team of expert instructors will guide you through the necessary subject material and test-taking strategies, giving you the best chance at achieving your dreams of becoming a doctor.”</p>
+            <h4 className={styles.about_dopa_head}>
+              Dare to dream big with DOPA
+            </h4>
+            <p className={styles.about_dopa_content}>
+              “ DOPA offers medical entrance coaching that is accessible and
+              affordable for all students. Our innovative, online program is
+              designed to help students succeed on exams like NEET, regardless
+              of their socio-economic background. Our team of expert instructors
+              will guide you through the necessary subject material and
+              test-taking strategies, giving you the best chance at achieving
+              your dreams of becoming a doctor.”
+            </p>
             <div className={styles.dopa_said_wrapper}>
-              <strong className={styles.about_dopa_content}>Directors of DOPA</strong>
-              <p className={styles.about_dopa_content}>Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Dr.Muneer</p>
+              <strong className={styles.about_dopa_content}>
+                Directors of DOPA
+              </strong>
+              <p className={styles.about_dopa_content}>
+                Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Dr.Muneer
+              </p>
             </div>
           </div>
           <div className={styles.about_dopa_right}>
-            <Image src={aboutDopa} className={styles.about_dopa_img} alt="What dopa say's?" />
+            <Image
+              src={aboutDopa}
+              className={styles.about_dopa_img}
+              alt="What dopa say's?"
+            />
           </div>
         </div>
 
         <section className={styles.result_section}>
           <div className={styles.result_header_wrapper}>
-            <Image className={styles.result_header_icon} src={resultHeaderIcon} alt="Results of Dopa" />
+            <Image
+              className={styles.result_header_icon}
+              src={resultHeaderIcon}
+              alt="Results of Dopa"
+            />
             <div className={styles.result_header}>
               <h3>Our Results</h3>
               <h4>Unparalleled results in NEET’22 !</h4>
@@ -176,16 +283,55 @@ export default function Home() {
           </div>
           <div className={styles.results_wrapper}>
             <div className={styles.main_results}>
-              <Image className={styles.main_result_img} alt="Dopa rank 11" src={result11} />
-              <Image className={styles.main_result_img} alt="Dopa rank 16" src={result16} />
+              <Image
+                className={styles.main_result_img}
+                alt="Dopa rank 11"
+                src={result11}
+              />
+              <Image
+                className={styles.main_result_img}
+                alt="Dopa rank 16"
+                src={result16}
+              />
             </div>
             <div className={styles.dopa_updates_carousel_wrapper}>
-              <SlArrowLeft onClick={() => handleNavigation(1,'result')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_left} />
-              <SlArrowRight onClick={() => handleNavigation(-1,'result')} className={styles.dopa_update_navigator + " " + styles.dopa_update_navigator_right} />
-              <Carousel itemsPerWindow={1} gap={isMobile ? 10 : 16} navigator={resultNavigator} setNavigator={setResultNavigator}>
-                <Image src={result1} alt="Dopa updates" className={styles.dopa_result_secondary_img} />
-                <Image src={result2} alt="Dopa updates" className={styles.dopa_result_secondary_img} />
-                <Image src={result3} alt="Dopa updates" className={styles.dopa_result_secondary_img} />
+              <SlArrowLeft
+                onClick={() => handleNavigation(1, "result")}
+                className={
+                  styles.dopa_update_navigator +
+                  " " +
+                  styles.dopa_update_navigator_left
+                }
+              />
+              <SlArrowRight
+                onClick={() => handleNavigation(-1, "result")}
+                className={
+                  styles.dopa_update_navigator +
+                  " " +
+                  styles.dopa_update_navigator_right
+                }
+              />
+              <Carousel
+                itemsPerWindow={1}
+                gap={isMobile ? 10 : 16}
+                navigator={resultNavigator}
+                setNavigator={setResultNavigator}
+              >
+                <Image
+                  src={result1}
+                  alt="Dopa updates"
+                  className={styles.dopa_result_secondary_img}
+                />
+                <Image
+                  src={result2}
+                  alt="Dopa updates"
+                  className={styles.dopa_result_secondary_img}
+                />
+                <Image
+                  src={result3}
+                  alt="Dopa updates"
+                  className={styles.dopa_result_secondary_img}
+                />
               </Carousel>
             </div>
           </div>
@@ -194,7 +340,6 @@ export default function Home() {
         <HomeSuccessSection />
 
         <EliteTutorsSection />
-
 
         <section className={styles.insight_section}>
           <div className={styles.insight_header_wrapper}>
@@ -235,11 +380,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-
         </section>
 
         <AppDownloadSection />
       </main>
     </MainLayout>
-  )
+  );
 }

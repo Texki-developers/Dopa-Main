@@ -7,9 +7,9 @@ import live from "../../public/Assets/home/live class.png";
 import bank from "../../public/Assets/home/question bank.png";
 import discussion from "../../public/Assets/home/discussion panel.png";
 import doubt from "../../public/Assets/home/doubt clearance.png";
-import quiz from '../../public/Assets/home/dopa quiz.png';
-import test from '../../public/Assets/home/test series.png'
-import mine from '../../public/Assets/about/dopa_mine.png'
+import quiz from "../../public/Assets/home/dopa quiz.png";
+import test from "../../public/Assets/home/test series.png";
+import mine from "../../public/Assets/about/dopa_mine.png";
 
 let features = [
   {

@@ -23,6 +23,7 @@ export default function index() {
   console.log(DopaBg, "image");
   const [isMobile, setMobile] = useState(false)
   const [isTab, setTab] = useState(false)
+  const [classes,setClasses] = useState('')
   const [tutorNavigator,setTutorNavigator] = useState(0)
   const handleNavigation = (dir,type) => {
     setTutorNavigator(dir)
@@ -32,6 +33,9 @@ setTimeout(() => {
 }
 
 useEffect(() => {
+let classitem = localStorage.getItem('class')
+setClasses(classitem)
+
 if (window.innerWidth < 500) {
   setMobile(true)
 } else {
@@ -43,7 +47,7 @@ if (window.innerWidth < 769) {
 } else {
   setTab(false)
 }
-}, [])
+}, [classes])
   let DataArray = [
     {
       image: education,

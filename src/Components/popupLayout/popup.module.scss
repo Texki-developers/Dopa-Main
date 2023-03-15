@@ -1,0 +1,36 @@
+.popup_container {
+  position: absolute;
+  display: none;
+  width: 40%;
+  height: 18rem;
+  flex-direction: column;
+  background: var(--color-primary);
+  border-radius: 10px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 0.2rem 0 #ddd;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50rem;
+  z-index: 5;
+  .popup_close{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+}
+
+
+@media only screen and (max-width:900px) {
+    .popup_container{
+        width: 60%;
+    }
+}
+
+
+@media only screen and (max-width:560px) {
+    .popup_container{
+        width: 95%;
+    }
+}

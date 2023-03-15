@@ -3,6 +3,7 @@
   border-radius: 40px;
   width: 100%;
   padding: 2rem;
+  height: 25rem;
   .mission_card_header {
     display: flex;
     justify-content: space-between;
@@ -16,3 +17,56 @@
     }
   }
 }
+
+
+@media only screen and (max-width:950px) {
+  .mission_card_container{
+
+    .mission_card_header{
+      img{
+        width: 6rem;
+        height: 6rem;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width:1392px) {
+ .mission_card_container{
+  height: 29rem
+  
+ }
+  }
+
+
+
+@media only screen and (max-width:900px) {
+  .mission_card_container{
+
+    .mission_card_header{
+      img{
+        width: 6rem;
+        height: 6rem;
+        object-fit: contain;
+      }
+    
+    }
+
+    .mission_head_container{
+      h1{
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width:700px) {
+  .mission_card_container{
+    padding: 2rem 2rem 6rem;
+   height: 100%;
+  }
+}
+
