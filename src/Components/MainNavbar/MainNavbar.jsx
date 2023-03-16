@@ -56,7 +56,7 @@ export default function MainNavbar() {
               }}
             >
               <li>
-                <Link href="/courses/neet">Dopa Neet</Link>
+                <Link href="/courses/neet">+1/+2 Neet Coaching</Link>
               </li>
               <li>
                 <Link href="/courses/repeaters">Dopa Repeaters</Link>
