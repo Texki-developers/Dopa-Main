@@ -34,7 +34,7 @@ export default [
         profile: jaydeep
     },
     {
-        name:"k.krishnadas",
+        name:"k.Krishnadas",
         designation: "Biology Faculty",
         education: "M.Sc",
         experience: "5+ years Experience",

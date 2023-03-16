@@ -252,12 +252,8 @@ const {push} = useRouter()
               your dreams of becoming a doctor.”
             </p>
             <div className={styles.dopa_said_wrapper}>
-              <strong className={styles.about_dopa_content}>
-                Directors of DOPA
-              </strong>
-              <p className={styles.about_dopa_content}>
-                Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Dr.Muneer
-              </p>
+              <strong className={styles.about_dopa_content}>Directors of DOPA</strong>
+              <p className={styles.about_dopa_content}>Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Mr.Muneer</p>
             </div>
           </div>
           <div className={styles.about_dopa_right}>
