@@ -71,9 +71,9 @@ export default function index() {
     },
   ];
 
-  let p1 = [true, true, true, true, true, true, true, true, true];
-  let p2 = [true, true, true, true, true, true, false, false, true];
-  let p3 = [false, true, true, true, true, true, false, false, true];
+  let p1 = [true, true, true, true, true, true, true, true];
+  let p2 = [true, true, true, true, true, true, false, true];
+  let p3 = [false, true, true, true, true, true, false, true];
 
   let features = [
     "Offline Lectures by Elite teachers",
@@ -83,7 +83,6 @@ export default function index() {
     "LIVE Discussions",
     "Mentorship by Doctors",
     "24x7 Doubt Clearance",
-    "Hostel facility and Food",
     "Capsule Notes ",
   ];
 
@@ -118,7 +117,7 @@ export default function index() {
             price3={"6,000"}
           />
         </div>
-        <ResultBanner />
+        <ResultBanner  />
         <MaximisePotential
           width="18%"
           icon={potential}

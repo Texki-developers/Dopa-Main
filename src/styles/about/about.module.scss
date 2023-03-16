@@ -34,9 +34,39 @@
 
   .mission_vision_container{
     background: linear-gradient(96.96deg, #B261BE -4.77%, #0D81A1 32.08%, #24ACAD 75.71%, #26B6E3 98.92%);
-    padding: 2rem 3rem;
+    padding: 2rem 8rem;
     display: flex;
     margin-top: 2rem;
-    gap: 2rem;
+    gap: 10rem;
   }
 }
+
+@media only screen and (max-width:1392px) {
+  .about_container{
+    .mission_vision_container{
+      padding: 2rem 3rem;
+      gap: 2rem;
+    }
+  }
+  }
+
+
+@media only screen and (max-width:900px) {
+.about_container{
+  .mission_vision_container{
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+}
+
+
+@media only screen and (max-width:700px) {
+  .about_container{
+    .mission_vision_container{
+      padding: 1rem;
+      gap: 1rem;
+      flex-direction: column;
+    }
+  }
+  }
