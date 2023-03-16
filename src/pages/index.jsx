@@ -158,7 +158,7 @@ export default function Home() {
             <p className={styles.about_dopa_content}>“ DOPA offers medical entrance coaching that is accessible and affordable for all students. Our innovative, online program is designed to help students succeed on exams like NEET, regardless of their socio-economic background. Our team of expert instructors will guide you through the necessary subject material and test-taking strategies, giving you the best chance at achieving your dreams of becoming a doctor.”</p>
             <div className={styles.dopa_said_wrapper}>
               <strong className={styles.about_dopa_content}>Directors of DOPA</strong>
-              <p className={styles.about_dopa_content}>Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Dr.Muneer</p>
+              <p className={styles.about_dopa_content}>Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Mr.Muneer</p>
             </div>
           </div>
           <div className={styles.about_dopa_right}>
