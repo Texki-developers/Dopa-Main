@@ -34,6 +34,7 @@ export default function index() {
   };
 
   useEffect(() => {
+
     if (window.innerWidth < 500) {
       setMobile(true);
     } else {

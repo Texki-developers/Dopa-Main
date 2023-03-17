@@ -50,7 +50,7 @@ export default function Home() {
     }
   };
 
-const {push} = useRouter()
+  const { push } = useRouter();
 
   const handleNavigation = (dir, type) => {
     switch (type) {
@@ -73,10 +73,10 @@ const {push} = useRouter()
     }, 100);
   };
 
-  const handleRedirectToNeet = (data)=>{
-    localStorage.setItem('class',data)
-    push('/courses/neet')
-  }
+  const handleRedirectToNeet = (data) => {
+    localStorage.setItem("class", data);
+    push(`/courses/neet`);
+  };
 
   useEffect(() => {
     if (window.innerWidth < 500) {
@@ -108,6 +108,12 @@ const {push} = useRouter()
               className={styles.popup_class_container}
             >
               <p>Plus Two</p>
+            </div>
+            <div
+              onClick={() => handleRedirectToNeet("plusOne&plustwo")}
+              className={styles.popup_class_container}
+            >
+              <p>Plus One & Plus Two</p>
             </div>
           </div>
         </Popup>
@@ -252,8 +258,12 @@ const {push} = useRouter()
               your dreams of becoming a doctor.”
             </p>
             <div className={styles.dopa_said_wrapper}>
-              <strong className={styles.about_dopa_content}>Directors of DOPA</strong>
-              <p className={styles.about_dopa_content}>Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Mr.Muneer</p>
+              <strong className={styles.about_dopa_content}>
+                Directors of DOPA
+              </strong>
+              <p className={styles.about_dopa_content}>
+                Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Mr.Muneer
+              </p>
             </div>
           </div>
           <div className={styles.about_dopa_right}>
