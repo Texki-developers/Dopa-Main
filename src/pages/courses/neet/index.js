@@ -46,6 +46,7 @@ export default function index() {
         break;
       case "plusOne&plustwo":
         setClasses(30678);
+        
         break;
       default:
         break;
