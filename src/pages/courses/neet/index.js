@@ -39,13 +39,13 @@ export default function index() {
 
     switch (className) {
       case "plusOne":
-        setClasses(18880);
+        setClasses(16000);
         break;
       case "plusTwo":
-        setClasses(20650);
+        setClasses(17500);
         break;
       case "plusOne&plustwo":
-        setClasses(30678);
+        setClasses(25999);
         
         break;
       default:
@@ -54,13 +54,13 @@ export default function index() {
 
     switch (className) {
       case "plusOne":
-        setOffline(37760);
+        setOffline(32000);
         break;
       case "plusTwo":
-        setOffline(39530);
+        setOffline(33500);
         break;
       case "plusOne&plustwo":
-        setOffline(63720);
+        setOffline(52500);
         break;
       default:
         break;
