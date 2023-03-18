@@ -135,7 +135,7 @@ export default function index() {
     true,
     true,
     true,
-    "DOPA Notes - ₹3,500",
+    "DOPA Material - ₹3,500",
     "DOPA Tab - ₹12,000",
     "Capsule - ₹2,000",
   ];

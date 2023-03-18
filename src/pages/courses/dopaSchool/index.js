@@ -80,7 +80,7 @@ export default function index() {
 "Mentorship by Doctors",
 "24x7 Doubt Clearance",
 "Hostel facility and Food",
-"DOPA Notes ",
+"DOPA Material ",
 "DOPA Tab",
 "DOPA Exclusive Crash - CAPSULE",
 "DOPA App Premium Subscription"

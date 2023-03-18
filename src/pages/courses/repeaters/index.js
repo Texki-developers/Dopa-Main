@@ -79,7 +79,7 @@ export default function index() {
     "Mentorship by Doctors",
     "  24x7 Doubt Clearance",
     "Hostel facility and Food ",
-    "    DOPA Notes ",
+    "    DOPA Material ",
     "DOPA Tab",
     "DOPA Exclusive Crash - CAPSULE",
     "DOPA App Premium Subscription",
@@ -108,7 +108,7 @@ export default function index() {
     true,
     true,
     false,
-    "DOPA Notes - ₹3,500",
+    "DOPA Material - ₹5,000",
     "DOPA Tab - ₹12,000",
     true,
     true,
@@ -122,7 +122,7 @@ export default function index() {
     true,
     true,
     false,
-    "DOPA Notes - ₹3,500",
+    "DOPA Material - ₹5,000",
     "DOPA Tab - ₹12,000",
     true,
     true,
@@ -158,7 +158,7 @@ export default function index() {
             price3={24599}
             Notes={`*Hostel facility and Food have separate fees <br/>
             DOPA TAB  -  ₹ 12000 <br/>
-            DOPA NOTES  - ₹ 5000 `}
+            DOPA Material  - ₹ 5000 `}
           />
         </div>
         <ResultBanner />
