@@ -25,10 +25,10 @@ import doubtClearance from '../../../../public/Assets/home/doubt clearance.png'
 import discussionPanel from '../../../../public/Assets/home/discussion panel.png'
 import dopaMine from '../../../../public/Assets/home/dopa mine.png'
 import InnovativeApproachPoints from '../InnovativeApproachPoints/InnovativeApproachPoints'
-
+// import fs from 'fs'
 import Image from 'next/image'
 
-export default function BenefitsSection() {
+export default function BenefitsSection({data}) {
   const [sliderStatus, setSliderStatus] = useState([0, 0])
   const sliderChildRef = useRef(null)
   const [isMobile, setMobile] = useState(false)
@@ -47,6 +47,13 @@ export default function BenefitsSection() {
     }
     event.target.classList.add('benefit_mobile_selector__active')
     setMobileActiveIndex(index)
+  }
+
+  const downloadDoctorPDF = () => {
+    let downloadTag = document.createElement('a')
+    downloadTag.href = '/pdfs/capsule calender.pdf'
+    downloadTag.download = 'Success planner.pdf'
+    downloadTag.click();
   }
 
   useEffect(() => {
@@ -97,7 +104,8 @@ export default function BenefitsSection() {
                 <p>
                   Doctor-led mentorship program for NEET coaching students provides expert guidance and personalized support to help aspiring medical students succeed on the competitive exam. Include study materials, practice tests and strategies for managing stress. Helps students realize their full potential.
                 </p>
-                <button className="btn-primary">Book a free trial</button>
+                {/* <a href="/pdfs/capsule calender.pdf" download="capsule calender.pdf">Download PDF</a> */}
+                <button className="btn-primary" onClick={() => window.open("https://dopaclass.com/")}>Book a free trial</button>
               </div>
 
               <div className={styles['phone-img-wrapper']}>
@@ -116,7 +124,7 @@ export default function BenefitsSection() {
                   Our success program can help you get there.
                   Our expert-designed program includes a doctor's success planner, weekly exams, and tracking and analysis of scores to keep you focused and on track. With our proven approach, you can achieve NEET success with confidence.
                 </p>
-                <button className="btn-primary">Download Doctor’s success planner</button>
+                <button className="btn-primary" onClick={downloadDoctorPDF}>Download Doctor’s success planner</button>
               </div>
 
               <div className={styles['phone-img-wrapper']}>
@@ -137,7 +145,7 @@ export default function BenefitsSection() {
                   <p>
                     Our elite tutors are experts in their field, with a wealth of knowledge and experience in preparing students for the NEET. We understand that NEET is a challenging exam and requires a tailored approach to learning. Our tutors work with you to identify your strengths and weaknesses and create a customized study plan that will help you reach your full potential.
                   </p>
-                  <button className="btn-primary">Schedule a Trial Class</button>
+                  <button className="btn-primary" onClick={() => window.open("https://dopaclass.com/")}>Schedule a Trial Class</button>
                 </div>
 
                 <div className={styles['phone-img-wrapper']}>
@@ -246,7 +254,7 @@ export default function BenefitsSection() {
                       <p>
                         Doctor-led mentorship program for NEET coaching students provides expert guidance and personalized support to help aspiring medical students succeed on the competitive exam. Include study materials, practice tests and strategies for managing stress. Helps students realize their full potential.
                       </p>
-                      <button className="btn-primary">Download Doctor’s success planner</button>
+                      <button className="btn-primary" onClick={() => window.open("https://dopaclass.com/")}>Book a Free Trial</button>
                     </div>
 
                     <div className={styles.benefit_video_wrapper}>
@@ -266,7 +274,7 @@ export default function BenefitsSection() {
                         Our success program can help you get there.
                         Our expert-designed program includes a doctor's success planner, weekly exams, and tracking and analysis of scores to keep you focused and on track. With our proven approach, you can achieve NEET success with confidence.
                       </p>
-                      <button className="btn-primary">Download Doctor’s success planner</button>
+                      <button className="btn-primary" onClick={downloadDoctorPDF}>Download Doctor’s success planner</button>
                     </div>
                   </div>
                   : mobileActiveIndex === 3 ?
@@ -280,7 +288,7 @@ export default function BenefitsSection() {
                           <p>
                             Our elite tutors are experts in their field, with a wealth of knowledge and experience in preparing students for the NEET. We understand that NEET is a challenging exam and requires a tailored approach to learning. Our tutors work with you to identify your strengths and weaknesses and create a customized study plan that will help you reach your full potential.
                           </p>
-                          <button className="btn-primary btn-light">Schedule a Trial Class</button>
+                          <button className="btn-primary btn-light" onClick={() => window.open("https://dopaclass.com/")}>Schedule a Trial Class</button>
                         </div>
 
                         <div className={styles.benefit_video_wrapper}>
@@ -294,4 +302,11 @@ export default function BenefitsSection() {
       </div>
     </section >
   )
+}
+
+
+export async function getStaticProps() {
+  const filePath = `${process.cwd()}/public/pdfs/capsule calender.pdf`;
+  const data = fs.readFileSync(filePath).toString('base64');
+  return { props: { data } };
 }
