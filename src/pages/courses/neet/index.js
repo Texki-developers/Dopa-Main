@@ -19,35 +19,66 @@ import ResultBanner from "@/Components/CourseComponents/Banners/resultBanner/Res
 import { Carousel } from "@/Components/Carousel/Carousel";
 import result1 from "../../../../public/Assets/courses/results/result1.png";
 import result2 from "../../../../public/Assets/courses/results/result2.png";
+import { useRouter } from "next/router";
 export default function index() {
-  console.log(DopaBg, "image");
-  const [isMobile, setMobile] = useState(false)
-  const [isTab, setTab] = useState(false)
-  const [classes,setClasses] = useState('')
-  const [tutorNavigator,setTutorNavigator] = useState(0)
-  const handleNavigation = (dir,type) => {
-    setTutorNavigator(dir)
-setTimeout(() => {
-  setTutorNavigator(0)
-}, 100)
-}
+  const [isMobile, setMobile] = useState(false);
+  const [isTab, setTab] = useState(false);
+  const [classes, setClasses] = useState(0);
+  const [offline, setOffline] = useState(0);
+  const [tutorNavigator, setTutorNavigator] = useState(0);
+  const handleNavigation = (dir, type) => {
+    setTutorNavigator(dir);
+    setTimeout(() => {
+      setTutorNavigator(0);
+    }, 100);
+  };
 
-useEffect(() => {
-let classitem = localStorage.getItem('class')
-setClasses(classitem)
+  let className;
+  useEffect(() => {
+    className = localStorage.getItem("class");
 
-if (window.innerWidth < 500) {
-  setMobile(true)
-} else {
-  setMobile(false)
-}
+    switch (className) {
+      case "plusOne":
+        setClasses(16000);
+        break;
+      case "plusTwo":
+        setClasses(17500);
+        break;
+      case "plusOne&plustwo":
+        setClasses(25999);
+        
+        break;
+      default:
+        break;
+    }
 
-if (window.innerWidth < 769) {
-  setTab(true)
-} else {
-  setTab(false)
-}
-}, [classes])
+    switch (className) {
+      case "plusOne":
+        setOffline(32000);
+        break;
+      case "plusTwo":
+        setOffline(33500);
+        break;
+      case "plusOne&plustwo":
+        setOffline(52500);
+        break;
+      default:
+        break;
+    }
+
+    if (window.innerWidth < 500) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+
+    if (window.innerWidth < 769) {
+      setTab(true);
+    } else {
+      setTab(false);
+    }
+  }, []);
+
   let DataArray = [
     {
       image: education,
@@ -104,7 +135,7 @@ if (window.innerWidth < 769) {
     true,
     true,
     true,
-    "DOPA Notes - ₹3,500",
+    "DOPA Material - ₹3,500",
     "DOPA Tab - ₹12,000",
     "Capsule - ₹2,000",
   ];
@@ -132,10 +163,8 @@ if (window.innerWidth < 769) {
             p2={p2}
             p1name="DOPA offline"
             p2name="DOPA Online"
-            p3name="DOPA Online"
-            price1={52500}
-            price2={9999}
-            price3={9999}
+            price1={offline}
+            price2={classes}
           />
         </div>
         <ResultBanner />
@@ -151,7 +180,11 @@ if (window.innerWidth < 769) {
             <h1>Our Results</h1>
           </div>
 
-          <Carousel itemsPerWindow={isMobile ? 1 : isTab ? 2 : 2} navigator={tutorNavigator} setNavigator={setTutorNavigator}>
+          <Carousel
+            itemsPerWindow={isMobile ? 1 : isTab ? 2 : 2}
+            navigator={tutorNavigator}
+            setNavigator={setTutorNavigator}
+          >
             {images && images.map((img) => <img src={img.src} alt="" />)}
           </Carousel>
         </div>

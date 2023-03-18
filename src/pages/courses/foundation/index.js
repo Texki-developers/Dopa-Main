@@ -80,12 +80,16 @@ export default function index() {
     "Assignments and class notes",
     "Study Materials",
     "DOPA App Premium Subscription",
+    "Revision Plan",
+    "Daily NewsPaper Reading",
+    "self Assessment",
+    'NMMS training'
   ];
 
-  let p1 = [true, true, true, true, true, true, true, true, true, true];
-  let p2 = [true, true, true, true, true, true, true, true, true, true];
+  let p1 = [true, true, true, true, true, true, true, true, true, true,true,true,true,true];
+  let p2 = [true, true, true, true, true, true, true, true, true, true,false,false,false,false];
 
-  let p3 = [false, true, true, true, true, true, true, true, true, true];
+  let p3 = [false, true, true, true, true, true, true, true, true, true,false,false,false,false];
 
   let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY"];
 

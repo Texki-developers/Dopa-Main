@@ -80,7 +80,7 @@ export default function index() {
 "Mentorship by Doctors",
 "24x7 Doubt Clearance",
 "Hostel facility and Food",
-"DOPA Notes ",
+"DOPA Material ",
 "DOPA Tab",
 "DOPA Exclusive Crash - CAPSULE",
 "DOPA App Premium Subscription"
@@ -122,7 +122,7 @@ export default function index() {
             className={"+1,+2 Integrated NEET school"}
             p1={p1} 
             p1name="NEET SCHOOL (2 YEARS)"
-            price1="1,25,000"
+            price1="2,50,000"
             />
         </div>
         <ResultBanner/>

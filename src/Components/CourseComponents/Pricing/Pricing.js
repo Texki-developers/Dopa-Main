@@ -1,5 +1,5 @@
 import PrimaryButton from "@/Components/Buttons/PrimaryButton/PrimaryButton";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineDone } from "react-icons/md";
 import styles from "./Pricing.module.scss";
 import { VscChromeClose } from "react-icons/vsc";
@@ -27,63 +27,66 @@ export default function Pricing({
   let secondBox = [];
   let thirdBox = [];
 
+  useEffect(() => {
+    if (price1) {
+      setP1price(price1);
+    }
+    if (price2) {
+      setP2price(price2);
+    }
+    if (price3) {
+      setP3price(price3);
+    }
+  }, [price1, price2, price3]);
 
-
-  const pricePush = (event,data, type) => {
-   
+  const pricePush = (event, data, type) => {
     if (type == "p1") {
       firstBox.push(data);
-     
-      calculations(firstBox,type,event.target.checked)
+
+      calculations(firstBox, type, event.target.checked);
     } else if (type == "p2") {
       secondBox.push(data);
-      calculations(secondBox,type,event.target.checked)
+      calculations(secondBox, type, event.target.checked);
     } else if (type == "p3") {
       thirdBox.push(data);
-      calculations(thirdBox,type,event.target.checked)
+      calculations(thirdBox, type, event.target.checked);
     }
   };
 
-  const calculations = (data,type,checked)=>{
-    
-    data && data?.map((items)=>{
-      let total = 0
+  const calculations = (data, type, checked) => {
+    data &&
+      data?.map((items) => {
+        let total = 0;
 
-      if(type == "p1"){
-        if(checked){
-          total = p1Price + items
-          setP1price(total)
-        }else{
-          total = p1Price - items
-          setP1price(total)
+        if (type == "p1") {
+          if (checked) {
+            total = p1Price + items;
+            setP1price(total);
+          } else {
+            total = p1Price - items;
+            setP1price(total);
+          }
         }
-     
-      }
-      if(type == "p2"){
-        if(checked){
-          total = p2Price + items
-          setP2price(total)
-        }else{
-          total = p2Price - items
-          setP2price(total)
+        if (type == "p2") {
+          if (checked) {
+            total = p2Price + items;
+            setP2price(total);
+          } else {
+            total = p2Price - items;
+            setP2price(total);
+          }
         }
-        
-      }
-      if(type == "p3"){
-        if(checked){
-          total = p3Price + items
-          setP3price(total)
-        }else{
-          total = p3Price - items
-          setP3price(total)
+        if (type == "p3") {
+          if (checked) {
+            total = p3Price + items;
+            setP3price(total);
+          } else {
+            total = p3Price - items;
+            setP3price(total);
+          }
         }
-
-      }
-    })
-
-  }
-
-
+      });
+  };
 
   let valueBoxClassNames = `${styles.features_container} ${styles.features_mobile}`;
   return (
@@ -173,8 +176,13 @@ export default function Pricing({
                         }
                       >
                         <input
-                   
-                          onChange={(event)=>pricePush(event,features === "DOPA Notes - ₹3,500" ? 3500 : 12000, "p1")}
+                          onChange={(event) =>
+                            pricePush(
+                              event,
+                              features == "DOPA Material - ₹3,500" ? 3500 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              "p1"
+                            )
+                          }
                           type="checkbox"
                         />
                         <div>
@@ -186,7 +194,7 @@ export default function Pricing({
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features === "DOPA Notes - ₹3,500" ? (
+                          ) : features === "DOPA Material - ₹3,500" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>
@@ -259,7 +267,13 @@ export default function Pricing({
                         }
                       >
                         <input
-                          onChange={(event)=>pricePush(event,features === "DOPA Notes - ₹3,500" ? 3500 : 12000, "p2")}
+                          onChange={(event) =>
+                            pricePush(
+                              event,
+                              features == "DOPA Material - ₹3,500" ? 3500 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              "p2"
+                            )
+                          }
                           type="checkbox"
                         />
                         <div>
@@ -271,7 +285,7 @@ export default function Pricing({
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features === "DOPA Notes - ₹3,500" ? (
+                          ) : features === "DOPA Material - ₹3,500" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>
@@ -342,7 +356,13 @@ export default function Pricing({
                         }
                       >
                         <input
-                          onChange={(event)=>pricePush(event,features === "DOPA Notes - ₹3,500" ? 3500 : 12000, "p3")}
+                          onChange={(event) =>
+                            pricePush(
+                              event,
+                              features == "DOPA Material - ₹3,500" ? 3500 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              "p3"
+                            )
+                          }
                           type="checkbox"
                         />
                         <div>
@@ -350,11 +370,11 @@ export default function Pricing({
                           <p className={styles.feature_fields_head}>
                             {features}
                           </p>
-                          {features === "Capsule - ₹2,000" ? (
+                          {features == "Capsule - ₹2,000" ? (
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features === "DOPA Notes - ₹3,500" ? (
+                          ) : features == "DOPA Material - ₹3,500" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>

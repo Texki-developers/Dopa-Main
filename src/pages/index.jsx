@@ -35,6 +35,7 @@ import Link from "next/link";
 import Popup from "@/Components/popupLayout/Popup";
 import { useRouter } from "next/router";
 
+
 export default function Home() {
   const [navigator, setNavigator] = useState(0);
   const [resultNavigator, setResultNavigator] = useState(0);
@@ -50,7 +51,7 @@ export default function Home() {
     }
   };
 
-const {push} = useRouter()
+  const { push } = useRouter();
 
   const handleNavigation = (dir, type) => {
     switch (type) {
@@ -73,10 +74,10 @@ const {push} = useRouter()
     }, 100);
   };
 
-  const handleRedirectToNeet = (data)=>{
-    localStorage.setItem('class',data)
-    push('/courses/neet')
-  }
+  const handleRedirectToNeet = (data) => {
+    localStorage.setItem("class", data);
+    push(`/courses/neet`);
+  };
 
   useEffect(() => {
     if (window.innerWidth < 500) {
@@ -94,6 +95,7 @@ const {push} = useRouter()
   return (
     <MainLayout>
       <main className={styles.main}>
+
         <Popup action={handlePopup} refs={popRef}>
           <div className={styles.popup_container_home}>
             <h3>Which class are you Preparing for ?</h3>
@@ -108,6 +110,12 @@ const {push} = useRouter()
               className={styles.popup_class_container}
             >
               <p>Plus Two</p>
+            </div>
+            <div
+              onClick={() => handleRedirectToNeet("plusOne&plustwo")}
+              className={styles.popup_class_container}
+            >
+              <p>Plus One & Plus Two</p>
             </div>
           </div>
         </Popup>
@@ -252,8 +260,12 @@ const {push} = useRouter()
               your dreams of becoming a doctor.”
             </p>
             <div className={styles.dopa_said_wrapper}>
-              <strong className={styles.about_dopa_content}>Directors of DOPA</strong>
-              <p className={styles.about_dopa_content}>Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Mr.Muneer</p>
+              <strong className={styles.about_dopa_content}>
+                Directors of DOPA
+              </strong>
+              <p className={styles.about_dopa_content}>
+                Dr.Niyas P, Dr.Asif PP, Dr.Ashique, Mr.Muneer
+              </p>
             </div>
           </div>
           <div className={styles.about_dopa_right}>
