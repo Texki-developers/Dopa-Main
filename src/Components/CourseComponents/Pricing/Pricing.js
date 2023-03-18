@@ -179,7 +179,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features === "DOPA Notes - ₹3,500" ? 3500 : 12000,
+                              features === "DOPA Notes - ₹5,000" ? 5000 : 12000,
                               "p1"
                             )
                           }
@@ -194,7 +194,7 @@ export default function Pricing({
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features === "DOPA Notes - ₹3,500" ? (
+                          ) : features === "DOPA Notes - ₹5,000" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>
@@ -270,7 +270,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features === "DOPA Notes - ₹3,500" ? 3500 : 12000,
+                              features === "DOPA Notes - ₹5,000" ? 5000 : 12000,
                               "p2"
                             )
                           }
@@ -285,7 +285,7 @@ export default function Pricing({
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features === "DOPA Notes - ₹3,500" ? (
+                          ) : features === "DOPA Notes - ₹5,000" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>
@@ -359,7 +359,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features === "DOPA Notes - ₹3,500" ? 3500 : 12000,
+                              features === "DOPA Notes - ₹5,000" ? 5000 : 12000,
                               "p3"
                             )
                           }
@@ -374,7 +374,7 @@ export default function Pricing({
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features === "DOPA Notes - ₹3,500" ? (
+                          ) : features === "DOPA Notes - ₹5,000" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>

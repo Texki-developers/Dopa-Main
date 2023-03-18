@@ -35,6 +35,7 @@ import Link from "next/link";
 import Popup from "@/Components/popupLayout/Popup";
 import { useRouter } from "next/router";
 
+
 export default function Home() {
   const [navigator, setNavigator] = useState(0);
   const [resultNavigator, setResultNavigator] = useState(0);
@@ -94,6 +95,7 @@ export default function Home() {
   return (
     <MainLayout>
       <main className={styles.main}>
+
         <Popup action={handlePopup} refs={popRef}>
           <div className={styles.popup_container_home}>
             <h3>Which class are you Preparing for ?</h3>

@@ -19,8 +19,11 @@
     justify-content: flex-end;
   }
 
-}
 
+}
+.popup_enquiry_container{
+
+}
 
 @media only screen and (max-width:900px) {
     .popup_container{
@@ -28,6 +31,12 @@
     }
 }
 
+@media only screen and (max-width:650px) {
+  .popup_enquiry_container{
+width: 95% !important;
+padding: 0.5rem;
+  }
+}
 
 @media only screen and (max-width:560px) {
     .popup_container{
