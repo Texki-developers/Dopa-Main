@@ -34,9 +34,9 @@
         }
     }
 
-    .class_link{
-        color: #fff;
-      }
+      .class_link{
+    color: #fff;
+  }
 
     a,span {
         text-decoration: none;
@@ -53,7 +53,7 @@
     border-radius: 6px;
     background: var(--color-primary);
     width: max-content;
-    display: block;
+    display: none;
     li{
         padding: 0.5rem 1rem;
         &:hover{
