@@ -29,7 +29,7 @@
         align-items: center;
         position: relative;
         cursor: pointer;
-        &:hover ul{
+        &:hover .sublinks_list{
             display: block;
         }
     }
@@ -49,6 +49,29 @@
     border-radius: 6px;
     background: var(--color-primary);
     width: max-content;
+    display: block;
+    li{
+        padding: 0.5rem 1rem;
+        &:hover{
+            background: #ffffff4f;
+        }
+    }
+    a{
+        color: #fff;
+        font-size: 1rem;
+    }
+}
+.sublinks_list li:hover .link_expand{
+    display: block;
+}
+.link_expand{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(calc(100% + 1px));
+    border-radius: 6px;
+    background: var(--color-primary);
+    width: max-content;
     display: none;
     li{
         padding: 0.5rem 1rem;
@@ -60,6 +83,7 @@
         color: #fff;
         font-size: 1rem;
     }
+
 }
 .btnWrapperMobile {
     display: none;
@@ -119,16 +143,27 @@
         transform: translate(0,0);
         li{
             padding: 0.5rem 0;
-            display: block;
+            display: flex;
+            flex-direction: column;
             height: max-content;
             &:hover{
                 background: transparent;
             }
         }
-        a{
+        a,p{
             color: #000;
+            cursor: pointer;
             font-size: 0.9rem;
         }
+    }
+    .link_expand{
+        background: transparent;
+        padding-left: 1rem;
+        position: initial;
+        top: 0;
+        left: 0;
+        right: auto;
+        transform: translate(0);
     }
     .mainHeader button{
         width: 11rem;

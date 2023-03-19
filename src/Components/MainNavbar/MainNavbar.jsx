@@ -15,6 +15,10 @@ export default function MainNavbar() {
     }
   };
 
+  const handleInnerExpansion = (event) => {
+    console.log(event);
+  }
+
   useEffect(() => {
     setWindowWidth(window.innerWidth);
   }, []);
@@ -55,8 +59,19 @@ export default function MainNavbar() {
                     : "",
               }}
             >
-              <li>
-                <Link href="/courses/neet">+1/+2 Neet Coaching</Link>
+              <li onClick={handleInnerExpansion}>
+                <a style={{pointerEvents:'none'}}>Dopa Neet</a>
+                <ul className={style.link_expand}>
+                  <li>
+                    <Link href=''>+1</Link>
+                  </li>
+                  <li>
+                    <Link href=''>+2</Link>
+                  </li>
+                  <li>
+                    <Link href=''>+1 & +2</Link>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link href="/courses/repeaters">Dopa Repeaters</Link>
