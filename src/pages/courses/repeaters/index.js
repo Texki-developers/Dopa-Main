@@ -78,7 +78,6 @@ export default function index() {
     " LIVE Discussions",
     "Mentorship by Doctors",
     "  24x7 Doubt Clearance",
-    "Hostel facility and Food ",
     "    DOPA Material ",
     "DOPA Tab",
     "DOPA Exclusive Crash - CAPSULE",
@@ -86,7 +85,6 @@ export default function index() {
   ];
 
   let p1 = [
-    true,
     true,
     true,
     true,
@@ -107,7 +105,6 @@ export default function index() {
     true,
     true,
     true,
-    false,
     "DOPA Material - ₹5,000",
     "DOPA Tab - ₹12,000",
     true,
@@ -121,7 +118,6 @@ export default function index() {
     true,
     true,
     true,
-    false,
     "DOPA Material - ₹5,000",
     "DOPA Tab - ₹12,000",
     true,

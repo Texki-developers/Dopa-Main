@@ -67,7 +67,7 @@ export default function MainNavbar() {
               }}
             >
               <li onClick={handleInnerExpansion}>
-                <a style={{ pointerEvents: "none" }}>Dopa Neet</a>
+                <a style={{ pointerEvents: "none" }}>+1/+2 Neet Coaching</a>
                 <ul className={style.link_expand}>
                   <li>
                     <p
