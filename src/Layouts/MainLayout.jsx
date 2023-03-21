@@ -4,9 +4,10 @@ import Head from "next/head";
 import styles from "./MainLayout.module.scss";
 import { MdQuestionAnswer } from "react-icons/md";
 import Popup from "@/Components/popupLayout/Popup";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Form from "@/Components/Form/Form";
+import { useRouter } from "next/router";
 export default function MainLayout({ children }) {
   let popupRef = useRef();
   const handlePopup = (type) => {
@@ -16,6 +17,18 @@ export default function MainLayout({ children }) {
       popupRef.current.style.display = "none";
     }
   };
+
+
+  const router = useRouter()
+
+
+  console.log(router,'router')
+  useEffect(() => {
+
+    router.pathname === '/' &&   handlePopup(1)
+ 
+  }, [])
+  
   return (
     <>
       <AnchorLink
