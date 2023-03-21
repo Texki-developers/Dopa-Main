@@ -17,7 +17,12 @@ export default function MainNavbar() {
 
   const handleInnerExpansion = (event) => {
     console.log(event);
-  }
+  };
+
+  const handleRedirectToNeet = (data) => {
+    localStorage.setItem("class", data);
+    push(`/courses/neet`);
+  };
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
@@ -30,7 +35,7 @@ export default function MainNavbar() {
         <span></span>
         <span></span>
       </label>
-      <Link href='/'>
+      <Link href="/">
         <Image src={logo} className={style.headerLogo} placeholder="blur" />
       </Link>
       {windowWidth && (
@@ -60,16 +65,31 @@ export default function MainNavbar() {
               }}
             >
               <li onClick={handleInnerExpansion}>
-                <a style={{pointerEvents:'none'}}>Dopa Neet</a>
+                <a style={{ pointerEvents: "none" }}>Dopa Neet</a>
                 <ul className={style.link_expand}>
                   <li>
-                    <Link href=''>+1</Link>
+                    <p
+                      className={style.class_link}
+                      onClick={() => handleRedirectToNeet("plusOne")}
+                    >
+                      +1
+                    </p>
                   </li>
                   <li>
-                    <Link href=''>+2</Link>
+                    <p
+                      className={style.class_link}
+                      onClick={() => handleRedirectToNeet("plusTwo")}
+                    >
+                      +2
+                    </p>
                   </li>
                   <li>
-                    <Link href=''>+1 & +2</Link>
+                    <p
+                      className={style.class_link}
+                      onClick={() => handleRedirectToNeet("plusOne&plustwo")}
+                    >
+                      +1 & +2
+                    </p>
                   </li>
                 </ul>
               </li>
@@ -99,7 +119,7 @@ export default function MainNavbar() {
           <li>
             <Link href="">About Us</Link>
           </li> */}
-          <li onClick={()=> window.location.href="https://dopaclass.com"}>
+          <li onClick={() => (window.location.href = "https://dopaclass.com")}>
             <PrimaryButton addon={"btnBlueGradient"}>
               Book a Free Trial
             </PrimaryButton>
@@ -109,7 +129,10 @@ export default function MainNavbar() {
           </li>
         </ul>
       )}
-      <div onClick={()=> window.location.href="https://dopaclass.com"} className={style.btnWrapperMobile}>
+      <div
+        onClick={() => (window.location.href = "https://dopaclass.com")}
+        className={style.btnWrapperMobile}
+      >
         <PrimaryButton addon={"btnBlueGradient"}>
           Book a Free Trial
         </PrimaryButton>
