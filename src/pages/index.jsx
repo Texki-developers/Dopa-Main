@@ -34,7 +34,10 @@ import AppDownloadSection from "@/Components/appDownloadSection/AppDownloadSecti
 import Link from "next/link";
 import Popup from "@/Components/popupLayout/Popup";
 import { useRouter } from "next/router";
-
+import update1 from '../../public/Assets/home/update 1.jpeg'
+import update2 from '../../public/Assets/home/update 2.jpeg'
+import update3 from '../../public/Assets/home/update 3.jpeg'
+import update4 from '../../public/Assets/home/update 4.jpeg'
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0);
@@ -212,32 +215,22 @@ export default function Home() {
               setNavigator={setNavigator}
             >
               <Image
-                src={du1}
+                src={update1}
                 alt="Dopa updates"
                 className={styles.dopa_updates_carousel_item}
               />
               <Image
-                src={du2}
+                src={update2}
                 alt="Dopa updates"
                 className={styles.dopa_updates_carousel_item}
               />
               <Image
-                src={du1}
+                src={update3}
                 alt="Dopa updates"
                 className={styles.dopa_updates_carousel_item}
               />
               <Image
-                src={du2}
-                alt="Dopa updates"
-                className={styles.dopa_updates_carousel_item}
-              />
-              <Image
-                src={du1}
-                alt="Dopa updates"
-                className={styles.dopa_updates_carousel_item}
-              />
-              <Image
-                src={du2}
+                src={update4}
                 alt="Dopa updates"
                 className={styles.dopa_updates_carousel_item}
               />
