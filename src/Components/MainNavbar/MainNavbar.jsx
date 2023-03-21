@@ -4,11 +4,13 @@ import style from "./MainNavbar.module.scss";
 import logo from "../../../public/Assets/logo.png";
 import Link from "next/link";
 import PrimaryButton from "../Buttons/PrimaryButton/PrimaryButton";
+import { useRouter } from "next/router";
 
 export default function MainNavbar() {
   const [activeMObileSubMenu, setActiveMobileSubMenu] = useState(null);
   const [windowWidth, setWindowWidth] = useState(null);
 
+  const {push} = useRouter()
   const handleActivationOfMobileMenu = (id) => {
     if (window.innerWidth <= 768) {
       setActiveMobileSubMenu(activeMObileSubMenu ? false : id);
