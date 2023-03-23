@@ -162,7 +162,7 @@ export default function index() {
     true,
     true,
     true,
-    "DOPA Material - ₹3,500",
+    "DOPA Material - ₹3,000",
     "DOPA Tab - ₹12,000",
     "Capsule - ₹2,000",
   ];
@@ -175,7 +175,7 @@ export default function index() {
     true,
     true,
     true,
-    "DOPA Material - ₹3,500",
+    "DOPA Material - ₹3,000",
     "DOPA Tab - ₹12,000",
   ];
   let paraArray = ["ONLINE & OFFLINE CLASSES", "MENTORSHIP BY DOCTORS"];
@@ -205,6 +205,7 @@ export default function index() {
             p2name="DOPA Online"
             price1={offline}
             price2={classes}
+        
           />
         </div>
         <ResultBanner />

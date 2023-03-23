@@ -105,7 +105,7 @@ export default function index() {
     true,
     true,
     true,
-    "DOPA Material - ₹5,000",
+   true,
     "DOPA Tab - ₹12,000",
     true,
     true,
@@ -118,13 +118,13 @@ export default function index() {
     true,
     true,
     true,
-    "DOPA Material - ₹5,000",
+   true,
     "DOPA Tab - ₹12,000",
     true,
     true,
   ];
 
-  let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY"];
+  let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY","ONLINE CLASSES","RESIDENTIAL CLASSES"];
 
   return (
     <MainLayout>

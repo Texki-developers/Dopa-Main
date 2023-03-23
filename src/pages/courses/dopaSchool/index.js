@@ -46,7 +46,6 @@ export default function index() {
     }
   }, []);
   let images = [result1, result2];
-  
 
   let DataArray = [
     {
@@ -71,20 +70,20 @@ export default function index() {
     },
   ];
 
- let  features=[
-"Offline Lectures by Elite teachers",
-"LIVE Classes & in-class doubt solving",
-"Dopa quizzes and leader board",
-"DOPA Exclusive Test series",
-"LIVE Discussions",
-"Mentorship by Doctors",
-"24x7 Doubt Clearance",
-// "Hostel facility and Food",
-"DOPA Material ",
-"DOPA Tab",
-"DOPA Exclusive Crash - CAPSULE",
-"DOPA App Premium Subscription"
- ]
+  let features = [
+    "Offline Lectures by Elite teachers",
+    "LIVE Classes & in-class doubt solving",
+    "Dopa quizzes and leader board",
+    "DOPA Exclusive Test series",
+    "LIVE Discussions",
+    "Mentorship by Doctors",
+    "24x7 Doubt Clearance",
+    // "Hostel facility and Food",
+    "DOPA Material ",
+    "DOPA Tab",
+    "DOPA Exclusive Crash - CAPSULE",
+    "DOPA App Premium Subscription",
+  ];
 
   let p1 = [
     true,
@@ -99,10 +98,9 @@ export default function index() {
     true,
     true,
     true,
-
   ];
 
-  let paraArray = ["OFFLINE CLASSES","DOPA LIBRARY","HOSTEL FACILITY"];
+  let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY"];
 
   return (
     <MainLayout>
@@ -116,16 +114,24 @@ export default function index() {
 
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
-          <Pricing    features={features}
+          <Pricing
+            features={features}
             courseName="NEET SCHOOL"
             subjects={"Physics  Chemistry  Biology"}
             className={"+1,+2 Integrated NEET school"}
-            p1={p1} 
-            p1name="NEET SCHOOL (2 YEARS)"
-            price1="2,50,000"
-            />
+            p1={p1}
+            p2={p1}
+            p3={p1}
+            p1name="NEET SCHOOL (+1)"
+            p2name="NEET SCHOOL (+2)"
+            p3name="NEET SCHOOL (2year Course)"
+            price1="1,25,000"
+            price2="1,25,000"
+            price3="2,50,000"
+            Notes="*Hostel facility and Food have separate fees"
+          />
         </div>
-        <ResultBanner/>
+        <ResultBanner />
         <MaximisePotential
           width="18%"
           icon={potential}
@@ -133,12 +139,16 @@ export default function index() {
           btn="Download"
           bg="#ffff"
         />
-           <div className={styles.our_results_container}>
+        <div className={styles.our_results_container}>
           <div className={styles.our_results_header}>
             <h1>Our Results</h1>
           </div>
 
-          <Carousel itemsPerWindow={isMobile ? 1 : isTab ? 2 : 2} navigator={tutorNavigator} setNavigator={setTutorNavigator}>
+          <Carousel
+            itemsPerWindow={isMobile ? 1 : isTab ? 2 : 2}
+            navigator={tutorNavigator}
+            setNavigator={setTutorNavigator}
+          >
             {images && images.map((img) => <img src={img.src} alt="" />)}
           </Carousel>
         </div>
@@ -151,7 +161,7 @@ export default function index() {
 "
         />
         <div className={styles.elite_tutor_wrapper}>
-        <EliteTutorsSection isHideSubHeading={true}/>
+          <EliteTutorsSection isHideSubHeading={true} />
         </div>
       </main>
     </MainLayout>
