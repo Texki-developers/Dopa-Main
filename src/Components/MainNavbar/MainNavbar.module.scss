@@ -97,6 +97,7 @@
     display: none;
 }
 
+
 @media only screen and (max-width: 1300px) {
     .navLinks {
         gap: 1rem;
@@ -113,6 +114,8 @@
         display: grid;
         grid-template-columns: 1fr max-content 1fr;
     }
+
+ 
 
     .navLinks {
         flex-direction: column;
@@ -133,7 +136,13 @@
             align-items: flex-start;
             height: max-content;
         }
+
+        .class_link{
+            color: rgb(6, 6, 6);
+          }
     }
+
+    
     .sublinks_list{
         position: initial;
         padding-left: 1rem;

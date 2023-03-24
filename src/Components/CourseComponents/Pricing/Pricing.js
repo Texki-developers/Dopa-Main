@@ -179,7 +179,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features == "DOPA Material - ₹3,500" ? 3500 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
                               "p1"
                             )
                           }
@@ -194,7 +194,7 @@ export default function Pricing({
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features === "DOPA Material - ₹3,500" ? (
+                          ) : features === "DOPA Material - ₹3,000" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>
@@ -219,13 +219,13 @@ export default function Pricing({
               >
                 Total <br /> ₹ {p1Price} + GST
               </h3>
-              {active === 0 && <p>Few seats Left</p>}
+             {   courseName="NEET SCHOOL" ? '' : <>{active === 0 && <p>Few seats Left</p>}
               <PrimaryButton
                 children="Buy Now"
                 bgColor={`${active === 0 ? "#1BBCEE" : "#ffff"}`}
                 color={`${active === 0 ? "#ffff" : "#000000"}`}
                 addon="buy-now"
-              />
+              /></>}
             </div>
           </div>
         ) : (
@@ -270,7 +270,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features == "DOPA Material - ₹3,500" ? 3500 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
                               "p2"
                             )
                           }
@@ -285,7 +285,7 @@ export default function Pricing({
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features === "DOPA Material - ₹3,500" ? (
+                          ) : features === "DOPA Material - ₹3,000" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>
@@ -310,13 +310,13 @@ export default function Pricing({
               >
                 Total <br /> ₹ {p2Price} + GST
               </h3>
-              {active === 1 && <p>Few seats Left</p>}
+            { courseName="NEET SCHOOL" ? '' : <> {active === 1 && <p>Few seats Left</p>}
               <PrimaryButton
                 children="Buy Now"
                 bgColor={`${active === 1 ? "#1BBCEE" : "#ffff"}`}
                 color={`${active === 1 ? "#ffff" : "#000000"}`}
                 addon="buy-now"
-              />
+              /></>} 
             </div>
           </div>
         ) : (
@@ -359,7 +359,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features == "DOPA Material - ₹3,500" ? 3500 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
                               "p3"
                             )
                           }
@@ -374,7 +374,7 @@ export default function Pricing({
                             <p className={styles.feature_fields_para}>
                               Books,Classes are complimentary
                             </p>
-                          ) : features == "DOPA Material - ₹3,500" ? (
+                          ) : features == "DOPA Material - ₹3,000" ? (
                             <p className={styles.feature_fields_para}>
                               for One year
                             </p>

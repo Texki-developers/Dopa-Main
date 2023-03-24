@@ -108,7 +108,7 @@ export default function index() {
           <Pricing
             features={features}
             courseName="FOUNDATION BATCH"
-            subjects={"Aptitude  Physics  Chemistry  Biology"}
+            subjects={"Aptitude  Physics Chemistry Biology socialScience Maths"}
             className={"For 8th,9th,10th"}
             p1={p1}
             p2={p2}

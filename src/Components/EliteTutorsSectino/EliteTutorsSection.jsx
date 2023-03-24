@@ -58,7 +58,7 @@ export default function EliteTutorsSection({isHideSubHeading}) {
         <div className={styles.tutors_speciality}>
           <Image className={styles.speciality_icon} alt="Speciality Icon" src={tutorSpeciality3} />
           <p>Excel in NEET with Doctor-Guided Lessons, Your Path to Medical School Starts Here</p>
-        </div>
+        </div> 
       </div>}
 
       <div className={styles.dopa_updates_carousel_wrapper}>

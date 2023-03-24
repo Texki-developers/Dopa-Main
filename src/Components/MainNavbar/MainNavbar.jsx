@@ -4,11 +4,13 @@ import style from "./MainNavbar.module.scss";
 import logo from "../../../public/Assets/logo.png";
 import Link from "next/link";
 import PrimaryButton from "../Buttons/PrimaryButton/PrimaryButton";
+import { useRouter } from "next/router";
 
 export default function MainNavbar() {
   const [activeMObileSubMenu, setActiveMobileSubMenu] = useState(null);
   const [windowWidth, setWindowWidth] = useState(null);
 
+  const {push} = useRouter()
   const handleActivationOfMobileMenu = (id) => {
     if (window.innerWidth <= 768) {
       setActiveMobileSubMenu(activeMObileSubMenu ? false : id);
@@ -65,7 +67,7 @@ export default function MainNavbar() {
               }}
             >
               <li onClick={handleInnerExpansion}>
-                <a style={{ pointerEvents: "none" }}>Dopa Neet</a>
+                <a style={{ pointerEvents: "none" }}>+1/+2 NEET COACHING</a>
                 <ul className={style.link_expand}>
                   <li>
                     <p
@@ -94,13 +96,13 @@ export default function MainNavbar() {
                 </ul>
               </li>
               <li>
-                <Link href="/courses/repeaters">Dopa Repeaters</Link>
+                <Link href="/courses/repeaters">DOPA REPEATERS</Link>
               </li>
               <li>
-                <Link href="/courses/dopaSchool">Dopa School</Link>
+                <Link href="/courses/dopaSchool">NEET SCHOOL</Link>
               </li>
               <li onClick={handleInnerExpansion}>
-                <a style={{pointerEvents: 'none'}}>Dopa Foundation</a>
+                <a style={{pointerEvents: 'none'}}>DOPA FOUNDATION</a>
                 <ul className={style.link_expand}>
                   <li>
                     <p
@@ -129,7 +131,7 @@ export default function MainNavbar() {
                 </ul>
               </li>
               <li>
-                <Link href="/courses/capsule">Dopa Capsules</Link>
+                <Link href="/courses/capsule">DOPA CAPSULE</Link>
               </li>
             </ul>
           </li>

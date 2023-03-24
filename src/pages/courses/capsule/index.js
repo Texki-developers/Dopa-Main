@@ -73,8 +73,8 @@ export default function index() {
   ];
 
   let p1 = [true, true, true, true, true, true, true, true];
-  let p2 = [true, true, true, true, true, true, false, true];
-  let p3 = [false, true, true, true, true, true, false, true];
+  let p2 = [true, true, true, true, true, true, true, true];
+  let p3 = [false, true, true, true, true, true, true, true];
 
   let features = [
     "Offline Lectures by Elite teachers",
@@ -112,10 +112,10 @@ export default function index() {
             p1name={"RESIDENTIAL PROGRAM"}
             p2name="OFFLINE"
             p3name="ONLINE"
-            price1={"21,240"}
-            price2="14,160"
+            price1={"18,000"}
+            price2="12,000"
             Notes="*Hostel facility and Food have separate fees"
-            price3={"7080"}
+            price3={"6,000"}
           />
         </div>
         <ResultBanner  />

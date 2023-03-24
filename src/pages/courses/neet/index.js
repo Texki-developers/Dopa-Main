@@ -46,7 +46,7 @@ export default function index() {
         break;
       case "plusOne&plustwo":
         setClasses(25999);
-        
+
         break;
       default:
         break;
@@ -77,7 +77,7 @@ export default function index() {
     } else {
       setTab(false);
     }
-  }, []);
+  }, [className,classes]);
 
   let DataArray = [
     {
@@ -102,6 +102,8 @@ export default function index() {
     },
   ];
 
+
+
   let features = [
     " Lectures by Elite teachers",
     "LIVE Classes & in-class doubt solving",
@@ -113,6 +115,18 @@ export default function index() {
     "Assignments and class notes",
     "Study Materials",
     "DOPA App Premium Subscription",
+  ];
+
+  let features1 = [
+    " Lectures by Elite teachers",
+    "LIVE Classes & in-class doubt solving",
+    "Dopa quizzes and leader board",
+    "DOPA Exclusive Test series",
+    "LIVE Discussions",
+    "Mentorship by Doctors",
+    "24x7 Doubt Clearance",
+    "Assignments and class notes",
+    "Study Materials",
   ];
 
   let p1 = [
@@ -127,6 +141,19 @@ export default function index() {
     "DOPA Tab - ₹12,000",
     "Capsule - ₹2,000",
   ];
+
+  let p11 = [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    "DOPA Tab - ₹12,000",
+  ];
+
   let p2 = [
     false,
     true,
@@ -135,12 +162,25 @@ export default function index() {
     true,
     true,
     true,
-    "DOPA Material - ₹3,500",
+    "DOPA Material - ₹3,000",
     "DOPA Tab - ₹12,000",
     "Capsule - ₹2,000",
   ];
+
+  let p22 = [
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    "DOPA Material - ₹3,000",
+    "DOPA Tab - ₹12,000",
+  ];
   let paraArray = ["ONLINE & OFFLINE CLASSES", "MENTORSHIP BY DOCTORS"];
 
+ 
   let images = [result1, result2];
   return (
     <MainLayout>
@@ -155,16 +195,17 @@ export default function index() {
         <CourseFeatures data={DataArray} />
         <div className={styles.pricing}>
           <Pricing
-            features={features}
+            features={offline == "32000"  ? features1 : features}
             courseName="NEET COACHING"
             subjects={"Physics  Chemistry  Biology  Mathematics"}
             className={"Class11 and 12"}
-            p1={p1}
-            p2={p2}
+            p1={offline == "32000" ? p11 : p1}
+            p2={offline == "32000" ?  p22 : p2}
             p1name="DOPA offline"
             p2name="DOPA Online"
             price1={offline}
             price2={classes}
+        
           />
         </div>
         <ResultBanner />

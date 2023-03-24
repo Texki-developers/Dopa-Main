@@ -3,7 +3,7 @@ import styles from "./Landing.module.scss";
 import { MdOutlineDone } from "react-icons/md";
 
 export default function Landing({ image, bg, head, para }) {
-let className = `${styles.dopa_students} ${styles.dopa_students_capsule}`
+  let className = `${styles.dopa_students} ${styles.dopa_students_capsule}`;
   return (
     <div className={styles.dopa_landing}>
       <div className={styles.dopa_bg}>
@@ -15,7 +15,14 @@ let className = `${styles.dopa_students} ${styles.dopa_students_capsule}`
             className={head == "CAPSULE 3.0" ? styles.mainHead : ""}
             dangerouslySetInnerHTML={{ __html: head.replace(/\n/g, "<br>") }}
           ></h1>
-          {head == "CAPSULE 3.0" ? <h2 className={styles.mainPara}>NEET 2023 CRASH COURSE</h2> : ""}
+          {head == "CAPSULE 3.0" ? (
+            <h2 className={styles.mainPara}>NEET 2023 CRASH COURSE</h2>
+          ) : (
+            ""
+          )}
+        
+
+       
           {para &&
             para?.map((items) => (
               <div className={styles.online_mentor_para}>
@@ -25,9 +32,20 @@ let className = `${styles.dopa_students} ${styles.dopa_students_capsule}`
                 </div>
               </div>
             ))}
+            
         </div>
-        <div className={head == "CAPSULE 3.0" ? className :styles.dopa_students }>
-          <img className={head == "DOPA <br/> FOUNDATION COURSE" ? styles.foundation_image : ''} src={image.src} alt="" />
+        <div
+          className={head == "CAPSULE 3.0" ? className : styles.dopa_students}
+        >
+          <img
+            className={
+              head == "DOPA <br/> FOUNDATION COURSE"
+                ? styles.foundation_image
+                : ""
+            }
+            src={image.src}
+            alt=""
+          />
         </div>
       </div>
     </div>
