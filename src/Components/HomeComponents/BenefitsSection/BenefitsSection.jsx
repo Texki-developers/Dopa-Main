@@ -28,7 +28,7 @@ import InnovativeApproachPoints from '../InnovativeApproachPoints/InnovativeAppr
 // import fs from 'fs'
 import Image from 'next/image'
 
-export default function BenefitsSection({data}) {
+export default function BenefitsSection({ data }) {
   const [sliderStatus, setSliderStatus] = useState([0, 0])
   const sliderChildRef = useRef(null)
   const [isMobile, setMobile] = useState(false)
@@ -189,8 +189,8 @@ export default function BenefitsSection({data}) {
                       <span>DOWNLOAD NOW</span>
                     </p>
                     <div className="downloads-wrapper">
-                      <Image src={downloadAppStore} className={styles['download-img']} alt="Download Dopa appstore" />
-                      <Image src={downloadPlayStore} className={styles['download-img']} alt="Download Dopa playstore" />
+                      <Image onClick={() => window.open('https://mydopaclass.com/download')} src={downloadAppStore} className={styles['download-img']} alt="Download Dopa appstore" />
+                      <Image onClick={() => window.open('https://mydopaclass.com/download')} src={downloadPlayStore} className={styles['download-img']} alt="Download Dopa playstore" />
                     </div>
                   </div>
                   <div className={styles.benefits_mobile_slide_card}>

@@ -22,6 +22,8 @@
     gap: 10%;
     padding: var(--padding-primary);
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 .no_one_content{
     display: flex;

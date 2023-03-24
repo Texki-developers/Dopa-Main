@@ -64,16 +64,12 @@ export default function Home() {
       case "result":
         setResultNavigator(dir);
         break;
-      case "tutor":
-        setTutorNavigator(dir);
-        break;
       default:
         break;
     }
     setTimeout(() => {
       setNavigator(0);
       setResultNavigator(0);
-      setTutorNavigator(0);
     }, 100);
   };
 

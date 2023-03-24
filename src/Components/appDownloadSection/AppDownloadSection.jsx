@@ -14,8 +14,8 @@ export default function AppDownloadSection() {
                 <div className={styles.no_one_content}>
                     <h2 className={styles.no_one_text}>Download India’s First NEET coaching App By Doctors.</h2>
                     <div className={styles.no_one_download_wrapper}>
-                        <Image src={downloadAppStore} className={styles['download-img']} alt="Download Dopa appstore" />
-                        <Image src={downloadPlayStore} className={styles['download-img']} alt="Download Dopa playstore" />
+                        <Image onClick={() => window.open('https://mydopaclass.com/download')} src={downloadAppStore} className={styles['download-img']} alt="Download Dopa appstore" />
+                        <Image onClick={() => window.open('https://mydopaclass.com/download')} src={downloadPlayStore} className={styles['download-img']} alt="Download Dopa playstore" />
                     </div>
                 </div>
                 <Image src={no1Mobile} className={styles.no_one_phone_img} alt="No 1 in India" />

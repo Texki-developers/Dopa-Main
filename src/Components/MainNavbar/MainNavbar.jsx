@@ -99,8 +99,34 @@ export default function MainNavbar() {
               <li>
                 <Link href="/courses/dopaSchool">Dopa School</Link>
               </li>
-              <li>
-                <Link href="/courses/foundation">Dopa Foundation</Link>
+              <li onClick={handleInnerExpansion}>
+                <a style={{pointerEvents: 'none'}}>Dopa Foundation</a>
+                <ul className={style.link_expand}>
+                  <li>
+                    <p
+                      className={style.class_link}
+                      onClick={() => handleRedirectToNeet("plusOne")}
+                    >
+                      8th
+                    </p>
+                  </li>
+                  <li>
+                    <p
+                      className={style.class_link}
+                      onClick={() => handleRedirectToNeet("plusTwo")}
+                    >
+                      9th
+                    </p>
+                  </li>
+                  <li>
+                    <p
+                      className={style.class_link}
+                      onClick={() => handleRedirectToNeet("plusOne&plustwo")}
+                    >
+                      10th
+                    </p>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link href="/courses/capsule">Dopa Capsules</Link>
