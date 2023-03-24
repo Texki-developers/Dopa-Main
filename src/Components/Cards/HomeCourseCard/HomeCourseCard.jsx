@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./HomeCourseCard.module.scss";
 
 export default function HomeCourseCard({ icon, alt, cardTitle, to,action }) {
-  return cardTitle == "+1/+2 Neet Coaching" ? (
+  return cardTitle == "+1/+2 Neet Coaching" || cardTitle == "NEET Foundation" ? (
     <div onClick={action} className={styles["home-course-card"]}>
       <Image src={icon} alt={alt} placeholder="blur" />
       <p>{cardTitle}</p>

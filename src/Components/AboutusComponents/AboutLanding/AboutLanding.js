@@ -33,7 +33,7 @@ export default function AboutLanding() {
         <h1>DOCTORS OWN PREP ACADEMY</h1>
         <p>BY THE DOCTORS...FOR DOCTORS TO BE..</p>
       </div>
-
+<>
       <img src={DopaStudents.src} alt="dopavideothumbnail" />
       {!isPlay && (
         <FiPlayCircle onClick={handlePlay} className={styles.play_button} />
@@ -52,6 +52,7 @@ export default function AboutLanding() {
           Your browser does not support the video tag.
         </video>
       </div>
+      </>
     </div>
   );
 }

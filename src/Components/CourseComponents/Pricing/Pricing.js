@@ -219,7 +219,7 @@ export default function Pricing({
               >
                 Total <br /> ₹ {p1Price} + GST
               </h3>
-             {   courseName="NEET SCHOOL" ? '' : <>{active === 0 && <p>Few seats Left</p>}
+             {   courseName=="NEET SCHOOL" ? '' : <>{active === 0 && <p>Few seats Left</p>}
               <PrimaryButton
                 children="Buy Now"
                 bgColor={`${active === 0 ? "#1BBCEE" : "#ffff"}`}
@@ -310,7 +310,7 @@ export default function Pricing({
               >
                 Total <br /> ₹ {p2Price} + GST
               </h3>
-            { courseName="NEET SCHOOL" ? '' : <> {active === 1 && <p>Few seats Left</p>}
+            { courseName=="NEET SCHOOL" ? '' : <> {active === 1 && <p>Few seats Left</p>}
               <PrimaryButton
                 children="Buy Now"
                 bgColor={`${active === 1 ? "#1BBCEE" : "#ffff"}`}

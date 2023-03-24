@@ -4,9 +4,10 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;
@@ -51,5 +52,140 @@
     font-size: 6rem;
     background: none;
     color: var(--color-primary);
+  }
+}
+
+@media only screen and (max-width: 1318px) {
+  .aboutus_landing {
+    padding: 2rem 3rem 0 3rem;
+    height: 100%;
+
+    img {
+      height: 28rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .aboutus_landing {
+    img {
+      height: 100%;
+    }
+    .about_header {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .aboutus_landing {
+    padding: 0rem 3rem 0 3rem;
+    .about_header {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .play_button {
+      top: 81%;
+      font-size: 5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 712px) {
+  .aboutus_landing {
+    .about_header {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .play_button {
+      top: 81%;
+      font-size: 4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutus_landing {
+    padding: 0 2rem 0 2rem;
+    .about_header {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .play_button {
+      top: 82%;
+      font-size: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .aboutus_landing {
+    padding: 0 0rem 0 0rem;
+    .about_header {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .aboutus_landing {
+    padding: 0;
+    .about_header {
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+    .play_button {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 330px) {
+  .aboutus_landing {
+    padding: 0;
+    .about_header {
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+    }
+    .play_button {
+      font-size: 2rem;
+    }
   }
 }

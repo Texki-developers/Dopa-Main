@@ -118,7 +118,7 @@ export default function index() {
     true,
     true,
     true,
-   true,
+    "DOPA Material - ₹5,000",
     "DOPA Tab - ₹12,000",
     true,
     true,
