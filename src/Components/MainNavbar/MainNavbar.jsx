@@ -148,10 +148,10 @@ export default function MainNavbar() {
           </li>
           <li>
             <Link href="">Scholarships</Link>
-          </li>
-          <li>
-            <Link href="">About Us</Link>
           </li> */}
+          <li>
+            <Link href="/about">About Us</Link>
+          </li>
           <li onClick={() => (window.location.href = "https://dopaclass.com")}>
             <PrimaryButton addon={"btnBlueGradient"}>
               Book a Free Trial
