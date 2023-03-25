@@ -22,6 +22,7 @@ export default function index() {
   console.log(DopaBg, "image");
   const [isMobile, setMobile] = useState(false);
   const [isTab, setTab] = useState(false);
+  const [classes,setClasses] = useState();
   const [tutorNavigator, setTutorNavigator] = useState(0);
   const handleNavigation = (dir, type) => {
     setTutorNavigator(dir);
@@ -93,6 +94,27 @@ export default function index() {
 
   let paraArray = ["OFFLINE CLASSES", "DOPA LIBRARY", "HOSTEL FACILITY"];
 
+let className ;
+  useEffect(() => {
+    className = localStorage.getItem("class");
+
+    switch (className) {
+      case "8":
+        setClasses(14000);
+        break;
+      case "9":
+        setClasses(16000);
+        break;
+      case "10":
+        setClasses(18000);
+
+        break;
+      default:
+        break;
+    }
+
+  }, [className])
+  
   return (
     <MainLayout>
       <main className={styles.neet_container}>
@@ -117,7 +139,7 @@ export default function index() {
             p2name="Hybrid Classes"
             p3name="Online Classes"
             price1={42000}
-            price2={1000}
+            price2={classes}
             price3={4000}
           />
         </div>

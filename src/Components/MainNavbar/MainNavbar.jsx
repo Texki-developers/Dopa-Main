@@ -10,7 +10,7 @@ export default function MainNavbar() {
   const [activeMObileSubMenu, setActiveMobileSubMenu] = useState(null);
   const [windowWidth, setWindowWidth] = useState(null);
 
-  const {push} = useRouter()
+  const { push } = useRouter();
   const handleActivationOfMobileMenu = (id) => {
     if (window.innerWidth <= 768) {
       setActiveMobileSubMenu(activeMObileSubMenu ? false : id);
@@ -24,6 +24,11 @@ export default function MainNavbar() {
   const handleRedirectToNeet = (data) => {
     localStorage.setItem("class", data);
     push(`/courses/neet`);
+  };
+
+  const handleRedirectToFound = (data) => {
+    localStorage.setItem("class", data);
+    push(`/courses/foundation`);
   };
 
   useEffect(() => {
@@ -102,12 +107,12 @@ export default function MainNavbar() {
                 <Link href="/courses/dopaSchool">NEET SCHOOL</Link>
               </li>
               <li onClick={handleInnerExpansion}>
-                <a style={{pointerEvents: 'none'}}>DOPA FOUNDATION</a>
+                <a style={{ pointerEvents: "none" }}>DOPA FOUNDATION</a>
                 <ul className={style.link_expand}>
                   <li>
                     <p
                       className={style.class_link}
-                      onClick={() => handleRedirectToNeet("plusOne")}
+                      onClick={() => handleRedirectToFound("8")}
                     >
                       8th
                     </p>
@@ -115,7 +120,7 @@ export default function MainNavbar() {
                   <li>
                     <p
                       className={style.class_link}
-                      onClick={() => handleRedirectToNeet("plusTwo")}
+                      onClick={() => handleRedirectToFound("9")}
                     >
                       9th
                     </p>
@@ -123,7 +128,7 @@ export default function MainNavbar() {
                   <li>
                     <p
                       className={style.class_link}
-                      onClick={() => handleRedirectToNeet("plusOne&plustwo")}
+                      onClick={() => handleRedirectToFound("10")}
                     >
                       10th
                     </p>
@@ -143,10 +148,10 @@ export default function MainNavbar() {
           </li>
           <li>
             <Link href="">Scholarships</Link>
-          </li>
-          <li>
-            <Link href="">About Us</Link>
           </li> */}
+          <li>
+            <Link href="/about">About Us</Link>
+          </li>
           <li onClick={() => (window.location.href = "https://dopaclass.com")}>
             <PrimaryButton addon={"btnBlueGradient"}>
               Book a Free Trial

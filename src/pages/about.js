@@ -8,6 +8,7 @@ import { data, features } from "../JSON_DB/aboutUs";
 import Missioncard from "@/Components/AboutusComponents/missionCard/Missioncard";
 import mission from "../../public/Assets/about/mission.png";
 import vision from "../../public/Assets/about/view.png";
+import FreeTrialComponent from "@/Components/FreeTrialComponent/FreeTrialComponent";
 
 export default function about() {
   console.log(mission, "dat");
@@ -52,6 +53,7 @@ export default function about() {
             para="We aim to train the young brains and help them grow into successful medical health professionals by grooming their scientific temper and building the curiosity inside them."
           />
         </div>
+        <FreeTrialComponent/>
       </main>
     </MainLayout>
   );

@@ -34,21 +34,37 @@ import AppDownloadSection from "@/Components/appDownloadSection/AppDownloadSecti
 import Link from "next/link";
 import Popup from "@/Components/popupLayout/Popup";
 import { useRouter } from "next/router";
+<<<<<<< HEAD
 import update1 from '../../public/Assets/home/update 1.jpeg'
 import update2 from '../../public/Assets/home/update 2.jpeg'
 import update3 from '../../public/Assets/home/update 3.jpeg'
 import update4 from '../../public/Assets/home/update 4.jpeg'
 import ImgAdPopup from "@/Components/imgAdPopup/ImgAdPopup";
+=======
+import update1 from "../../public/Assets/home/update 1.jpeg";
+import update2 from "../../public/Assets/home/update 2.jpeg";
+import update3 from "../../public/Assets/home/update 3.jpeg";
+import update4 from "../../public/Assets/home/update 4.jpeg";
+>>>>>>> dc5b30ee5f1092a72f44bfa4a47484a95516395c
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0);
   const [resultNavigator, setResultNavigator] = useState(0);
   const [isMobile, setMobile] = useState(false);
   const [isTab, setTab] = useState(false);
+<<<<<<< HEAD
   const [imageAd,setImageAd] = useState(false)
+=======
+  const [type, setType] = useState();
+>>>>>>> dc5b30ee5f1092a72f44bfa4a47484a95516395c
   const popRef = useRef();
 
-  const handlePopup = (type) => {
+  const handlePopup = (type, mode) => {
+    if (mode === 1) {
+      setType(1);
+    } else {
+      setType(2);
+    }
     if (type == 1) {
       popRef.current.style.display = "flex";
     } else {
@@ -78,6 +94,10 @@ export default function Home() {
   const handleRedirectToNeet = (data) => {
     localStorage.setItem("class", data);
     push(`/courses/neet`);
+  };
+  const handleRedirectToFound = (data) => {
+    localStorage.setItem("class", data);
+    push(`/courses/foundation`);
   };
 
   const handleSessionClose = () => {
@@ -122,22 +142,34 @@ export default function Home() {
           <div className={styles.popup_container_home}>
             <h3>Which class are you Preparing for ?</h3>
             <div
-              onClick={() => handleRedirectToNeet("plusOne")}
+              onClick={() =>
+                type === 1
+                  ? handleRedirectToNeet("plusOne")
+                  : handleRedirectToFound("8")
+              }
               className={styles.popup_class_container}
             >
-              <p>Plus One</p>
+              <p>{type === 1 ? "Plus One" : "8th"}</p>
             </div>
             <div
-              onClick={() => handleRedirectToNeet("plusTwo")}
+              onClick={() =>
+                type === 1
+                  ? handleRedirectToNeet("plusTwo")
+                  : handleRedirectToFound("9")
+              }
               className={styles.popup_class_container}
             >
-              <p>Plus Two</p>
+              <p>{type === 1 ? "Plus Two" : "9th"}</p>
             </div>
             <div
-              onClick={() => handleRedirectToNeet("plusOne&plustwo")}
+              onClick={() =>
+                type === 1
+                  ? handleRedirectToNeet("plusOne&plustwo")
+                  : handleRedirectToFound("10")
+              }
               className={styles.popup_class_container}
             >
-              <p>Plus One & Plus Two</p>
+              <p>{type === 1 ? "Plus One & Plus Two" : "10th"}</p>
             </div>
           </div>
         </Popup>
@@ -174,7 +206,7 @@ export default function Home() {
               alt="+1/+2 Neet Coaching"
               cardTitle="+1/+2 Neet Coaching"
               to=""
-              action={() => handlePopup(1)}
+              action={() => handlePopup(1, 1)}
             />
             <HomeCourseCard
               icon={repeaterIcon}
@@ -192,7 +224,8 @@ export default function Home() {
               icon={neetFoundationIcon}
               alt="NEET Foundation"
               cardTitle="NEET Foundation"
-              to="/courses/foundation"
+              to=""
+              action={() => handlePopup(1, 2)}
             />
             <HomeCourseCard
               icon={capsuleCrash}
