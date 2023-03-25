@@ -38,12 +38,14 @@ import update1 from '../../public/Assets/home/update 1.jpeg'
 import update2 from '../../public/Assets/home/update 2.jpeg'
 import update3 from '../../public/Assets/home/update 3.jpeg'
 import update4 from '../../public/Assets/home/update 4.jpeg'
+import ImgAdPopup from "@/Components/imgAdPopup/ImgAdPopup";
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0);
   const [resultNavigator, setResultNavigator] = useState(0);
   const [isMobile, setMobile] = useState(false);
   const [isTab, setTab] = useState(false);
+  const [imageAd,setImageAd] = useState(false)
   const popRef = useRef();
 
   const handlePopup = (type) => {
@@ -78,6 +80,22 @@ export default function Home() {
     push(`/courses/neet`);
   };
 
+  const handleSessionClose = () => {
+    localStorage.removeItem('imageAd')
+  }
+
+  useEffect(() => {
+    let isAdShown = localStorage.getItem('imageAd');
+    if(!isAdShown){
+      setImageAd(true)
+      localStorage.setItem('imageAd',true);
+    }
+    window.addEventListener("beforeunload", handleSessionClose);
+    return () => {
+      window.removeEventListener("beforeunload", handleSessionClose);
+    };
+  },[])
+
   useEffect(() => {
     if (window.innerWidth < 500) {
       setMobile(true);
@@ -94,6 +112,11 @@ export default function Home() {
   return (
     <MainLayout>
       <main className={styles.main}>
+
+        {/* {
+          imageAd &&
+          <ImgAdPopup setPopup={setImageAd} />
+        } */}
 
         <Popup action={handlePopup} refs={popRef}>
           <div className={styles.popup_container_home}>
