@@ -34,29 +34,19 @@ import AppDownloadSection from "@/Components/appDownloadSection/AppDownloadSecti
 import Link from "next/link";
 import Popup from "@/Components/popupLayout/Popup";
 import { useRouter } from "next/router";
-<<<<<<< HEAD
 import update1 from '../../public/Assets/home/update 1.jpeg'
 import update2 from '../../public/Assets/home/update 2.jpeg'
 import update3 from '../../public/Assets/home/update 3.jpeg'
 import update4 from '../../public/Assets/home/update 4.jpeg'
 import ImgAdPopup from "@/Components/imgAdPopup/ImgAdPopup";
-=======
-import update1 from "../../public/Assets/home/update 1.jpeg";
-import update2 from "../../public/Assets/home/update 2.jpeg";
-import update3 from "../../public/Assets/home/update 3.jpeg";
-import update4 from "../../public/Assets/home/update 4.jpeg";
->>>>>>> dc5b30ee5f1092a72f44bfa4a47484a95516395c
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0);
   const [resultNavigator, setResultNavigator] = useState(0);
   const [isMobile, setMobile] = useState(false);
   const [isTab, setTab] = useState(false);
-<<<<<<< HEAD
   const [imageAd,setImageAd] = useState(false)
-=======
   const [type, setType] = useState();
->>>>>>> dc5b30ee5f1092a72f44bfa4a47484a95516395c
   const popRef = useRef();
 
   const handlePopup = (type, mode) => {
