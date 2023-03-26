@@ -410,7 +410,8 @@ export default function Pricing({
                 color={`${active === 2 ? "#ffff" : "#000000"}`}
                 addon="buy-now"
               />
-            </div>
+            </div> 
+            
           </div>
         ) : (
           ""
