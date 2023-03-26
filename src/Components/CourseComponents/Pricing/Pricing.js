@@ -220,7 +220,8 @@ export default function Pricing({
                 Total <br /> ₹ {p1Price} + GST
               </h3>
              {   courseName=="NEET SCHOOL" ? '' : <>{active === 0 && <p>Few seats Left</p>}
-              <PrimaryButton
+              <PrimaryButton 
+              action={()=>window.location.href="https://wa.me/message/QAZCVPJXDUQJO1"}
                 children="Buy Now"
                 bgColor={`${active === 0 ? "#1BBCEE" : "#ffff"}`}
                 color={`${active === 0 ? "#ffff" : "#000000"}`}
@@ -312,6 +313,7 @@ export default function Pricing({
               </h3>
             { courseName=="NEET SCHOOL" ? '' : <> {active === 1 && <p>Few seats Left</p>}
               <PrimaryButton
+                action={()=>window.location.href="https://wa.me/message/QAZCVPJXDUQJO1"}
                 children="Buy Now"
                 bgColor={`${active === 1 ? "#1BBCEE" : "#ffff"}`}
                 color={`${active === 1 ? "#ffff" : "#000000"}`}
@@ -402,6 +404,7 @@ export default function Pricing({
               </h3>
               {active === 2 && <p>Few seats Left</p>}
               <PrimaryButton
+                action={()=>window.location.href="https://wa.me/message/QAZCVPJXDUQJO1"}
                 children="Buy Now"
                 bgColor={`${active === 2 ? "#1BBCEE" : "#ffff"}`}
                 color={`${active === 2 ? "#ffff" : "#000000"}`}
