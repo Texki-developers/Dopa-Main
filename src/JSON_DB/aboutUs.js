@@ -10,7 +10,12 @@ import doubt from "../../public/Assets/home/doubt clearance.png";
 import quiz from "../../public/Assets/home/dopa quiz.png";
 import test from "../../public/Assets/home/test series.png";
 import mine from "../../public/Assets/about/dopa_mine.png";
-
+import about from "../../public/Assets/about/dopaatwork1.jpeg";
+import about1 from "../../public/Assets/about/dopaatwork2.jpeg";
+import about2 from "../../public/Assets/about/dopaatwork3.jpeg";
+import about3 from "../../public/Assets/about/dopaatwork4.jpeg";
+import about4 from "../../public/Assets/about/dopaatwork.jpeg";
+import about5 from "../../public/Assets/about/dopawork6.jpeg";
 let features = [
   {
     image: foundation,
@@ -64,7 +69,11 @@ let data = [
     title: "DOPA_Mine",
   },
 ];
+
+let gallery = [about, about1, about2, about3, about4,about5];
+
 module.exports = {
   data,
+  gallery,
   features,
 };
