@@ -141,7 +141,7 @@ export default function MainNavbar() {
             </ul>
           </li>
           <li>
-            <Link href="/results">Results</Link>
+            <Link href="/dopa-results">Results</Link>
           </li>
           {/* <li>
             <Link href="">Resources</Link>
@@ -150,7 +150,7 @@ export default function MainNavbar() {
             <Link href="">Scholarships</Link>
           </li> */}
           <li>
-            <Link href="/about">About Us</Link>
+            <Link href="/dopa-about">About Us</Link>
           </li>
           <li onClick={() => (window.location.href = "https://dopaclass.com")}>
             <PrimaryButton addon={"btnBlueGradient"}>
