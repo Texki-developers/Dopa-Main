@@ -3,6 +3,7 @@
     padding: 1rem;
     width: 100%;
     position: relative;
+    padding-bottom: 0;
 }
 .no_one_vector_bg{
     width: 100%;
@@ -24,6 +25,7 @@
     align-items: center;
     position: relative;
     z-index: 10;
+    overflow-y: hidden;
 }
 .no_one_content{
     display: flex;
@@ -37,7 +39,7 @@
     cursor: pointer;
 }
 .no_one_phone_img{
-    margin-bottom: -1rem;
+    margin-bottom: -15%;
 }
 .no_one_text{
     font-size: 2rem;
@@ -45,6 +47,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .no_one_section{
+        padding-bottom: 1rem;
+    }
     .no_one_phone_img{
         display: none;
     }
