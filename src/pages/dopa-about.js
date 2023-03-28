@@ -4,11 +4,12 @@ import MainLayout from "@/Layouts/MainLayout";
 import React from "react";
 import aboutUs from "@/JSON_DB/aboutUs";
 import styles from "../styles/about/about.module.scss";
-import { data, features } from "../JSON_DB/aboutUs";
+import { data, features, gallery } from "../JSON_DB/aboutUs";
 import Missioncard from "@/Components/AboutusComponents/missionCard/Missioncard";
 import mission from "../../public/Assets/about/mission.png";
 import vision from "../../public/Assets/about/view.png";
 import FreeTrialComponent from "@/Components/FreeTrialComponent/FreeTrialComponent";
+import Image from "next/image";
 
 export default function about() {
   console.log(mission, "dat");
@@ -53,7 +54,30 @@ export default function about() {
             para="We aim to train the young brains and help them grow into successful medical health professionals by grooming their scientific temper and building the curiosity inside them."
           />
         </div>
-        <FreeTrialComponent/>
+        <FreeTrialComponent />
+        <div className={styles.dopa_work_conatainer}>
+          <h1>DOPA AT WORK</h1>
+
+          <div className={styles.dopa_work_content_container}>
+            <div className={styles.dopa_image_gallery}>
+              {gallery &&
+                gallery.map((items) => (
+                  <div className={styles.gallery_images_container}>
+                    <img
+                      className={styles.gallery_images}
+                      src={items.src}
+                      alt="dopa_About_us"
+                    />
+                  </div>
+                ))}
+            </div>
+
+            <div className={styles.about_contact_container}>
+              <h2>Join with us</h2>
+              <h2>Careers.dopa@gmail.com</h2>
+            </div>
+          </div>
+        </div>
       </main>
     </MainLayout>
   );
