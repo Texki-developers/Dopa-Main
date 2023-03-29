@@ -123,10 +123,10 @@ export default function Home() {
     <MainLayout>
       <main className={styles.main}>
 
-        {/* {
+        {
           imageAd &&
           <ImgAdPopup setPopup={setImageAd} />
-        } */}
+        }
 
         <Popup action={handlePopup} refs={popRef}>
           <div className={styles.popup_container_home}>
