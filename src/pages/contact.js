@@ -7,7 +7,7 @@ export default function contact() {
     <MainLayout>
     <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100vh'}}>
         <div style={{width:'30rem',display:'flex',alignItems:'center',flexDirection:'column',gap:'1rem'}}>
-    <h1 style={{color:'#1987a4'}}>Contact Us</h1>
+    <h1 style={{color:'#1987a4',marginTop:'1.5rem'}}>Contact Us</h1>
         <Form/>
         </div>
     </div>

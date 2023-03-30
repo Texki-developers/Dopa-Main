@@ -2,12 +2,13 @@ import Footer from "@/Components/Footer/Footer";
 import MainNavbar from "@/Components/MainNavbar/MainNavbar";
 import Head from "next/head";
 import styles from "./MainLayout.module.scss";
-import { MdQuestionAnswer } from "react-icons/md";
+import { IoLogoWhatsapp } from "react-icons/io";
 import Popup from "@/Components/popupLayout/Popup";
 import { useEffect, useRef } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Form from "@/Components/Form/Form";
 import { useRouter } from "next/router";
+
 export default function MainLayout({ children }) {
   // let popupRef = useRef();
   // const handlePopup = (type) => {
@@ -38,13 +39,13 @@ export default function MainLayout({ children }) {
 
   return (
     <>
-      {/* <AnchorLink
-        href="#pop"
-        onClick={() => handlePopup(1)}
+      <div
+      
+      onClick={()=>window.location.href="https://wa.me/message/QAZCVPJXDUQJO1"}
         className={styles.enquiry_popup}
       >
-        <MdQuestionAnswer />
-      </AnchorLink> */}
+        <IoLogoWhatsapp />
+      </div>
       {/* <Popup refs={popupRef} action={handlePopup} type={1}>
         <h1 style={{ marginBottom: "1.5rem" }}>Enquiry form</h1>
         <Form />
