@@ -44,7 +44,7 @@ export default function MainLayout({ children }) {
       onClick={()=>window.location.href="https://wa.me/message/QAZCVPJXDUQJO1"}
         className={styles.enquiry_popup}
       >
-        <IoLogoWhatsapp />
+        <IoLogoWhatsapp  color="#25D366"/>
       </div>
       {/* <Popup refs={popupRef} action={handlePopup} type={1}>
         <h1 style={{ marginBottom: "1.5rem" }}>Enquiry form</h1>
