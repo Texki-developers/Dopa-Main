@@ -1,0 +1,15 @@
+.contact_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    margin-top: 6.8rem;
+    margin-bottom: 6rem;
+}
+
+@media only screen and (max-width:750px) {
+    .contact_container{
+        margin-top: 2.5rem;
+        padding: 1rem;
+    }
+}
