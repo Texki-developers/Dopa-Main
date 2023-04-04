@@ -105,7 +105,7 @@ export default function BenefitsSection({ data }) {
                   Doctor-led mentorship program for NEET coaching students provides expert guidance and personalized support to help aspiring medical students succeed on the competitive exam. Include study materials, practice tests and strategies for managing stress. Helps students realize their full potential.
                 </p>
                 {/* <a href="/pdfs/capsule calender.pdf" download="capsule calender.pdf">Download PDF</a> */}
-                <button className="btn-primary" onClick={() => window.open("https://dopaclass.com/")}>Book a free trial</button>
+                <button className="btn-primary" onClick={() => window.location.href ='https://mydopaclass.com/download'}>Book a free trial</button>
               </div>
 
               <div className={styles['phone-img-wrapper']}>
@@ -145,7 +145,7 @@ export default function BenefitsSection({ data }) {
                   <p>
                     Our elite tutors are experts in their field, with a wealth of knowledge and experience in preparing students for the NEET. We understand that NEET is a challenging exam and requires a tailored approach to learning. Our tutors work with you to identify your strengths and weaknesses and create a customized study plan that will help you reach your full potential.
                   </p>
-                  <button className="btn-primary" onClick={() => window.open("https://dopaclass.com/")}>Schedule a Trial Class</button>
+                  <button className="btn-primary" onClick={() => window.location.href ='https://mydopaclass.com/download'}>Schedule a Trial Class</button>
                 </div>
 
                 <div className={styles['phone-img-wrapper']}>
@@ -189,8 +189,8 @@ export default function BenefitsSection({ data }) {
                       <span>DOWNLOAD NOW</span>
                     </p>
                     <div className="downloads-wrapper">
-                      <Image onClick={() => window.open('https://mydopaclass.com/download')} src={downloadAppStore} className={styles['download-img']} alt="Download Dopa appstore" />
-                      <Image onClick={() => window.open('https://mydopaclass.com/download')} src={downloadPlayStore} className={styles['download-img']} alt="Download Dopa playstore" />
+                      <Image onClick={() => window.location.href ='https://mydopaclass.com/download'} src={downloadAppStore} className={styles['download-img']} alt="Download Dopa appstore" />
+                      <Image onClick={() => window.location.href ='https://mydopaclass.com/download'} src={downloadPlayStore} className={styles['download-img']} alt="Download Dopa playstore" />
                     </div>
                   </div>
                   <div className={styles.benefits_mobile_slide_card}>
@@ -254,7 +254,7 @@ export default function BenefitsSection({ data }) {
                       <p>
                         Doctor-led mentorship program for NEET coaching students provides expert guidance and personalized support to help aspiring medical students succeed on the competitive exam. Include study materials, practice tests and strategies for managing stress. Helps students realize their full potential.
                       </p>
-                      <button className="btn-primary" onClick={() => window.open("https://dopaclass.com/")}>Book a Free Trial</button>
+                      <button className="btn-primary" onClick={() => window.location.href ='https://mydopaclass.com/download'}>Book a Free Trial</button>
                     </div>
 
                     <div className={styles.benefit_video_wrapper}>
@@ -288,7 +288,7 @@ export default function BenefitsSection({ data }) {
                           <p>
                             Our elite tutors are experts in their field, with a wealth of knowledge and experience in preparing students for the NEET. We understand that NEET is a challenging exam and requires a tailored approach to learning. Our tutors work with you to identify your strengths and weaknesses and create a customized study plan that will help you reach your full potential.
                           </p>
-                          <button className="btn-primary btn-light" onClick={() => window.open("https://dopaclass.com/")}>Schedule a Trial Class</button>
+                          <button className="btn-primary btn-light" onClick={() => window.location.href ='https://mydopaclass.com/download'}>Schedule a Trial Class</button>
                         </div>
 
                         <div className={styles.benefit_video_wrapper}>

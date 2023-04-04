@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function about() {
   console.log(mission, "dat");
   return (
-    <MainLayout>
+
       <main className={styles.about_container}>
         <AboutLanding />
 
@@ -79,6 +79,6 @@ export default function about() {
           </div>
         </div>
       </main>
-    </MainLayout>
+
   );
 }

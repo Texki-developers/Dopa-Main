@@ -34,6 +34,9 @@
   .logo-wrapper {
     display: flex;
     gap: 1rem;
+    img{
+      object-fit: contain;
+    }
   }
 
   .footer-social_media {
@@ -213,6 +216,7 @@
       img {
         height: 4rem;
         width: 3rem;
+        object-fit: contain;
       }
 
       h2 {
