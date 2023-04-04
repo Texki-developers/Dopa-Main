@@ -38,6 +38,8 @@ import update1 from '../../public/Assets/home/update 1.jpeg'
 import update2 from '../../public/Assets/home/update 2.jpeg'
 import update3 from '../../public/Assets/home/update 3.jpeg'
 import update4 from '../../public/Assets/home/update 4.jpeg'
+import update5 from '../../public/Assets/home/update 5.jpeg'
+import update6 from '../../public/Assets/home/update 6.jpeg'
 import ImgAdPopup from "@/Components/imgAdPopup/ImgAdPopup";
 
 export default function Home() {
@@ -257,6 +259,16 @@ export default function Home() {
               setNavigator={setNavigator}
             >
               <Image
+                src={update5}
+                alt="Dopa updates"
+                className={styles.dopa_updates_carousel_item}
+              />
+              <Image
+                src={update6}
+                alt="Dopa updates"
+                className={styles.dopa_updates_carousel_item}
+              />
+              <Image
                 src={update1}
                 alt="Dopa updates"
                 className={styles.dopa_updates_carousel_item}
@@ -276,6 +288,7 @@ export default function Home() {
                 alt="Dopa updates"
                 className={styles.dopa_updates_carousel_item}
               />
+              
             </Carousel>
           </div>
         </div>
