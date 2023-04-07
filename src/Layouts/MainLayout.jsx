@@ -41,7 +41,7 @@ export default function MainLayout({ children }) {
     <>
       <div
       
-      onClick={()=>window.location.href="https://wa.me/message/QAZCVPJXDUQJO1"}
+      onClick={()=>window.location.href="https://wa.me/message/6XK5M76P6FZVG1"}
         className={styles.enquiry_popup}
       >
         <IoLogoWhatsapp  color="#25D366"/>
