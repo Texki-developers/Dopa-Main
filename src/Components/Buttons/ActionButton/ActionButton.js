@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "./ActionButton.module.scss";
+import { useRouter } from "next/router";
 export default function ActionButton({ name }) {
   const handleSubmit = () => {
+    const router = useRouter();
     name == "Book a Free Trial"
-      ? (window.location.href = "https://dopaclass.com")
+      ? router.push('/contact')
       : "";
   };
   return (

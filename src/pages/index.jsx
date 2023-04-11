@@ -171,7 +171,7 @@ export default function Home() {
               <button>
                 <Link href="/contact">
                   <span>
-                    <strong>Join with DOPA Capsule 3.0</strong> <br /> NEET2023
+                    <strong>Enroll Now</strong> <br /> NEET2023
                     Exclusive Crash Course
                   </span>
                 </Link>
