@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function about() {
   console.log(mission, "dat");
   return (
-
+    <MainLayout>
       <main className={styles.about_container}>
         <AboutLanding />
 
@@ -74,11 +74,11 @@ export default function about() {
 
             <div className={styles.about_contact_container}>
               <h2>Join with us</h2>
-              <h2>Dopaprep@gmail.com</h2>
+              <h2>info@dopacoaching.com</h2>
             </div>
           </div>
         </div>
       </main>
-
+    </MainLayout>
   );
 }

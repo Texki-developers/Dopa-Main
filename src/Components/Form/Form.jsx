@@ -119,6 +119,9 @@ export default function Form() {
         </div>
         <Inputs register={register} name="Whatsapp Number" />
         <Inputs register={register} name="Guardian Number" />
+        <Inputs register={register} name="Email" />
+        <Inputs register={register} name="State" />
+        <Inputs register={register} name="Country" />
         <Inputs register={register} name="School" />
         <Inputs register={register} name="Which course are you looking for?" />
         <Inputs register={register} name="Enquiry" />

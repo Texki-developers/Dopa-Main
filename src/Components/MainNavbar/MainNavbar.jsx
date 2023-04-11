@@ -150,7 +150,7 @@ export default function MainNavbar() {
             <Link href="">Scholarships</Link>
           </li> */}
           <li>
-            <Link href="/dopa-about">About Us</Link>
+            <Link href="/about">About Us</Link>
           </li>
           <li>
             <Link href="/contact">Contact Us</Link>

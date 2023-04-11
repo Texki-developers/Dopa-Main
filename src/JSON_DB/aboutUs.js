@@ -12,7 +12,7 @@ import test from "../../public/Assets/home/test series.png";
 import mine from "../../public/Assets/about/dopa_mine.png";
 import about from "../../public/Assets/about/dopaatwork1.jpeg";
 import about1 from "../../public/Assets/about/dopaatwork2.jpeg";
-import about2 from "../../public/Assets/about/dopaatwork3.jpeg";
+import about2 from "../../public/Assets/about/dopaoffc.png";
 import about3 from "../../public/Assets/about/dopaatwork4.jpeg";
 import about4 from "../../public/Assets/about/dopaatwork.jpeg";
 import about5 from "../../public/Assets/about/dopawork6.jpeg";
