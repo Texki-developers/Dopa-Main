@@ -23,7 +23,7 @@ export default function about() {
         <div className={styles.path_to_success_container}>
           <h1>
             Your Path to Medical Success Starts Here: <br /> NEET Coaching and
-            Mentorship from DOPA
+            Mentorship from DOPA 
           </h1>
           <div className={styles.path_to_success_content_container}>
             {data &&
