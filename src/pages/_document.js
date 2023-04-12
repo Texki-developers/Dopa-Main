@@ -6,11 +6,7 @@ export default function Document() {
       <Head>
         <title>Best NEET Coaching center in Kerala | DOPA Coaching</title>
         <meta name="description" content="DOPA  is an initiative of a group of doctors from Calicut Medical College, located in Kerala. Who provides top premium coaching services for preparing for the NEET Exam." />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8121242688709466"
-          crossorigin="anonymous"
-        ></script>
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
