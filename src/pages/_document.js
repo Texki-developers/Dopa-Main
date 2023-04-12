@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Best NEET Coaching center in Kerala | DOPA Coaching</title>
         <meta name="description" content="DOPA  is an initiative of a group of doctors from Calicut Medical College, located in Kerala. Who provides top premium coaching services for preparing for the NEET Exam." />
 
         <script
