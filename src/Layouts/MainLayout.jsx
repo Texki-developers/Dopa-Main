@@ -41,7 +41,7 @@ export default function MainLayout({ children }) {
     <>
       <div
         onClick={() =>
-          (window.location.href = "https://wa.me/message/6XK5M76P6FZVG1")
+          (window.location.href = `${process.env.NEXT_PUBLIC_WHATSAPP}`)
         }
         className={styles.enquiry_popup}
       >

@@ -29,7 +29,7 @@ export default function Footer() {
         <FiYoutube onClick={()=>window.location.href="https://youtube.com/c/DOPACoaching"} style={{ fontSize: "2rem" }}  />
           <AiOutlineInstagram onClick={()=>window.location.href="https://www.instagram.com/dopacoaching/?ig"}  style={{ fontSize: "2rem" }}  />
           <FiFacebook onClick={()=>window.location.href="https://www.facebook.com/dopacoaching/"} style={{ fontSize: "1.8rem",marginLeft:'-0.5rem' }}  />
-          <FaWhatsapp  onClick={()=>window.location.href="https://wa.me/message/6XK5M76P6FZVG1"} style={{ fontSize: "2rem",marginLeft:'-0.3rem' }} />
+          <FaWhatsapp  onClick={()=>window.location.href=`${process.env.NEXT_PUBLIC_WHATSAPP}`} style={{ fontSize: "2rem",marginLeft:'-0.3rem' }} />
         </div>
       </div>
       </div>
@@ -64,7 +64,7 @@ export default function Footer() {
           <FiYoutube onClick={()=>window.location.href="https://youtube.com/c/DOPACoaching"} style={{ fontSize: "2rem" }}  />
           <AiOutlineInstagram onClick={()=>window.location.href="https://www.instagram.com/dopacoaching/?ig"}  style={{ fontSize: "2rem" }}  />
           <FiFacebook onClick={()=>window.location.href="https://www.facebook.com/dopacoaching/"} style={{ fontSize: "1.8rem",marginLeft:'-0.5rem' }}  />
-          <FaWhatsapp  onClick={()=>window.location.href="https://wa.me/message/6XK5M76P6FZVG1"} style={{ fontSize: "2rem",marginLeft:'-0.3rem' }} />
+          <FaWhatsapp  onClick={()=>window.location.href=`${process.env.NEXT_PUBLIC_WHATSAPP}`} style={{ fontSize: "2rem",marginLeft:'-0.3rem' }} />
         </div>
       </div>
       </div>
