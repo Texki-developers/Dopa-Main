@@ -64,11 +64,8 @@ export default function Form() {
     console.log(data);
     if (
       data["Whatsapp Number"].length > 0 &&
-      data["Guardian Number"].length > 0 &&
       data.Name.length > 0 &&
-      data.class.length > 0 &&
-      data.district.length > 0 &&
-      data.School.length > 0
+      data.class.length > 0 
     ) {
       appendSpreadsheet(data);
       setErr(false);
@@ -126,6 +123,9 @@ export default function Form() {
         <Inputs register={register} name="Which course are you looking for?" />
         <Inputs register={register} name="Enquiry" />
         <button type="submit">Submit</button>
+        {
+          response ? <p style={{color:"green"}}>Successfully Submitted your Enquiry</p> : ""
+        }
         {errors.Name || errors["Whatsapp Number"] || errors.School || err ? (
           <p style={{ color: "red", fontSize: "0.9rem", textAlign: "center" }}>
             {errmsg}{" "}

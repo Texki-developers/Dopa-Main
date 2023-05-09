@@ -106,7 +106,7 @@ export default function index() {
     true,
     true,
    true,
-    "DOPA Tab - ₹12,000",
+    "DOPA Tab - ₹15,000",
     true,
     true,
   ];
@@ -119,7 +119,7 @@ export default function index() {
     true,
     true,
     "DOPA Material - ₹5,000",
-    "DOPA Tab - ₹12,000",
+    "DOPA Tab - ₹15,000",
     true,
     true,
   ];
@@ -149,11 +149,11 @@ export default function index() {
             p1name={"RESIDENTIAL PROGRAM"}
             p2name="OFFLINE"
             p3name="ONLINE"
-            price1={65500}
+            price1={68500}
             price2={54000}
             price3={24599}
             Notes={`*Hostel facility and Food have separate fees <br/>
-            DOPA TAB  -  ₹ 12000 <br/>
+            DOPA TAB  -  ₹ 15000 <br/>
             DOPA Material  - ₹ 5000 `}
           />
         </div>

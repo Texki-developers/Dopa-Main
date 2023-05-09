@@ -179,7 +179,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 15000,
                               "p1"
                             )
                           }
@@ -271,7 +271,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 15000,
                               "p2"
                             )
                           }
@@ -361,7 +361,7 @@ export default function Pricing({
                           onChange={(event) =>
                             pricePush(
                               event,
-                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 12000,
+                              features == "DOPA Material - ₹3,000" ? 3000 : features == 'Capsule - ₹2,000' ? 2000 : features == "DOPA Material - ₹5,000" ? 5000 : 15000,
                               "p3"
                             )
                           }

@@ -155,7 +155,7 @@ export default function MainNavbar() {
           <li>
             <Link href="/contact">Contact Us</Link>
           </li>
-          <li onClick={() => (window.location.href = "https://dopaclass.com")}>
+          <li onClick={()=>push('/contact')}>
             <PrimaryButton addon={"btnBlueGradient"}>
               Book a Free Trial
             </PrimaryButton>

@@ -138,7 +138,7 @@ export default function index() {
     true,
     true,
     true,
-    "DOPA Tab - ₹12,000",
+    "DOPA Tab - ₹15,000",
     "Capsule - ₹2,000",
   ];
 
@@ -151,7 +151,7 @@ export default function index() {
     true,
     true,
     true,
-    "DOPA Tab - ₹12,000",
+    "DOPA Tab - ₹15,000",
   ];
 
   let p2 = [
@@ -163,7 +163,7 @@ export default function index() {
     true,
     true,
     "DOPA Material - ₹3,000",
-    "DOPA Tab - ₹12,000",
+    "DOPA Tab - ₹15,000",
     "Capsule - ₹2,000",
   ];
 
@@ -176,7 +176,7 @@ export default function index() {
     true,
     true,
     "DOPA Material - ₹3,000",
-    "DOPA Tab - ₹12,000",
+    "DOPA Tab - ₹15,000",
   ];
   let paraArray = ["ONLINE & OFFLINE CLASSES", "MENTORSHIP BY DOCTORS"];
 
