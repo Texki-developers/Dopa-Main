@@ -1,46 +1,48 @@
-import Image from "next/image";
-import styles from "@/styles/Home.module.scss";
-import bannerFace from "../../public/Assets/home/banner-face.png";
-import HomeCourseCard from "@/Components/Cards/HomeCourseCard/HomeCourseCard";
-import neetIcon from "../../public/Assets/home/neet.png";
-import repeaterIcon from "../../public/Assets/home/repeater.png";
-import neetSchoolIcon from "../../public/Assets/home/neet school.png";
-import neetFoundationIcon from "../../public/Assets/home/neet foundation.png";
-import capsuleCrash from "../../public/Assets/home/capsule crash.png";
-import BenefitsSection from "@/Components/HomeComponents/BenefitsSection/BenefitsSection";
-import MainLayout from "@/Layouts/MainLayout";
-import du1 from "../../public/Assets/temp/du 1.png";
-import du2 from "../../public/Assets/temp/du 2.png";
-import aboutDopa from "../../public/Assets/home/about dopa.png";
-import { Carousel } from "@/Components/Carousel/Carousel";
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import { useEffect, useRef, useState } from "react";
-import resultHeaderIcon from "../../public/Assets/home/result icon.png";
-import result11 from "../../public/Assets/home/result 11.png";
-import result16 from "../../public/Assets/home/result 16.png";
-import result1 from "../../public/Assets/home/result 1.png";
-import result2 from "../../public/Assets/home/result 2.png";
-import result3 from "../../public/Assets/home/result 3.png";
-import HomeSuccessSection from "@/Components/HomeSuccessSection/HomeSuccessSection";
-import insightIcon from "../../public/Assets/home/insight.png";
-import viewsStatics from "../../public/Assets/home/views statics.png";
-import admissionStatics from "../../public/Assets/home/admission statics.png";
-import learningStatics from "../../public/Assets/home/learning statics.png";
-import studentsStatics from "../../public/Assets/home/students statics.png";
-import bannerBgPrimary from "../../public/Assets/home/home banner bg primary.png";
-import bannerBgSecondary from "../../public/Assets/home/home banner bg secondary.png";
-import EliteTutorsSection from "@/Components/EliteTutorsSectino/EliteTutorsSection";
-import AppDownloadSection from "@/Components/appDownloadSection/AppDownloadSection";
-import Link from "next/link";
-import Popup from "@/Components/popupLayout/Popup";
-import { useRouter } from "next/router";
-import update1 from "../../public/Assets/home/update 1.jpeg";
-import update2 from "../../public/Assets/home/update 2.jpeg";
-import update3 from "../../public/Assets/home/update 3.jpeg";
-import update4 from "../../public/Assets/home/update 4.jpeg";
-import update5 from "../../public/Assets/home/update 5.jpeg";
-import update6 from "../../public/Assets/home/update 6.jpeg";
-import ImgAdPopup from "@/Components/imgAdPopup/ImgAdPopup";
+import Image from 'next/image';
+import styles from '@/styles/Home.module.scss';
+import bannerFace from '../../public/Assets/home/banner-face.png';
+import HomeCourseCard from '@/Components/Cards/HomeCourseCard/HomeCourseCard';
+import neetIcon from '../../public/Assets/home/neet.png';
+import repeaterIcon from '../../public/Assets/home/repeater.png';
+import neetSchoolIcon from '../../public/Assets/home/neet school.png';
+import neetFoundationIcon from '../../public/Assets/home/neet foundation.png';
+import capsuleCrash from '../../public/Assets/home/capsule crash.png';
+import BenefitsSection from '@/Components/HomeComponents/BenefitsSection/BenefitsSection';
+import MainLayout from '@/Layouts/MainLayout';
+import du1 from '../../public/Assets/temp/du 1.png';
+import du2 from '../../public/Assets/temp/du 2.png';
+import aboutDopa from '../../public/Assets/home/about dopa.png';
+import { Carousel } from '@/Components/Carousel/Carousel';
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
+import { useEffect, useRef, useState } from 'react';
+import resultHeaderIcon from '../../public/Assets/home/result icon.png';
+import result11 from '../../public/Assets/home/result 11.png';
+import result16 from '../../public/Assets/home/result 16.png';
+import result1 from '../../public/Assets/home/result 1.png';
+import result2 from '../../public/Assets/home/result 2.png';
+import result3 from '../../public/Assets/home/result 3.png';
+import HomeSuccessSection from '@/Components/HomeSuccessSection/HomeSuccessSection';
+import insightIcon from '../../public/Assets/home/insight.png';
+import viewsStatics from '../../public/Assets/home/views statics.png';
+import admissionStatics from '../../public/Assets/home/admission statics.png';
+import learningStatics from '../../public/Assets/home/learning statics.png';
+import studentsStatics from '../../public/Assets/home/students statics.png';
+import bannerBgPrimary from '../../public/Assets/home/home banner bg primary.png';
+import bannerBgSecondary from '../../public/Assets/home/home banner bg secondary.png';
+import EliteTutorsSection from '@/Components/EliteTutorsSectino/EliteTutorsSection';
+import AppDownloadSection from '@/Components/appDownloadSection/AppDownloadSection';
+import Link from 'next/link';
+import Popup from '@/Components/popupLayout/Popup';
+import { useRouter } from 'next/router';
+import update1 from '../../public/Assets/home/update 1.png';
+import update2 from '../../public/Assets/home/update 2.png';
+import update3 from '../../public/Assets/home/update 3.png';
+import update4 from '../../public/Assets/home/update 4.jpeg';
+import update5 from '../../public/Assets/home/update 5.jpeg';
+import update6 from '../../public/Assets/home/update 6.jpeg';
+import ImgAdPopup from '@/Components/imgAdPopup/ImgAdPopup';
+
+let dopaUpdates = [update1, update2, update3];
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0);
@@ -58,9 +60,9 @@ export default function Home() {
       setType(2);
     }
     if (type == 1) {
-      popRef.current.style.display = "flex";
+      popRef.current.style.display = 'flex';
     } else {
-      popRef.current.style.display = "none";
+      popRef.current.style.display = 'none';
     }
   };
 
@@ -68,10 +70,10 @@ export default function Home() {
 
   const handleNavigation = (dir, type) => {
     switch (type) {
-      case "update":
+      case 'update':
         setNavigator(dir);
         break;
-      case "result":
+      case 'result':
         setResultNavigator(dir);
         break;
       default:
@@ -84,27 +86,27 @@ export default function Home() {
   };
 
   const handleRedirectToNeet = (data) => {
-    localStorage.setItem("class", data);
+    localStorage.setItem('class', data);
     push(`/courses/neet`);
   };
   const handleRedirectToFound = (data) => {
-    localStorage.setItem("class", data);
+    localStorage.setItem('class', data);
     push(`/courses/foundation`);
   };
 
   const handleSessionClose = () => {
-    localStorage.removeItem("imageAd");
+    localStorage.removeItem('imageAd');
   };
 
   useEffect(() => {
-    let isAdShown = localStorage.getItem("imageAd");
+    let isAdShown = localStorage.getItem('imageAd');
     if (!isAdShown) {
       setImageAd(true);
-      localStorage.setItem("imageAd", true);
+      localStorage.setItem('imageAd', true);
     }
-    window.addEventListener("beforeunload", handleSessionClose);
+    window.addEventListener('beforeunload', handleSessionClose);
     return () => {
-      window.removeEventListener("beforeunload", handleSessionClose);
+      window.removeEventListener('beforeunload', handleSessionClose);
     };
   }, []);
 
@@ -132,47 +134,47 @@ export default function Home() {
             <div
               onClick={() =>
                 type === 1
-                  ? handleRedirectToNeet("plusOne")
-                  : handleRedirectToFound("8")
+                  ? handleRedirectToNeet('plusOne')
+                  : handleRedirectToFound('8')
               }
               className={styles.popup_class_container}
             >
-              <p>{type === 1 ? "Plus One" : "8th"}</p>
+              <p>{type === 1 ? 'Plus One' : '8th'}</p>
             </div>
             <div
               onClick={() =>
                 type === 1
-                  ? handleRedirectToNeet("plusTwo")
-                  : handleRedirectToFound("9")
+                  ? handleRedirectToNeet('plusTwo')
+                  : handleRedirectToFound('9')
               }
               className={styles.popup_class_container}
             >
-              <p>{type === 1 ? "Plus Two" : "9th"}</p>
+              <p>{type === 1 ? 'Plus Two' : '9th'}</p>
             </div>
             <div
               onClick={() =>
                 type === 1
-                  ? handleRedirectToNeet("plusOne&plustwo")
-                  : handleRedirectToFound("10")
+                  ? handleRedirectToNeet('plusOne&plustwo')
+                  : handleRedirectToFound('10')
               }
               className={styles.popup_class_container}
             >
-              <p>{type === 1 ? "Plus One & Plus Two" : "10th"}</p>
+              <p>{type === 1 ? 'Plus One & Plus Two' : '10th'}</p>
             </div>
           </div>
         </Popup>
         <section className={styles.banner}>
           <div className={styles.banner_wrapper_main}>
-            <div className={styles["banner-content"]}>
+            <div className={styles['banner-content']}>
               <h1>
                 Unleashing your potential <br /> to succeed in NEET.
               </h1>
               <p>Become a doctor with experienced mentor support.</p>
               <button>
-                <Link href="/contact">
+                <Link href='/contact'>
                   <span>
-                    <strong>Enroll Now</strong> <br /> NEET2023
-                    Exclusive Crash Course
+                    <strong>Enroll Now</strong> <br /> NEET2023 Exclusive Crash
+                    Course
                   </span>
                 </Link>
               </button>
@@ -188,38 +190,38 @@ export default function Home() {
 
         <section className={styles.courseSection}>
           <h1 className={styles.sectionTitle}>Our Courses</h1>
-          <div className={styles["cards-wrapper"]}>
+          <div className={styles['cards-wrapper']}>
             <HomeCourseCard
               icon={neetIcon}
-              alt="+1/+2 Neet Coaching"
-              cardTitle="+1/+2 Neet Coaching"
-              to=""
+              alt='+1/+2 Neet Coaching'
+              cardTitle='+1/+2 Neet Coaching'
+              to=''
               action={() => handlePopup(1, 1)}
             />
             <HomeCourseCard
               icon={repeaterIcon}
               alt="Repeater's programs"
               cardTitle="Repeater's programs"
-              to="/courses/repeaters"
+              to='/courses/repeaters'
             />
             <HomeCourseCard
               icon={neetSchoolIcon}
-              alt="NEET School"
-              cardTitle="NEET School"
-              to="/courses/dopaSchool"
+              alt='NEET School'
+              cardTitle='NEET School'
+              to='/courses/dopaSchool'
             />
             <HomeCourseCard
               icon={neetFoundationIcon}
-              alt="NEET Foundation"
-              cardTitle="NEET Foundation"
-              to=""
+              alt='NEET Foundation'
+              cardTitle='NEET Foundation'
+              to=''
               action={() => handlePopup(1, 2)}
             />
             <HomeCourseCard
               icon={capsuleCrash}
-              alt="Capsule Crash Course for Neet"
-              cardTitle="Capsule Crash Course"
-              to="/courses/capsule"
+              alt='Capsule Crash Course for Neet'
+              cardTitle='Capsule Crash Course'
+              to='/courses/capsule'
             />
           </div>
         </section>
@@ -233,18 +235,18 @@ export default function Home() {
           </div>
           <div className={styles.dopa_updates_carousel_wrapper}>
             <SlArrowLeft
-              onClick={() => handleNavigation(1, "update")}
+              onClick={() => handleNavigation(1, 'update')}
               className={
                 styles.dopa_update_navigator +
-                " " +
+                ' ' +
                 styles.dopa_update_navigator_left
               }
             />
             <SlArrowRight
-              onClick={() => handleNavigation(-1, "update")}
+              onClick={() => handleNavigation(-1, 'update')}
               className={
                 styles.dopa_update_navigator +
-                " " +
+                ' ' +
                 styles.dopa_update_navigator_right
               }
             />
@@ -254,36 +256,14 @@ export default function Home() {
               navigator={navigator}
               setNavigator={setNavigator}
             >
-              <Image
-                src={update5}
-                alt="Dopa updates"
-                className={styles.dopa_updates_carousel_item}
-              />
-              <Image
-                src={update6}
-                alt="Dopa updates"
-                className={styles.dopa_updates_carousel_item}
-              />
-              <Image
-                src={update1}
-                alt="Dopa updates"
-                className={styles.dopa_updates_carousel_item}
-              />
-              <Image
-                src={update2}
-                alt="Dopa updates"
-                className={styles.dopa_updates_carousel_item}
-              />
-              <Image
-                src={update3}
-                alt="Dopa updates"
-                className={styles.dopa_updates_carousel_item}
-              />
-              <Image
-                src={update4}
-                alt="Dopa updates"
-                className={styles.dopa_updates_carousel_item}
-              />
+              {dopaUpdates.map((update, index) => (
+                <Image
+                  src={update}
+                  key={index}
+                  alt='Dopa updates'
+                  className={styles.dopa_updates_carousel_item}
+                />
+              ))}
             </Carousel>
           </div>
         </div>
@@ -325,7 +305,7 @@ export default function Home() {
             <Image
               className={styles.result_header_icon}
               src={resultHeaderIcon}
-              alt="Results of Dopa"
+              alt='Results of Dopa'
             />
             <div className={styles.result_header}>
               <h3>Our Results</h3>
@@ -336,29 +316,29 @@ export default function Home() {
             <div className={styles.main_results}>
               <Image
                 className={styles.main_result_img}
-                alt="Dopa rank 11"
+                alt='Dopa rank 11'
                 src={result11}
               />
               <Image
                 className={styles.main_result_img}
-                alt="Dopa rank 16"
+                alt='Dopa rank 16'
                 src={result16}
               />
             </div>
             <div className={styles.dopa_updates_carousel_wrapper}>
               <SlArrowLeft
-                onClick={() => handleNavigation(1, "result")}
+                onClick={() => handleNavigation(1, 'result')}
                 className={
                   styles.dopa_update_navigator +
-                  " " +
+                  ' ' +
                   styles.dopa_update_navigator_left
                 }
               />
               <SlArrowRight
-                onClick={() => handleNavigation(-1, "result")}
+                onClick={() => handleNavigation(-1, 'result')}
                 className={
                   styles.dopa_update_navigator +
-                  " " +
+                  ' ' +
                   styles.dopa_update_navigator_right
                 }
               />
@@ -370,17 +350,17 @@ export default function Home() {
               >
                 <Image
                   src={result1}
-                  alt="Dopa updates"
+                  alt='Dopa updates'
                   className={styles.dopa_result_secondary_img}
                 />
                 <Image
                   src={result2}
-                  alt="Dopa updates"
+                  alt='Dopa updates'
                   className={styles.dopa_result_secondary_img}
                 />
                 <Image
                   src={result3}
-                  alt="Dopa updates"
+                  alt='Dopa updates'
                   className={styles.dopa_result_secondary_img}
                 />
               </Carousel>
