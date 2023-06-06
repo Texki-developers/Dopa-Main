@@ -14,14 +14,14 @@
     background: #fff;
     border-radius: 20px;
     overflow: hidden;
+    max-width: 10rem;
     aspect-ratio: 1/1;
     display: flex;
     align-items: flex-end;
-    padding-top: 1rem;
 }
 .tutor_card_img{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 .tutor_name{
     font-size: 1.3rem;

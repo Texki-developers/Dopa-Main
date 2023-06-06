@@ -4,6 +4,10 @@ import ashraf from '../../public/Assets/tutors/ashraf.png'
 import jaydeep from '../../public/Assets/tutors/jayadeep.png'
 import krishnadas from '../../public/Assets/tutors/krishnadas.png'
 import shibil from '../../public/Assets/tutors/shibil.png'
+import sandeep from '../../public/Assets/tutors/sandeep.png'
+import unais from '../../public/Assets/tutors/unais.png'
+import jinas from '../../public/Assets/tutors/jinas.png'
+
 export default [
     {
         name:"Muneeb Haneefa C",
@@ -17,28 +21,28 @@ export default [
         designation: "Physics faculty ",
         education: "MSc Physics ,B Ed , SET",
         experience: "15+ years Experience",
-        profile: shibil
+        profile: sandeep
     },
     {
         name:"Unais KP",
         designation: "Biology faculty",
         education: "Doctor",
         experience: "6+ years Experience",
-        profile: shibil
+        profile: unais
     },
-    {
-        name:"Anoop k ",
-        designation: "Physics Faculty ",
-        education: "B tech ",
-        experience: "10+ years Experience",
-        profile: shibil
-    },
+    // {
+    //     name:"Anoop k ",
+    //     designation: "Physics Faculty ",
+    //     education: "B tech ",
+    //     experience: "10+ years Experience",
+    //     profile: shibil
+    // },
     {
         name:"Jinas Ahammed",
         designation: "Physics Faculty ",
         education: "Msc Physics  ",
         experience: "12+ years Experience",
-        profile: shibil
+        profile: jinas
     },
     {
         name:"Anees Rahman",
@@ -54,13 +58,13 @@ export default [
         experience: "6+ years Experience",
         profile: shibil
     },
-    {
-        name:"Ashraf",
-        designation: "Chemistry Faculty",
-        education: "M.Sc ,B.Ed",
-        experience: "25+ years Experience",
-        profile: ashraf
-    },
+    // {
+    //     name:"Ashraf",
+    //     designation: "Chemistry Faculty",
+    //     education: "M.Sc ,B.Ed",
+    //     experience: "25+ years Experience",
+    //     profile: ashraf
+    // },
     {
         name:"Jaydeep",
         designation: "Chemistry Faculty",
