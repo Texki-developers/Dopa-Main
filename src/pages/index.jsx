@@ -37,9 +37,6 @@ import { useRouter } from 'next/router';
 import update1 from '../../public/Assets/home/update 1.png';
 import update2 from '../../public/Assets/home/update 2.png';
 import update3 from '../../public/Assets/home/update 3.png';
-import update4 from '../../public/Assets/home/update 4.jpeg';
-import update5 from '../../public/Assets/home/update 5.jpeg';
-import update6 from '../../public/Assets/home/update 6.jpeg';
 import ImgAdPopup from '@/Components/imgAdPopup/ImgAdPopup';
 
 let dopaUpdates = [update1, update2, update3];
