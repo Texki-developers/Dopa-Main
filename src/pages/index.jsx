@@ -37,9 +37,11 @@ import { useRouter } from 'next/router';
 import update1 from '../../public/Assets/home/update 1.png';
 import update2 from '../../public/Assets/home/update 2.png';
 import update3 from '../../public/Assets/home/update 3.png';
+import update4 from '../../public/Assets/home/update 4.png';
+import update5 from '../../public/Assets/home/update 5.png';
 import ImgAdPopup from '@/Components/imgAdPopup/ImgAdPopup';
 
-let dopaUpdates = [update1, update2, update3];
+let dopaUpdates = [update4, update5, update1, update2, update3];
 
 export default function Home() {
   const [navigator, setNavigator] = useState(0);
@@ -168,10 +170,10 @@ export default function Home() {
               </h1>
               <p>Become a doctor with experienced mentor support.</p>
               <button>
-                <Link href='/contact'>
+                <Link href='/courses/repeaters'>
                   <span>
-                    <strong>Enroll Now</strong> <br /> NEET2023 Exclusive Crash
-                    Course
+                    <strong>Enroll Now</strong> <br /> DOPA exclusive NEET 2024
+                    Repeaters course
                   </span>
                 </Link>
               </button>
