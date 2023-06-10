@@ -40,6 +40,8 @@ import update3 from '../../public/Assets/home/update 3.png';
 import update4 from '../../public/Assets/home/update 4.png';
 import update5 from '../../public/Assets/home/update 5.png';
 import ImgAdPopup from '@/Components/imgAdPopup/ImgAdPopup';
+import { axiosInstance } from '@/utils/axiosInstance';
+import config from '@/utils/config';
 
 let dopaUpdates = [update4, update5, update1, update2, update3];
 
@@ -50,6 +52,8 @@ export default function Home() {
   const [isTab, setTab] = useState(false);
   const [imageAd, setImageAd] = useState(false);
   const [type, setType] = useState();
+  const [updates, setUpdates] = useState(null);
+  const [popup, setPopup] = useState(null);
   const popRef = useRef();
 
   const handlePopup = (type, mode) => {
@@ -110,6 +114,18 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    fetchUpdates();
+  }, []);
+
+  const fetchUpdates = async () => {
+    let data = await axiosInstance.get('updates');
+    let popupData = await axiosInstance.get('popup');
+    console.log({ data: data.data.data, popup: popupData.data.data });
+    setUpdates(data?.data?.data);
+    setPopup(popupData.data?.data?.[0]);
+  };
+
+  useEffect(() => {
     if (window.innerWidth < 500) {
       setMobile(true);
     } else {
@@ -125,7 +141,13 @@ export default function Home() {
   return (
     <MainLayout>
       <main className={styles.main}>
-        {imageAd && <ImgAdPopup setPopup={setImageAd} />}
+        {imageAd && (
+          <ImgAdPopup
+            setPopup={setImageAd}
+            adMobile={popup?.imageM}
+            adDesk={popup?.imageD}
+          />
+        )}
 
         <Popup action={handlePopup} refs={popRef}>
           <div className={styles.popup_container_home}>
@@ -227,45 +249,47 @@ export default function Home() {
 
         <BenefitsSection />
 
-        <div className={styles.dopa_updates_section}>
-          <div className={styles.dopa_updates_header}>
-            <h3>DOPA Updates!</h3>
-            <h4>What's been happening?</h4>
+        {updates && (
+          <div className={styles.dopa_updates_section}>
+            <div className={styles.dopa_updates_header}>
+              <h3>DOPA Updates!</h3>
+              <h4>What's been happening?</h4>
+            </div>
+            <div className={styles.dopa_updates_carousel_wrapper}>
+              <SlArrowLeft
+                onClick={() => handleNavigation(1, 'update')}
+                className={
+                  styles.dopa_update_navigator +
+                  ' ' +
+                  styles.dopa_update_navigator_left
+                }
+              />
+              <SlArrowRight
+                onClick={() => handleNavigation(-1, 'update')}
+                className={
+                  styles.dopa_update_navigator +
+                  ' ' +
+                  styles.dopa_update_navigator_right
+                }
+              />
+              <Carousel
+                itemsPerWindow={isMobile ? 1.2 : 2}
+                gap={isMobile ? 10 : 16}
+                navigator={navigator}
+                setNavigator={setNavigator}
+              >
+                {updates.map((update, index) => (
+                  <img
+                    src={`${config.imageURL}${update.imageD}`}
+                    key={update._id}
+                    alt={update.alt}
+                    className={styles.dopa_updates_carousel_item}
+                  />
+                ))}
+              </Carousel>
+            </div>
           </div>
-          <div className={styles.dopa_updates_carousel_wrapper}>
-            <SlArrowLeft
-              onClick={() => handleNavigation(1, 'update')}
-              className={
-                styles.dopa_update_navigator +
-                ' ' +
-                styles.dopa_update_navigator_left
-              }
-            />
-            <SlArrowRight
-              onClick={() => handleNavigation(-1, 'update')}
-              className={
-                styles.dopa_update_navigator +
-                ' ' +
-                styles.dopa_update_navigator_right
-              }
-            />
-            <Carousel
-              itemsPerWindow={isMobile ? 1.2 : 2}
-              gap={isMobile ? 10 : 16}
-              navigator={navigator}
-              setNavigator={setNavigator}
-            >
-              {dopaUpdates.map((update, index) => (
-                <Image
-                  src={update}
-                  key={index}
-                  alt='Dopa updates'
-                  className={styles.dopa_updates_carousel_item}
-                />
-              ))}
-            </Carousel>
-          </div>
-        </div>
+        )}
 
         <div className={styles.about_dopa_section}>
           <div className={styles.about_dopa_left}>
