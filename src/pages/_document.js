@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
        
-
+      <meta name="google-site-verification" content="RKvR80ZgxDSmi8-OyiMqt6EN0YzItjXgf6z-Nzpeenk" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

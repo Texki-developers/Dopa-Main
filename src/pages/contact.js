@@ -9,7 +9,8 @@ export default function contact() {
     <MainLayout>
       <div className={styles.contact_container}>
         <div
-          style={{
+          style={{ 
+            
             width: "30rem",
             display: "flex",
             alignItems: "center",
