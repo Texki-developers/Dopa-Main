@@ -30,6 +30,16 @@ export default function Document() {
             src="https://www.facebook.com/tr?id=431035462525150&ev=PageView&noscript=1"
           />
         </noscript>
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWSD5J8GF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WFWSD5J8GF');
+</script>
       </Head>
       <body>
         <Main />
