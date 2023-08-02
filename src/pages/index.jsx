@@ -208,6 +208,7 @@ export default function Home() {
             />
           </div>
         </section>
+        
 
         <section className={styles.courseSection}>
           <h1 className={styles.sectionTitle}>Our Courses</h1>
