@@ -61,11 +61,11 @@
 }
 
 .bannerImage{
-    margin-top: auto;
-    height: 90%;
-    width: auto;
+    width: 100%;
     z-index: 3;
     position: relative;
+    height: auto;
+    align-self: center;
 }
 
 .courseSection{
