@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
+
 export default function Document() {
   return (
     <Html lang="en">
@@ -33,6 +34,7 @@ export default function Document() {
 
   
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWSD5J8GF"></script>
+
 {/* <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)}
@@ -40,6 +42,7 @@ export default function Document() {
 
   gtag('config', 'G-WFWSD5J8GF');
 </script> */}
+
       </Head>
       <body>
         <Main />
