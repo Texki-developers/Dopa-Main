@@ -16,11 +16,12 @@ import { Carousel } from '@/Components/Carousel/Carousel';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import { useEffect, useRef, useState } from 'react';
 import resultHeaderIcon from '../../public/Assets/home/result icon.png';
-import result11 from '../../public/Assets/home/result 11.png';
-import result16 from '../../public/Assets/home/result 16.png';
-import result1 from '../../public/Assets/home/result 1.png';
-import result2 from '../../public/Assets/home/result 2.png';
-import result3 from '../../public/Assets/home/result 3.png';
+import result11 from '../../public/Assets/home/result 11.jpeg';
+import result16 from '../../public/Assets/home/result 16.jpeg';
+import result1 from '../../public/Assets/home/result 1.jpeg';
+import result2 from '../../public/Assets/home/result 2.jpeg';
+import result3 from '../../public/Assets/home/result 3.jpeg';
+import result4 from '../../public/Assets/home/result 4.jpeg';
 import HomeSuccessSection from '@/Components/HomeSuccessSection/HomeSuccessSection';
 import insightIcon from '../../public/Assets/home/insight.png';
 import viewsStatics from '../../public/Assets/home/views statics.png';
@@ -384,6 +385,11 @@ export default function Home() {
                 />
                 <Image
                   src={result3}
+                  alt='Dopa updates'
+                  className={styles.dopa_result_secondary_img}
+                />
+                <Image
+                  src={result4}
                   alt='Dopa updates'
                   className={styles.dopa_result_secondary_img}
                 />
