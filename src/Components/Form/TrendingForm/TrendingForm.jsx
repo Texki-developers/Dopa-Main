@@ -13,6 +13,11 @@ export default function TrendingForm() {
     control,
     formState: { errors },
   } = useForm({ mode: "onChange" });
+
+  const onFormSubmission = (data) => {
+    console.log({ data });
+  };
+
   return (
     <VStack w="100%" alignSelf="center">
       <Heading variant="secondary" textAlign="left">
@@ -56,7 +61,12 @@ export default function TrendingForm() {
           register={register("school")}
           errorMessage={errors.school?.message}
         />
-        <Button variant="primary" minW="15rem" mt={6}>
+        <Button
+          variant="primary"
+          minW="15rem"
+          mt={6}
+          onClick={handleSubmit(onFormSubmission)}
+        >
           Submit
         </Button>
       </VStack>
