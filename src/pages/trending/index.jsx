@@ -9,7 +9,7 @@ import VideosSection from "./Sections/videosSection/VideosSection";
 export default function trending() {
   return (
     <MainLayout>
-      <VStack pt={24} gap={{ base: 6, sm: 8, lg: 16 }}>
+      <VStack pt={24} gap={{ base: 6, sm: 8, lg: 16 }} pb={4}>
         <BannerSection />
         {/* <BenefitsSection /> */}
         <DownoloadBrochure />
