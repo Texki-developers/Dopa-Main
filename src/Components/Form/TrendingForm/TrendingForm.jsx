@@ -5,23 +5,27 @@ import { Button, Heading, SimpleGrid, VStack } from "@chakra-ui/react";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { classess } from "./trendingForm.data";
+import { saveLeads } from "@/utils/Services/trending.service";
 
-export default function TrendingForm() {
+export default function TrendingForm({landingData}) {
   const {
     register,
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
   const onFormSubmission = (data) => {
-    console.log({ data });
+    data.formname = 'Mainpage'
+    saveLeads(data)
+    reset({})
   };
-
+console.log()
   return (
     <VStack w="100%" alignSelf="center">
       <Heading variant="secondary" textAlign="left">
-        Join Now
+   {landingData && landingData[0]?.landingTitle}
       </Heading>
       <VStack w="100%">
         <PrimaryInput

@@ -121,7 +121,7 @@ export default function Home() {
   const fetchUpdates = async () => {
     let data = await axiosInstance.get('updates');
     let popupData = await axiosInstance.get('popup');
-    console.log({ data: data.data.data, popup: popupData.data.data });
+    
     setUpdates(data?.data?.data);
     setPopup(popupData.data?.data?.[0]);
   };

@@ -11,12 +11,12 @@ import React from "react";
 
 const id = "yvCAi7Wp7SQSAAPY";
 
-export default function VideosSection() {
+export default function VideosSection({ data }) {
   return (
-    <Center w="100%"  px={{ base: 4, sm: 6, md: 8 }}>
+    <Center w="100%" px={{ base: 4, sm: 6, md: 8 }}>
       <VStack maxW="1400px" w="100%" gap={8}>
         <Heading variant="primary" fontWeight={600}>
-          This is video section
+          {data && data[0]?.videoTitle}
         </Heading>
         <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }} gap={4} w="100%">
           <AspectRatio ratio={16 / 9} w="100%">
@@ -31,21 +31,16 @@ export default function VideosSection() {
             ></iframe>
           </AspectRatio>
           <VStack>
-            <YoutubeVideoCard
-              vID="4EvNxWhskf8"
-              title="This is the title of the video"
-              duration="33:57"
-            />
-            <YoutubeVideoCard
-              vID="4EvNxWhskf8"
-              title="This is the title of the video"
-              duration="33:57"
-            />
-            <YoutubeVideoCard
-              vID="4EvNxWhskf8"
-              title="This is the title of the video"
-              duration="33:57"
-            />
+            {data &&
+              data[0]?.videos.map((items) => (
+                <YoutubeVideoCard
+                  vID="4EvNxWhskf8"
+                  title={items.videoHeading}
+                  duration={items.duration}
+                />
+              ))}
+
+    
           </VStack>
         </Grid>
       </VStack>

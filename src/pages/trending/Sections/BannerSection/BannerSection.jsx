@@ -1,10 +1,12 @@
-import { AspectRatio, Center, Flex, Grid } from "@chakra-ui/react";
-import Image from "next/image";
+import { AspectRatio, Center, Grid,Image } from "@chakra-ui/react";
+
 import React from "react";
 import bannerImage from "../../../../../public/Assets/trending/dopa.png";
 import TrendingForm from "@/Components/Form/TrendingForm/TrendingForm";
+import config from "@/utils/config";
 
-export default function BannerSection() {
+export default function BannerSection({data}) {
+
   return (
     <Center w="100%" px={{ base: 4, sm: 6, md: 8 }}>
       <Grid
@@ -16,7 +18,7 @@ export default function BannerSection() {
       >
         <AspectRatio ratio={1 / 1} w="100%" gridArea="ad">
           <Image
-            src={bannerImage}
+            src={data ? `${config.imageURL}${data[0]?.landingImage}` :bannerImage}
             style={{
               width: "100%",
               height: "100%",
@@ -27,7 +29,7 @@ export default function BannerSection() {
             alt="Dopa for Neet"
           />
         </AspectRatio>
-        <TrendingForm />
+        <TrendingForm  landingData={data}/>
       </Grid>
     </Center>
   );
