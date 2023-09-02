@@ -121,14 +121,8 @@ export default function Home() {
   }, []);
 
   const fetchUpdates = async () => {
-<<<<<<< HEAD
     let data = await axiosInstance.get("updates");
     let popupData = await axiosInstance.get("popup");
-=======
-    let data = await axiosInstance.get('updates');
-    let popupData = await axiosInstance.get('popup');
-    
->>>>>>> 62d39a1759e46e81836c9f8ed9b0b40d4954348b
     setUpdates(data?.data?.data);
     setPopup(popupData.data?.data?.[0]);
     onOpen();
