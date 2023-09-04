@@ -1,3 +1,7 @@
+// export default {
+//   imageURL: "https://api.mydopaclass.com/uploads/"
+// }
+
 export default {
-  imageURL: "https://api.mydopaclass.com/uploads/"
+  imageURL: "http://localhost:8085/uploads/"
 }

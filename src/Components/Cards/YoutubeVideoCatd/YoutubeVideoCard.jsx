@@ -1,7 +1,12 @@
 import { AspectRatio, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
-export default function YoutubeVideoCard({ vID, title, duration }) {
+export default function YoutubeVideoCard({
+  vID,
+  title,
+  duration,
+  setSelectedVideo,
+}) {
   return (
     <HStack
       gap={2}
@@ -9,6 +14,7 @@ export default function YoutubeVideoCard({ vID, title, duration }) {
       p={2}
       w="100%"
       cursor="pointer"
+      onClick={() => setSelectedVideo(vID)}
     >
       <AspectRatio ratio={16 / 9} w="5rem">
         <Image
