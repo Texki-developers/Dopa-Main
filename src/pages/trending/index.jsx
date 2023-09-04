@@ -15,7 +15,6 @@ export default function Trending() {
     });
   }, []);
 
-  console.log(data);
   return (
     <MainLayout>
       <VStack pt={24} gap={{ base: 6, sm: 8, lg: 16 }} pb={4}>

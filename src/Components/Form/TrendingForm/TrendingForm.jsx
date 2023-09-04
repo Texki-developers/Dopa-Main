@@ -1,13 +1,19 @@
 import PhoneInputField from "@/Components/InputFields/PhoneInput/PhoneInputField";
 import PrimaryInput from "@/Components/InputFields/PrimaryInput/PrimaryInput";
 import SelectInput from "@/Components/InputFields/SelectInput/SelectInput";
-import { Button, Heading, SimpleGrid, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  Heading,
+  SimpleGrid,
+  VStack,
+  useToast,
+} from "@chakra-ui/react";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { classess } from "./trendingForm.data";
 import { saveLeads } from "@/utils/Services/trending.service";
 
-export default function TrendingForm({landingData}) {
+export default function TrendingForm({ landingData }) {
   const {
     register,
     handleSubmit,
@@ -15,17 +21,39 @@ export default function TrendingForm({landingData}) {
     reset,
     formState: { errors },
   } = useForm({ mode: "onChange" });
+  const toast = useToast();
 
-  const onFormSubmission = (data) => {
-    data.formname = 'Mainpage'
-    saveLeads(data)
-    reset({})
+  const onFormSubmission = async (data) => {
+    data.formname = "Mainpage";
+    const response = await saveLeads(data);
+    console.log(response);
+    if (response.status === 200) {
+      toast({
+        status: "success",
+        description: "Registered Successfully!",
+        title: "Great!",
+      });
+      reset({
+        name: "",
+        email: "",
+        phone: "",
+        district: "",
+        class: "",
+        school: "",
+      });
+    }else{
+      toast({
+        status: "error",
+        description: "Something went wrong!",
+        title: "Ugh no!",
+      });
+    }
   };
-console.log()
+  console.log();
   return (
     <VStack w="100%" alignSelf="center">
       <Heading variant="secondary" textAlign="left">
-   {landingData && landingData[0]?.landingTitle}
+        {landingData && landingData[0]?.landingTitle}
       </Heading>
       <VStack w="100%">
         <PrimaryInput
