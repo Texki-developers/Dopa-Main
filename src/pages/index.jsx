@@ -196,10 +196,9 @@ export default function Home() {
               </h1>
               <p>Become a doctor with experienced mentor support.</p>
               <button>
-                <Link href="/courses/repeaters">
+                <Link href="/trending">
                   <span>
-                    <strong>Enroll Now</strong> <br /> DOPA exclusive NEET 2024
-                    Repeaters course
+                    <strong>Register Now</strong> 
                   </span>
                 </Link>
               </button>
