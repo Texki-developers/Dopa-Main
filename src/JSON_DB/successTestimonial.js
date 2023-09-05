@@ -42,7 +42,7 @@ export default [
     image: imran,
     content:
       "This great achievement I have grabbed were all given by the faculties and all supporters from Dopa  showered their blessing and education on me...Dopa family became a great guide to us...Thanks a lot for your guidance....Dopa is the best neet coaching platform that I had ever seen in my life...one of the best comfort zone that I recommend for the students who gladly preparing for neet....Thank you for being a part in my success...✨😊",
-    video: "https://www.youtube.com/embed/zkhvoM_iTd4?si=cHMOhbgsHTojSiZs",
+    video: "https://www.youtube.com/embed/aaRATnPfsSk?si=v3Zxnj94tQgukT_C",
   },
   {
     name: "Priya",
