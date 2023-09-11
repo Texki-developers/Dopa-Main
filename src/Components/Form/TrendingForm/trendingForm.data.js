@@ -26,4 +26,14 @@ export const classess = [
     value: 12,
     option: "12th",
   },
+  {
+    id: uuidv4(),
+    value: 'repeaters',
+    option: "Repeaters",
+  },
+  {
+    id: uuidv4(),
+    value: 'other',
+    option: "Other",
+  },
 ];

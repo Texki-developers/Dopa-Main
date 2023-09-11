@@ -89,7 +89,7 @@ export default function TrendingForm({ landingData }) {
           />
         </SimpleGrid>
         <PrimaryInput
-          label="School"
+          label="School/Institute"
           register={register("school")}
           errorMessage={errors.school?.message}
         />
