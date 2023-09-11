@@ -11,6 +11,7 @@ import vision from "../../public/Assets/about/view.png";
 import FreeTrialComponent from "@/Components/FreeTrialComponent/FreeTrialComponent";
 import Image from "next/image";
 
+
 export default function about() {
   console.log(mission, "dat");
   return (
