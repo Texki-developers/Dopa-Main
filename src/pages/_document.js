@@ -8,6 +8,7 @@ export default function Document() {
           name="google-site-verification"
           content="RKvR80ZgxDSmi8-OyiMqt6EN0YzItjXgf6z-Nzpeenk"
         />
+        <meta name="facebook-domain-verification" content="qmqbi1l3d15ddvf54yov9409qcbt9n" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
