@@ -18,6 +18,7 @@ import about4 from "../../public/Assets/about/dopaatwork.jpeg";
 import about5 from "../../public/Assets/about/dopawork6.jpeg";
 let features = [
   {
+    
     image: foundation,
     title: "Foundation courses for <br/> 8,9 and 10 th students",
   },
