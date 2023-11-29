@@ -416,7 +416,7 @@ export default function Home() {
             <div className={styles.statics_card}>
               <Image className={styles.statics_icon} src={studentsStatics} />
               <div className={styles.statics_details_wrapper}>
-                <h3>20k+</h3>
+                <h3>50k+</h3>
                 <p>Students impacted</p>
               </div>
             </div>
