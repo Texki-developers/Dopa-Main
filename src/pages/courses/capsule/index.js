@@ -95,7 +95,7 @@ export default function index() {
         <Landing
           image={dopaTeacher}
           bg={DopaBg}
-          head="CAPSULE 3.0"
+          head="CAPSULE 4.0"
           para={paraArray}
         />
 
