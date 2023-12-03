@@ -12,10 +12,10 @@ export default function Landing({ image, bg, head, para }) {
       <div className={styles.dopa_landing__wrapper}>
         <div className={styles.dopa_landing_headers_wrapper}>
           <h1
-            className={head == "CAPSULE 3.0" ? styles.mainHead : ""}
+            className={head == "CAPSULE 4.0" ? styles.mainHead : ""}
             dangerouslySetInnerHTML={{ __html: head.replace(/\n/g, "<br>") }}
           ></h1>
-          {head == "CAPSULE 3.0" ? (
+          {head == "CAPSULE 4.0" ? (
             <h2 className={styles.mainPara}>NEET 2023 CRASH COURSE</h2>
           ) : (
             ""
@@ -35,7 +35,7 @@ export default function Landing({ image, bg, head, para }) {
             
         </div>
         <div
-          className={head == "CAPSULE 3.0" ? className : styles.dopa_students}
+          className={head == "CAPSULE 4.0" ? className : styles.dopa_students}
         >
           <img
             className={

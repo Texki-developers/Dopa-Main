@@ -107,7 +107,7 @@ export default function index() {
             p2={p2}
             p3={p3}
             className=""
-            courseName="CAPSULE 3.0 <br/>NEET CRASH COURSE"
+            courseName="CAPSULE 4.0 <br/>NEET CRASH COURSE"
             subjects="Physics  Chemistry  Biology"
             p1name={"RESIDENTIAL PROGRAM"}
             p2name="OFFLINE"

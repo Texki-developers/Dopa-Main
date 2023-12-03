@@ -9,7 +9,7 @@ export default function ResultBanner() {
         <h1>Unleashing your potential <br/> to succeed in NEET.</h1>
         <button>
                 <span>
-                  <strong>Join with DOPA Capsule 3.0</strong> <br /> NEET2023 Exclusive Crash Course
+                  <strong>Join with DOPA Capsule 4.0</strong> <br /> NEET2023 Exclusive Crash Course
                 </span>
               </button>
       </div>
