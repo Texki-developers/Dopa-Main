@@ -16,7 +16,7 @@ export default function Landing({ image, bg, head, para }) {
             dangerouslySetInnerHTML={{ __html: head.replace(/\n/g, "<br>") }}
           ></h1>
           {head == "CAPSULE 4.0" ? (
-            <h2 className={styles.mainPara}>NEET 2023 CRASH COURSE</h2>
+            <h2 className={styles.mainPara}>NEET 2024 CRASH COURSE</h2>
           ) : (
             ""
           )}
