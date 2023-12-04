@@ -56,7 +56,7 @@ export default function ImgAdPopup({ isOpen, onClose, adMobile, adDesk }) {
             bottom="1rem"
             left="50%"
             transform="translateX(-50%)"
-            onClick={() => router.push("/trending")}
+            onClick={() => router.push("/DopaNeetCoaching")}
           >
             Join Now
           </Button>
