@@ -1,0 +1,27 @@
+.thankyou_container{
+    height: 100vh;
+    width: 100%;
+    padding-top: 10rem;
+    display: flex;
+    justify-content: center;
+
+    .main_thankyou{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        svg{
+            font-size: 10rem;
+            color: var(--color-primary);
+        }
+
+        h1{
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        p{
+            color: var(--color-primary);
+            padding-bottom: 2rem;
+        }
+    }
+}

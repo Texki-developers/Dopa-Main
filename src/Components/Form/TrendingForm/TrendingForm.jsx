@@ -12,6 +12,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { classess } from "./trendingForm.data";
 import { saveLeads } from "@/utils/Services/trending.service";
+import { useRouter } from "next/router";
 
 export default function TrendingForm({ landingData }) {
   const {
@@ -22,12 +23,12 @@ export default function TrendingForm({ landingData }) {
     formState: { errors },
   } = useForm({ mode: "onChange" });
   const toast = useToast();
-
+    const {push} = useRouter()
   const onFormSubmission = async (data) => {
-    data.formname = "Mainpage";
+    data.formName = landingData[0]?.formName
     const response = await saveLeads(data);
-    console.log(response);
     if (response.status === 200) {
+        push('/DopaNeetCoaching/thankyou')
       toast({
         status: "success",
         description: "Registered Successfully!",
@@ -40,6 +41,7 @@ export default function TrendingForm({ landingData }) {
         district: "",
         class: "",
         school: "",
+        formName : landingData[0]?.formName ?? ''
       });
     }else{
       toast({
@@ -49,7 +51,7 @@ export default function TrendingForm({ landingData }) {
       });
     }
   };
-  console.log();
+
   return (
     <VStack w="100%" alignSelf="center">
       <Heading variant="secondary" textAlign="left">
