@@ -196,7 +196,7 @@ export default function Home() {
               </h1>
               <p>Become a doctor with experienced mentor support.</p>
               <button>
-                <Link href="/DopaNeetCoaching">
+                <Link href="/Neet2024CrashCourse">
                   <span>
                     <strong>Register Now</strong> 
                   </span>
