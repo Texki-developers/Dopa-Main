@@ -5,18 +5,27 @@ import AdmissionSection from "@/PageComponents/DopaThrissurLanding/AdmissionSect
 import CrackNeetSection from "@/PageComponents/DopaThrissurLanding/CrackNeetSection/CrackNeetSection";
 import FacilitiesSection from "@/PageComponents/DopaThrissurLanding/FacilitiesSection/FacilitiesSection";
 import StudentTestimonials from "@/PageComponents/DopaThrissurLanding/StudentTestimonials/StudentTestimonials";
+import LearningCenters from "@/PageComponents/LearningCenter/LearningCenters";
+import ThrissurResults from "@/PageComponents/ThrissurResults/ThrissurResults";
+import Tbanner from "@/PageComponents/banner/TBanner";
 import React from "react";
 
 export default function index() {
   return (
     <MainLayout>
       <VStack className="pt-[7rem] gap-[3rem]">
+        <div>
+          <Tbanner />
+          <CoursesOffered />
+          <ThrissurResults />
+        </div>
         <StudentTestimonials />
         <div>
           <AdmissionSection />
           <FacilitiesSection />
         </div>
         <CrackNeetSection />
+        <LearningCenters />
         {/* <CoursesOffered /> */}
       </VStack>
     </MainLayout>
