@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Manrope:wght@200;300;400;600;700;800&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --padding-primary: 0 5%;
@@ -130,5 +133,118 @@ body {
   .header-icon{
     width: 2rem;
     height: auto;
+  }
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Book Antiqua */
+@font-face {
+  font-family: 'Book Antiqua';
+  src: url('/assets/fonts/Book Antiqua Font.ttf');
+}
+
+/* Avenir */
+@font-face {
+  font-family: 'Avenir Roman';
+  src: url('/assets/fonts/avenir/AvenirLTStd-Roman.otf');
+}
+@font-face {
+  font-family: 'Avenir Book';
+  src: url('/assets/fonts/avenir/AvenirLTStd-Book.otf');
+}
+@font-face {
+  font-family: 'Avenir Black';
+  src: url('/assets/fonts/avenir/AvenirLTStd-Black.otf');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* Import and use font family here */
+  font-family: 'Montserrat';
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.animate-slide {
+  animation: slide 30s linear 0s infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(var(--company-scroll-x, 0));
+  }
+}
+
+@layer components {
+  .btn-common {
+    @apply flex justify-center gap-2 px-[2rem] py-[1.5rem] text-[0.85rem] transition-all duration-300 ease-in-out disabled:cursor-not-allowed disabled:opacity-50 md:text-[1rem];
+  }
+  .btn-ghost {
+    @apply border-2 border-transparent hover:border-slate-50 hover:bg-slate-50;
+  }
+  .btn-outlined {
+    @apply border-2 border-slate-400 hover:bg-slate-50;
+  }
+  .btn-solid {
+    @apply border-2 border-blue-500 bg-blue-500 text-white hover:border-blue-600 hover:bg-blue-600;
+  }
+  .common-space-x {
+    @apply max-w-[1800px] px-4 md:px-20;
+  }
+  .text-basic {
+    @apply text-[0.9rem] md:text-[1rem];
+  }
+  .section-heading {
+    @apply font-antiqua text-[1.7rem] font-semibold md:text-[3rem];
+  }
+  .section-heading-small {
+    @apply text-[1.4rem] font-[400] md:text-[2rem];
+  }
+  .font-thin {
+    @apply text-[0.8rem] font-[200] md:text-[0.9rem];
+  }
+  .lfont-thin {
+    @apply text-[1rem] font-[200] md:text-[1rem];
+  }
+  .section-heading-Xsmall {
+    @apply text-[1.4rem] font-[200] md:text-[1.2rem];
+  }
+  .card-heading {
+    @apply text-[1.1rem] md:text-[1.2rem];
+  }
+  .banner-title {
+    @apply font-antiqua text-[1.5rem] font-[700] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];
+  }
+
+  .card-heading-v2 {
+    @apply font-antiqua text-[2rem] md:text-[3rem];
+  }
+  .banner-subtitle {
+    @apply text-[1rem] font-[400] md:text-[1.8rem];
+  }
+  .btn-primary {
+    @apply btn-solid rounded-md uppercase md:rounded-lg;
+  }
+  .input-common {
+    @apply border-b-2  py-1 text-[0.95rem] outline-none focus:border-b-4 md:text-[1rem];
+  }
+  .input-cover {
+    @apply border-[1.5px];
+  }
+  .input-line {
+    @apply border-b-[1.5px] pb-1 pl-0;
   }
 }
