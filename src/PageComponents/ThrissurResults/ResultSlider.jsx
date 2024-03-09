@@ -1,11 +1,12 @@
 import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import VStack from "@/Components/BasicComponents/VStack/VStack";
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-
-SwiperCore.use([Navigation, Pagination]);
+import SwiperCore, {Autoplay } from "swiper/core";
+import 'swiper/css/autoplay'
+SwiperCore.use([Autoplay]);
 import "swiper/css";
 import SliderRow from "./sliderRow";
+import HStack from "@/Components/BasicComponents/HStack/HStack";
 
 export default function ResultSlider() {
   return (
@@ -13,13 +14,29 @@ export default function ResultSlider() {
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={(e) => console.log("slide change",e.activeIndex)}
+        onSwiper={(swiper) => console.log(swiper) }
       >
-        <VStack >
-        <SliderRow SwiperSlide={SwiperSlide}/>
-        <SliderRow SwiperSlide={SwiperSlide}/>
-        <SliderRow SwiperSlide={SwiperSlide}/>
+        <VStack>
+          <HStack>
+            <SwiperSlide>
+              <SliderRow />
+            </SwiperSlide>
+      
+            <SwiperSlide>
+              <SliderRow />
+            </SwiperSlide>
+
+
+            <SwiperSlide>
+              <SliderRow />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <SliderRow />
+            </SwiperSlide>
+          </HStack>
+
         </VStack>
       </Swiper>
     </VStack>

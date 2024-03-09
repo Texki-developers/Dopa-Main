@@ -12,6 +12,8 @@ export default function ThrissurResults() {
              <p className='section-heading-Xsmall text-center' >Our Dopa Alumins</p>
             </VStack>
             <ResultSlider/>
+            <ResultSlider/>
+            <ResultSlider/>
         </VStack>
     </Center>
   )
