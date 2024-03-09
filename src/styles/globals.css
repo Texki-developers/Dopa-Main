@@ -202,13 +202,13 @@ body {
     @apply border-2 border-blue-500 bg-blue-500 text-white hover:border-blue-600 hover:bg-blue-600;
   }
   .common-space-x {
-    @apply max-w-[1800px] px-4 md:px-20;
+    @apply max-w-[1400px] px-4 md:px-20;
   }
   .text-basic {
     @apply text-[0.9rem] md:text-[1rem];
   }
   .section-heading {
-    @apply font-antiqua text-[1.7rem] font-semibold md:text-[3rem];
+    @apply text-[1.7rem] font-semibold md:text-[3rem];
   }
   .section-heading-small {
     @apply text-[1.4rem] font-[400] md:text-[2rem];
@@ -226,11 +226,11 @@ body {
     @apply text-[1.1rem] md:text-[1.2rem];
   }
   .banner-title {
-    @apply font-antiqua text-[1.5rem] font-[700] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];
+    @apply text-[1.5rem] font-[700] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];
   }
 
   .card-heading-v2 {
-    @apply font-antiqua text-[2rem] md:text-[3rem];
+    @apply text-[2rem] md:text-[3rem];
   }
   .banner-subtitle {
     @apply text-[1rem] font-[400] md:text-[1.8rem];
