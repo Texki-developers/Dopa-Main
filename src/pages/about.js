@@ -19,7 +19,7 @@ export default function about() {
       <main className={styles.about_container}>
         <AboutLanding />
 
-        <CourseFeatures type={1} data={features} />
+      <CourseFeatures type={1} data={features} />
 
         <div className={styles.path_to_success_container}>
           <h1>
