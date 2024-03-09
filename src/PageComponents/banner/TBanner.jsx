@@ -31,7 +31,7 @@ export default function Tbanner() {
             fill
           />
         </div>
-        <div className='w-[100%]  pb-[4rem]'>
+        <div className='w-[100%]  py-[4rem]'>
         <BannerForm/> 
         </div>
 
