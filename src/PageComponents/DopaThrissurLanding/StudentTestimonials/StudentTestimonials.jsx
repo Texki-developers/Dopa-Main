@@ -38,7 +38,7 @@ export default function StudentTestimonials() {
           {[...Array(4)].map((_, index) => (
             <SwiperSlide>
               <div className="grid sm:grid-cols-[1fr_1.3fr] sm:gap-[1rem] gap-[0.5rem] md:gap-[3rem] w-[100%] common-space-x">
-                <div className="w-[100%] rounded-lg overflow-hidden">
+                <div className="w-[100%] aspect-video rounded-lg overflow-hidden">
                   <iframe
                     width="100%"
                     height="100%"
@@ -49,8 +49,8 @@ export default function StudentTestimonials() {
                     allowfullscreen
                   ></iframe>
                 </div>
-                <div className="w-100% relative overflow-hidden">
-                  <VStack className="p-[2rem] border-[2px] border-black rounded-lg gap-4">
+                <div className="w-100% min-h-[100%] relative overflow-hidden">
+                  <VStack className="p-[2rem] border-[2px] min-h-[100%] border-black rounded-lg gap-4">
                     <p className="text-basic">
                       Dopa's guidance not only instilled the belief that I can
                       become a doctor but also emphasized the importance of
