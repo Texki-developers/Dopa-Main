@@ -137,6 +137,7 @@ body {
 }
 
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -208,7 +209,7 @@ body {
     @apply text-[0.9rem] md:text-[1rem];
   }
   .section-heading {
-    @apply text-[1.7rem] font-semibold md:text-[3rem];
+    @apply text-[1.7rem] font-semibold  md:text-[3rem];
   }
   .section-heading-small {
     @apply text-[1.4rem] font-[400] md:text-[2rem];
@@ -239,7 +240,7 @@ body {
     @apply btn-solid rounded-md uppercase md:rounded-lg;
   }
   .input-common {
-    @apply border-b-2  py-1 text-[0.95rem] outline-none focus:border-b-4 md:text-[1rem];
+    @apply  p-3 font-thin text-blue-500 outline-none focus:border-b-2 ;
   }
   .input-cover {
     @apply border-[1.5px];

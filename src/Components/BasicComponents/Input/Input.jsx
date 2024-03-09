@@ -14,16 +14,22 @@ errorClass,
 }) {
   return (
     <VStack >
-      <label
-        htmlFor={slugify(label)}
-        className={`text-basic ${required && 'after:content-["*"]'}`}
-      >
-        {label}
-      </label>
+      {label ?
+   <label
+   htmlFor={slugify(label)}
+   className={`text-basic ${required && 'after:content-["*"]'}`}
+ >
+   {label}
+ </label>
+      : ''}
+   
       <input
+      style={{
+        border: '1px solid #1C375A29',
+      }}
         className={`input-common ${className}`}
         {...register}
-        id={slugify(label)}
+        id={ label && slugify(label)}
         {...otherProps}
       />
       {error && error != '' && (
