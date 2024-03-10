@@ -1,9 +1,9 @@
 export const resultDataRow1 = [
-    "/Assets/thrissurLanding/results/thrissur_result_row1.png",
-    "/Assets/thrissurLanding/results/thrissur_result_row1_2.png",
-    "/Assets/thrissurLanding/results/thrissur_result_row1.png",
-    "/Assets/thrissurLanding/results/thrissur_result_row1.png",
-    "/Assets/thrissurLanding/results/thrissur_result_row1.png"
+    "/Assets/thrissurLanding/results/row1.png",
+    "/Assets/thrissurLanding/results/row1_1.png",
+    "/Assets/thrissurLanding/results/row1_1_1.png",
+     "/Assets/thrissurLanding/results/row1_gmcekm.png",
+    
 
 ]
 
