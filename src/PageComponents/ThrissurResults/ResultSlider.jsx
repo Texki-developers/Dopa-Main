@@ -9,7 +9,7 @@ export default function ResultSlider() {
     <VStack>
       <SliderRow direction={-1} images={resultDataRow1}/>
       <SliderRow direction={1} images={resultDataRow2}/>
-      <SliderRow direction={-1} images={resultDataRow3}/>
+      <SliderRow direction={-1} images={resultDataRow2}/>
       <SliderRow direction={1} images={resultDataRow1}/>
     </VStack>
   );
