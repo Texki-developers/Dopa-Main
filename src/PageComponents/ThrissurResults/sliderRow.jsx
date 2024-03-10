@@ -14,7 +14,7 @@ export default function SliderRow({ direction, images }) {
     >
       {images &&
         images?.map((items) => (
-          <div className="relative w-[40rem] aspect-[5/1] overflow-hidden">
+          <div className="relative w-[40rem] aspect-[3/2] overflow-hidden">
             <Image src={items} alt="dopa_thrissur_results" fill />
           </div>
         ))}
