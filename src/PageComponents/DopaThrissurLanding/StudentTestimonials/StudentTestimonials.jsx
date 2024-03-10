@@ -34,51 +34,55 @@ export default function StudentTestimonials() {
         <h1 className="section-heading text-center">Testimonials</h1>
       </HStack>
       <Center className="w-[100%]">
-        <Swiper {...swiperParams}>
-          {[...Array(4)].map((_, index) => (
-            <SwiperSlide>
-              <div className="grid sm:grid-cols-[1fr_1.3fr] sm:gap-[1rem] gap-[0.5rem] md:gap-[3rem] w-[100%] common-space-x">
-                <div className="w-[100%] aspect-video rounded-lg overflow-hidden">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/xXqgcm8dWyE?si=a-JgGuCV4C9qbK1a"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div className="w-100% min-h-[100%] relative overflow-hidden">
-                  <VStack className="p-[2rem] border-[2px] min-h-[100%] border-black rounded-lg gap-4">
-                    <p className="text-basic">
-                      Dopa's guidance not only instilled the belief that I can
-                      become a doctor but also emphasized the importance of
-                      studying smartly, highlighting that working intelligently
-                      is key to success—a crucial lesson in pursuing my dream.
-                      Thank you DOPA {index}
-                    </p>
-                    <hr className="border-black" />
-                    <HStack className="w-[100%] justify-between">
-                      <VStack>
-                        <p className="text-basic font-[600]">Diya</p>
-                        <p className="text-small">Alumni</p>
+        <div className="common-space-x w-[100%]">
+          <Swiper {...swiperParams}>
+            {[...Array(4)].map((_, index) => (
+              <SwiperSlide>
+                <div className="grid sm:grid-cols-[1fr_1.3fr] sm:gap-[1rem] gap-[0.5rem] md:gap-[3rem] w-[100%]">
+                  <div className="w-[100%] aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/xXqgcm8dWyE?si=a-JgGuCV4C9qbK1a"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div className="w-100% min-h-[100%] relative overflow-hidden">
+                    <VStack className="p-[2rem] border-[2px] min-h-[100%] border-black rounded-lg gap-4 justify-between">
+                      <p className="text-basic">
+                        Dopa's guidance not only instilled the belief that I can
+                        become a doctor but also emphasized the importance of
+                        studying smartly, highlighting that working
+                        intelligently is key to success—a crucial lesson in
+                        pursuing my dream. Thank you DOPA {index}
+                      </p>
+                      <VStack className="gap-4">
+                        <hr className="border-black" />
+                        <HStack className="w-[100%] justify-between">
+                          <VStack>
+                            <p className="text-basic font-[600]">Diya</p>
+                            <p className="text-small">Alumni</p>
+                          </VStack>
+                          <HStack className="gap-2">
+                            <div className="aspect-square testimonial-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1.5rem] rounded-full">
+                              <MdOutlineArrowForward />
+                            </div>
+                            <div className="aspect-square testimonial-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1.5rem] rounded-full">
+                              <MdOutlineArrowForward />
+                            </div>
+                          </HStack>
+                        </HStack>
                       </VStack>
-                      <HStack className="gap-2">
-                        <div className="aspect-square testimonial-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1.5rem] rounded-full">
-                          <MdOutlineArrowForward />
-                        </div>
-                        <div className="aspect-square testimonial-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1.5rem] rounded-full">
-                          <MdOutlineArrowForward />
-                        </div>
-                      </HStack>
-                    </HStack>
-                  </VStack>
+                    </VStack>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </Center>
     </VStack>
   );
