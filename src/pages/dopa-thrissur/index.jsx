@@ -4,6 +4,7 @@ import CoursesOffered from "@/PageComponents/CoursesOffered/CoursesOffered";
 import AdmissionSection from "@/PageComponents/DopaThrissurLanding/AdmissionSection/AdmissionSection";
 import CrackNeetSection from "@/PageComponents/DopaThrissurLanding/CrackNeetSection/CrackNeetSection";
 import FacilitiesSection from "@/PageComponents/DopaThrissurLanding/FacilitiesSection/FacilitiesSection";
+import Gallery from "@/PageComponents/DopaThrissurLanding/Gallery/Gallery";
 import StudentTestimonials from "@/PageComponents/DopaThrissurLanding/StudentTestimonials/StudentTestimonials";
 import LearningCenters from "@/PageComponents/LearningCenter/LearningCenters";
 import ThrissurResults from "@/PageComponents/ThrissurResults/ThrissurResults";
@@ -26,6 +27,7 @@ export default function index() {
         </div>
         <CrackNeetSection />
         <LearningCenters />
+        <Gallery />
         {/* <CoursesOffered /> */}
       </VStack>
     </MainLayout>
