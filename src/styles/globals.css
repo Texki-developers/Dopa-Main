@@ -200,7 +200,7 @@ body {
     @apply border-2 border-white bg-white text-primary-500 rounded-full;
   }
   .common-space-x {
-    @apply max-w-[1400px] px-4 md:px-20;
+    @apply max-w-[1400px] px-4 md:px-20 xl:px-0;
   }
   .text-basic {
     @apply text-[0.9rem] md:text-[1rem];
@@ -237,7 +237,7 @@ body {
     @apply btn-solid rounded-md uppercase md:rounded-lg;
   }
   .input-common {
-    @apply  p-3 font-thin text-blue-500 outline-none focus:border-b-2 ;
+    @apply p-3 font-thin text-blue-500 outline-none focus:border-b-2;
   }
   .input-cover {
     @apply border-[1.5px];
