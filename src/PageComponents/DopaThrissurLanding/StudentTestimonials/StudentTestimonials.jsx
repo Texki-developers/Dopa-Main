@@ -50,8 +50,8 @@ export default function StudentTestimonials() {
                       allowfullscreen
                     ></iframe>
                   </div>
-                <div className="w-100% min-h-[100%] relative overflow-hidden">
-                    <VStack className="p-[2rem] border-[2px] min-h-[100%] border-black rounded-lg gap-4">
+                  <div className="w-100% min-h-[100%] relative overflow-hidden">
+                    <VStack className="p-[2rem] border-[2px] min-h-[100%] border-black rounded-lg gap-4 justify-between">
                       <p className="text-basic">
                         Dopa's guidance not only instilled the belief that I can
                         become a doctor but also emphasized the importance of
@@ -59,21 +59,23 @@ export default function StudentTestimonials() {
                         intelligently is key to success—a crucial lesson in
                         pursuing my dream. Thank you DOPA {index}
                       </p>
-                      <hr className="border-black" />
-                      <HStack className="w-[100%] justify-between">
-                        <VStack>
-                          <p className="text-basic font-[600]">Diya</p>
-                          <p className="text-small">Alumni</p>
-                        </VStack>
-                        <HStack className="gap-2">
-                          <div className="aspect-square testimonial-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1.5rem] rounded-full">
-                            <MdOutlineArrowForward />
-                          </div>
-                          <div className="aspect-square testimonial-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1.5rem] rounded-full">
-                            <MdOutlineArrowForward />
-                          </div>
+                      <VStack className="gap-4">
+                        <hr className="border-black" />
+                        <HStack className="w-[100%] justify-between">
+                          <VStack>
+                            <p className="text-basic font-[600]">Diya</p>
+                            <p className="text-small">Alumni</p>
+                          </VStack>
+                          <HStack className="gap-2">
+                            <div className="aspect-square testimonial-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1.5rem] rounded-full">
+                              <MdOutlineArrowForward />
+                            </div>
+                            <div className="aspect-square testimonial-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1.5rem] rounded-full">
+                              <MdOutlineArrowForward />
+                            </div>
+                          </HStack>
                         </HStack>
-                      </HStack>
+                      </VStack>
                     </VStack>
                   </div>
                 </div>
