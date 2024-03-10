@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import SwiperCore, { Navigation } from "swiper/core";
 import { MdOutlineArrowForward } from "react-icons/md";
+import successTestimonial from "@/JSON_DB/successTestimonial";
 
 SwiperCore.use([Navigation]);
 
@@ -36,14 +37,14 @@ export default function StudentTestimonials() {
       <Center className="w-[100%]">
         <div className="common-space-x w-[100%]">
           <Swiper {...swiperParams}>
-            {[...Array(4)].map((_, index) => (
+            {successTestimonial.map((item, index) => (
               <SwiperSlide>
                 <div className="grid sm:grid-cols-[1fr_1.3fr] sm:gap-[1rem] gap-[0.5rem] md:gap-[3rem] w-[100%]">
                   <div className="w-[100%] aspect-video rounded-lg overflow-hidden">
                     <iframe
                       width="100%"
                       height="100%"
-                      src="https://www.youtube.com/embed/xXqgcm8dWyE?si=a-JgGuCV4C9qbK1a"
+                      src={item.video}
                       title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -52,18 +53,12 @@ export default function StudentTestimonials() {
                   </div>
                   <div className="w-100% min-h-[100%] relative overflow-hidden">
                     <VStack className="p-[2rem] border-[2px] min-h-[100%] border-black rounded-lg gap-4 justify-between">
-                      <p className="text-basic">
-                        Dopa's guidance not only instilled the belief that I can
-                        become a doctor but also emphasized the importance of
-                        studying smartly, highlighting that working
-                        intelligently is key to success—a crucial lesson in
-                        pursuing my dream. Thank you DOPA {index}
-                      </p>
+                      <p className="text-basic">{item.content}</p>
                       <VStack className="gap-4">
                         <hr className="border-black" />
                         <HStack className="w-[100%] justify-between">
                           <VStack>
-                            <p className="text-basic font-[600]">Diya</p>
+                            <p className="text-basic font-[600]">{item.name}</p>
                             <p className="text-small">Alumni</p>
                           </VStack>
                           <HStack className="gap-2">
