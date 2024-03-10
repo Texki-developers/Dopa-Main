@@ -56,7 +56,7 @@ export default function BannerForm() {
           />
           <Input
     
-            placeholder='class'
+            placeholder='Class'
             register={register('class', {
               required: 'class Field is required',
             })}
@@ -65,7 +65,7 @@ export default function BannerForm() {
           />
           <Input
     
-            placeholder='school'
+            placeholder='School'
             register={register('school', {
               required: 'School field is required',
             })}
@@ -74,7 +74,7 @@ export default function BannerForm() {
           />
           <Input
     
-            placeholder = 'whatsapp Number'
+            placeholder = 'Whatsapp Number'
             register={register('whatsapp', {
               required: 'whatsapp field is required',
             })}
