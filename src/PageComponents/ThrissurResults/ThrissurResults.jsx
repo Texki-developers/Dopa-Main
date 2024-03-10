@@ -5,15 +5,14 @@ import Center from '@/Components/BasicComponents/Center/Center';
 
 export default function ThrissurResults() {
   return (
-    <Center className='bg-[#0A7D90] '>
-        <VStack className='gap-[3rem] w-[100%] py-[3rem]'>
+    <Center className='bg-[#0A7D90] w-[100vw]'>
+        <VStack className='gap-[3rem]  py-[3rem] '>
             <VStack className='text-white'>
              <h1 className="section-heading text-center">Results</h1>
              <p className='section-heading-Xsmall text-center' >Our Dopa Alumins</p>
             </VStack>
             <ResultSlider/>
-            <ResultSlider/>
-            <ResultSlider/>
+      
         </VStack>
     </Center>
   )
