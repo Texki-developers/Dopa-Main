@@ -30,12 +30,11 @@ export default function BannerForm() {
       });
       setLoading(false);
       reset({
-        name: "",
         email: "",
-        phone: "",
-        district: "",
+        name:"",
         class: "",
         school: "",
+        whatsapp: "",
       });
     } else {
       setLoading(false);
@@ -49,10 +48,10 @@ export default function BannerForm() {
     setshowFeedback(true);
     reset({
       email: "",
-      firstName: "",
-      lastName: "",
-      phone: "",
-      message: "",
+      name:"",
+      class: "",
+      school: "",
+      whatsapp: "",
     });
   };
 
