@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./SuccessCardStory.module.scss";
-import sana from "../../../public/Assets/Success/success.jpg";
-import Image from "next/image";
 
 export default function SuccessStoryCard({ data }) {
   return (
