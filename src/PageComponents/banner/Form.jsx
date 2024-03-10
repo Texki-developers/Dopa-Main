@@ -41,7 +41,7 @@ export default function BannerForm() {
     <Center style={{
       boxShadow: '0px 4px 16px 8px #0000000A',
 
-    }} className=' w-[100%]  bg-white  '>
+    }} className=' w-[100%]  bg-white'>
       <VStack className='w-[100%] gap-[1rem] md:gap-[2rem]  p-[0.5rem] pt-[1rem]  md:p-[2rem]'>
       <h2 className='section-heading-small text-center md:text-start font-bold' >Enquiry Form</h2>
         <VStack className='gap-[1rem] '>
