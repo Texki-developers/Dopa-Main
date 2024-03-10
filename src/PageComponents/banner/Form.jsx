@@ -112,7 +112,7 @@ export default function BannerForm() {
 
         {showFeedback && (
           <p className="mb-[1rem] rounded-sm bg-[lightGreen] p-1 text-[0.9rem] text-[green]">
-            Form submitted successfully
+            Form submitted successfully!
           </p>
         )}
         <Button
