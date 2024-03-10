@@ -22,6 +22,5 @@ export const resultDataRow3 = [
     "/Assets/thrissurLanding/results/Frame 54.png",
     "/Assets/thrissurLanding/results/Frame 61.png",
     "/Assets/thrissurLanding/results/Frame 54.png",
-    "/Assets/thrissurLanding/results/Frame 61.png",
-    "/Assets/thrissurLanding/results/Frame 61.png"
+   
 ]
