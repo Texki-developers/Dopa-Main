@@ -21,14 +21,22 @@ export default function FacilitiesSection() {
           <div className="hidden md:block aspect-square w-[100%] rounded-lg relative">
             <Image src="/Assets/thrissurLanding/hostel-facilities.png" fill />
           </div>
-          <VStack className="gap-[1rem] sm:gap-[2rem] w-[100%] p-[1rem] sm:p-[2rem] rounded-lg bg-primary-50">
+          <VStack
+            style={{
+              background: "url('/Assets/thrissurLanding/pattern-lg.png')",
+              backgroundSize: "cover",
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: "center",
+            }}
+            className="gap-[1rem] sm:gap-[2rem] w-[100%] p-[1rem] sm:p-[2rem] rounded-lg bg-primary-50"
+          >
             <h2 className="section-heading-small font-bold">
               Hostel Facilities
             </h2>
             <VStack className="gap-2">
               {hostelFacilities.map((item, index) => (
                 <HStack key={index} className="gap-4">
-                  <MdOutlineDone className="text-[1.5rem] text-green-500" />
+                  <MdOutlineDone className="text-[1.5rem] text-primary-500" />
                   <p className="text-[1rem] sm:text-[1.3rem]">{item}</p>
                 </HStack>
               ))}
