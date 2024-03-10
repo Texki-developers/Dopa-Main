@@ -196,8 +196,11 @@ body {
   0% {
     transform: translateX(0);
   }
-  100% {
+  50% {
     transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -205,8 +208,11 @@ body {
   0% {
     transform: translateX(0);
   }
+  50% {
+    transform: translateX(10%);
+  }
   100% {
-    transform: translateX(20%);
+    transform: translateX(0);
   }
 }
 
