@@ -35,7 +35,7 @@ export default function Tbanner() {
        </div>
        
      
-        <div className='w-[100%] md:py-[1rem] lg:py-[6rem] xl:py-[4rem]'>
+        <div className='w-[100%] pb-[1rem] md:py-[1rem] lg:py-[6rem] xl:py-[4rem]'>
         <BannerForm/> 
         </div>
 
