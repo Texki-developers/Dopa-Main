@@ -24,7 +24,7 @@ export default function Tbanner() {
     >
       <HStack className='w-[100%] common-space-x'>
         <div className='grid grid-cols-1 md:grid-cols-[1fr,1fr] lg:grid-cols-[2fr,1.5fr] xl:grid-cols-[2fr,1.3fr] w-[100%] md:gap-[2rem]'>
-        <div className="relative aspect-[4/4] md:aspect-[4/1] w-[100%] h-[100%] flex items-end justify-end">
+        <div className="relative  aspect-[252/217] md:aspect-[4/1] w-[100%] h-[100%] flex items-end justify-end">
           <Image
             src="/Assets/thrissurLanding/banner/dopa_thrissur_landing.png"
             alt="thrissur_landing"
