@@ -18,7 +18,7 @@ export default function index() {
         <div>
           <Tbanner />
           <CoursesOffered />
-          <ThrissurResults />
+        
         </div>
         <StudentTestimonials />
         <div>
@@ -28,7 +28,6 @@ export default function index() {
         <CrackNeetSection />
         <LearningCenters />
         <Gallery />
-        {/* <CoursesOffered /> */}
       </VStack>
     </MainLayout>
   );
