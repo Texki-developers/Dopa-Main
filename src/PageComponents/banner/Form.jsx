@@ -62,11 +62,11 @@ export default function BannerForm() {
       }}
       className=" w-[100%]  bg-white"
     >
-      <VStack className="w-[100%] gap-[1rem] md:gap-[2rem]  p-[0.5rem] pt-[1rem]  md:p-[2rem]">
+      <VStack className="w-[100%] gap-[1rem] xl:gap-[2rem]  p-[0.5rem] pt-[1rem]  md:p-[1rem] xl:p-[2rem]">
         <h2 className="section-heading-small text-center md:text-start font-bold">
           Enquiry Form
         </h2>
-        <VStack className="gap-[1rem] ">
+        <VStack className=" gap-[1rem] ">
           <Input
             className="  font-thin "
             placeholder="Name"
@@ -118,7 +118,7 @@ export default function BannerForm() {
         <Button
           isLoading={isLoading}
           onClick={handleSubmit(onFormSubmission)}
-          className="btn-common bg-[#17829E] py-4 font-bold rounded-full text-white active:bg-white active:text-black"
+          className="btn-common bg-[#17829E] py-4 md:py-2 xl:py-4 font-bold rounded-full text-white active:bg-white active:text-black"
         >
           Apply Now
         </Button>

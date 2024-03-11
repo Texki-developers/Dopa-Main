@@ -264,7 +264,7 @@ body {
     @apply btn-solid rounded-md uppercase md:rounded-lg;
   }
   .input-common {
-    @apply  p-3 font-thin placeholder:text-black  outline-none focus:border-b-2 ;
+    @apply  p-3 md:p-1 xl:p-3 font-thin placeholder:text-black  outline-none focus:border-b-2 ;
   }
   .input-cover {
     @apply border-[1.5px];
