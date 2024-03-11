@@ -39,7 +39,7 @@ export default function StudentTestimonials() {
           <Swiper {...swiperParams}>
             {successTestimonial.map((item, index) => (
               <SwiperSlide>
-                <div className="grid sm:grid-cols-[1fr_1.3fr] sm:gap-[1rem] gap-[0.5rem] md:gap-[3rem] w-[100%]">
+                <div className="grid lg:grid-cols-[1fr_1.3fr] sm:gap-[1rem] gap-[0.5rem] lg:gap-[3rem] w-[100%]">
                   <div className="w-[100%] aspect-video rounded-lg overflow-hidden">
                     <iframe
                       width="100%"
