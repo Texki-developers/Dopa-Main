@@ -26,9 +26,9 @@ export default function TrendingForm({ landingData }) {
     const {push} = useRouter()
   const onFormSubmission = async (data) => {
     data.formName = landingData[0]?.formName
-    const response = await saveLeads(data);
+    const response = await saveEnquiryLeads(data);
     if (response.status === 200) {
-        push('/DopaNeetCoaching/thankyou')
+        push('/dopaEnquiry2024/thankyou')
       toast({
         status: "success",
         description: "Registered Successfully!",
