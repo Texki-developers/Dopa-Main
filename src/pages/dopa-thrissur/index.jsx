@@ -14,11 +14,11 @@ import React from "react";
 export default function index() {
   return (
     <MainLayout>
-      <VStack className="pt-[7rem] gap-[3rem]">
+      <VStack className="mt-[4rem] md:mt-[5rem] gap-[3rem]">
         <div>
           <Tbanner />
           <CoursesOffered />
-        
+          <ThrissurResults />
         </div>
         <StudentTestimonials />
         <div>

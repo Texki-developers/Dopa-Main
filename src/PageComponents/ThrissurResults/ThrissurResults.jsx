@@ -18,7 +18,6 @@ export default function ThrissurResults() {
               <Image src='/Assets/thrissurLanding/results/results.png' alt='result' fill />
             </div>
             </div>
-      
         </VStack>
     </Center>
   )
