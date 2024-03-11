@@ -14,8 +14,8 @@ import React from "react";
 export default function index() {
   return (
     <MainLayout>
-      <VStack className="mt-[4rem] md:mt-[5rem] gap-[3rem]">
-        <div>
+      <VStack className="mt-[4rem] md:mt-[5rem] gap-[1rem] md:gap-[3rem]">
+        <div className='h-max'>
           <Tbanner />
           <CoursesOffered />
           <ThrissurResults />
