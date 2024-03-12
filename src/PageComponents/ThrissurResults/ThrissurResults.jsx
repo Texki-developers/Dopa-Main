@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function ThrissurResults() {
   return (
-    <Center className='bg-[#0A7D90] w-[100vw] mb-[10rem]'>
+    <Center className='bg-[#0A7D90]  mb-[10rem]'>
         <VStack className=' gap-[1rem] md:gap-[3rem]  py-[3rem] pb-0 w-[100%]'>
             <VStack className='text-white'>
              <h1 className="section-heading text-center">Results</h1>
