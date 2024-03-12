@@ -8,16 +8,14 @@ export default function SliderRow({ direction, images }) {
       style={{
         animation: `${
           direction === 1 ? "slide-left" : "slide-right"
-        } 5s infinite `, // Adjust the duration as needed
+        } 8s infinite `, // Adjust the duration as needed
       }}
-      className="min-w-[100vw] overflow-hidden"
+      className="min-w-[100vw] "
     >
-      {images &&
-        images?.map((items) => (
-          <div className="relative w-[40rem] aspect-[3/2] overflow-hidden">
-            <Image src={items} alt="dopa_thrissur_results" fill />
+          <div className="relative w-[100vw] aspect-[15/4]  md:aspect-[15/2] ">
+            <Image className="object-cover" src={images} alt="dopa_thrissur_results" fill />
           </div>
-        ))}
+  
     </HStack>
   );
 }
