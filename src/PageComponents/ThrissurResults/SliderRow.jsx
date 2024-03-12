@@ -12,9 +12,9 @@ export default function SliderRow({ direction, images }) {
       }}
       className="min-w-[100vw] "
     >
-          <div className="relative w-[100vw] aspect-[15/4]  md:aspect-[15/2] ">
-            <Image className="object-cover" src={images} alt="dopa_thrissur_results" fill />
-          </div>
+      
+            <img className="object-cover " src={images} alt="dopa_thrissur_results"  />
+       
   
     </HStack>
   );
