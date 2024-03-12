@@ -8,9 +8,9 @@ import "@fontsource/manrope/800.css";
 import { BiBorderRadius } from "react-icons/bi";
 
 const fonts = {
-  mono: `'Menlo', monospace`,
-  heading: `'Montserrat', sans-serif`,
-  body: `'Montserrat', sans-serif`,
+  // mono: `'Menlo', monospace`,
+  // heading: `'Montserrat', sans-serif`,
+  // body: `'Montserrat', sans-serif`,
 };
 
 const breakpoints = {

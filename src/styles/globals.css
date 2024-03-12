@@ -1,19 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Manrope:wght@200;300;400;600;700;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --padding-primary: 0 5%;
   --padding-carousel: 0 5%;
   --font-manrope: "Manrope", sans-serif;
   --font-inter: "Inter", sans-serif;
-  --font-anton: 'Anton', sans-serif;
+  --font-anton: "Anton", sans-serif;
   --aqua-gradient: linear-gradient(145.62deg, #33cccc 20.31%, #1987a4 138.1%);
   --main-title-size: 1.8rem;
   --sub-title-size: 1.3rem;
   --read-text-size: 1rem;
   --color-primary: #1987a4;
-  --color-muted: #D9D9D9;;
+  --color-muted: #d9d9d9;
 }
 
 /* input for the telephone input */
@@ -27,7 +30,7 @@
   font-size: 1rem;
 }
 
-.swiper-slide{
+.swiper-slide {
   height: 100% !important;
 }
 
@@ -42,7 +45,6 @@
   padding: 0;
   margin: 0;
 }
-
 
 html,
 body {
@@ -59,7 +61,7 @@ body {
   border-radius: 50px;
   border: none;
 }
-.btn-light{
+.btn-light {
   background: #fff;
   color: #000;
 }
@@ -68,25 +70,25 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 }
-.benefit_mobile_selector__active{
+.benefit_mobile_selector__active {
   flex: 2 !important;
 }
-.benefit_mobile_selector__active span{
+.benefit_mobile_selector__active span {
   display: block !important;
 }
-.benefit_mobile_selector__active::before{
+.benefit_mobile_selector__active::before {
   background: var(--color-primary) !important;
 }
-.icon-header-wrapper{
+.icon-header-wrapper {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-.icon-header-wrapper h3{
+.icon-header-wrapper h3 {
   font-size: var(--main-title-size);
   color: var(--color-primary);
 }
-.icon-header-wrapper h4{
+.icon-header-wrapper h4 {
   font-size: var(--sub-title-size);
   font-weight: 500;
   background: #33cccc1d;
@@ -95,10 +97,11 @@ body {
   width: max-content;
   padding: 2px 5px;
 }
-.header-icon{
+.header-icon {
   width: 3rem;
   height: auto;
 }
+
 @media only screen and (max-width: 768px) {
   :root {
     --padding-carousel: 0 3rem;
@@ -111,14 +114,14 @@ body {
     --read-text-size: 0.9rem;
     --padding-carousel: 0 1rem;
   }
-  .btn-primary{
+  .btn-primary {
     padding: 0.5rem 1rem;
   }
-  .icon-header-wrapper h3{
+  .icon-header-wrapper h3 {
     font-size: 1.2rem;
     color: var(--color-primary);
   }
-  .icon-header-wrapper h4{
+  .icon-header-wrapper h4 {
     font-size: 0.9rem;
     font-weight: 500;
     background: #33cccc1d;
@@ -127,8 +130,146 @@ body {
     width: max-content;
     padding: 2px 5px;
   }
-  .header-icon{
+  .header-icon {
     width: 2rem;
     height: auto;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-slide {
+  animation: slide 30s linear 0s infinite;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10%);
+  }
+}
+
+/* Book Antiqua */
+@font-face {
+  font-family: "Book Antiqua";
+  src: url("/assets/fonts/Book Antiqua Font.ttf");
+}
+
+/* Avenir */
+@font-face {
+  font-family: "Avenir Roman";
+  src: url("/assets/fonts/avenir/AvenirLTStd-Roman.otf");
+}
+@font-face {
+  font-family: "Avenir Book";
+  src: url("/assets/fonts/avenir/AvenirLTStd-Book.otf");
+}
+@font-face {
+  font-family: "Avenir Black";
+  src: url("/assets/fonts/avenir/AvenirLTStd-Black.otf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* Import and use font family here */
+  font-family: "Montserrat";
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Tailwind CSS Animation Styles (or include in your Tailwind CSS configuration) */
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(10%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+
+
+@layer components {
+  .btn-common {
+    @apply flex justify-center gap-2 px-[2rem] py-[0.8rem] text-[0.85rem] transition-all duration-300 ease-in-out disabled:cursor-not-allowed disabled:opacity-50 md:text-[1rem];
+  }
+  .btn-ghost {
+    @apply border-2 border-transparent hover:border-slate-50 hover:bg-slate-50;
+  }
+  .btn-outlined {
+    @apply border-2 border-slate-400 hover:bg-slate-50;
+  }
+  .btn-solid {
+    @apply border-2 border-white bg-white text-primary-500 rounded-full;
+  }
+  .common-space-x {
+    @apply max-w-[1400px] px-4 md:px-20 xl:px-0;
+  }
+  .text-basic {
+    @apply text-[0.9rem] md:text-[1rem];
+  }
+  .section-heading {
+    @apply text-[1.7rem] font-semibold  md:text-[3rem];
+  }
+  .section-heading-small {
+    @apply text-[1.4rem] font-[400] md:text-[2rem];
+  }
+  .font-thin {
+    @apply text-[0.8rem] font-[200] md:text-[0.9rem];
+  }
+  .lfont-thin {
+    @apply text-[1rem] font-[200] md:text-[1rem];
+  }
+  .section-heading-Xsmall {
+    @apply text-[1.4rem] font-[200] md:text-[1.2rem];
+  }
+  .card-heading {
+    @apply text-[1.1rem] md:text-[1.2rem];
+  }
+  .banner-title {
+    @apply text-[1.5rem] font-[700] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];
+  }
+
+  .card-heading-v2 {
+    @apply text-[2rem] md:text-[3rem];
+  }
+  .banner-subtitle {
+    @apply text-[1rem] font-[400] md:text-[1.8rem];
+  }
+  .btn-primary {
+    @apply btn-solid rounded-md uppercase md:rounded-lg;
+  }
+  .input-common {
+    @apply  p-3 md:p-1 xl:p-3 font-thin placeholder:text-black  outline-none focus:border-b-2 ;
+  }
+  .input-cover {
+    @apply border-[1.5px];
+  }
+  .input-line {
+    @apply border-b-[1.5px] pb-1 pl-0;
   }
 }
