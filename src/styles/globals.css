@@ -189,28 +189,54 @@ body {
 
 @keyframes slide-left {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   50% {
-    transform: translateX(-10%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
 }
 
 @keyframes slide-right {
   0% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
   50% {
-    transform: translateX(10%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
 }
 
+
+@media only screen and  (max-width: 700px){
+  @keyframes slide-left {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(-180%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(180%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
 
 
 @layer components {

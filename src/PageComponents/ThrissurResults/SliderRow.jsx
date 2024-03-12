@@ -1,23 +1,49 @@
-import React from "react";
-import HStack from "@/Components/BasicComponents/HStack/HStack";
-import Image from "next/image";
+import React, { useEffect, useState, useRef } from "react";
+import {motion} from 'framer-motion'
+
 
 export default function SliderRow({ direction, images }) {
+  const [translateXValue, setTranslateXValue] = useState(0);
+  const[screenWidth,setScreenWidth] = useState(0)
+  const transitionDuration = 1000; // Adjust the transition duration in milliseconds
+  const [imageWidth,setImageWidth] = useState(0)
+
+  
+
+  useEffect(() => {
+    const img = document.createElement("img");
+    img.src= images
+    console.log(images)
+   const imageWidth =  img.width
+   setImageWidth(imageWidth)
+   setScreenWidth(window.innerWidth)
+   console.log(imageWidth,"Imagewidth")
+  }, []);
+
   return (
-    <HStack
-      style={{
-        animation: `${
-          direction === 1 ? "slide-left" : "slide-right"
-        } 5s infinite `, // Adjust the duration as needed
-      }}
-      className="min-w-[100vw] overflow-hidden"
+    <motion.div
+    initial={{
+      translateX: `-${imageWidth - screenWidth}px`
+    }}
+    animate={{
+    translateX: direction === -1 ? [`-${imageWidth - screenWidth}px`,'0px',`-${imageWidth - screenWidth}px`] :['0px',`-${imageWidth - screenWidth}px`,'0px'] 
+    }}
+    transition={{
+      duration: 10,
+      repeat:Infinity  
+    }}
+    className="w-[max-content]"
     >
-      {images &&
-        images?.map((items) => (
-          <div className="relative w-[40rem] aspect-[3/2] overflow-hidden">
-            <Image src={items} alt="dopa_thrissur_results" fill />
-          </div>
-        ))}
-    </HStack>
+      <img
+        style={{
+          width:`${imageWidth}px`
+        }}
+
+        id="carouselImage"
+  
+        src={images}
+        alt="dopa_thrissur_results"
+      />
+    </motion.div>
   );
 }
