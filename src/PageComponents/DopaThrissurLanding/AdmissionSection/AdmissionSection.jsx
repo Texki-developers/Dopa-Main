@@ -8,8 +8,8 @@ const pills = ["Online", "Offline", "Residential Batch"];
 
 export default function AdmissionSection() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-[3rem] bg-primary-500">
-      <div className="hidden md:block relative w-[100%]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-[3rem] bg-primary-500">
+      <div className="hidden lg:block relative w-[100%]">
         <div className="md:absolute bottom-[5rem] z-[2] aspect-[89/53] w-[100%]">
           <Image src="/Assets/thrissurLanding/dopa-students.png" fill />
         </div>
@@ -59,8 +59,8 @@ export default function AdmissionSection() {
         </Button>
       </VStack>
 
-      <div className="md:hidden block relative w-[100%]">
-        <div className="md:absolute bottom-[5rem] z-[2] aspect-[89/53] w-[100%]">
+      <div className="lg:hidden block relative w-[100%]">
+        <div className="lg:absolute bottom-[5rem] z-[2] aspect-[89/53] w-[100%]">
           <Image src="/Assets/thrissurLanding/dopa-students.png" fill />
         </div>
         <span className="absolute z-[3] skew-x-[30deg] bottom-0 left-0 w-[calc(100%+2rem)] translate-x-[-4rem] h-[3rem] block bg-white"></span>
