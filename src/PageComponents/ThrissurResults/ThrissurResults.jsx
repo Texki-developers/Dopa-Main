@@ -13,7 +13,7 @@ export default function ThrissurResults() {
              <p className='section-heading-Xsmall text-center' >Our Dopa Alumins</p>
             </VStack>
             <ResultSlider/>
-            <div className='w-[100%] flex justify-center items-end  sm:mb-[-12rem] mb-[-7rem]'>
+            <div className='w-[100%] flex justify-center items-end sm:mb-[-9rem] lg:mb-[-14rem] mb-[-7rem]'>
             <div className='relative w-[20rem] sm:w-[25rem] lg:w-[40rem]  aspect-[4/3] '>
               <Image src='/Assets/thrissurLanding/results/results.png' alt='result' fill />
             </div>
