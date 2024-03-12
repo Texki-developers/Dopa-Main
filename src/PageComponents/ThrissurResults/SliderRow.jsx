@@ -12,8 +12,8 @@ export default function SliderRow({ direction, images }) {
       }}
       className="min-w-[100vw] "
     >
-      
-            <img className="object-cover " src={images} alt="dopa_thrissur_results"  />
+
+            <img className="object-cover aspect-[15/2] overflow-visible" src={images} alt="dopa_thrissur_results"  />
        
   
     </HStack>
