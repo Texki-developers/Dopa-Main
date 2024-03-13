@@ -19,7 +19,7 @@ export const saveLeads = async (body) => {
 };
 
 export const saveThrissurLeads = async (body) => {
-  return await axiosInstance.post("thrissur/leads", {
+  return await axiosInstance.post("landing/thrissur/leads", {
     body,
   });
 };

@@ -5,7 +5,7 @@ import logo from "../../../public/Assets/logo.png";
 import Link from "next/link";
 import PrimaryButton from "../Buttons/PrimaryButton/PrimaryButton";
 import { useRouter } from "next/router";
-
+import { MdOutlineFiberNew } from "react-icons/md";
 export default function MainNavbar() {
   const [activeMObileSubMenu, setActiveMobileSubMenu] = useState(null);
   const [windowWidth, setWindowWidth] = useState(null);
@@ -47,6 +47,10 @@ export default function MainNavbar() {
       </Link>
       {windowWidth && (
         <ul className={style.navLinks}>
+
+           <li >
+                <Link href="/dopa-thrissur">Dopa Thrissur</Link>
+              </li>
           <li>
             <span
               onClick={() => {
