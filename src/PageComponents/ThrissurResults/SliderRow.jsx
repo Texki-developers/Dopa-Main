@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import {motion} from 'framer-motion'
 
 
 export default function SliderRow({ direction, images }) {
-  const [translateXValue, setTranslateXValue] = useState(0);
+
   const[screenWidth,setScreenWidth] = useState(0)
-  const transitionDuration = 1000; // Adjust the transition duration in milliseconds
   const [imageWidth,setImageWidth] = useState(0)
 
   
@@ -27,7 +26,7 @@ export default function SliderRow({ direction, images }) {
     translateX: direction === -1 ? [`-${imageWidth - screenWidth}px`,'0px',`-${imageWidth - screenWidth}px`] :['0px',`-${imageWidth - screenWidth}px`,'0px'] 
     }}
     transition={{
-      duration: 10,
+      duration: screenWidth <=500 ? 15 : 10,
       repeat:Infinity  
     }}
     className="w-[max-content]"
