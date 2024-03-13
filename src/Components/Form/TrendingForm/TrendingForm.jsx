@@ -10,11 +10,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { classess } from "./trendingForm.data";
-import { saveLeads } from "@/utils/Services/trending.service";
 import { useRouter } from "next/router";
 
-export default function TrendingForm({ landingData }) {
+export default function TrendingForm({ landingData,classess,saveLeads }) {
   const {
     register,
     handleSubmit,
@@ -26,7 +24,7 @@ export default function TrendingForm({ landingData }) {
     const {push} = useRouter()
   const onFormSubmission = async (data) => {
     data.formName = landingData[0]?.formName
-    const response = await saveEnquiryLeads(data);
+    const response = await saveLeads(data);
     if (response.status === 200) {
         push('/dopaEnquiry2024/thankyou')
       toast({
