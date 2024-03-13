@@ -47,7 +47,6 @@ export default function MainNavbar() {
       </Link>
       {windowWidth && (
         <ul className={style.navLinks}>
-
            <li >
                 <Link href="/dopa-thrissur">Dopa Thrissur</Link>
               </li>
