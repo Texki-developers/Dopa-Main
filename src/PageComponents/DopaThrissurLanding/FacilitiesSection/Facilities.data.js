@@ -46,7 +46,7 @@ export const hostelFacilities = [
     'Study Hall',
     'Library',
     'Prayer Hall',
-    'Hygienic Halal food',
+    'Hygienic food',
     '24 hours power backup',
     'Laundry',
     'Transportation',

@@ -13,17 +13,15 @@ export default function SliderRow({ direction, images }) {
   useEffect(() => {
     const img = document.createElement("img");
     img.src= images
-    console.log(images)
    const imageWidth =  img.width
    setImageWidth(imageWidth)
-   setScreenWidth(window.innerWidth)
-   console.log(imageWidth,"Imagewidth")
+
   }, []);
 
   return (
     <motion.div
     initial={{
-      translateX: `-${imageWidth - screenWidth}px`
+      translateX: direction === -1 ? `-${imageWidth - screenWidth}px`: '0px'
     }}
     animate={{
     translateX: direction === -1 ? [`-${imageWidth - screenWidth}px`,'0px',`-${imageWidth - screenWidth}px`] :['0px',`-${imageWidth - screenWidth}px`,'0px'] 

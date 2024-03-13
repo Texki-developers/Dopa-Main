@@ -9,25 +9,25 @@ export const courseOfferedData = [
     },
     {
         sn:'02',
-        head:'NEET/JEE REPEATERS',
+        head:'NEET/KEAM CRASH',
         features:{
-            name:"Class XII Passed Students",
+            name:"Class XII  Students",
             duration:'short term course'
         }
     },
     {
         sn:'03',
-        head:'NEET/JEE REPEATERS',
+        head:'BOARD EXAM CRASH',
         features:{
-            name:"Class XII Passed Students",
-            duration:'1 Year'
+            name:"Plus one ,Plus two Ongoing Students",
+            duration:'3 months'
         }
     },
     {
         sn:'04',
-        head:'NEET/JEE REPEATERS',
+        head:'PLUS 1, PLUS 2 REGULAR / HOLIDAY BATCH',
         features:{
-            name:"Class XII Passed Students",
+            name:"Class XI , XII  Students",
             duration:'1 Year'
         }
     },
@@ -41,9 +41,9 @@ export const courseOfferedData = [
     },
     {
         sn:'06',
-        head:'NEET/JEE REPEATERS',
+        head:'FOUNDATION BATCHES',
         features:{
-            name:"Class XII Passed Students",
+            name:"8,9,10 Students",
             duration:'1 Year'
         }
     },
