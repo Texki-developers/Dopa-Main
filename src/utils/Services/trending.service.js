@@ -5,7 +5,7 @@ export const getLanding = async () => {
 };
 
 export const getEnquiryLanding = async () => {
-  return await axiosInstance.get("enquiry-landing");
+  return await axiosInstance.get("landing/enquiry-landing");
 };
  
 export const saveEnquiryLeads = async () => {
