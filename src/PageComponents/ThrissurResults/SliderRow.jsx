@@ -13,6 +13,7 @@ export default function SliderRow({ direction, images }) {
     const img = document.createElement("img");
     img.src= images
    const imageWidth =  img.width
+   setScreenWidth(window.innerWidth)
    setImageWidth(imageWidth)
 
   }, []);
