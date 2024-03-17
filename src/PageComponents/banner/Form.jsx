@@ -7,7 +7,7 @@ import { useToast } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { saveThrissurLeads } from "@/utils/Services/trending.service";
 
-export default function BannerForm() {
+export default function BannerForm({type}) {
   const [isLoading, setLoading] = useState(false);
   const [showFeedback, setshowFeedback] = useState(false);
   const toast = useToast();
@@ -21,6 +21,7 @@ export default function BannerForm() {
   const onFormSubmission = async (data) => {
     console.log(data);
     setLoading(true);
+    data.type = type
     const response = await saveThrissurLeads(data);
     if (response.status === 200) {
       toast({
@@ -35,6 +36,7 @@ export default function BannerForm() {
         class: "",
         school: "",
         whatsapp: "",
+        place:""
       });
     } else {
       setLoading(false);
@@ -52,6 +54,7 @@ export default function BannerForm() {
       class: "",
       school: "",
       whatsapp: "",
+      place:""
     });
   };
 
@@ -107,6 +110,14 @@ export default function BannerForm() {
             })}
             required
             error={errors?.email?.message}
+          />
+            <Input
+            placeholder="Place"
+            register={register("place", {
+              required: "Your Place is required",
+            })}
+            required
+            error={errors?.place?.message}
           />
         </VStack>
 
