@@ -21,11 +21,11 @@ export default function LearningCard({ data }) {
           <h1 className='font-bold'>{data?.head}</h1>
           <HStack className='gap-[1rem]'>
             <IonCallOutline />
-            <p>9544998866</p>
+            <p>{data?.phone}</p>
           </HStack>
           <HStack className='gap-[1rem]'>
             <MaterialSymbolsLocationOnOutline />
-            <p>Open map location</p>
+            <p className="hover:cursor-pointer" onClick={() => window.location.href =data.map}>Open map location</p>
           </HStack>
         </VStack>
       </VStack>

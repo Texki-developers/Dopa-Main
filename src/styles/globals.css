@@ -228,7 +228,16 @@ body {
   .banner-title {
     @apply text-[1.5rem] font-[700] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];
   }
+  .thin-banner-title {
+    @apply text-[1.5rem] font-[400] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];
+  }
 
+  .optimised-banner-title {
+    @apply text-[1.5rem] font-[700] sm:text-[3rem] md:text-[3.5rem] md:leading-[5rem];
+  } 
+  .thin-optimised-banner-title {
+    @apply text-[1.5rem] font-[400] sm:text-[3rem] md:text-[3.5rem] md:leading-[5rem];
+  } 
   .card-heading-v2 {
     @apply text-[2rem] md:text-[3rem];
   }
