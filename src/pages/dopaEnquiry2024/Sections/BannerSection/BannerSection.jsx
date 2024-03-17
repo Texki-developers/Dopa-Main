@@ -4,6 +4,8 @@ import React from "react";
 import bannerImage from "../../../../../public/Assets/trending/dopa.png";
 import TrendingForm from "@/Components/Form/TrendingForm/TrendingForm";
 import config from "@/utils/config";
+import { Enquiryclassess } from "@/Components/Form/TrendingForm/trendingForm.data";
+import { saveEnquiryLeads } from "@/utils/Services/trending.service";
 
 export default function BannerSection({ data }) {
   console.log({ data });
@@ -30,7 +32,7 @@ export default function BannerSection({ data }) {
               alt="Dopa for Neet"
             />
         </AspectRatio>
-        <TrendingForm landingData={data} />
+        <TrendingForm landingData={data} classess={Enquiryclassess} saveLeads={saveEnquiryLeads}/>
       </Grid>
     </Center>
   );

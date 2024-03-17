@@ -5,7 +5,7 @@ export const getLanding = async () => {
 };
 
 export const getEnquiryLanding = async () => {
-  return await axiosInstance.get("enquiry-landing");
+  return await axiosInstance.get("landing/enquiry-landing");
 };
  
 export const saveEnquiryLeads = async () => {
@@ -19,7 +19,7 @@ export const saveLeads = async (body) => {
 };
 
 export const saveThrissurLeads = async (body) => {
-  return await axiosInstance.post("thrissur/leads", {
+  return await axiosInstance.post("landing/thrissur/leads", {
     body,
   });
 };
