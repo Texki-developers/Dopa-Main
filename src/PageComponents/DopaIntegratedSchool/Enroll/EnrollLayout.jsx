@@ -13,7 +13,7 @@ export default function EnrollLayout() {
           How to <span className="text-primary-400">enroll?</span>{" "}
         </h1>
 
-        <HStack className="flex-col md:flex-row gap-2 w-[100%] h-[100%] ">
+        <HStack className="flex-col md:flex-row gap-2 w-[100%] h-[100%]  items-stretch">
           {EnrollData && EnrollData.map((items) => <EnrollCard data={items} />)}
         </HStack>
       </VStack>
