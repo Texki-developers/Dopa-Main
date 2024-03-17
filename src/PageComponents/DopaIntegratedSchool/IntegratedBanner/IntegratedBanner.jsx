@@ -1,21 +1,17 @@
 import Center from "@/Components/BasicComponents/Center/Center";
 import HStack from "@/Components/BasicComponents/HStack/HStack";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import BannerForm from "../../banner/Form";
 import Image from "next/image";
 import VStack from "@/Components/BasicComponents/VStack/VStack";
 
 export default function IntegratedBanner() {
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
+ 
 
   return (
     <Center
       style={{
-        background: 'url("/Assets/thrissurLanding/banner/Rectangle.png")',
+        background: 'url("/Assets/integratedSchool/inner_bg_banner.png")',
         backgroundRepeat: "no-repeat",
         backgroundPosition: `center`,
         backgroundSize: "cover",
