@@ -6,8 +6,6 @@ import Image from "next/image";
 import VStack from "@/Components/BasicComponents/VStack/VStack";
 
 export default function IntegratedBanner() {
- 
-
   return (
     <Center
       style={{
@@ -18,13 +16,19 @@ export default function IntegratedBanner() {
       }}
     >
       <HStack className="w-[100%] common-space-x">
-        <div className="grid grid-cols-1 justify-end md:grid-cols-[1.3fr,1fr] lg:grid-cols-[1.5fr,1fr] xl:grid-cols-[2fr,1.3fr] w-[100%]  lg:gap-[2rem]">
-          <div className="h-[100%] flex items-center md:items-start flex-col">
-            <VStack>
-              <h1 className="banner-title">TARGET</h1>
-              <h1 className="banner-title text-primary-600">AIIMS /IIT</h1>
-              <p className="text-basic font-[600]">Run under the Guidance
-of Doctors from Dopa! </p>
+        <div className="grid grid-cols-1 justify-end md:grid-cols-[1.3fr,1fr] lg:grid-cols-[1.5fr,1fr] xl:grid-cols-[2fr,1.3fr] w-[100%] md:gap-[2rem] lg:gap-[10rem]  xl:gap-[13rem]">
+          <div className="h-[100%] flex items-center md:items-start flex-col justify-end">
+            <VStack className='gap-[1rem]'>
+              <div>
+              <h1 className="banner-title ">TARGET</h1>
+              <h1 className="banner-title text-primary-600 leading-[3rem]">
+                AIIMS /IIT
+              </h1>
+              </div>
+            
+              <p className="section-heading-Xsmall font-[800]">
+                Run under the Guidance of Doctors from Dopa!{" "}
+              </p>
             </VStack>
             <div className="relative  aspect-[3/2]  w-[100%]  xl:w-[100%] flex items-end justify-end">
               <Image
@@ -36,7 +40,7 @@ of Doctors from Dopa! </p>
           </div>
 
           <div className="w-[100%] pb-[1rem] md:py-[1rem] lg:py-[6rem] xl:py-[4rem]">
-            <BannerForm type="integrated"/>
+            <BannerForm type="integrated" />
           </div>
         </div>
       </HStack>
