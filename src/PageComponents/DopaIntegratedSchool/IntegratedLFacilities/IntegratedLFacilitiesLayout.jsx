@@ -50,7 +50,7 @@ export default function IntegratedLFacilitiesLayout() {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="py-[1rem] md:py-[4rem] w-[100%]"
+      className="py-[2rem] md:py-[4rem] w-[100%]"
     >
       <VStack className="common-space-x w-[100%] items-center gap-[3rem]">
         <h1 className="banner-title">
