@@ -62,6 +62,7 @@ export default function BannerForm({type}) {
     <Center
       style={{
         boxShadow: "0px 4px 16px 8px #0000000A",
+        borderRadius : type === 'integrated' ? '2rem' : '0'
       }}
       className=" w-[100%]  bg-white"
     >
