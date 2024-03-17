@@ -36,7 +36,7 @@ export default function Tbanner() {
        
      
         <div className='w-[100%] pb-[1rem] md:py-[1rem] lg:py-[6rem] xl:py-[4rem]'>
-        <BannerForm/> 
+        <BannerForm type="thrissur" /> 
         </div>
 
         </div>
