@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Manrope:wght@200;300;400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -187,9 +188,6 @@ body {
 }
 /* Tailwind CSS Animation Styles (or include in your Tailwind CSS configuration) */
 
-
-
-
 @layer components {
   .btn-common {
     @apply flex justify-center gap-2 px-[2rem] py-[0.8rem] text-[0.85rem] transition-all duration-300 ease-in-out disabled:cursor-not-allowed disabled:opacity-50 md:text-[1rem];
@@ -241,7 +239,7 @@ body {
     @apply btn-solid rounded-md uppercase md:rounded-lg;
   }
   .input-common {
-    @apply  p-3 md:p-1 xl:p-3 font-thin placeholder:text-black  outline-none focus:border-b-2 ;
+    @apply p-3 md:p-1 xl:p-3 font-thin placeholder:text-black  outline-none focus:border-b-2;
   }
   .input-cover {
     @apply border-[1.5px];
