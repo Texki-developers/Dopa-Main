@@ -36,6 +36,12 @@ module.exports = {
           500: "#1987a4",
           600: "#007d93",
         },
+        soft:{
+          blue: '#E3EEFF'
+        }
+      },
+      fontFamily: {
+        "montserrat": "Montserrat, sans-serif",
       },
     },
   },
