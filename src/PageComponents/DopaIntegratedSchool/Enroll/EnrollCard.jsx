@@ -6,9 +6,9 @@ import { MaterialSymbolsCheckSmallRounded } from '@/Components/Icons/Icons'
 export default function EnrollCard({data}) {
   return (
   <VStack className="bg-[#E3EEFF] rounded-xl  w-[100%] ">
-    <VStack className="p-[2rem] gap-[1rem]  w-[100%] ">
+    <VStack className="p-[0.5rem] md:p-[2rem] gap-[1rem]  w-[100%] ">
         <HStack className="gap-[1rem] ">
-            <div className='relative w-[3.5rem] h-[3rem] md:w-[4rem] md:h-[4rem]' >
+            <div className='relative  w-[4rem] h-[4rem]' >
             <Image src={data?.image} alt="sci-sat" fill />
             </div>
        
@@ -22,11 +22,11 @@ export default function EnrollCard({data}) {
             </VStack>
         </HStack>
         <VStack className="gap-[1rem] ">
-            <HStack className="gap-[1rem]">
+            <HStack className="gap-[1rem] grow-1 shrink-1">
                 <MaterialSymbolsCheckSmallRounded />
                 <p className='text-basic font-[600]'>{data.point1}</p>
             </HStack>
-            <HStack className="gap-[1rem] ">
+            <HStack className="gap-[1rem] grow-1 shrink-1">
             <MaterialSymbolsCheckSmallRounded/>
                 <p className='text-basic font-[600]'>{data.point2}</p>
             </HStack>
