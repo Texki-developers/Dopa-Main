@@ -15,13 +15,13 @@ export default function IntegratedBanner() {
         backgroundSize: "cover",
       }}
     >
-      <HStack className="w-[100%] common-space-x">
+      <HStack className="w-[100%] common-space-x pt-[2.5rem] md:pt-0">
         <div className="grid grid-cols-1 justify-end md:grid-cols-[1.3fr,1fr] lg:grid-cols-[1.5fr,1fr] xl:grid-cols-[2fr,1.3fr] w-[100%] md:gap-[2rem] lg:gap-[10rem]  xl:gap-[13rem]">
           <div className="h-[100%] flex items-center md:items-start flex-col justify-end">
             <VStack className='gap-[1rem]'>
               <div>
               <h1 className="banner-title ">TARGET</h1>
-              <h1 className="banner-title text-primary-600 leading-[3rem]">
+              <h1 className="banner-title text-primary-600 leading-[1.5rem] md:leading-[3rem]">
                 AIIMS /IIT
               </h1>
               </div>

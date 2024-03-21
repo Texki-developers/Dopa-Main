@@ -5,7 +5,7 @@ import VStack from "@/Components/BasicComponents/VStack/VStack";
 import React, { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
-import { saveThrissurLeads } from "@/utils/Services/trending.service";
+import { saveForms, saveThrissurLeads } from "@/utils/Services/trending.service";
 
 export default function BannerForm({type}) {
   const [isLoading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ export default function BannerForm({type}) {
     console.log(data);
     setLoading(true);
     data.type = type
-    const response = await saveThrissurLeads(data);
+    const response = await saveForms(data);
     if (response.status === 200) {
       toast({
         status: "success",
