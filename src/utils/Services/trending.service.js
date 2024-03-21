@@ -18,8 +18,8 @@ export const saveLeads = async (body) => {
   });
 };
 
-export const saveThrissurLeads = async (body) => {
-  return await axiosInstance.post("landing/thrissur/leads", {
+export const saveForms = async (body) => {
+  return await axiosInstance.post("landing/form", {
     body,
   });
 };
