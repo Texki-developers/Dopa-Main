@@ -5,7 +5,7 @@ import VStack from "@/Components/BasicComponents/VStack/VStack";
 import React, { useState } from "react";
 import { useToast } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
-import { saveForms, saveThrissurLeads } from "@/utils/Services/trending.service";
+import { saveForms } from "@/utils/Services/trending.service";
 
 export default function BannerForm({type}) {
   const [isLoading, setLoading] = useState(false);
