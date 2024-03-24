@@ -7,7 +7,7 @@ import { useToast } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { saveThrissurLeads } from "@/utils/Services/trending.service";
 
-export default function BannerForm({type}) {
+export default function BannerForm({ type }) {
   const [isLoading, setLoading] = useState(false);
   const [showFeedback, setshowFeedback] = useState(false);
   const toast = useToast();
@@ -21,7 +21,7 @@ export default function BannerForm({type}) {
   const onFormSubmission = async (data) => {
     console.log(data);
     setLoading(true);
-    data.type = type
+    data.type = type;
     const response = await saveThrissurLeads(data);
     if (response.status === 200) {
       toast({
@@ -32,11 +32,11 @@ export default function BannerForm({type}) {
       setLoading(false);
       reset({
         email: "",
-        name:"",
+        name: "",
         class: "",
         school: "",
         whatsapp: "",
-        place:""
+        place: "",
       });
     } else {
       setLoading(false);
@@ -50,11 +50,11 @@ export default function BannerForm({type}) {
     setshowFeedback(true);
     reset({
       email: "",
-      name:"",
+      name: "",
       class: "",
       school: "",
       whatsapp: "",
-      place:""
+      place: "",
     });
   };
 
@@ -62,7 +62,7 @@ export default function BannerForm({type}) {
     <Center
       style={{
         boxShadow: "0px 4px 16px 8px #0000000A",
-        borderRadius : type === 'integrated' ? '2rem' : '0'
+        borderRadius: type === "integrated" ? "2rem" : "0",
       }}
       className=" w-[100%]  bg-white"
     >
@@ -112,14 +112,16 @@ export default function BannerForm({type}) {
             required
             error={errors?.email?.message}
           />
+          {type !== "repeaters" && (
             <Input
-            placeholder="Place"
-            register={register("place", {
-              required: "Your Place is required",
-            })}
-            required
-            error={errors?.place?.message}
-          />
+              placeholder="Place"
+              register={register("place", {
+                required: "Your Place is required",
+              })}
+              required
+              error={errors?.place?.message}
+            />
+          )}
         </VStack>
 
         {showFeedback && (
