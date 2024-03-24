@@ -8,7 +8,13 @@ export default function JoinDopaSection() {
   return (
     <Center className="bg-soft-blue py-[3rem]">
       <div className="common-space-x">
-        <div className="grid grid-col-1 sm:grid-cols-[1.5fr_1fr] md:grid-cols-2 items-center bg-white rounded-2xl">
+        <div
+          className="grid grid-col-1 sm:grid-cols-[1.5fr_1fr] md:grid-cols-2 items-center bg-white rounded-2xl"
+          style={{
+            background: `url('/Assets/integratedSchool/join-pattern.svg')`,
+            backgroundSize: "cover",
+          }}
+        >
           <VStack className="gap-4 sm:gap-6 p-[1rem] sm:p-[2rem]">
             <h2 className="section-heading leading-[1.1]">
               <span className="text-primary-500">Join Dopa</span> and <br />{" "}

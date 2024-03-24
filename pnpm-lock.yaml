@@ -17,6 +17,9 @@ dependencies:
   '@fontsource/manrope':
     specifier: ^5.0.9
     version: 5.0.9
+  '@gsap/react':
+    specifier: ^2.1.0
+    version: 2.1.0
   '@next/font':
     specifier: 13.1.6
     version: 13.1.6
@@ -1373,6 +1376,13 @@ packages:
 
   /@fontsource/manrope@5.0.9:
     resolution: {integrity: sha512-qQrPfZcd7dvjCt+64P/m0UiVEmew7paEilunMs/fXLcSlDFGc8Ne/gQmeqv4xuN8NDSHAEHTuyl1uxpxpasLbA==}
+    dev: false
+
+  /@gsap/react@2.1.0:
+    resolution: {integrity: sha512-pwdFXvOM5IsRZXpWTKkQoEjb3/iUjDCU1BCJDlE6pHgVjG+7Ep/7+sszUgqVZ2Jc0mR8gnhtDWyx5cQAT4kwQw==}
+    dependencies:
+      gsap: 3.12.5
+      react: 18.2.0
     dev: false
 
   /@isaacs/cliui@8.0.2:
@@ -2747,6 +2757,10 @@ packages:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
     dependencies:
       get-intrinsic: 1.2.4
+    dev: false
+
+  /gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
     dev: false
 
   /gtoken@5.3.2:
