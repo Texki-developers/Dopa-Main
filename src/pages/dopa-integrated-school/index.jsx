@@ -9,6 +9,7 @@ import Sat from "@/PageComponents/DopaIntegratedSchool/Sat/Sat";
 import IntegratedLFacilitiesLayout from "@/PageComponents/DopaIntegratedSchool/IntegratedLFacilities/IntegratedLFacilitiesLayout";
 import IntegratedBanner from "@/PageComponents/DopaIntegratedSchool/IntegratedBanner/IntegratedBanner";
 import MainLayout from "@/Layouts/MainLayout";
+import ResultSlider from "@/PageComponents/ThrissurResults/ResultSlider";
 
 export default function DopaIntegratedSchool() {
   return (
@@ -20,6 +21,7 @@ export default function DopaIntegratedSchool() {
       <IntegratedTestimonials />
       <IntegratedLFacilitiesLayout/>
       <SuccessStories/>
+      <ResultSlider/>
       <Sat/>
       <JoinDopaSection />
   
