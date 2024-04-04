@@ -7,12 +7,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 import { enrollDetails } from "./enroll.data";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HowToEnrollSection() {
-  gsap.registerPlugin(ScrollTrigger);
   let component = useRef();
   const [width, setWidth] = useState(0);
 
