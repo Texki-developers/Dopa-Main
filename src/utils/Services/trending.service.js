@@ -20,6 +20,6 @@ export const saveLeads = async (body) => {
 
 export const saveForms = async (body) => {
   return await axiosInstance.post("landing/form", {
-    body,
+    ...body,
   });
 };
