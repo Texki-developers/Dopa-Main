@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 import { enrollDetails } from "./enroll.data";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
