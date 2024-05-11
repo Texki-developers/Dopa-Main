@@ -50,6 +50,9 @@ export default function MainNavbar() {
            <li >
                 <Link href="/dopa-thrissur">Dopa Thrissur</Link>
               </li>
+              <li >
+                <Link href="/dopa-integrated-school">Integrated School</Link>
+              </li>
           <li>
             <span
               onClick={() => {
@@ -107,7 +110,7 @@ export default function MainNavbar() {
                 <Link href="/courses/repeaters">DOPA REPEATERS</Link>
               </li>
               <li>
-                <Link href="/courses/dopaSchool">NEET SCHOOL</Link>
+                <Link href="/courses/dopaSchool">INTEGRATED SCHOOL</Link>
               </li>
               <li onClick={handleInnerExpansion}>
                 <a style={{ pointerEvents: "none" }}>DOPA FOUNDATION</a>
