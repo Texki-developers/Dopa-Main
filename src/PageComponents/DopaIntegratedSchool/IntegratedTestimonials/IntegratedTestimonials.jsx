@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 
 import SwiperCore, { Navigation, Autoplay } from "swiper/core";
 import { MdOutlineArrowForward } from "react-icons/md";
+import { testimonialsIntegrated } from "./integratedTestimonials.data";
 SwiperCore.use([Navigation, Autoplay]);
 
 export default function IntegratedTestimonials() {
@@ -65,11 +66,11 @@ export default function IntegratedTestimonials() {
             </div>
           </HStack>
         </HStack>
-        <div className="w-[100%] overflow-hidden">
+        <div className="w-[100%] overflow-hidden integrated-testimonial-card">
           <Swiper {...swiperParams}>
-            {[...Array(10)].map((_, index) => (
-              <SwiperSlide>
-                <IntegratedTestimonialCard />
+            {testimonialsIntegrated.map((data, index) => (
+              <SwiperSlide key={index}>
+                <IntegratedTestimonialCard data={data} />
               </SwiperSlide>
             ))}
           </Swiper>

@@ -56,7 +56,7 @@ export default function HowToEnrollSection() {
             </Center>
             <VStack>
               <p className="card-heading uppercase">Admission Desk</p>
-              <Link href="tel:">+91 957 898 3333</Link>
+              <Link href="tel:919645202200">+91 9645202200</Link>
             </VStack>
           </HStack>
         </div>
