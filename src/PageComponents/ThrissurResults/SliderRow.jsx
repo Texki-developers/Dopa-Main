@@ -27,7 +27,7 @@ export default function SliderRow({ direction, images }) {
     translateX: direction === -1 ? [`-${imageWidth - screenWidth}px`,'0px',`-${imageWidth - screenWidth}px`] :['0px',`-${imageWidth - screenWidth}px`,'0px'] 
     }}
     transition={{
-      duration: screenWidth <=500 ? 15 : 10,
+      duration: screenWidth <=500 ? 20 : 18,
       repeat:Infinity  
     }}
     className="w-[max-content]"
