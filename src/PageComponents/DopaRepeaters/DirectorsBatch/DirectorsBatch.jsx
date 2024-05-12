@@ -11,12 +11,12 @@ export default function DirectorsBatch() {
       role: "Academic Director | DOPA",
     },
     {
-      name: "Dr Ashiq Sainudheen",
-      role: "Academic Director | DOPA",
+      name: "Dr Niyas Paloth",
+      role: "CEO | DOPA",
     },
     {
-      name: "Dr Ashiq Sainudheen",
-      role: "Academic Director | DOPA",
+      name: "Dr Asif PP",
+      role: "Founder | DOPA",
     },
   ];
   return (

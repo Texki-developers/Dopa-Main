@@ -22,7 +22,7 @@ export default function index() {
         </div>
         <StudentTestimonials />
         <div>
-          <AdmissionSection />
+          <AdmissionSection/>
           <FacilitiesSection />
         </div>
         <CrackNeetSection />
