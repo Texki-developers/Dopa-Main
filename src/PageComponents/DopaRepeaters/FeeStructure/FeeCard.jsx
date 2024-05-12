@@ -9,13 +9,18 @@ export default function FeeCard({ data }) {
     <VStack
       style={{
         border: "2px solid #FFFFFF",
-      }} className="rounded-xl p-[2rem]"
+      }} className="rounded-xl p-[1.5rem]"
     >
       <VStack className=' h-[100%] justify-between gap-[2rem]'>
         <VStack className='gap-[1rem]'>
         <VStack className="gap-[1rem] items-center">
           <h2 className="section-heading-Xsmall font-[600]">{data?.title}</h2>
+          <HStack>
           <h1 className="section-heading font-[800]">{data?.price}</h1>
+          <h1 className="section-heading-Xsmall font-[400] pl-1"> + GST</h1>
+          </HStack>
+
+
         </VStack>
 
         <VStack className='gap-[1rem]'>

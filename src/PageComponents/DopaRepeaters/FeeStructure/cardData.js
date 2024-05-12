@@ -1,7 +1,7 @@
 export const FeeCardData = [
     {
         title:'online',
-        price:'₹24,999',
+        price:'₹24,599',
         points:[
             "Dopa App Access",
             "Expert Mentorship",
