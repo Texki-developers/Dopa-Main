@@ -26,22 +26,6 @@ export default function Document() {
           }}
         />
 
-        {/* Google tag manager */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-WFWSD5J8GF"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-WFWSD5J8GF');
-              `,
-          }}
-        />
-
         <noscript>
           <img
             height="1"
@@ -50,20 +34,23 @@ export default function Document() {
             src="https://www.facebook.com/tr?id=431035462525150&ev=PageView&noscript=1"
           />
         </noscript>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-WFWSD5J8GF"
-        ></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16564495090">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16564495090">
 </script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)}
-  gtag('js', new Date());
 
-  gtag('config', 'AW-16564495090');
-</script>
+<script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-16564495090');
+              `,
+            }}
+          />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-16564495090"
+          />
       </Head>
       <body>
         <Main />
