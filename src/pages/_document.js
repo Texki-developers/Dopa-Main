@@ -55,13 +55,15 @@ export default function Document() {
           src="https://www.googletagmanager.com/gtag/js?id=G-WFWSD5J8GF"
         ></script>
 
-        {/* <script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16564495090">
+</script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)}
   gtag('js', new Date());
 
-  gtag('config', 'G-WFWSD5J8GF');
-</script> */}
+  gtag('config', 'AW-16564495090');
+</script>
       </Head>
       <body>
         <Main />
