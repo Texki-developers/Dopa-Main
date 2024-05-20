@@ -52,6 +52,17 @@ export default function Document() {
             src="https://www.googletagmanager.com/gtag/js?id=AW-16564495090"
           />
       </Head>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=G-4R8KCY1EB3`}></script>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-4R8KCY1EB3');
+                `,
+              }}
+            />
       <body>
         <Main />
         <NextScript />
