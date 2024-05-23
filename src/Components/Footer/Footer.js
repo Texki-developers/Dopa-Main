@@ -13,14 +13,14 @@ export default function Footer() {
       <div className={styles['footer-logo-container-mobile']}>
       <div className={styles['footer-mobile-links-wrapper']}>
       <div className={styles['footer-dopa_deatails-mobile']}>
-        <LinkCard para ="K.M. Apartment, Rahmaniya school, Near Medical College, Kozhikode, Kerala 673008 " logo={<BiMapAlt className={styles["map"]} style={{ fontSize: "5rem" }} />} />
+        <LinkCard para ="Dopa (DOCTOR'S OWN PREP ACADEMY) VELLIPARAMBA POST KOZHIKODE PIN 673008 LANDMARK-RELIANCE SMART POINT" logo={<BiMapAlt className={styles["map"]} style={{ fontSize: "5rem" }} />} />
         <LinkCard action={()=>{
-          window.location.href = "tel:+91 9645 202 200"
-        }} para =" +91 9645 202 200 " logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
+          window.location.href = "tel:+91 9645202200"
+        }} para =" +91 9645302200 " logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
         <LinkCard action={(e) => {
-                window.location.href = "mailto:dopaprep@gmail.com";
+                window.location.href = "mailto:info@dopacoaching.com";
                 e.preventDefault();
-            }} para="dopaprep@gmail.com" logo={<FiSend className={styles["mail"]} style={{ fontSize: "2rem" }} />} /> 
+            }} para="info@dopacoaching.com" logo={<FiSend className={styles["mail"]} style={{ fontSize: "2rem" }} />} /> 
       </div>
 
       <div className={styles["footer-social_media-mobile"]}>

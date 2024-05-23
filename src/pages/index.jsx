@@ -230,9 +230,9 @@ export default function Home() {
             />
             <HomeCourseCard
               icon={neetSchoolIcon}
-              alt="NEET School"
-              cardTitle="NEET School"
-              to="/courses/dopaSchool"
+              alt="INTEGRATED SCHOOL"
+              cardTitle="INTEGRATED SCHOOL"
+              to="/dopa-integrated-school"
             />
             <HomeCourseCard
               icon={neetFoundationIcon}
