@@ -109,9 +109,6 @@ export default function MainNavbar() {
               <li>
                 <Link href="/courses/repeaters">DOPA REPEATERS</Link>
               </li>
-              <li>
-                <Link href="/courses/dopaSchool">INTEGRATED SCHOOL</Link>
-              </li>
               <li onClick={handleInnerExpansion}>
                 <a style={{ pointerEvents: "none" }}>DOPA FOUNDATION</a>
                 <ul className={style.link_expand}>

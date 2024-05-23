@@ -219,7 +219,7 @@ export default function Pricing({
               >
                 Total <br /> ₹ {p1Price} + GST
               </h3>
-             {   courseName=="NEET SCHOOL" ? '' : <>{active === 0 && <p>Few seats Left</p>}
+             {   courseName=="INTEGRATED SCHOOL" ? '' : <>{active === 0 && <p>Few seats Left</p>}
               <PrimaryButton 
               action={()=>window.location.href=`${process.env.NEXT_PUBLIC_WHATSAPP}`}
                 children="Buy Now"
@@ -311,7 +311,7 @@ export default function Pricing({
               >
                 Total <br /> ₹ {p2Price} + GST
               </h3>
-            { courseName=="NEET SCHOOL" ? '' : <> {active === 1 && <p>Few seats Left</p>}
+            { courseName=="INTEGRATED SCHOOL" ? '' : <> {active === 1 && <p>Few seats Left</p>}
               <PrimaryButton
                 action={()=>window.location.href=`${process.env.NEXT_PUBLIC_WHATSAPP}`}
                 children="Buy Now"
