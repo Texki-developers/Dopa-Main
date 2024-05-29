@@ -16,7 +16,7 @@ export default function Footer() {
         <LinkCard para ="Dopa (DOCTOR'S OWN PREP ACADEMY) VELLIPARAMBA POST KOZHIKODE PIN 673008 LANDMARK-RELIANCE SMART POINT" logo={<BiMapAlt className={styles["map"]} style={{ fontSize: "5rem" }} />} />
         <LinkCard action={()=>{
           window.location.href = "tel:+91 9645202200"
-        }} para =" +91 9645302200 " logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
+        }} para =" +91 9645302200" logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
         <LinkCard action={(e) => {
                 window.location.href = "mailto:info@dopacoaching.com";
                 e.preventDefault();
@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
         </div>
         
-      <p className={styles["dopa-copyright-mobile"]}>Copyright © 2021-2022 DOPA Coaching All rights reserved.</p>
+      <p className={styles["dopa-copyright-mobile"]}>Copyright © 2024-2025 DOPA Coaching All rights reserved.</p>
       </div>
 
     
@@ -71,15 +71,15 @@ export default function Footer() {
 
 
       <div className={styles["footer-dopa_deatails"]}>
-        <LinkCard para ="K.M. Apartment, Rahmaniya school, Near Medical College, Kozhikode, Kerala 673008 " logo={<BiMapAlt className={styles["map"]} style={{ fontSize: "3.5rem" }} />} />
-        <LinkCard action={()=>{window.location.href = "tel:+91 9645 202 200"}} para =" +91 9645 202 200 " logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
+        <LinkCard para ="Dopa (DOCTOR'S OWN PREP ACADEMY) VELLIPARAMBA POST KOZHIKODE PIN 673008 LANDMARK-RELIANCE SMART POINT" logo={<BiMapAlt className={styles["map"]} style={{ fontSize: "3.5rem" }} />} />
+        <LinkCard action={()=>{window.location.href = "tel:+91 9645 202 200"}} para =" +91 9645302200" logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
         <LinkCard  action={(e) => {
-                window.location.href = "mailto:dopaprep@gmail.com";
+                window.location.href = "mailto:info@dopacoaching.com";
                 e.preventDefault();
-            }} para="dopaprep@gmail.com" logo={<FiSend className={styles["mail"]} style={{ fontSize: "2rem" }} />} /> 
+            }} para="info@dopacoaching.com" logo={<FiSend className={styles["mail"]} style={{ fontSize: "2rem" }} />} /> 
       </div>
 
-      <p className={styles["dopa-copyright"]}>Copyright © 2021-2022 DOPA Coaching All rights reserved.</p>
+      <p className={styles["dopa-copyright"]}>Copyright © 2024-2025 DOPA Coaching All rights reserved.</p>
     </div>
   );
 }
