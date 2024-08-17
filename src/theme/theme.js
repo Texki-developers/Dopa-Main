@@ -5,13 +5,6 @@ import "@fontsource/manrope/500.css";
 import "@fontsource/manrope/600.css";
 import "@fontsource/manrope/700.css";
 import "@fontsource/manrope/800.css";
-import { BiBorderRadius } from "react-icons/bi";
-
-const fonts = {
-  // mono: `'Menlo', monospace`,
-  // heading: `'Montserrat', sans-serif`,
-  // body: `'Montserrat', sans-serif`,
-};
 
 const breakpoints = {
   sm: "576px",
@@ -23,7 +16,6 @@ const breakpoints = {
 
 const customTheme = extendTheme({
   breakpoints,
-  fonts,
   colors: {
     brand: {
       primary: "#1987a4",

@@ -12,6 +12,7 @@
   --font-manrope: "Manrope", sans-serif;
   --font-inter: "Inter", sans-serif;
   --font-anton: "Anton", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
   --aqua-gradient: linear-gradient(145.62deg, #33cccc 20.31%, #1987a4 138.1%);
   --main-title-size: 1.8rem;
   --sub-title-size: 1.3rem;
@@ -56,7 +57,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  font-family: var(--font-manrope);
+  font-family: var(--font-montserrat) !important;
 }
 .btn-primary {
   padding: 0.8rem 2rem;
@@ -190,6 +191,21 @@ body {
 * {
   box-sizing: border-box;
 }
+.banner-gradient {
+  background: linear-gradient(
+    114.84deg,
+    #adfaff 7.53%,
+    #dffcff 56.79%,
+    #85f0ff 101.39%
+  );
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #000000 0%, #037281 52.91%, #000000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* Tailwind CSS Animation Styles (or include in your Tailwind CSS configuration) */
 
 @layer components {
@@ -206,10 +222,10 @@ body {
     @apply border-2 border-white bg-white text-primary-500 rounded-full;
   }
   .common-space-x {
-    @apply max-w-[1400px] px-4 md:px-20 xl:px-0;
+    @apply max-w-[1400px] px-4 xl:px-20 md:px-4;
   }
   .text-basic {
-    @apply text-[0.9rem] md:text-[1rem];
+    @apply text-[0.9rem] font-[500] md:text-[1rem];
   }
   .section-heading {
     @apply text-[1.7rem] font-semibold  md:text-[3rem];
@@ -230,7 +246,7 @@ body {
     @apply text-[1.1rem] md:text-[1.2rem];
   }
   .banner-title {
-    @apply text-[1.5rem] font-[700] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];
+    @apply text-[2rem] font-[800] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];
   }
   .thin-banner-title {
     @apply text-[1.5rem] font-[400] sm:text-[3rem] md:text-[4rem] md:leading-[5rem];

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Ashraf",
+    "designation": "Chemistry Faculty",
+    "education": "Msc, B Ed",
+    "experience": "25+ years",
+    "image": "/Assets/facultiesv2/ashraf.png"
+  },
+  {
+    "name": "Jayadeep",
+    "designation": "Chemistry Faculty",
+    "education": "B Tech - CET",
+    "experience": "15+ years",
+    "image": "/Assets/facultiesv2/jayadeep.png"
+  },
+  {
+    "name": "Dr Dunool Shibili",
+    "designation": "Biology Faculty",
+    "education": "MBBS",
+    "experience": "7+ years",
+    "image": "/Assets/facultiesv2/dunool.png"
+  },
+  {
+    "name": "Muneeb Haneefa C",
+    "designation": "Physics Faculty",
+    "education": "B.Ed , Msc Physics Department of physics and astrophysics. University of Delhi",
+    "experience": "10+ years",
+    "image": "/Assets/facultiesv2/muneeb.png"
+  },
+  {
+    "name": "Anoop K",
+    "designation": "Physics Faculty",
+    "education": "B Tech",
+    "experience": "11+ years",
+    "image": "/Assets/facultiesv2/anoop.png"
+  },
+  {
+    "name": "Unais KP",
+    "designation": "Biology Faculty",
+    "education": "MBBS",
+    "experience": "7 years",
+    "image": "/Assets/facultiesv2/unais.jpeg"
+  },
+  {
+    "name": "Sandeep EP",
+    "designation": "Physics Faculty",
+    "education": "MSc Physics, B Ed, SET",
+    "experience": "15+ years",
+    "image": "/Assets/facultiesv2/sandeep.jpeg"
+  },
+  {
+    "name": "Dr Ashiq Sainudheen",
+    "designation": "Biology Faculty",
+    "education": "MBBS ( Calicut medical College )",
+    "experience": "11+ years",
+    "image": "/Assets/facultiesv2/ashiq.png"
+  },
+  {
+    "name": "Dr.Jidhu Mohan",
+    "designation": "Biology Faculty",
+    "education": "Bachelor of Dental Surgery ( Mar baselios Dental college kothamangalam )",
+    "experience": "10+ years",
+    "image": "/Assets/facultiesv2/jidhu.png"
+  },
+  {
+    "name": "Shafeeque",
+    "designation": "Physics Faculty",
+    "education": "B Tech ( GEC Wayanad )",
+    "experience": "7+ years",
+    "image": "/Assets/facultiesv2/shefeeque.jpeg"
+  },
+  {
+    "name": "Ashfaque",
+    "designation": "Chemistry Faculty",
+    "education": "MSc Chemistry (Central University of Kerala), B Ed (Farook B Ed College)",
+    "experience": "8+ years",
+    "image": "/Assets/facultiesv2/ashfaque.png"
+  },
+  {
+    "name": "Dr. Aqif Nasim",
+    "designation": "Physics Faculty",
+    "education": "MBBS from Calicut Medical College",
+    "experience": "5+ years",
+    "image": "/Assets/facultiesv2/aqif.png"
+  }
+]

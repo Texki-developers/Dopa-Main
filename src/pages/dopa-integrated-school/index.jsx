@@ -14,19 +14,17 @@ import ResultSlider from "@/PageComponents/ThrissurResults/ResultSlider";
 export default function DopaIntegratedSchool() {
   return (
     <MainLayout>
-  <VStack className="font-montserrat mt-[4rem] md:mt-[5rem]">
-      <IntegratedBanner/>
-      <AboutDopa />
-      <EnrollLayout/>
-      <IntegratedTestimonials />
-      <IntegratedLFacilitiesLayout/>
-      <SuccessStories/>
-      <ResultSlider/>
-      <Sat/>
-      <JoinDopaSection />
-  
-    </VStack>
+      <VStack className="font-montserrat mt-[4rem] md:mt-[5rem]">
+        <IntegratedBanner />
+        <AboutDopa />
+        <EnrollLayout />
+        <IntegratedTestimonials />
+        <IntegratedLFacilitiesLayout />
+        <SuccessStories />
+        <ResultSlider />
+        <Sat />
+        <JoinDopaSection />
+      </VStack>
     </MainLayout>
-  
   );
 }
