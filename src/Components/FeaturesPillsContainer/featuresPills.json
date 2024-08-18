@@ -1,0 +1,34 @@
+[
+  {
+    "icon": "/Assets/icons/medico-mentor.png",
+    "text": "Medico Mentorship"
+  },
+  {
+    "icon": "/Assets/icons/247.png",
+    "text": "24*7 Monitoring"
+  },
+  {
+    "icon": "/Assets/icons/faculty-panel.png",
+    "text": "Topmost faculty panel"
+  },
+  {
+    "icon": "/Assets/icons/strategic-revision.png",
+    "text": "Strategic revision plan"
+  },
+  {
+    "icon": "/Assets/icons/rapid-test.png",
+    "text": "Rapid Test Series"
+  },
+  {
+    "icon": "/Assets/icons/exam.png",
+    "text": "Result oriented coaching"
+  },
+  {
+    "icon": "/Assets/icons/yearly-schedule.png",
+    "text": "Daily & Weekly Schedule"
+  },
+  {
+    "icon": "/Assets/icons/stress-free.png",
+    "text": "Stress Free Atmosphere"
+  }
+]
