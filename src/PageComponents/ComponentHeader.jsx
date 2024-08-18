@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-export default function ComponentHeader({ heading, url, alt,className='flex pt-[4rem] pb-[1.5rem] lg:pt-[5rem] gap-[1rem] items-center justify-center md:justify-start' }) {
+export default function ComponentHeader({ heading, url, alt,className }) {
   return (
-    <div className={className}>
+    <div className={`flex pt-[4rem] pb-[1.5rem] lg:pt-[5rem] gap-[1rem] items-center justify-center md:justify-start ${className}`}>
       <div className="relative w-[2rem] h-[2rem]">
         <Image src={url} fill alt={alt} />
       </div>
