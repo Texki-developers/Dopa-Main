@@ -1,0 +1,45 @@
+[
+  {
+    "heading": "Video:",
+    "image": "/Assets/dopaApp/video.png",
+    "points": [
+      "Comprehensive & simplified video lectures.",
+      "Flexible learning and in-depth coverage of important topics."
+    ]
+  },
+  {
+    "heading": "Live Classes:",
+    "image": "/Assets/dopaApp/live-class.png",
+    "description": "Help with NEET exam preparation by providing immediate clarification, personalized guidance, peer interaction, and flexibility."
+  },
+  {
+    "heading": "Dopa Quizzes:",
+    "image": "/Assets/dopaApp/dopa-quiz.png",
+    "description": "A brief assessment helps you to be more familiar with the questions; test your Knowledge and measure the growth."
+  },
+  {
+    "heading": "Test Series:",
+    "image": "/Assets/dopaApp/test-series.png",
+    "description": "Regular tests and mock exams can help track progress and boost confidence for the NEET exam"
+  },
+  {
+    "heading": "Question Bank:",
+    "image": "/Assets/dopaApp/question-bank.png",
+    "description": "An invaluable tool for success helps students prepare for exams and improve their knowledge and reinforce their understanding of key concepts."
+  },
+  {
+    "heading": "Discussion Panel:",
+    "image": "/Assets/dopaApp/discussion-panel.png",
+    "description": "A dynamic classroom where students are actively participating in discussions that foster critical thinking and a deeper understanding of the concepts. DOPA mine:"
+  },
+  {
+    "heading": "Dopa Mine:",
+    "image": "/Assets/dopaApp/dopa-mine.png",
+    "description": "DOPA Mines are visual guides to help students easily memorize NCERT concepts."
+  },
+  {
+    "heading": "Podcast:",
+    "image": "/Assets/dopaApp/podcast.png",
+    "description": "Opportunity to listen and learn from experts anytime and anywhere."
+  }
+]

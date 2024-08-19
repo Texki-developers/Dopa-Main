@@ -18,14 +18,13 @@
 }
 .benefits-container{
     display: grid;
-    grid-template-columns: 1fr 1.8fr;
+    grid-template-columns: auto auto;
     padding: 2rem;
-    background: #F9F8F8;
-    box-shadow: 1.01973px 3.05918px 11.217px -3.05918px #1786A1;
+    background: linear-gradient(114.84deg, #ADFAFF 7.53%, #DFFCFF 56.79%, #85F0FF 101.39%);
     border-radius: 26px;
     grid-gap: 2rem;
-    max-width: 1200px;
     margin-top: 3rem;
+    max-width: 1400px;
 }
 .benefits-selector-wrapper{
     list-style: none;
@@ -59,13 +58,12 @@
 }
 
 .benefit_child{
-    background: #fff;
     padding-left: 2rem;
-    padding-top: 2rem;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1.8fr 1.2fr;
     grid-gap: 2rem;
+    height: max-content;
     h4{
         color: #000000A6;
         font-size: 1.2rem;
