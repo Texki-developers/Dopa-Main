@@ -39,11 +39,13 @@ module.exports = {
         },
         soft:{
           blue: '#E3EEFF'
-        }
+        },
+        darkBlue:'#27506A'
       },
       fontFamily: {
         "montserrat": "Montserrat, sans-serif",
       },
+      
     },
   },
   plugins: [],
