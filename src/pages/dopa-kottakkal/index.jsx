@@ -1,4 +1,5 @@
 import VStack from "@/Components/BasicComponents/VStack/VStack";
+import TSRGallery from "@/Components/CarousalComponents/TSRGallery";
 import FeaturesPillContainer from "@/Components/FeaturesPillsContainer/FeaturesPillContainer";
 import MainLayout from "@/Layouts/MainLayout";
 import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
@@ -18,12 +19,15 @@ export default function index() {
               <Image
                 src="/Assets/dopa-kottakkal.png"
                 fill
-                className="object-cover rounded-[14px]"
+                className="object-cover"
               />
             </div>
           </div>
         </CustomizableBanner>
-        <FeaturesPillContainer />
+        <div>
+          <FeaturesPillContainer />
+          <TSRGallery type="ktkl" />
+        </div>
       </VStack>
     </MainLayout>
   );
