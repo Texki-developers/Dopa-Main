@@ -6,6 +6,7 @@ import DopaUpdates from "@/PageComponents/DopaUpdates";
 import HomeBanner from "@/PageComponents/HomeBanner";
 import HomeCourseSection from "@/PageComponents/HomeCourseSection";
 import Result from "@/PageComponents/Result";
+import Testimonials from "@/PageComponents/TestimonialsV2/Testimonials";
 import React from "react";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <HomeCourseSection />
       <DopaUpdates />
       <Result />
+      <Testimonials/>
       <Directors />
       <Counters />
     </MainLayout>

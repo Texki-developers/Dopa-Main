@@ -1,7 +1,13 @@
 import React from 'react'
+import ComponentHeader from '../ComponentHeader'
 
 export default function Testimonials() {
   return (
-    <div>Testimonials</div>
+    <div>
+      <div>
+        <ComponentHeader className='justify-center' heading='Testimonials'/>
+
+      </div>
+    </div>
   )
 }

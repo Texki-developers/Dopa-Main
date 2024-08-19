@@ -10,7 +10,7 @@ export default function FacultyCardV2({
 }) {
   return (
     <div
-      className="flex flex-col w-[100%] rounded-[14px] overflow-hidden border-[#eeeeee] border-[1px] pb-[0.5rem]"
+      className="flex flex-col w-[100%] h-full rounded-[14px] overflow-hidden border-[#eeeeee] border-[1px] pb-[0.5rem]"
       style={{
         background: "linear-gradient(180deg, #F5F7F9 0%, #F6FEFF 100%)",
       }}
