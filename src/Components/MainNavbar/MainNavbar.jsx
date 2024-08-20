@@ -153,10 +153,10 @@ export default function MainNavbar() {
             <Link href="">Scholarships</Link>
           </li> */}
           <li>
-            <Link href="/about">About Us</Link>
+            <Link href="/about-dopa">About Us</Link>
           </li>
           <li>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/dopa-contact">Contact Us</Link>
           </li>
           <li onClick={()=>push('/contact')}>
             <PrimaryButton addon={"btnBlueGradient"}>
