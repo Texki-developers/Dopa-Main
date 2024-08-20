@@ -11,7 +11,7 @@ import TestimonialCardV2 from "./TestimonialCardV2";
 import { testimonialsData } from "./Testimonial.data";
 import Center from "@/Components/BasicComponents/Center/Center";
 
-SwiperCore.use([Navigation, FreeMode, Autoplay]);
+SwiperCore.use([Navigation,Autoplay]);
 
 export default function Testimonials() {
   console.log(testimonialsData, "data");
@@ -23,23 +23,22 @@ export default function Testimonials() {
       nextEl: ".gallery-custom-next",
       prevEl: ".gallery-custom-prev",
     },
-    freeMode: true,
     autoplay: {
       delay: 3000, // Delay between transitions in ms
       disableOnInteraction: false, // Enable/disable autoplay on user interaction
     },
     breakpoints: {
-      // When the window width is >= 320px
+   
       320: {
         slidesPerView: 1,
         spaceBetween: 8,
       },
-      // When the window width is >= 640px
+   
       640: {
         slidesPerView: 2,
         spaceBetween: 8,
       },
-      // When the window width is >= 1024px
+ 
       1024: {
         slidesPerView: 3,
         spaceBetween: 8,

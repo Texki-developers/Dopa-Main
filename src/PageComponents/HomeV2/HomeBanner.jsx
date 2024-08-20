@@ -1,8 +1,10 @@
 import Button from "@/Components/BasicComponents/Button/Button";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 export default function HomeBanner() {
+  const {push} = useRouter();
   return (
     <div className="grid grid-cols-1 md:grid-cols-2  pt-[4rem] md:pt-[5rem] lg:pt-28  px-4 sm:px-[4rem] lg:px-[5rem] 2xl:px-[8rem]">
       <div className="pb-6 xl:pb-[6rem] order-1 pt-4">
@@ -16,6 +18,7 @@ export default function HomeBanner() {
         <Button
           style={{ boxShadow: "0px 3.42px 3.42px 0px #00000040" }}
           className="btn-common bg-[#06AEC6] py-2 font-bold rounded-full text-white active:bg-white  active:text-black w-full md:w-[16rem]"
+          onClick={()=>push('/contact-us')}
         >
           Apply Now
         </Button>

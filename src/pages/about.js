@@ -2,7 +2,6 @@ import AboutLanding from "@/Components/AboutusComponents/AboutLanding/AboutLandi
 import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseFeatures";
 import MainLayout from "@/Layouts/MainLayout";
 import React from "react";
-import aboutUs from "@/JSON_DB/aboutUs";
 import styles from "../styles/about/about.module.scss";
 import { data, features, gallery } from "../JSON_DB/aboutUs";
 import Missioncard from "@/Components/AboutusComponents/missionCard/Missioncard";
@@ -13,7 +12,6 @@ import Image from "next/image";
 
 
 export default function about() {
-  console.log(mission, "dat");
   return (
     <MainLayout>
       <main className={styles.about_container}>

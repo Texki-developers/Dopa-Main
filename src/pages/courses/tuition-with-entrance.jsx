@@ -15,6 +15,7 @@ import faculties from "../../PageComponents/DopaFaculites/facultiesv2.json";
 import FacultyCardV2 from "@/Components/Cards/FacultyCardV2/FacultyCardV2";
 import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
 import Image from "next/image";
+import FeaturesPillContainer from "@/Components/FeaturesPillsContainer/FeaturesPillContainer";
 SwiperCore.use([Navigation, FreeMode, Autoplay]);
 
 export default function Tution() {
@@ -46,7 +47,6 @@ export default function Tution() {
         slidesPerView: 3,
         spaceBetween: 8,
       },
-    
     },
   };
 
@@ -97,11 +97,11 @@ export default function Tution() {
   return (
     <MainLayout>
       <VStack className="gap-[1rem] pb-[1rem]">
-      <CustomizableBanner
+        <CustomizableBanner
           title={["DOPA Tution & Foundation", "ENTRANCE"]}
           description="Dopa's +1 and +2 tuition program offers structured and scheduled classes, with sessions held every Saturday tailored for both state and CBSE students. Additionally, specialized coaching is provided for students preparing for entrance exams such as NEET and JEE."
         >
-          <div className="lg:pt-[2rem]">
+          <div className="lg:pt-[2rem] lg:pb-[3rem]">
             <div className="w-[100%] md:h-[100%] hidden sm:block relative overflow-hidden">
               <Image
                 src="/Assets/homeV2/dopa_neet_coaching_entrance.png"
@@ -111,63 +111,8 @@ export default function Tution() {
             </div>
           </div>
         </CustomizableBanner>
-        {coursesData &&
-          coursesData.map((items) => (
-            <div
-              key={items?.heading}
-              className="flex flex-col gap-4 px-4 md:px-[9rem]"
-            >
-              <CourseCard data={items} />
-            </div>
-          ))}
 
-        <div className="w-full h-full px-4 md:px-[5rem] pb-12 pt-12">
-          <HStack className="w-[100%] justify-between items-center">
-            <h1 className="text-4xl font-semibold text-[#27506A] pb-6">
-              Other Courses
-            </h1>
-            <HStack className="gap-2">
-              <div className="aspect-square gallery-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
-                <MdOutlineArrowForward />
-              </div>
-              <div className="aspect-square gallery-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
-                <MdOutlineArrowForward />
-              </div>
-            </HStack>
-          </HStack>
-          <Swiper {...swiperParams}>
-            {Course &&
-              Course.map((items) => (
-                <SwiperSlide key={items.name}  style={{ height: "auto !important" }}>
-                  <PrimaryCourseCard data={items} />
-                </SwiperSlide>
-              ))}
-          </Swiper>
-        </div>
-
-        <div className="w-full h-full px-4 md:px-[5rem]">
-          <HStack className="w-[100%] justify-between items-center">
-            <h1 className="text-4xl font-semibold text-[#27506A] pb-6">
-              Faculties
-            </h1>
-            <HStack className="gap-2">
-              <div className="aspect-square gallery-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
-                <MdOutlineArrowForward />
-              </div>
-              <div className="aspect-square gallery-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
-                <MdOutlineArrowForward />
-              </div>
-            </HStack>
-          </HStack>
-          <Swiper {...swiperParams}>
-            {faculties &&
-              faculties.map((items) => (
-                <SwiperSlide key={items.name}  style={{ height: "auto !important" }}>
-                  <FacultyCardV2 {...items} key={items.name} />
-                </SwiperSlide>
-              ))}
-          </Swiper>
-        </div>
+        <FeaturesPillContainer />
       </VStack>
     </MainLayout>
   );

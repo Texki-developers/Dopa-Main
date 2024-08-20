@@ -1,7 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 
-const LottieAnimation = ({ animationData, loop = true, autoplay = true, width = '5rem', height = '5rem' }) => {
+const LottieAnimation = ({ animationData, loop = true, autoplay = true, width = '3rem', height = '3rem' }) => {
   const defaultOptions = {
     loop,
     autoplay,

@@ -15,7 +15,8 @@ import faculties from "../../PageComponents/DopaFaculites/facultiesv2.json";
 import FacultyCardV2 from "@/Components/Cards/FacultyCardV2/FacultyCardV2";
 import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
 import Image from "next/image";
-SwiperCore.use([Navigation, FreeMode,Autoplay ]);
+import Center from "@/Components/BasicComponents/Center/Center";
+SwiperCore.use([Navigation, FreeMode, Autoplay]);
 
 export default function Tution() {
   const swiperParams = {
@@ -110,67 +111,74 @@ export default function Tution() {
             </div>
           </div>
         </CustomizableBanner>
-        {coursesData &&
-          coursesData.map((items) => (
-            <div
-              key={items?.heading}
-              className="flex flex-col gap-4 px-4 md:px-[9rem]"
-            >
-              <CourseCard data={items} />
-            </div>
-          ))}
-
-        <div className="w-full h-full px-4 md:px-[5rem] pb-12 pt-12">
-          <HStack className="w-[100%] justify-between items-center">
-            <h1 className="text-4xl font-semibold text-[#27506A] pb-6">
-              Other Courses
-            </h1>
-            <HStack className="gap-2">
-              <div className="aspect-square gallery-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
-                <MdOutlineArrowForward />
-              </div>
-              <div className="aspect-square gallery-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
-                <MdOutlineArrowForward />
-              </div>
-            </HStack>
-          </HStack>
-          <Swiper {...swiperParams}>
-            {Course &&
-              Course.map((items) => (
-                <SwiperSlide key={items.name}   style={{ height: "auto !important" }}>
-                  <PrimaryCourseCard data={items} />
-                </SwiperSlide>
-              ))}
-          </Swiper>
-        </div>
-
-        <div className="w-full h-full px-4 md:px-[5rem]">
-          <HStack className="w-[100%] justify-between items-center">
-            <h1 className="text-4xl font-semibold text-[#27506A] pb-6">
-              Faculties
-            </h1>
-            <HStack className="gap-2">
-              <div className="aspect-square gallery-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
-                <MdOutlineArrowForward />
-              </div>
-              <div className="aspect-square gallery-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
-                <MdOutlineArrowForward />
-              </div>
-            </HStack>
-          </HStack>
-          <Swiper {...swiperParams}>
-            {faculties &&
-              faculties.map((items) => (
-                <SwiperSlide
-                  key={items.name}
-                  className="flex items-center justify-center"
-                  style={{ height: "auto !important" }}
+        <Center>
+          <div className="common-space-x w-full flex flex-col gap-4 h-full md:pt-6">
+            {coursesData &&
+              coursesData.map((items) => (
+                <div
+                  key={items?.heading}
+                  className="flex flex-col gap-4 px-4 "
                 >
-                  <FacultyCardV2 {...items} />
-                </SwiperSlide>
+                  <CourseCard data={items} />
+                </div>
               ))}
-          </Swiper>
-        </div>
+
+            <div className="w-full h-full px-4  pb-12 pt-12">
+              <HStack className="w-[100%] justify-between items-center">
+                <h1 className="text-4xl font-semibold text-[#27506A] pb-6">
+                  Other Courses
+                </h1>
+                <HStack className="gap-2">
+                  <div className="aspect-square gallery-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
+                    <MdOutlineArrowForward />
+                  </div>
+                  <div className="aspect-square gallery-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
+                    <MdOutlineArrowForward />
+                  </div>
+                </HStack>
+              </HStack>
+              <Swiper {...swiperParams}>
+                {Course &&
+                  Course.map((items) => (
+                    <SwiperSlide
+                      key={items.name}
+                      style={{ height: "auto !important" }}
+                    >
+                      <PrimaryCourseCard data={items} />
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
+            </div>
+
+            <div className="w-full h-full px-4 ">
+              <HStack className="w-[100%] justify-between items-center">
+                <h1 className="text-4xl font-semibold text-[#27506A] pb-6">
+                  Faculties
+                </h1>
+                <HStack className="gap-2">
+                  <div className="aspect-square gallery-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
+                    <MdOutlineArrowForward />
+                  </div>
+                  <div className="aspect-square gallery-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
+                    <MdOutlineArrowForward />
+                  </div>
+                </HStack>
+              </HStack>
+              <Swiper {...swiperParams}>
+                {faculties &&
+                  faculties.map((items) => (
+                    <SwiperSlide
+                      key={items.name}
+                      className="flex items-center justify-center"
+                      style={{ height: "auto !important" }}
+                    >
+                      <FacultyCardV2 {...items} />
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
+            </div>
+          </div>
+        </Center>
       </VStack>
     </MainLayout>
   );

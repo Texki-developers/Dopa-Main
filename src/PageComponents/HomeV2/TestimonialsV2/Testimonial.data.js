@@ -5,8 +5,7 @@ export const testimonialsData = [
     student: "Fathimma Shaliya",
     type: "DOPA Student",
     thumbnail: "",
-    rank: "655/720",
-    exam: "NEET 2023",
+    rank: "/Assets/homeV2/rank.png",
   },
   {
     video: "",
@@ -14,8 +13,7 @@ export const testimonialsData = [
     student: "Fathimma Shaliya",
     type: "DOPA Student",
     thumbnail: "",
-    rank: "655/720",
-    exam: "NEET 2023",
+    rank: "/Assets/homeV2/rank.png",
   },
   {
     video: "",
@@ -23,8 +21,7 @@ export const testimonialsData = [
     student: "Fathimma Shaliya",
     type: "DOPA Student",
     thumbnail: "",
-    rank: "655/720",
-    exam: "NEET 2023",
+    rank: "/Assets/homeV2/rank.png",
   },
   {
     video: "",
@@ -32,8 +29,7 @@ export const testimonialsData = [
     student: "Fathimma Shaliya",
     type: "DOPA Student",
     thumbnail: "",
-    rank: "655/720",
-    exam: "NEET 2023",
+    rank: "/Assets/homeV2/rank.png",
   },
   {
     video: "",
@@ -41,7 +37,6 @@ export const testimonialsData = [
     student: "Fathimma Shaliya",
     type: "DOPA Student",
     thumbnail: "",
-    rank: "655/720",
-    exam: "NEET 2023",
+    rank: "/Assets/homeV2/rank.png",
   },
 ];
