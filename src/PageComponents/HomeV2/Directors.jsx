@@ -1,9 +1,11 @@
+import Center from "@/Components/BasicComponents/Center/Center";
 import Image from "next/image";
 import React from "react";
 
 export default function Directors() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2  px-4 md:px-20 md: md:pt-[3rem] items-start">
+    <Center>
+    <div className="grid grid-cols-1 lg:grid-cols-2  px-4 md:px-20 md: md:pt-[3rem] items-start common-space-x w-full">
       <div className="relative flex flex-col gap-4 pt-3 order-2 md:order-1">
         <div className="relative z-10">
           <p className='md:max-w-[32rem] 2xl:max-w-[38rem]'>
@@ -38,5 +40,6 @@ export default function Directors() {
         />
       </div>
     </div>
+    </Center>
   );
 }

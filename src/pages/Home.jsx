@@ -1,11 +1,12 @@
 import MainLayout from "@/Layouts/MainLayout";
 import BannerV2 from "@/PageComponents/banner/BannerV2";
-import Counters from "@/PageComponents/Counters";
-import Directors from "@/PageComponents/Directors";
-import DopaUpdates from "@/PageComponents/DopaUpdates";
-import HomeBanner from "@/PageComponents/HomeBanner";
-import HomeCourseSection from "@/PageComponents/HomeCourseSection";
-import Result from "@/PageComponents/Result";
+import Counters from "@/PageComponents/HomeV2/Counters";
+import Directors from "@/PageComponents/HomeV2/Directors";
+import DopaUpdates from "@/PageComponents/HomeV2/DopaUpdates";
+import HomeBanner from "@/PageComponents/HomeV2/HomeBanner";
+import HomeCourseSection from "@/PageComponents/HomeV2/HomeCourseSection";
+import Result from "@/PageComponents/HomeV2/Result";
+import Testimonials from "@/PageComponents/HomeV2/TestimonialsV2/Testimonials";
 import React from "react";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <HomeCourseSection />
       <DopaUpdates />
       <Result />
+      <Testimonials/>
       <Directors />
       <Counters />
     </MainLayout>
