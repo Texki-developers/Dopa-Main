@@ -18,7 +18,7 @@ export default function HomeBanner() {
         <Button
           style={{ boxShadow: "0px 3.42px 3.42px 0px #00000040" }}
           className="btn-common bg-[#06AEC6] py-2 font-bold rounded-full text-white active:bg-white  active:text-black w-full md:w-[16rem]"
-          onClick={()=>push('/contact-us')}
+          onClick={()=>push('/dopa-contact')}
         >
           Apply Now
         </Button>
@@ -29,7 +29,7 @@ export default function HomeBanner() {
           fill
           className="object-contain object-bottom"
           src="/Assets/homeV2/banner_dopa_directors.png"
-          alt=""
+          alt="dopa_neet_coaching_center"
         />
       </div>
     </div>
