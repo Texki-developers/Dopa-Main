@@ -12,7 +12,7 @@ export default function CustomizableBanner({
     <Center className="w-[100%] bg-[#17829E] pt-[4rem] lg:pt-[5rem] relative">
       <div className="common-space-x grid lg:grid-cols-[1.5fr_1fr] gap-[1rem] lg:gap-[3rem] relative w-[100%] z-[2] min-h-0 md:min-h-[20rem]">
         <div
-          className={`flex flex-col gap-[0.5rem] py-[2rem] justify-center ${
+          className={`flex flex-col gap-[0.5rem] py-[2rem] pb-0 justify-center ${
             rtl ? "sm:order-2" : ""
           }`}
         >

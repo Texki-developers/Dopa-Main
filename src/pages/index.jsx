@@ -14,7 +14,7 @@ import React from "react";
 export default function Home() {
   return (
     <MainLayout>
-      <HomeBanner />
+      <HomeBanner/>
       <CustomizableBanner
         title={["About Us"]}
         description="DOPA is an initiative started by a group of young doctors who have completed MBBS from Calicut Medical College, Kerala. we support medical aspirants to ace the NEET along with extensive board exam preparations.
@@ -22,7 +22,7 @@ export default function Home() {
         help turn your dream into reality"
         rtl
       >
-        <div className="w-[100%] aspect-[741/400] relative mt-[2rem]">
+        <div className="w-[100%] aspect-[741/400] relative lg:mt-[2rem]">
           <Image
             className="object-contain"
             src="/Assets/integratedSchool/integratted_banner.png"
