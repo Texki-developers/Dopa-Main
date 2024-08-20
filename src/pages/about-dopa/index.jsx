@@ -1,4 +1,7 @@
+import BenefitsSection from "@/Components/HomeComponents/BenefitsSection/BenefitsSection";
 import MainLayout from "@/Layouts/MainLayout";
+import Directors from "@/PageComponents/HomeV2/Directors";
+import Testimonials from "@/PageComponents/HomeV2/TestimonialsV2/Testimonials";
 import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
 import Image from "next/image";
 import React from "react";
@@ -15,6 +18,10 @@ export default function index() {
           <Image src="/Assets/homeV2/banner_dopa_directors.png" fill />
         </div>
       </CustomizableBanner>
+      {/* <Counters /> */}
+      <Directors />
+      <Testimonials />
+      <BenefitsSection />
     </MainLayout>
   );
 }

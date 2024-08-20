@@ -144,7 +144,7 @@ export default function MainNavbar() {
             </ul>
           </li>
           <li>
-            <Link href="/dopa-results">Results</Link>
+            <Link href="/results-of-dopa">Results</Link>
           </li>
           {/* <li>aaaaaaaaaaaaaaaaaaaaaaaaa
             <Link href="">Resources</Link>
