@@ -8,8 +8,8 @@ export default function HomeCourseSection() {
     const Course = [
         {
             name:'TEST AND DISCUSSION',
-            headClass:'font-bold text-white text-4xl 2xl:w-[15rem]',
-            subheadClass:'text-[1.8rem] text-white',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
+            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
             subtitle:'BATCH',
             link:'/'
         },
@@ -17,20 +17,20 @@ export default function HomeCourseSection() {
             name:'TAMIL',
             subtitle:'REPEATERS',
             link:'/',
-            headClass:'font-bold text-white text-4xl',
-            subheadClass:'text-[1.8rem] text-white',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
+            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
         },
         {
             name:'INTEGRATED',
             subtitle:'SCHOOL',
             link:'/',
-            headClass:'font-bold text-white text-4xl',
-            subheadClass:'text-[1.8rem] text-white',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
+            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
         },
         {
             name:'TEST AND DISCUSSION',
-            headClass:'font-bold text-white text-4xl 2xl:w-[15rem]',
-            subheadClass:'text-[1.8rem] text-white',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
+            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
             subtitle:'BATCH',
             link:'/'
         },
@@ -38,15 +38,15 @@ export default function HomeCourseSection() {
             name:'TAMIL',
             subtitle:'REPEATERS',
             link:'/',
-            headClass:'font-bold text-white text-4xl',
-            subheadClass:'text-[1.8rem] text-white',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
+            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
         },
         {
             name:'INTEGRATED',
             subtitle:'SCHOOL',
             link:'/',
-            headClass:'font-bold text-white text-4xl',
-            subheadClass:'text-[1.8rem] text-white',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
+            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
         }
     ]
   return (
