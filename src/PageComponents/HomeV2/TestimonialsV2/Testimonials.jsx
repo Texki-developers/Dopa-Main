@@ -18,7 +18,7 @@ export default function Testimonials() {
 
   const swiperParams = {
     slidesPerView: "auto",
-    spaceBetween: 8,
+    spaceBetween: 12,
     navigation: {
       nextEl: ".gallery-custom-next",
       prevEl: ".gallery-custom-prev",
@@ -30,17 +30,17 @@ export default function Testimonials() {
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 8,
+        spaceBetween: 12,
       },
 
       640: {
         slidesPerView: 2,
-        spaceBetween: 8,
+        spaceBetween: 12,
       },
 
       1024: {
         slidesPerView: 3,
-        spaceBetween: 8,
+        spaceBetween: 12,
       },
     },
   };
@@ -65,14 +65,16 @@ export default function Testimonials() {
             </HStack>
           </HStack>
         </div>
-        <Swiper {...swiperParams}>
+        <Swiper {...swiperParams}>    
           {testimonialsData &&
             testimonialsData?.map((items) => (
               <SwiperSlide
                 key={items.student}
                 style={{ height: "auto !important" }}
               >
+                <div className='pt-12'>
                 <TestimonialCardV2 data={items} />
+                </div>
               </SwiperSlide>
             ))}
         </Swiper>
