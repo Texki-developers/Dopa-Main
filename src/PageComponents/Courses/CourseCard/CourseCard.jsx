@@ -10,7 +10,7 @@ export default function CourseCard({ data }) {
 
       
       <div className="flex flex-col gap-[1rem]">
-        <h1 className="font-bold text-darkBlue text-4xl">{data?.heading}</h1>
+        <h1 className="font-bold text-darkBlue text-lg md:text-2xl lg:text-4xl">{data?.heading}</h1>
         <div className="flex flex-col md:flex-row gap-[1rem] lg:gap-[2rem]">
           <p
             style={{
