@@ -4,8 +4,10 @@ import rocket from '../../public/Assets/lottie/rocket.json'
 import people from '../../public/Assets/lottie/people.json'
 import youtube from '../../public/Assets/lottie/youtube.json'
 import live from '../../public/Assets/lottie/live.json'
+import Center from "@/Components/BasicComponents/Center/Center";
 
 export default function Counters() {
+
   const counters = [
     {
       title: "50k+",
@@ -28,11 +30,13 @@ export default function Counters() {
         logo: <LottieAnimation autoplay loop animationData={rocket}/>,
       },
   ];
+
   return (
-    <div className='flex gap-4 bg-[#F6FDFE] p-4 md:px-32 justify-center py-8'>
-      {counters &&
+    <Center>
+    <div className='flex gap-4 bg-[#F6FDFE] p-4 common-space-x py-8'>
+      {counters && 
         counters.map((data) => (
-          <div key={data.title} className='border border-black p-6 rounded-md bg-white w-[15rem]'>
+          <div key={data.title} className='border border-black p-6 rounded-md bg-white '>
             <div >
               {data.logo}
             </div>
@@ -43,5 +47,6 @@ export default function Counters() {
           </div>
         ))}
     </div>
+    </Center>
   );
 }

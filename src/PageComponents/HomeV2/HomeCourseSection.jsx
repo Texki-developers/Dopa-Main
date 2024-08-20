@@ -1,6 +1,6 @@
 import React from 'react'
-import ComponentHeader from './ComponentHeader'
-import PrimaryCourseCard from './Courses/CourseCard/PrimaryCourseCard'
+import ComponentHeader from '../ComponentHeader'
+import PrimaryCourseCard from '../Courses/CourseCard/PrimaryCourseCard'
 
 export default function HomeCourseSection() {
 

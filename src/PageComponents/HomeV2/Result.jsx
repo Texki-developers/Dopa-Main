@@ -1,5 +1,5 @@
 import React from "react";
-import ComponentHeader from "./ComponentHeader";
+import ComponentHeader from "../ComponentHeader";
 import Image from "next/image";
 
 export default function Result() {
