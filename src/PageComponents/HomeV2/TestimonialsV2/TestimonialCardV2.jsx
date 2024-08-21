@@ -4,7 +4,7 @@ import React from 'react'
 export default function TestimonialCardV2({data}) {
   return (
     <div className='w-full h-full border border-black rounded-xl relative'>
-      <Image className='object-contain z-30 !h-[4.5rem] !w-[4.5rem] !left-[21.5rem] !top-[-2rem]' fill src={data.rank} alt='best_dopa_neet_coaching_center'/>
+      <Image className='object-contain z-30 !h-[4.5rem] !w-[4.5rem] !left-[80%]  sm:!left-[85%] !top-[-2rem]' fill src={data.rank} alt='best_dopa_neet_coaching_center'/>
       <div className='p-2'>
         <div className='relative aspect-[3/2]'>
         <Image className='object-contain z-10 !w-[3rem] !h-[3rem] !top-[37%] !left-[46%] cursor-pointer' fill src='/Assets/icons/Play.png' alt='best_dopa_neet_coaching_center'/>

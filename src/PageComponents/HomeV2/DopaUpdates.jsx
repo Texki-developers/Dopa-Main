@@ -52,12 +52,12 @@ export default function DopaUpdates() {
         </Swiper>
 
 
-        <div className="absolute inset-y-0 left-4 flex items-center justify-center z-10">
+        <div className="absolute inset-y-0 left-2 md:left-4 flex items-center justify-center z-10">
           <div className="gallery-custom-prev transition-[all_0.3s_ease] text-white hover:text-black bg-black hover:bg-white  cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full">
             <MdOutlineArrowForward />
           </div>
         </div>
-        <div className="absolute inset-y-0 right-4 flex items-center justify-center z-10">
+        <div className="absolute inset-y-0 right-2 md:right-4 flex items-center justify-center z-10">
           <div className="gallery-custom-next transition-[all_0.3s_ease] text-white bg-black hover:bg-white hover:text-black cursor-pointer p-[0.3rem] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full">
             <MdOutlineArrowForward />
           </div>
