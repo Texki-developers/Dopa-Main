@@ -8,10 +8,27 @@ import HomeBanner from "@/PageComponents/HomeV2/HomeBanner";
 import HomeCourseSection from "@/PageComponents/HomeV2/HomeCourseSection";
 import Result from "@/PageComponents/HomeV2/Result";
 import Testimonials from "@/PageComponents/HomeV2/TestimonialsV2/Testimonials";
+import { axiosInstance } from "@/utils/axiosInstance";
 import Image from "next/image";
 import React from "react";
+import { useEffect,useState } from "react";
 
 export default function Home() {
+  const [updates, setUpdates] = useState(null);
+  const [popup, setPopup] = useState(null);
+
+  const fetchUpdates = async () => {
+    let data = await axiosInstance.get("updates");
+    let popupData = await axiosInstance.get("popup");
+    setUpdates(data?.data?.data);
+    setPopup(popupData.data?.data?.[0]);
+    // onOpen();
+  };
+
+  useEffect(() => {
+    fetchUpdates();
+  }, []);
+
   return (
     <MainLayout>
       <HomeBanner/>
@@ -31,7 +48,7 @@ export default function Home() {
         </div>
       </CustomizableBanner>
       <HomeCourseSection />
-      <DopaUpdates />
+      <DopaUpdates updates={updates}/>
       <Result />
       <Testimonials />
       <Directors />

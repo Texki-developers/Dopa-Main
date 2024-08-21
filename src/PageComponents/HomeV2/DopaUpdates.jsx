@@ -8,11 +8,11 @@ import "swiper/css/free-mode";
 import { MdOutlineArrowForward } from "react-icons/md";
 import HStack from "@/Components/BasicComponents/HStack/HStack";
 import Center from "@/Components/BasicComponents/Center/Center";
+import config from "@/utils/config";
 
 SwiperCore.use([Navigation, Autoplay, Pagination]);
 
-export default function DopaUpdates() {
-  const updates = ["/Assets/homeV2/updates.png", "/Assets/homeV2/updates.png"];
+export default function DopaUpdates({ updates }) {
   const swiperParams = {
     slidesPerView: "1",
     spaceBetween: 8,
@@ -29,41 +29,45 @@ export default function DopaUpdates() {
 
   return (
     <Center>
-    <div className="p-4 md:px-16 relative common-space-x w-full">
-      <div className="flex flex-col gap-2 pb-8">
-        <h1 className="font-bold text-4xl">Dopa Updates</h1>
-        <p>Explore what's been happening?</p>
-      </div>
+      <div className="p-4 md:px-16 relative common-space-x w-full">
+        <div className="flex flex-col gap-2 pb-8">
+          <h1 className="font-bold text-4xl">Dopa Updates</h1>
+          <p>Explore what's been happening?</p>
+        </div>
 
-      <div className="relative">
-        <Swiper {...swiperParams}>
-          {updates.map((item, index) => (
-            <SwiperSlide key={index} style={{ height: "auto !important" }}>
-              <div className="w-full h-[7rem] md:h-[13rem] lg:h-[16rem] xl:h-[25rem] relative rounded-lg">
-                <Image
-                  fill
-                  src={item}
-                  alt="Update image"
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="relative">
+          <Swiper {...swiperParams}>
+            {updates &&
+              updates?.map((update) => (
+                <SwiperSlide
+                  key={update._id}
+                  style={{ height: "auto !important" }}
+                >
+                  <div className="w-full h-[7rem] md:h-[13rem] lg:h-[16rem] xl:h-[25rem] relative rounded-lg">
+                    <Image
+                      fill
+                      key={update._id}
+                      alt={update.alt}
+                      src={`${config.imageURL}${update.imageD}`}
+                      className="object-cover rounded-lg"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+          </Swiper>
 
-
-        <div className="absolute inset-y-0 left-2 md:left-4 flex items-center justify-center z-10">
-          <div className="gallery-custom-prev transition-[all_0.3s_ease] text-white hover:text-black bg-black hover:bg-white  cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full">
-            <MdOutlineArrowForward />
+          <div className="absolute inset-y-0 left-2 md:left-4 flex items-center justify-center z-10">
+            <div className="gallery-custom-prev transition-[all_0.3s_ease] text-white hover:text-black bg-black hover:bg-white  cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full">
+              <MdOutlineArrowForward />
+            </div>
+          </div>
+          <div className="absolute inset-y-0 right-2 md:right-4 flex items-center justify-center z-10">
+            <div className="gallery-custom-next transition-[all_0.3s_ease] text-white bg-black hover:bg-white hover:text-black cursor-pointer p-[0.3rem] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full">
+              <MdOutlineArrowForward />
+            </div>
           </div>
         </div>
-        <div className="absolute inset-y-0 right-2 md:right-4 flex items-center justify-center z-10">
-          <div className="gallery-custom-next transition-[all_0.3s_ease] text-white bg-black hover:bg-white hover:text-black cursor-pointer p-[0.3rem] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full">
-            <MdOutlineArrowForward />
-          </div>
-        </div>
       </div>
-    </div>
     </Center>
   );
 }

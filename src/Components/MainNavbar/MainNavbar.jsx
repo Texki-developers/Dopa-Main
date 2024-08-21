@@ -47,8 +47,11 @@ export default function MainNavbar() {
       </Link>
       {windowWidth && (
         <ul className={style.navLinks}>
+             <li>
+            <Link href="/">Home</Link>
+          </li>
           <li>
-            <Link href="/dopa-integrated-school">Integrated School</Link>
+            <Link href="/dopa-app">Dopa App</Link>
           </li>
           <li>
             <span
@@ -110,35 +113,6 @@ export default function MainNavbar() {
                     : "",
               }}
             >
-              <li onClick={handleInnerExpansion}>
-                <a style={{ pointerEvents: "none" }}>+1/+2 NEET COACHING</a>
-                <ul className={style.link_expand}>
-                  <li>
-                    <p
-                      className={style.class_link}
-                      onClick={() => handleRedirectToNeet("plusOne")}
-                    >
-                      +1
-                    </p>
-                  </li>
-                  <li>
-                    <p
-                      className={style.class_link}
-                      onClick={() => handleRedirectToNeet("plusTwo")}
-                    >
-                      +2
-                    </p>
-                  </li>
-                  <li>
-                    <p
-                      className={style.class_link}
-                      onClick={() => handleRedirectToNeet("plusOne&plustwo")}
-                    >
-                      +1 & +2
-                    </p>
-                  </li>
-                </ul>
-              </li>
               <li>
                 <Link href="/courses/repeaters">DOPA REPEATERS</Link>
               </li>
@@ -179,6 +153,9 @@ export default function MainNavbar() {
                   DOPA Foundation
                 </Link>
               </li>
+              <li>
+            <Link href="/dopa-integrated-school">Integrated School</Link>
+          </li>
               <li>
                 <Link href="/courses/tuition-with-entrance">DOPA Entrance</Link>
               </li>
