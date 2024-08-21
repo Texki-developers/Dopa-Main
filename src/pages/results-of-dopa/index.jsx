@@ -16,7 +16,7 @@ export default function index() {
         >
           <img src="/Assets/results/result-banner.png" alt="" />
         </div>
-        <img src="/Assets/results/results.png" alt="" />
+        <img src="/Assets/results/results.jpg" alt="" />
         <Testimonials />
       </VStack>
     </MainLayout>
