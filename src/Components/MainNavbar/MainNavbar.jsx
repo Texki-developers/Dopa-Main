@@ -175,7 +175,9 @@ export default function MainNavbar() {
                 <Link href="/courses/capsule">DOPA CAPSULE</Link>
               </li>
               <li>
-                <Link href="/courses/tuition-with-foundation">DOPA Foundation</Link>
+                <Link href="/courses/tuition-with-foundation">
+                  DOPA Foundation
+                </Link>
               </li>
               <li>
                 <Link href="/courses/tuition-with-entrance">DOPA Entrance</Link>
@@ -184,6 +186,9 @@ export default function MainNavbar() {
           </li>
           <li>
             <Link href="/results-of-dopa">Results</Link>
+          </li>
+          <li>
+            <Link href="/dopa-faculties">Our Team</Link>
           </li>
           <li>
             <Link href="/about-dopa">About Us</Link>
