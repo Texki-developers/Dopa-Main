@@ -2,29 +2,25 @@ import AboutLanding from "@/Components/AboutusComponents/AboutLanding/AboutLandi
 import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseFeatures";
 import MainLayout from "@/Layouts/MainLayout";
 import React from "react";
-import aboutUs from "@/JSON_DB/aboutUs";
 import styles from "../styles/about/about.module.scss";
 import { data, features, gallery } from "../JSON_DB/aboutUs";
 import Missioncard from "@/Components/AboutusComponents/missionCard/Missioncard";
 import mission from "../../public/Assets/about/mission.png";
 import vision from "../../public/Assets/about/view.png";
 import FreeTrialComponent from "@/Components/FreeTrialComponent/FreeTrialComponent";
-import Image from "next/image";
-
 
 export default function about() {
-  console.log(mission, "dat");
   return (
     <MainLayout>
       <main className={styles.about_container}>
         <AboutLanding />
 
-      <CourseFeatures type={1} data={features} />
+        <CourseFeatures type={1} data={features} />
 
         <div className={styles.path_to_success_container}>
           <h1>
             Your Path to Medical Success Starts Here: <br /> NEET Coaching and
-            Mentorship from DOPA 
+            Mentorship from DOPA
           </h1>
           <div className={styles.path_to_success_content_container}>
             {data &&

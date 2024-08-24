@@ -1,0 +1,42 @@
+export const testimonialsData = [
+  {
+    video: "",
+    description: `I couldn't have cracked neet if i hadn't joned dopa. The mentors are MBBS students who have cracked NEET in recent years. It will help us to get good guidance. Apart from academics i got mental and emotional support which is very important in NEET journey. Literally i got stress free campus there. Thank you dopa❤❤`,
+    student: "Fathimma Shaliya",
+    type: "DOPA Student",
+    thumbnail: "",
+    rank: "/Assets/homeV2/rank.png",
+  },
+  {
+    video: "",
+    description: `I couldn't have cracked neet if i hadn't joned dopa. The mentors are MBBS students who have cracked NEET in recent years. It will help us to get good guidance. Apart from academics i got mental and emotional support which is very important in NEET journey. Literally i got stress free campus there. Thank you dopa❤❤`,
+    student: "Fathimma Shaliya",
+    type: "DOPA Student",
+    thumbnail: "",
+    rank: "/Assets/homeV2/rank.png",
+  },
+  {
+    video: "",
+    description: `I couldn't have cracked neet if i hadn't joned dopa. The mentors are MBBS students who have cracked NEET in recent years. It will help us to get good guidance. Apart from academics i got mental and emotional support which is very important in NEET journey. Literally i got stress free campus there. Thank you dopa❤❤`,
+    student: "Fathimma Shaliya",
+    type: "DOPA Student",
+    thumbnail: "",
+    rank: "/Assets/homeV2/rank.png",
+  },
+  {
+    video: "",
+    description: `I couldn't have cracked neet if i hadn't joned dopa. The mentors are MBBS students who have cracked NEET in recent years. It will help us to get good guidance. Apart from academics i got mental and emotional support which is very important in NEET journey. Literally i got stress free campus there. Thank you dopa❤❤`,
+    student: "Fathimma Shaliya",
+    type: "DOPA Student",
+    thumbnail: "",
+    rank: "/Assets/homeV2/rank.png",
+  },
+  {
+    video: "",
+    description: `I couldn't have cracked neet if i hadn't joned dopa. The mentors are MBBS students who have cracked NEET in recent years. It will help us to get good guidance. Apart from academics i got mental and emotional support which is very important in NEET journey. Literally i got stress free campus there. Thank you dopa❤❤`,
+    student: "Fathimma Shaliya",
+    type: "DOPA Student",
+    thumbnail: "",
+    rank: "/Assets/homeV2/rank.png",
+  },
+];

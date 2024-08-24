@@ -13,7 +13,7 @@ export default function Footer() {
       <div className={styles['footer-logo-container-mobile']}>
       <div className={styles['footer-mobile-links-wrapper']}>
       <div className={styles['footer-dopa_deatails-mobile']}>
-        <LinkCard para ="Dopa (DOCTOR'S OWN PREP ACADEMY) VELLIPARAMBA POST KOZHIKODE PIN 673008 LANDMARK-RELIANCE SMART POINT" logo={<BiMapAlt className={styles["map"]} style={{ fontSize: "5rem" }} />} />
+        <LinkCard para ="DOPA (DOCTOR'S OWN PREP ACADEMY) VELLIPARAMBA POST KOZHIKODE PIN 673008 LANDMARK-RELIANCE SMART POINT" logo={<BiMapAlt className={styles["map"]} style={{ fontSize: "5rem" }} />} />
         <LinkCard action={()=>{
           window.location.href = "tel:+91 9645202200"
         }} para =" +91 9645302200" logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
@@ -72,7 +72,7 @@ export default function Footer() {
 
       <div className={styles["footer-dopa_deatails"]}>
         <LinkCard para ="Dopa (DOCTOR'S OWN PREP ACADEMY) VELLIPARAMBA POST KOZHIKODE PIN 673008 LANDMARK-RELIANCE SMART POINT" logo={<BiMapAlt className={styles["map"]} style={{ fontSize: "3.5rem" }} />} />
-        <LinkCard action={()=>{window.location.href = "tel:+91 9645202200"}} para =" +91 9645302200" logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
+        <LinkCard action={()=>{window.location.href = "tel:+91 9645302200"}} para =" +91 9645202200" logo={<FiPhone className={styles["phone"]} style={{ fontSize: "2rem" }} />}/>
         <LinkCard  action={(e) => {
                 window.location.href = "mailto:info@dopacoaching.com";
                 e.preventDefault();

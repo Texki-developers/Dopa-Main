@@ -1,0 +1,43 @@
+[
+  {
+    "icon": "/Assets/icons/faculty-panel.png",
+    "text": "Topmost faculty panel"
+  },
+  {
+    "icon": "/Assets/icons/dopa-app.png",
+    "text": "DOPA app subscription"
+  },
+  {
+    "icon": "/Assets/icons/exam.png",
+    "text": "Result oriented coaching"
+  },
+  {
+    "icon": "/Assets/icons/ac.png",
+    "text": "AC classroom"
+  },
+  {
+    "icon": "/Assets/icons/personal-mentor.png",
+    "text": "Personal mentorship"
+  },
+  {
+    "icon": "/Assets/icons/medico-mentor.png",
+    "text": "Medico mentors for specified students"
+  },
+  {
+    "icon": "/Assets/icons/yearly-schedule.png",
+    "text": "Yearly schedule"
+  },
+  {
+    "icon": "/Assets/icons/library.svg",
+    "text": "Library"
+  },
+  {
+    "icon": "/Assets/icons/strategic-revision.png",
+    "text": "Strategic revision plan"
+  },
+
+  {
+    "icon": "/Assets/icons/bookstore.svg",
+    "text": "Providing study materials"
+  }
+]
