@@ -1,99 +1,18 @@
 import VStack from "@/Components/BasicComponents/VStack/VStack";
 import MainLayout from "@/Layouts/MainLayout";
-import CourseCard from "@/PageComponents/Courses/CourseCard/CourseCard";
-import { coursesData } from "@/PageComponents/Courses/CourseCard/CourseCard.data";
-import PrimaryCourseCard from "@/PageComponents/Courses/CourseCard/PrimaryCourseCard";
 import React from "react";
-import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
+import featuresPills from "../../Components/FeaturesPillsContainer/entraceFeatures.json";
 import SwiperCore, { Navigation, FreeMode, Autoplay } from "swiper/core";
-import HStack from "@/Components/BasicComponents/HStack/HStack";
-import { MdOutlineArrowForward } from "react-icons/md";
-import faculties from "../../PageComponents/DopaFaculites/facultiesv2.json";
-import FacultyCardV2 from "@/Components/Cards/FacultyCardV2/FacultyCardV2";
 import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
 import Image from "next/image";
-import FeaturesPillContainer from "@/Components/FeaturesPillsContainer/FeaturesPillContainer";
+import Center from "@/Components/BasicComponents/Center/Center";
+import FacilitiesCard from "@/Components/Cards/FacilitiesCard/FacilitiesCard";
 SwiperCore.use([Navigation, FreeMode, Autoplay]);
 
 export default function Tution() {
-  const swiperParams = {
-    slidesPerView: "3",
-    spaceBetween: 8,
-    navigation: {
-      nextEl: ".gallery-custom-next",
-      prevEl: ".gallery-custom-prev",
-    },
-    freeMode: true,
-    autoplay: {
-      delay: 3000, // Delay between transitions in ms
-      disableOnInteraction: false, // Enable/disable autoplay on user interaction
-    },
-    breakpoints: {
-      // When the window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 8,
-      },
-      // When the window width is >= 640px
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 8,
-      },
-      // When the window width is >= 1024px
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 8,
-      },
-    },
-  };
-
-  const Course = [
-    {
-      name: "TEST AND DISCUSSION",
-      headClass: "font-bold text-white text-4xl 2xl:w-[15rem]",
-      subheadClass: "text-[1.8rem] text-white",
-      subtitle: "BATCH",
-      link: "/",
-    },
-    {
-      name: "TAMIL",
-      subtitle: "REPEATERS",
-      link: "/",
-      headClass: "font-bold text-white text-4xl",
-      subheadClass: "text-[1.8rem] text-white",
-    },
-    {
-      name: "INTEGRATED",
-      subtitle: "SCHOOL",
-      link: "/",
-      headClass: "font-bold text-white text-4xl",
-      subheadClass: "text-[1.8rem] text-white",
-    },
-    {
-      name: "TEST AND DISCUSSION",
-      headClass: "font-bold text-white text-4xl 2xl:w-[15rem]",
-      subheadClass: "text-[1.8rem] text-white",
-      subtitle: "BATCH",
-      link: "/",
-    },
-    {
-      name: "TAMIL",
-      subtitle: "REPEATERS",
-      link: "/",
-      headClass: "font-bold text-white text-4xl",
-      subheadClass: "text-[1.8rem] text-white",
-    },
-    {
-      name: "INTEGRATED",
-      subtitle: "SCHOOL",
-      link: "/",
-      headClass: "font-bold text-white text-4xl",
-      subheadClass: "text-[1.8rem] text-white",
-    },
-  ];
   return (
     <MainLayout>
       <VStack className="gap-[1rem] pb-[1rem]">
@@ -112,7 +31,16 @@ export default function Tution() {
           </div>
         </CustomizableBanner>
 
-        <FeaturesPillContainer />
+        <Center className="py-[2rem]">
+      <div className="common-space-x w-[100%] py-[1rem] flex flex-col gap-[1rem] md:gap-[1.5rem]">
+        <h3 className="section-heading text-left w-max text-black">Features</h3>
+        <div className="flex gap-[1rem] flex-wrap">
+          {featuresPills?.map((item, index) => (
+            <FacilitiesCard {...item} key={index} />
+          ))}
+        </div>
+      </div>
+    </Center>
       </VStack>
     </MainLayout>
   );

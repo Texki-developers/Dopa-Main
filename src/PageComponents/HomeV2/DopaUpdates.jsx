@@ -43,7 +43,7 @@ export default function DopaUpdates({ updates }) {
                   key={update._id}
                   style={{ height: "auto !important" }}
                 >
-                  <div className="w-full h-[7rem] md:h-[13rem] lg:h-[16rem] xl:h-[25rem] relative rounded-lg">
+                  <div className="w-full aspect-[4/1] relative rounded-lg">
                     <Image
                       fill
                       key={update._id}

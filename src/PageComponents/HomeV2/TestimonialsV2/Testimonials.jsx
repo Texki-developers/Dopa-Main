@@ -46,7 +46,7 @@ export default function Testimonials() {
   };
 
   return (
-    <Center className='bg-[#F6FDFE] '>
+    <Center className='bg-[#F6FDFE] hidden'>
       <div className="common-space-x w-full">
         <div className="md:ml-auto md:w-[70%]">
           <HStack className="w-[100%] justify-between items-center">

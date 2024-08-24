@@ -114,7 +114,7 @@ export default function MainNavbar() {
               }}
             >
               <li>
-                <Link href="/courses/repeaters">DOPA REPEATERS</Link>
+                <Link href="/dopa-repeaters">DOPA REPEATERS</Link>
               </li>
               {/* <li onClick={handleInnerExpansion}>
                 <a style={{ pointerEvents: "none" }}>DOPA FOUNDATION</a>
@@ -145,9 +145,9 @@ export default function MainNavbar() {
                   </li>
                 </ul>
               </li> */}
-              <li>
+              {/* <li>
                 <Link href="/courses/capsule">DOPA CAPSULE</Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/courses/tuition-with-foundation">
                   DOPA Foundation

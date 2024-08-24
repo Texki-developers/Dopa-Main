@@ -19,6 +19,38 @@ import Center from "@/Components/BasicComponents/Center/Center";
 SwiperCore.use([Navigation, FreeMode, Autoplay]);
 
 export default function Tution() {
+
+  const breakpoints = {
+    // When the window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 8,
+    },
+    // When the window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 8,
+    },
+    // When the window width is >= 1024px
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 8,
+    },
+  }
+  const facultiesSwiperParams = {
+    slidesPerView: "3",
+    spaceBetween: 8,
+    navigation: {
+      nextEl: ".faculty-custom-next",
+      prevEl: ".faculty-custom-prev",
+    },
+    freeMode: true,
+    autoplay: {
+      delay: 3000, // Delay between transitions in ms
+      disableOnInteraction: false, // Enable/disable autoplay on user interaction
+    },
+    breakpoints: breakpoints
+  };
   const swiperParams = {
     slidesPerView: "3",
     spaceBetween: 8,
@@ -31,23 +63,7 @@ export default function Tution() {
       delay: 3000, // Delay between transitions in ms
       disableOnInteraction: false, // Enable/disable autoplay on user interaction
     },
-    breakpoints: {
-      // When the window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 8,
-      },
-      // When the window width is >= 640px
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 8,
-      },
-      // When the window width is >= 1024px
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 8,
-      },
-    },
+    breakpoints: breakpoints
   };
 
   const Course = [
@@ -114,12 +130,12 @@ export default function Tution() {
         <Center>
           <div className="common-space-x w-full flex flex-col gap-4 h-full md:pt-6">
             {coursesData &&
-              coursesData.map((items) => (
+              coursesData.map((items,index) => (
                 <div
                   key={items?.heading}
                   className="flex flex-col gap-4 px-4 "
                 >
-                  <CourseCard data={items} />
+                  <CourseCard data={items} imageClassName={index===2 ? '!object-contain' :''} className={index===3 ?'!pr-0' : ''}/>
                 </div>
               ))}
 
@@ -156,15 +172,15 @@ export default function Tution() {
                   Faculties
                 </h1>
                 <HStack className="gap-2">
-                  <div className="aspect-square gallery-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
+                  <div className="aspect-square faculty-custom-prev transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
                     <MdOutlineArrowForward />
                   </div>
-                  <div className="aspect-square gallery-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
+                  <div className="aspect-square faculty-custom-next transition-[all_0.3s_ease] hover:bg-black hover:text-white cursor-pointer p-[0.3rem] border-[2px] border-black text-[1rem] sm:text-[1.5rem] rounded-full">
                     <MdOutlineArrowForward />
                   </div>
                 </HStack>
               </HStack>
-              <Swiper {...swiperParams}>
+              <Swiper {...facultiesSwiperParams}>
                 {faculties &&
                   faculties.map((items) => (
                     <SwiperSlide
