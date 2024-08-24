@@ -51,7 +51,7 @@ export default function MainNavbar() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/dopa-app">Dopa App</Link>
+            <Link href="/dopa-app">DOPA App</Link>
           </li>
           <li>
             <span
