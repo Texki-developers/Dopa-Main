@@ -43,3 +43,38 @@ export const kGallery = [
     alt: "",
   },
 ];
+
+export const CGallery = [
+  {
+    image: "/Assets/gallery/kc1.jpeg",
+    alt: "",
+  },
+  {
+    image: "/Assets/gallery/kc2.jpeg",
+    alt: "",
+  },
+  {
+    image: "/Assets/gallery/kc3.jpeg",
+    alt: "",
+  },
+  {
+    image: "/Assets/gallery/kc4.jpeg",
+    alt: "",
+  },
+  {
+    image: "/Assets/gallery/kc5.jpeg",
+    alt: "",
+  },
+  {
+    image: "/Assets/gallery/kc6.jpeg",
+    alt: "",
+  },
+  {
+    image: "/Assets/gallery/kc7.jpeg",
+    alt: "",
+  },
+  {
+    image: "/Assets/gallery/kc8.jpeg",
+    alt: "",
+  },
+];
