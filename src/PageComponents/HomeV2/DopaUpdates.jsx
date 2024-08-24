@@ -31,7 +31,7 @@ export default function DopaUpdates({ updates }) {
     <Center>
       <div className="p-4 md:px-16 relative common-space-x w-full">
         <div className="flex flex-col gap-2 pb-8">
-          <h1 className="font-bold text-4xl">Dopa Updates</h1>
+          <h1 className="font-bold text-4xl">DOPA Updates</h1>
           <p>Explore what's been happening?</p>
         </div>
 

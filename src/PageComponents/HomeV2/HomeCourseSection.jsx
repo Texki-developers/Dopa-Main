@@ -11,43 +11,63 @@ export default function HomeCourseSection() {
             headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
             subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
             subtitle:'BATCH',
-            link:'/'
+            link:'#'
         },
         {
             name:'TAMIL',
             subtitle:'REPEATERS',
-            link:'/',
+            link:'#',
             headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
             subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
         },
         {
             name:'INTEGRATED',
             subtitle:'SCHOOL',
-            link:'/',
+            link:'#',
             headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
             subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
         },
         {
-            name:'TEST AND DISCUSSION',
+            name:'REPEATERS',
+            subheadClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
+            headClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
+            subtitle:'ONLINE',
+            link:'#'
+        },
+        {
+            name:'REPEATERS',
+            subtitle:'OFFLINE',
+            link:'#',
+            subheadClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
+            headClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
+        },
+        {
+            name:'REPEATERS',
+            subtitle:'RESIDENTIAL',
+            link:'#',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
+            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
+        },
+        {
+            name:'CAPSULE',
             headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
             subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-            subtitle:'BATCH',
-            link:'/'
+            subtitle:'CRASH COURSE',
+            link:'#'
         },
         {
-            name:'TAMIL',
-            subtitle:'REPEATERS',
-            link:'/',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
-            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
+            name:'FOUNDATION',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
+            link:'#'
         },
         {
-            name:'INTEGRATED',
-            subtitle:'SCHOOL',
-            link:'/',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
+            name:'+1 , +2',
+            headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
             subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-        }
+            subtitle:'WITH ENTRANCE',
+            link:'#'
+        },
+        
     ]
   return (
     <Center>

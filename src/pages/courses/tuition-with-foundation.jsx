@@ -16,6 +16,7 @@ import FacultyCardV2 from "@/Components/Cards/FacultyCardV2/FacultyCardV2";
 import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
 import Image from "next/image";
 import Center from "@/Components/BasicComponents/Center/Center";
+import { useEffect } from "react"
 SwiperCore.use([Navigation, FreeMode, Autoplay]);
 
 export default function Tution() {
@@ -110,6 +111,11 @@ export default function Tution() {
       subheadClass: "text-[1.8rem] text-white",
     },
   ];
+
+  useEffect(() => {
+
+  }, [])
+  
   return (
     <MainLayout>
       <VStack className="gap-[1rem] pb-[1rem]">
@@ -133,7 +139,7 @@ export default function Tution() {
               coursesData.map((items,index) => (
                 <div
                   key={items?.heading}
-                  className="flex flex-col gap-4 px-4 "
+                  className="flex flex-col gap-4 px-4" 
                 >
                   <CourseCard data={items} imageClassName={index===2 ? '!object-contain' :''} className={index===3 ?'!pr-0' : ''}/>
                 </div>
