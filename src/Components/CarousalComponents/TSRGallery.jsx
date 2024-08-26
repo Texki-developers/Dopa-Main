@@ -2,7 +2,7 @@ import Center from "@/Components/BasicComponents/Center/Center";
 import HStack from "@/Components/BasicComponents/HStack/HStack";
 import VStack from "@/Components/BasicComponents/VStack/VStack";
 import React, { useEffect, useState } from "react";
-import { firstImageCard, kGallery, tGallery } from "./gallery.data";
+import { CGallery, firstImageCard, kGallery, tGallery } from "./gallery.data";
 import { SwiperSlide, Swiper } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/css/navigation";
@@ -16,7 +16,7 @@ export default function TSRGallery({ type }) {
   const [swiperParams, setSwiperParams] = useState(null);
 
   const getSliderCount = (type) => {
-    if (type === "tsr") {
+    if (type === "tsr" || type === "clt") {
       if (window.innerWidth < 600) {
         return 1;
       } else {
@@ -71,12 +71,14 @@ export default function TSRGallery({ type }) {
                 ? tGallery
                 : type === "ktkl"
                 ? kGallery
+                : type === "clt"
+                ? CGallery
                 : []
               ).map((item, index) => (
                 <SwiperSlide key={index} style={{ width: "auto" }}>
                   <div
                     className={`${
-                      type === "tsr"
+                      type === "tsr" || type === "clt"
                         ? "aspect-[1.3/1]"
                         : type === "ktkl"
                         ? "aspect-[1/1.5]"

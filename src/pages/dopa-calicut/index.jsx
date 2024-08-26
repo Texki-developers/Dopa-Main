@@ -1,4 +1,5 @@
 import VStack from "@/Components/BasicComponents/VStack/VStack";
+import TSRGallery from "@/Components/CarousalComponents/TSRGallery";
 import Courses from "@/Components/Courses/Courses";
 import FeaturesPillContainer from "@/Components/FeaturesPillsContainer/FeaturesPillContainer";
 import MainLayout from "@/Layouts/MainLayout";
@@ -28,6 +29,7 @@ export default function index() {
           <Courses />
         </VStack>
         <FeaturesPillContainer />
+        <TSRGallery type="clt" />
       </VStack>
     </MainLayout>
   );
