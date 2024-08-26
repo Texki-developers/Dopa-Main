@@ -20,7 +20,7 @@ export default function AppCard({ image, heading, description, points }) {
         />
       </div>
       <div className="flex flex-col gap-[0.5rem] justify-center py-[1rem]">
-        <h5 className="card-heading font-[600]">{heading}</h5>
+        <h5 className="card-heading font-[600]">{heading}:</h5>
 
         {points && points?.length > 0 ? (
           <div className="flex flex-col gap-[1rem]">
