@@ -6,7 +6,6 @@ import "swiper/swiper.min.css";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import { MdOutlineArrowForward } from "react-icons/md";
-import HStack from "@/Components/BasicComponents/HStack/HStack";
 import Center from "@/Components/BasicComponents/Center/Center";
 import config from "@/utils/config";
 
@@ -26,7 +25,6 @@ export default function DopaUpdates({ updates }) {
       disableOnInteraction: false, // Enable/disable autoplay on user interaction
     },
   };
-
   return (
     <Center>
       <div className="p-4 md:px-16 relative common-space-x w-full">
@@ -34,7 +32,6 @@ export default function DopaUpdates({ updates }) {
           <h1 className="font-bold text-4xl">DOPA Updates</h1>
           <p>Explore what's been happening?</p>
         </div>
-
         <div className="relative">
           <Swiper {...swiperParams}>
             {updates &&
@@ -43,7 +40,7 @@ export default function DopaUpdates({ updates }) {
                   key={update._id}
                   style={{ height: "auto !important" }}
                 >
-                  <div className="w-full aspect-[4/1] relative rounded-lg">
+                <div className="w-full aspect-[4/1] relative rounded-lg">
                     <Image
                       fill
                       key={update._id}
@@ -55,7 +52,6 @@ export default function DopaUpdates({ updates }) {
                 </SwiperSlide>
               ))}
           </Swiper>
-
           <div className="absolute inset-y-0 left-2 md:left-4 flex items-center justify-center z-10">
             <div className="gallery-custom-prev transition-[all_0.3s_ease] text-white hover:text-black bg-black hover:bg-white  cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full">
               <MdOutlineArrowForward />
