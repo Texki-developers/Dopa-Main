@@ -1,5 +1,6 @@
 import BenefitsSection from "@/Components/HomeComponents/BenefitsSection/BenefitsSection";
 import MainLayout from "@/Layouts/MainLayout";
+import Counters from "@/PageComponents/HomeV2/Counters";
 import Directors from "@/PageComponents/HomeV2/Directors";
 import Testimonials from "@/PageComponents/HomeV2/TestimonialsV2/Testimonials";
 import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
@@ -18,7 +19,7 @@ export default function index() {
           <Image src="/Assets/homeV2/banner_dopa_directors.png" fill />
         </div>
       </CustomizableBanner>
-      {/* <Counters /> */}
+      <Counters/>
       <Directors />
       <Testimonials />
       <BenefitsSection />

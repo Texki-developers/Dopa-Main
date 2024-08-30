@@ -1,81 +1,26 @@
-import AboutLanding from "@/Components/AboutusComponents/AboutLanding/AboutLanding";
-import CourseFeatures from "@/Components/CourseComponents/courseFeatures/CourseFeatures";
-import MainLayout from "@/Layouts/MainLayout";
+import Counters from "@/PageComponents/HomeV2/Counters";
+import Directors from "@/PageComponents/HomeV2/Directors";
+import Testimonials from "@/PageComponents/HomeV2/TestimonialsV2/Testimonials";
+import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
+import Image from "next/image";
 import React from "react";
-import styles from "../styles/about/about.module.scss";
-import { data, features, gallery } from "../JSON_DB/aboutUs";
-import Missioncard from "@/Components/AboutusComponents/missionCard/Missioncard";
-import mission from "../../public/Assets/about/mission.png";
-import vision from "../../public/Assets/about/view.png";
-import FreeTrialComponent from "@/Components/FreeTrialComponent/FreeTrialComponent";
 
-export default function about() {
+export default function index() {
   return (
-    <MainLayout>
-      <main className={styles.about_container}>
-        <AboutLanding />
-
-        <CourseFeatures type={1} data={features} />
-
-        <div className={styles.path_to_success_container}>
-          <h1>
-            Your Path to Medical Success Starts Here: <br /> NEET Coaching and
-            Mentorship from DOPA
-          </h1>
-          <div className={styles.path_to_success_content_container}>
-            {data &&
-              data?.map((item) => (
-                <div className={styles.path_to_success_content}>
-                  <img src={item.image.src} alt="DopaVideoLectures" />
-                  <h4
-                    dangerouslySetInnerHTML={{
-                      __html: item.title.replace(/\n/g, "<br>"),
-                    }}
-                  ></h4>
-                </div>
-              ))}
-          </div>
+    <>
+      <CustomizableBanner
+        title={["About Us"]}
+        description="DOPA is an initiative started by a group of young doctors who have completed MBBS from Calicut MedicalCollege, Kerala. We support passionate students to crack their entrance exam. Scholarships will be offered tostudents achieving outstandingscores in the Integrated School Entrance Exam!"
+        rtl
+      >
+        <div className="w-[100%] aspect-[741/400] relative mt-[2rem]">
+          <Image src="/Assets/homeV2/banner_dopa_directors.png" fill />
         </div>
+      </CustomizableBanner>
+      <Counters />
+      <Directors />
+      <Testimonials />
 
-        <div className={styles.mission_vision_container}>
-          <Missioncard
-            logo={mission}
-            head={"MISSION"}
-            mainHead="A positive route to Success"
-            para="Redefining the prevailing medical entrance culture by substituting it with our most efficient and smart way of learning. DOPA delivers excellent medical entrance coaching that can be accessed anytime, anywhere irrespective of socio-economic backgrounds."
-          />
-          <Missioncard
-            logo={vision}
-            head={"VISION"}
-            mainHead="Let learning dispel the darkness"
-            para="We aim to train the young brains and help them grow into successful medical health professionals by grooming their scientific temper and building the curiosity inside them."
-          />
-        </div>
-        <FreeTrialComponent />
-        <div className={styles.dopa_work_conatainer}>
-          <h1>DOPA AT WORK</h1>
-
-          <div className={styles.dopa_work_content_container}>
-            <div className={styles.dopa_image_gallery}>
-              {gallery &&
-                gallery.map((items) => (
-                  <div className={styles.gallery_images_container}>
-                    <img
-                      className={styles.gallery_images}
-                      src={items.src}
-                      alt="dopa_About_us"
-                    />
-                  </div>
-                ))}
-            </div>
-
-            <div className={styles.about_contact_container}>
-              <h2>Join with us</h2>
-              <h2>info@dopacoaching.com</h2>
-            </div>
-          </div>
-        </div>
-      </main>
-    </MainLayout>
+      </>
   );
 }
