@@ -22,6 +22,7 @@ export default function index() {
                   src="/Assets/calicut-campus.jpeg"
                   fill
                   className="object-cover rounded-[14px]"
+                  alt='⁠entrance coaching centre near me'
                 />
               </div>
             </div>

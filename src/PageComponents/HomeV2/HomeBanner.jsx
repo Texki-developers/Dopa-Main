@@ -29,7 +29,7 @@ export default function HomeBanner() {
           fill
           className="object-contain object-bottom"
           src="/Assets/homeV2/banner_dopa_directors.png"
-          alt="dopa_neet_coaching_center"
+          alt=" ⁠Best neet coaching center in calicut"
         />
       </div>
     </div>

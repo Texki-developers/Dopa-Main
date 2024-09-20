@@ -14,7 +14,7 @@ export default function index() {
         rtl
       >
         <div className="w-[100%] aspect-[741/400] relative mt-[2rem]">
-          <Image src="/Assets/homeV2/banner_dopa_directors.png" fill />
+          <Image src="/Assets/homeV2/banner_dopa_directors.png" fill   alt="⁠Best neet coaching center in kerala" />
         </div>
       </CustomizableBanner>
       <Counters />
