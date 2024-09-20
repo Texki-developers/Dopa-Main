@@ -28,7 +28,7 @@ export default function Tbanner() {
        <div className="relative  aspect-[252/217]  w-[100%]  xl:w-[100%] flex items-end justify-end">
           <Image
             src="/Assets/thrissurLanding/banner/dopa_thrissur_landing.png"
-            alt="thrissur_landing"
+            alt="⁠best entrance coaching center in kerala"
             fill
           />
         </div>

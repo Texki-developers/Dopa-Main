@@ -43,6 +43,7 @@ export default function Home() {
           <Image
             className="object-contain"
             src="/Assets/integratedSchool/integratted_banner.png"
+            alt='Best neet coaching center in kerala'
             fill
           />
         </div>

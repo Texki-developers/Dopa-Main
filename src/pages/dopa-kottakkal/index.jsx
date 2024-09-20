@@ -22,6 +22,7 @@ export default function index() {
                   src="/Assets/dopa-kottakkal.png"
                   fill
                   className="object-cover"
+                  alt='⁠Best neet coaching center in calicut'
                 />
               </div>
             </div>
