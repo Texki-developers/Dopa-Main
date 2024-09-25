@@ -1,28 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ['api.mydopaclass.com'],
-  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      config.resolve.fallback.fs = false
-      config.resolve.fallback.tls = false
-      config.resolve.fallback.net = false
-      config.resolve.fallback.child_process = false
+      config.resolve.fallback = {
+        fs: false,
+        tls: false,
+        net: false,
+        child_process: false,
+      };
     }
 
-    return config
+    return config;
   },
   future: {
     webpack5: true,
   },
-  fallback: {
-    fs: false,
-    tls: false,
-    net: false,
-    child_process: false
+  images: {
+    domains: ["localhost","127.0.0.1", 'api.mydopaclass.com', 'panel.mydopaclass.com'],
   },
-}
+  publicRuntimeConfig: {
+    strapiUrl: "http://127.0.0.1:1337",
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
