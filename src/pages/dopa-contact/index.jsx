@@ -9,6 +9,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useToast } from "@chakra-ui/react";
 import { saveForms } from "@/utils/Services/trending.service";
+import { starpiInstance } from "@/config/strapiInstance";
 
 export default function index() {
   const [isLoading, setLoading] = useState(false);
@@ -22,10 +23,18 @@ export default function index() {
   } = useForm({ mode: "onChange" });
 
   const onFormSubmission = async (data) => {
-    console.log(data);
     setLoading(true);
-    data.type = "Contact Form";
-    const response = await saveForms(data);
+
+    const formData = {
+      ...data,
+      district: data?.place,
+      number: data?.whatsapp,
+    };
+
+    const response = await starpiInstance.post("/api/contact-form-datas", {
+      data: formData,
+    });
+
     if (response.status === 200) {
       toast({
         status: "success",

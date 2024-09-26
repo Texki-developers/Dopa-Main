@@ -12,7 +12,7 @@ import { MdOutlineArrowForward } from "react-icons/md";
 
 SwiperCore.use([Navigation, FreeMode, Autoplay]);
 
-export default function TSRGallery({ type }) {
+export default function TSRGallery({ type, images }) {
   const [swiperParams, setSwiperParams] = useState(null);
 
   const getSliderCount = (type) => {
@@ -67,14 +67,7 @@ export default function TSRGallery({ type }) {
         {swiperParams && (
           <div className="overflow-hidden">
             <Swiper {...swiperParams}>
-              {(type === "tsr"
-                ? tGallery
-                : type === "ktkl"
-                ? kGallery
-                : type === "clt"
-                ? CGallery
-                : []
-              ).map((item, index) => (
+              {images.map((item, index) => (
                 <SwiperSlide key={index} style={{ width: "auto" }}>
                   <div
                     className={`${
@@ -86,8 +79,8 @@ export default function TSRGallery({ type }) {
                     }`}
                   >
                     <img
-                      src={item.image}
-                      alt={item.alt}
+                      src={item}
+                      alt={"Dopa"}
                       className="w-[100%] select-none h-[100%] object-cover"
                     />
                   </div>

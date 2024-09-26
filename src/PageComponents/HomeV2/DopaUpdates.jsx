@@ -43,9 +43,9 @@ export default function DopaUpdates({ updates }) {
                 <div className="w-full aspect-[4/1] relative rounded-lg">
                     <Image
                       fill
-                      key={update._id}
-                      alt={update.alt}
-                      src={`${config.imageURL}${update.imageD}`}
+                      key={update.id}
+                      alt={update?.attributes?.alternativeText}
+                      src={`${process.env.NEXT_PUBLIC_STRAPIE_IMAGE}${update?.attributes?.url}`}
                       className="object-cover rounded-lg"
                     />
                   </div>

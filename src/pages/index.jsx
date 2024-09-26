@@ -1,3 +1,4 @@
+import { starpiInstance } from "@/config/strapiInstance";
 import MainLayout from "@/Layouts/MainLayout";
 import BannerV2 from "@/PageComponents/banner/BannerV2";
 import CustomizableBanner from "@/PageComponents/banner/CustomizableBanner";
@@ -11,9 +12,9 @@ import Testimonials from "@/PageComponents/HomeV2/TestimonialsV2/Testimonials";
 import { axiosInstance } from "@/utils/axiosInstance";
 import Image from "next/image";
 import React from "react";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Home() {
+export default function Home({ pageData }) {
   const [updates, setUpdates] = useState(null);
   const [popup, setPopup] = useState(null);
 
@@ -25,35 +26,61 @@ export default function Home() {
     // onOpen();
   };
 
+  const image_base = process.env.NEXT_PUBLIC_STRAPIE_IMAGE;
+
+  console.log(pageData, "HOME PAGE");
   useEffect(() => {
     fetchUpdates();
   }, []);
 
   return (
     <MainLayout>
-      <HomeBanner/>
+      <HomeBanner data={pageData?.HomeBanner} />
       <CustomizableBanner
-        title={["About Us"]}
-        description="DOPA is an initiative started by a group of young doctors who have completed MBBS from Calicut Medical College, Kerala. we support medical aspirants to ace the NEET along with extensive board exam preparations.
-        Studying for entrance exams alongside +1 and +2 is more beneficial than spending years on entrance preparation after completing +2. DOPA's NEET INTEGRATED SCHOOL is here to
-        help turn your dream into reality"
+        title={[pageData?.HomeAboutUsbanner[0]?.heading]}
+        description={pageData?.HomeAboutUsbanner[0]?.description}
         rtl
       >
         <div className="w-[100%] aspect-[741/400] relative lg:mt-[2rem]">
           <Image
             className="object-contain"
-            src="/Assets/integratedSchool/integratted_banner.png"
-            alt='Best neet coaching center in kerala'
+            src={
+              image_base +
+              pageData?.HomeAboutUsbanner[0]?.image?.data?.attributes?.url
+            }
+            alt="Best neet coaching center in kerala"
             fill
           />
         </div>
       </CustomizableBanner>
-      <HomeCourseSection />
-      <DopaUpdates updates={updates}/>
-      <Result />
+      <HomeCourseSection Course={pageData?.Courses} />
+      <DopaUpdates updates={pageData?.DopaUpdates?.DopaUpdatesImages.data} />
+      <Result
+      firstAlt={pageData?.HOMERESULT[0].FirstColumnImage?.data?.attributes?.alternativeText}
+      secondAlt={pageData?.HOMERESULT[0].SecondColumnImage?.data?.attributes?.alternativeText}
+        firstImage={
+          image_base +
+          pageData?.HOMERESULT[0].FirstColumnImage?.data?.attributes?.url
+        }
+        secondImage={
+          image_base +
+          pageData?.HOMERESULT[0].SecondColumnImage?.data?.attributes?.url
+        }
+      />
       <Testimonials />
-      <Directors />
+      <Directors alt={pageData?.HomepageDirectors[0]?.image_alt} image={pageData?.HomepageDirectors[0]?.image?.data?.attributes?.url} description={pageData?.HomepageDirectors[0]?.description}  directors={pageData?.HomepageDirectors[0]?.directors}/>
       <Counters />
     </MainLayout>
   );
+}
+
+export async function getStaticProps() {
+  const res = await starpiInstance(
+    "/api/home-page?populate[HomeBanner][populate]=*&populate[HomeAboutUsbanner][populate]=*&populate[Courses][populate]=*&populate[HOMERESULT][populate]=*&populate[HomepageDirectors][populate]=*&populate[DopaUpdates][populate]=*"
+  );
+  return {
+    props: {
+      pageData: res.data.data.attributes,
+    },
+  };
 }

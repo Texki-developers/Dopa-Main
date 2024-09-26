@@ -3,72 +3,8 @@ import ComponentHeader from '../ComponentHeader'
 import PrimaryCourseCard from '../Courses/CourseCard/PrimaryCourseCard'
 import Center from '@/Components/BasicComponents/Center/Center'
 
-export default function HomeCourseSection() {
+export default function HomeCourseSection({Course}) {
 
-    const Course = [
-        {
-            name:'TEST AND DISCUSSION',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
-            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-            subtitle:'BATCH',
-            link:'#'
-        },
-        {
-            name:'TAMIL',
-            subtitle:'REPEATERS',
-            link:'#',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
-            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-        },
-        {
-            name:'INTEGRATED',
-            subtitle:'SCHOOL',
-            link:'#',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
-            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-        },
-        {
-            name:'REPEATERS',
-            subheadClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
-            headClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-            subtitle:'ONLINE',
-            link:'#'
-        },
-        {
-            name:'REPEATERS',
-            subtitle:'OFFLINE',
-            link:'#',
-            subheadClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
-            headClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-        },
-        {
-            name:'REPEATERS',
-            subtitle:'RESIDENTIAL',
-            link:'#',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl',
-            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-        },
-        {
-            name:'CAPSULE',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
-            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-            subtitle:'CRASH COURSE',
-            link:'#'
-        },
-        {
-            name:'FOUNDATION',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
-            link:'#'
-        },
-        {
-            name:'+1 , +2',
-            headClass:'font-bold text-white text-lg md:text-2xl text-4xl 2xl:w-[15rem]',
-            subheadClass:'text-[0.9rem] md:text-[1.1rem] lg:text-[1.8rem] text-white',
-            subtitle:'WITH ENTRANCE',
-            link:'#'
-        },
-        
-    ]
   return (
     <Center>
     <div className='p-4 md:px-16 w-full common-space-x'>
