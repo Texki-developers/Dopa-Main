@@ -54,7 +54,7 @@ export default function Home({ pageData }) {
         </div>
       </CustomizableBanner>
       <HomeCourseSection Course={pageData?.Courses} />
-      <DopaUpdates updates={updates} />
+      <DopaUpdates updates={pageData?.DopaUpdates?.DopaUpdatesImages.data} />
       <Result
       firstAlt={pageData?.HOMERESULT[0].FirstColumnImage?.data?.attributes?.alternativeText}
       secondAlt={pageData?.HOMERESULT[0].SecondColumnImage?.data?.attributes?.alternativeText}
@@ -76,7 +76,7 @@ export default function Home({ pageData }) {
 
 export async function getStaticProps() {
   const res = await starpiInstance(
-    "/api/home-page?populate[HomeBanner][populate]=*&populate[HomeAboutUsbanner][populate]=*&populate[Courses][populate]=*&populate[HOMERESULT][populate]=*&populate[HomepageDirectors][populate]=*"
+    "/api/home-page?populate[HomeBanner][populate]=*&populate[HomeAboutUsbanner][populate]=*&populate[Courses][populate]=*&populate[HOMERESULT][populate]=*&populate[HomepageDirectors][populate]=*&populate[DopaUpdates][populate]=*"
   );
   return {
     props: {
