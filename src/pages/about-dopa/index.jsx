@@ -20,7 +20,7 @@ export default function index({ pageData }) {
         {pageData?.attributes?.about_banner?.image?.data?.attributes?.url && (
           <div className="w-[100%] aspect-[741/400] relative mt-[2rem]">
             <Image
-              src={`process.env.NEXT_PUBLIC_STRAPIE_IMAGE${pageData?.attributes?.about_banner?.image?.data?.attributes?.url}`}
+              src={`${process.env.NEXT_PUBLIC_STRAPIE_IMAGE}${pageData?.attributes?.about_banner?.image?.data?.attributes?.url}`}
               fill
             />
           </div>

@@ -2,7 +2,6 @@ import { publicRuntimeConfig } from "next.config";
 
 export const formatTCKPagesData = (data) => {
   let structData = {};
-
   structData.banner = data?.attributes?.banner;
   structData.courses = data?.attributes?.course_card?.course_card;
   structData.features = data?.attributes?.feature_card_row?.feature_card;
@@ -14,14 +13,6 @@ export const formatTCKPagesData = (data) => {
   } else {
     structData.banner.heading = [structData.banner.heading];
   }
-
-  structData.courses = structData?.courses?.map((item) => ({
-    name: item?.heading,
-    subtitle: item?.sub_heading,
-    link: item?.link || "/",
-    headClass: "font-bold text-white text-4xl",
-    subheadClass: "text-[1.8rem] text-white",
-  }));
 
   structData.features = structData.features?.map((item) => ({
     ...item,

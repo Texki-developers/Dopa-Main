@@ -22,7 +22,7 @@ export default function index({ pageData }) {
             <div className="lg:py-[2rem]">
               <div className="w-[100%] md:h-[100%] hidden sm:block relative overflow-hidden">
                 <Image
-                  src={`${publicRuntimeConfig.strapiUrl}${pageData?.banner?.image}`}
+                  src={`${process.env.NEXT_PUBLIC_STRAPIE_IMAGE}${pageData?.banner?.image}`}
                   fill
                   className="object-cover rounded-[14px]"
                 />

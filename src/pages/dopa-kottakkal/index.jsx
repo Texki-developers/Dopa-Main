@@ -11,6 +11,7 @@ import Image from "next/image";
 import React from "react";
 
 export default function index({ pageData }) {
+  console.log(pageData,"PAGE DATA")
   return (
     <MainLayout>
       <VStack className="gap-[1rem]">
@@ -22,7 +23,7 @@ export default function index({ pageData }) {
             <div className="lg:pt-[2rem]">
               <div className="w-[100%] md:h-[100%] hidden sm:block relative overflow-hidden">
                 <Image
-                  src={`${publicRuntimeConfig.strapiUrl}${pageData?.banner?.image}`}
+                  src={`${process.env.NEXT_PUBLIC_STRAPIE_IMAGE}${pageData?.banner?.image}`}
                   fill
                   className="object-cover"
                   alt='⁠Best neet coaching center in calicut'
