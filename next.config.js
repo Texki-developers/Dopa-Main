@@ -20,7 +20,7 @@ const nextConfig = {
     domains: ["localhost","127.0.0.1", 'api.mydopaclass.com', 'panel.mydopaclass.com'],
   },
   publicRuntimeConfig: {
-    strapiUrl: "http://127.0.0.1:1337",
+    strapiUrl: "https://panel.mydopaclass.com",
   },
 };
 
