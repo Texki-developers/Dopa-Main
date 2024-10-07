@@ -40,5 +40,6 @@ export async function getStaticProps() {
     props: {
       pageData: res.data.data,
     },
+    revalidate: 60,
   };
 }

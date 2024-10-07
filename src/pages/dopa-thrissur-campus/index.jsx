@@ -41,14 +41,26 @@ export default function index({ pageData }) {
 }
 
 export async function getStaticProps() {
-  const { data } = await starpiInstance(
-    "/api/dopa-thrissur-page?populate[banner][populate]=*&populate[course_card][populate][course_card][populate]=*&populate[feature_card_row][populate][feature_card][populate]=*&populate[gallery][populate][images][populate]=*"
-  );
-  const formattedData = formatTCKPagesData(data?.data);
+  try {
+    const { data } = await starpiInstance(
+      
+      "/api/dopa-thrissur-page?populate[banner][populate]=*&populate[course_card][populate][course_card][populate]=*&populate[feature_card_row][populate][feature_card][populate]=*&populate[gallery][populate][images][populate]=*"
+    );
+    const formattedData = formatTCKPagesData(data?.data);
 
-  return {
-    props: {
-      pageData: formattedData || {},
-    },
-  };
+    return {
+      props: {
+        pageData: formattedData || {},
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        pageData: {},
+      },
+      revalidate: 60,
+    };
+  }
 }

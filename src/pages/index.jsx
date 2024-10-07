@@ -80,7 +80,8 @@ export async function getStaticProps() {
   );
   return {
     props: {
-      pageData: res.data.data.attributes,
+      pageData: res?.data?.data?.attributes,
     },
+    revalidate: 60,
   };
 }
