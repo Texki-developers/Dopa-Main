@@ -52,6 +52,7 @@ export async function getStaticProps() {
   return {
     props: {
       pageData: formattedData || {},
+      revalidate: 60,
     },
   };
 }

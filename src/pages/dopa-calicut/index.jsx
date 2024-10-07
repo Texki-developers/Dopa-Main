@@ -49,5 +49,6 @@ console.log(formattedData)
     props: {
       pageData: formattedData || {},
     },
+    revalidate: 60,
   };
 }
