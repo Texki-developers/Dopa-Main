@@ -39,7 +39,6 @@ export default function Footer() {
         <img src={Logo.src}  alt="" />
         <div className={styles["logo_description"]}>
           <h2>DOCTORS OWN PREP ACADEMY</h2>
-          <p>“BY DOCTORS, FOR DOCTORS TO BE”</p>
           <span>www.mydopaclass.com</span>
         </div>
         </div>
@@ -54,7 +53,6 @@ export default function Footer() {
         <img src={Logo.src} alt="" />
         <div className={styles["logo_description"]}>
           <h2>DOCTORS OWN PREP ACADEMY</h2>
-          <p>“BY DOCTORS, FOR DOCTORS TO BE”</p>
           <p>India's 1st & largest doctor's neet coaching platform</p>
           <span>www.mydopaclass.com</span>
         </div>
