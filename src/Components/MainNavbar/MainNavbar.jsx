@@ -113,6 +113,9 @@ export default function MainNavbar() {
                     : "",
               }}
             >
+               <li>
+                <Link href="/Neet2024CrashCourse">DOPA Crash Course</Link>
+              </li>
               <li>
                 <Link href="/dopa-repeaters">DOPA REPEATERS</Link>
               </li>
