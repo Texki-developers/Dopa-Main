@@ -17,7 +17,7 @@ export default function Tution() {
     <MainLayout>
       <VStack className="gap-[1rem] pb-[1rem]">
         <CustomizableBanner
-          title={["DOPA Tution & Foundation", "ENTRANCE"]}
+          title={["+1/2 Entrance Coaching"]}
           description="Dopa's +1 and +2 tuition program offers structured and scheduled classes, with sessions held every Saturday tailored for both state and CBSE students. Additionally, specialized coaching is provided for students preparing for entrance exams such as NEET and JEE."
         >
           <div className="lg:pt-[2rem] lg:pb-[3rem]">

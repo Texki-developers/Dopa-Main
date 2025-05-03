@@ -151,16 +151,16 @@ export default function MainNavbar() {
               {/* <li>
                 <Link href="/courses/capsule">DOPA CAPSULE</Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link href="/courses/tuition-with-foundation">
                   DOPA Foundation
                 </Link>
-              </li>
+              </li> */}
               <li>
             <Link href="/dopa-integrated-school">Integrated School</Link>
           </li>
               <li>
-                <Link href="/courses/tuition-with-entrance">DOPA Entrance</Link>
+                <Link href="/courses/tuition-with-entrance">+1/+2 Entrance Coaching</Link>
               </li>
             </ul>
           </li>
