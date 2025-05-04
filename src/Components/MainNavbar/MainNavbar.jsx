@@ -139,7 +139,7 @@ export default function MainNavbar() {
             <Link href="/dopa-integrated-school">Integrated School</Link>
           </li>
               <li>
-                <Link href="/courses/tuition-with-entrance">DOPA Entrance</Link>
+                <Link href="/courses/tuition-with-entrance">+1/+2 Entrance Coaching</Link>
               </li>
               <li>
                 <Link href="/Neet2024CrashCourse">DOPA Crash Course</Link>
