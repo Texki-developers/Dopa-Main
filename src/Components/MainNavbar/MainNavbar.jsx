@@ -3,32 +3,13 @@ import React, { useEffect, useState } from "react";
 import style from "./MainNavbar.module.scss";
 import logo from "../../../public/Assets/logo.png";
 import Link from "next/link";
-import PrimaryButton from "../Buttons/PrimaryButton/PrimaryButton";
-import { useRouter } from "next/router";
-import { MdOutlineFiberNew } from "react-icons/md";
 export default function MainNavbar() {
   const [activeMObileSubMenu, setActiveMobileSubMenu] = useState(null);
   const [windowWidth, setWindowWidth] = useState(null);
-
-  const { push } = useRouter();
   const handleActivationOfMobileMenu = (id) => {
     if (window.innerWidth <= 768) {
       setActiveMobileSubMenu(activeMObileSubMenu ? false : id);
     }
-  };
-
-  const handleInnerExpansion = (event) => {
-    console.log(event);
-  };
-
-  const handleRedirectToNeet = (data) => {
-    localStorage.setItem("class", data);
-    push(`/courses/neet`);
-  };
-
-  const handleRedirectToFound = (data) => {
-    localStorage.setItem("class", data);
-    push(`/courses/foundation`);
   };
 
   useEffect(() => {
@@ -113,11 +94,9 @@ export default function MainNavbar() {
                     : "",
               }}
             >
-               <li>
-                <Link href="/Neet2024CrashCourse">DOPA Crash Course</Link>
-              </li>
+            
               <li>
-                <Link href="/dopa-repeaters">DOPA REPEATERS</Link>
+                <Link href="/dopa-repeaters">Repeaters Program</Link>
               </li>
               {/* <li onClick={handleInnerExpansion}>
                 <a style={{ pointerEvents: "none" }}>DOPA FOUNDATION</a>
@@ -151,16 +130,19 @@ export default function MainNavbar() {
               {/* <li>
                 <Link href="/courses/capsule">DOPA CAPSULE</Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link href="/courses/tuition-with-foundation">
                   DOPA Foundation
                 </Link>
-              </li>
+              </li> */}
               <li>
             <Link href="/dopa-integrated-school">Integrated School</Link>
           </li>
               <li>
                 <Link href="/courses/tuition-with-entrance">DOPA Entrance</Link>
+              </li>
+              <li>
+                <Link href="/Neet2024CrashCourse">DOPA Crash Course</Link>
               </li>
             </ul>
           </li>

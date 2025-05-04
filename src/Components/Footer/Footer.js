@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiFacebook, FiPhone, FiSend, FiYoutube } from "react-icons/fi";
 import { BiMapAlt } from "react-icons/bi";
-import Logo from '../../../public/Assets/dopa-Logo.png'
+import Logo from '../../../public/Assets/logo.png'
 import LinkCard from "./LinkCard";
 
 export default function Footer() {
@@ -50,7 +50,7 @@ export default function Footer() {
       <div className={styles["footer-logo_container"]}>
         <div className={styles["logo-wrapper"]}>
         
-        <img src={Logo.src} alt="" />
+        <img src={Logo.src} alt="" className={styles.footer_logo} />
         <div className={styles["logo_description"]}>
           <h2>DOCTORS OWN PREP ACADEMY</h2>
           <p>India's 1st & largest doctor's neet coaching platform</p>

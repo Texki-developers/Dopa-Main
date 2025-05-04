@@ -39,6 +39,13 @@
     }
   }
 
+  .footer_logo{
+    cursor: pointer;
+    width: 7rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
   .footer-social_media {
     display: flex;
     align-items: flex-start;
