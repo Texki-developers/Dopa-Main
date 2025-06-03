@@ -12,7 +12,7 @@ import React from "react";
 export default function index() {
   return (
     <MainLayout>
-      <VStack className="pt-[7rem]">
+      <VStack className="pt-[5rem] sm:pt-[7rem]">
         <Banner />
         <CoachingPlatform/>
         <VStack className="bg-primary-500 py-[1rem] md:py-[5rem] gap-[5rem]">
