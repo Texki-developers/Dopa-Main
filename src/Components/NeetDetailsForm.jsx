@@ -46,28 +46,6 @@ export const NeetDetailsForm = ({ onSubmit, isSubmitting }) => {
                                 </Box>
                             )}
                         </FormControl>
-                            
-                        <FormControl id="email" isRequired>
-                            <FormLabel>Email</FormLabel>
-                            <Input 
-                                type="email" 
-                                {...register('email', { 
-                                    required: 'Email is required',
-                                    pattern: {
-                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                        message: 'Invalid email address'
-                                    }
-                                })}
-                                placeholder="Enter your email"
-                                size="lg"
-                            />
-                            {errors.email && (
-                                <Box color="red.500" fontSize="sm" mt={1}>
-                                    {errors.email.message}
-                                </Box>
-                            )}
-                        </FormControl>
-
                         <FormControl id="mobile" isRequired>
                             <FormLabel>Mobile Number</FormLabel>
                             <Input 
