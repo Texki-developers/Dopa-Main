@@ -32,7 +32,7 @@ export const NeetDetailsForm = ({ onSubmit, isSubmitting }) => {
                             <FormLabel>NEET Score</FormLabel>
                             <Input 
                                 type="number" 
-                                {...register('neetScore', { 
+                                {...register('neetscore', { 
                                     required: 'NEET score is required',
                                     min: { value: 0, message: 'Score cannot be negative' },
                                     max: { value: 720, message: 'Maximum score is 720' }
@@ -40,13 +40,13 @@ export const NeetDetailsForm = ({ onSubmit, isSubmitting }) => {
                                 placeholder="Enter your NEET score"
                                 size="lg"
                             />
-                            {errors.neetScore && (
+                            {errors.neetscore && (
                                 <Box color="red.500" fontSize="sm" mt={1}>
-                                    {errors.neetScore.message}
+                                    {errors.neetscore.message}
                                 </Box>
                             )}
                         </FormControl>
-
+                            
                         <FormControl id="email" isRequired>
                             <FormLabel>Email</FormLabel>
                             <Input 

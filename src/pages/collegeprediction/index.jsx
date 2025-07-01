@@ -292,6 +292,7 @@ const CollegePredictionPage = () => {
     }
 
     const onFormSubmission = async (data) => {
+        console.log(data);
         setLoading(true);
         try {
             starpiInstance.defaults.headers.common['Authorization'] = `Bearer ${process.env.NEXT_PUBLIC_STRAPIE_TOKEN}`;
@@ -350,7 +351,7 @@ const CollegePredictionPage = () => {
                         <form>
                             <fieldset className="mb-6">
                                 <legend className="text-xl font-semibold border-b pb-2 mb-4 text-slate-700">Student & Score</legend>
-                                <InputField label="Student Name" id="student_name" name="student_name" value={inputs.student_name} onChange={handleInputChange} />
+            
                                 <InputField label="NEET Score" id="neet_score" name="neet_score" type="number" placeholder="e.g., 580" value={inputs.neet_score} onChange={handleInputChange} />
                                 <InputField label="All India Rank" id="aiq_rank" name="aiq_rank" type="number" placeholder="e.g., 25000" value={inputs.aiq_rank} onChange={handleInputChange} />
                                 <SelectField label="Kerala Category" id="student_category" name="student_category" value={inputs.student_category} onChange={handleInputChange}><option value="">Select</option><option value="SM">SM</option><option value="EW">EWS</option><option value="EZ">Ezhava</option><option value="MU">Muslim</option><option value="BH">BH</option><option value="LA">LA</option><option value="DV">DV</option><option value="VK">VK</option><option value="BX">BX</option><option value="SC">SC</option><option value="ST">ST</option></SelectField>
