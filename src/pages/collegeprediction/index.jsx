@@ -294,9 +294,12 @@ const CollegePredictionPage = () => {
     const onFormSubmission = async (data) => {
         setLoading(true);
         try {
+            starpiInstance.defaults.headers.common['Authorization'] = `Bearer ${process.env.NEXT_PUBLIC_STRAPIE_TOKEN}`;
+            starpiInstance.defaults.headers.common['Content-Type'] = 'application/json';
+
             const response = await starpiInstance.post('/api/college-prection-neet-scores', {
                 data: data,
-                
+       
             });
             if (response.status === 200) {
                 setShow(true)
