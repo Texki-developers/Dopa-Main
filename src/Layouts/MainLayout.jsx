@@ -40,29 +40,28 @@ export default function MainLayout({ children }) {
 
   return (
     <>
-      <div
-        onClick={() =>
-          (window.location.href = `${process.env.NEXT_PUBLIC_WHATSAPP}`)
-        }
-        className={styles.enquiry_popup}
-      >
-        <IoLogoWhatsapp color="#25D366" />
-      </div>
-      {/* <Popup refs={popupRef} action={handlePopup} type={1}>
-        <h1 style={{ marginBottom: "1.5rem" }}>Enquiry form</h1>
-        <Form />
-      </Popup> */}
       <Head>
-      <title>Best NEET Coaching center in Kerala | DOPA Coaching</title>
-      <meta name="description" content="DOPA  is an initiative of a group of doctors from Calicut Medical College, located in Kerala. Who provides top premium coaching services for preparing for the NEET Exam." />
+        <title>Best NEET Coaching center in Kerala | DOPA Coaching</title>
+        <meta name="description" content="DOPA is an initiative of a group of doctors from Calicut Medical College, located in Kerala. Who provides top premium coaching services for preparing for the NEET Exam." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="RKvR80ZgxDSmi8-OyiMqt6EN0YzItjXgf6z-Nzpeenk" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainNavbar />
-
-      {children}
+      
       <StickyBanner />
+      <MainNavbar />
+      
+      <main>
+        {children}
+      </main>
+      
+      <div
+        onClick={() => (window.location.href = `${process.env.NEXT_PUBLIC_WHATSAPP}`)}
+        className={styles.enquiry_popup}
+      >
+        <IoLogoWhatsapp color="#25D366" />
+      </div>
+      
       <Footer />
     </>
   );
