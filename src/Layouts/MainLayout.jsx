@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Form from "@/Components/Form/Form";
 import { useRouter } from "next/router";
+import StickyBanner from "@/Components/StickyBanner/StickyBanner";
 
 export default function MainLayout({ children }) {
   // let popupRef = useRef();
@@ -61,6 +62,7 @@ export default function MainLayout({ children }) {
       <MainNavbar />
 
       {children}
+      <StickyBanner />
       <Footer />
     </>
   );
