@@ -30,8 +30,12 @@ const StickyBanner = () => {
   return (
     <div className={styles.banner} onClick={handleBannerClick}>
       <div className={styles.content}>
+      
         <span className={styles.text}>
-          NEET 2025? Check your Kerala Medical College admission chances now! Predict your seat based on your score.
+        <div className={styles.pulseDot}></div>
+          <span className={styles.highlight}>NEET 2025 ALERT: </span>
+          <span className={styles.bold}>Predict Your Medical College Admission Chances in Kerala! </span>
+          <span className={styles.cta}>Click Here to Check Now →</span>
         </span>
       </div>
       <button className={styles.closeButton} onClick={handleClose}>
