@@ -22,7 +22,7 @@ const StickyBanner = () => {
   };
 
   const handleBannerClick = () => {
-    router.push('/collegeprediction'); // Update this path to your college prediction page
+    router.push('/neet-analysis-tool'); // Update this path to your college prediction page
   };
 
   if (!isVisible) return null;
@@ -34,7 +34,7 @@ const StickyBanner = () => {
         <span className={styles.text}>
         <div className={styles.pulseDot}></div>
           <span className={styles.highlight}>NEET 2025 ALERT: </span>
-          <span className={styles.bold}>Predict Your Medical College Admission Chances in Kerala! </span>
+          <span className={styles.bold}>Check your medical college admission chances with our NEET analysis tool! </span>
           <span className={styles.cta}>
             Click Here to Check Now 
             <span className={styles.newBadge}>NEW</span>
