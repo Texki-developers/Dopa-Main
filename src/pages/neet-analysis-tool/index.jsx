@@ -198,7 +198,7 @@ export default function DopaReattemptAnalyzer() {
             "application/json";
     
           const response = await starpiInstance.post(
-            "/api/college-prection-neet-scores",
+            "/api/neetanalysistools",
             {
               data: data,
             }
