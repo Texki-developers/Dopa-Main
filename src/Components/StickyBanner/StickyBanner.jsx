@@ -33,8 +33,8 @@ const StickyBanner = () => {
       
         <span className={styles.text}>
         <div className={styles.pulseDot}></div>
-          <span className={styles.highlight}>NEET 2025 ALERT: </span>
-          <span className={styles.bold}>Check your medical college admission chances with our NEET analysis tool! </span>
+          <span className={styles.highlight}>NEET 2025 RE-ATTEMPT ALERT: </span>
+          <span className={styles.bold}>Should you repeat? Don't just guess, get a data-driven answer </span>
           <span className={styles.cta}>
             Click Here to Check Now 
             <span className={styles.newBadge}>NEW</span>
