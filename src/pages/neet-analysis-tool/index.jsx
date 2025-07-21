@@ -407,6 +407,9 @@ export default function DopaReattemptAnalyzer() {
         <NeetDetailsForm 
           onSubmit={onFormSubmission} 
           isLoading={loading} 
+          subheading="we will help you to analyse your preparation"
+          title="Enter Your NEET 2025 Details"
+          btn="Start Analysis"
         />
       );
     }
