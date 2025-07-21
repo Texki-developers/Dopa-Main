@@ -2,15 +2,18 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Box, Button, FormControl, FormLabel, Input, VStack, Heading, Container } from '@chakra-ui/react';
 
-export const NeetDetailsForm = ({ onSubmit, isSubmitting }) => {
+export const NeetDetailsForm = ({ onSubmit, isSubmitting,title,subheading,btn }) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     
     return (
         <Container maxW="container.md " py={10} className='h-svh' >
             <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
                 <Heading as="h2" size="lg" mb={6} textAlign="center" color="blue.700">
-                    Enter Your NEET Details
+                    {title}
                 </Heading>
+                <Heading as="h4" size="sm" mb={6} textAlign="center" color="blue.800">
+                    {subheading}
+                </Heading>  
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <VStack spacing={4}>
                         <FormControl id="name" isRequired>
@@ -76,7 +79,7 @@ export const NeetDetailsForm = ({ onSubmit, isSubmitting }) => {
                             isLoading={isSubmitting}
                             loadingText="Submitting..."
                         >
-                            Get College Prediction
+                            {btn}
                         </Button>
                     </VStack>
                 </form>

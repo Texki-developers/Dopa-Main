@@ -1276,7 +1276,7 @@ export default function collegePrediction() {
   return (
     <div className="bg-slate-50 min-h-screen font-sans">
       {!isShow ? (
-        <NeetDetailsForm onSubmit={onFormSubmission} isLoading={loading} />
+        <NeetDetailsForm title="Enter Your NEET Details" btn={"Get College Prediction"} onSubmit={onFormSubmission} isLoading={loading} />
       ) : (
         <></>
       )}
