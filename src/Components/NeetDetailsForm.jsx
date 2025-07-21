@@ -6,9 +6,9 @@ export const NeetDetailsForm = ({ onSubmit, isSubmitting,title,subheading,btn })
     const { register, handleSubmit, formState: { errors } } = useForm();
     
     return (
-        <Container maxW="container.md " py={10} className='h-svh' >
+        <Container maxW="container.md " py={10} className='h-svh flex justify-center items-center' >
             <Box bg="white" p={8} borderRadius="lg" boxShadow="md">
-                <Heading as="h2" size="lg" mb={6} textAlign="center" color="blue.700">
+                <Heading as="h2" size="lg" mb={6} textAlign="center" color="blue.700" marginBottom={2}>
                     {title}
                 </Heading>
                 <Heading as="h4" size="sm" mb={6} textAlign="center" color="blue.800">

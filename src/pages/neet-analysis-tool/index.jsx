@@ -62,7 +62,7 @@ export default function DopaReattemptAnalyzer() {
     const callGeminiAPI = async (prompt) => {
         let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
         const payload = { contents: chatHistory };
-        const apiKey = ""; // Leave empty, handled by environment
+        const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY; // Leave empty, handled by environment
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
         try {
@@ -404,6 +404,7 @@ export default function DopaReattemptAnalyzer() {
 
     if (!isShow) {
       return (
+        <div className="h-full bg-gray-50 p-4 py-12 flex">
         <NeetDetailsForm 
           onSubmit={onFormSubmission} 
           isLoading={loading} 
@@ -411,6 +412,7 @@ export default function DopaReattemptAnalyzer() {
           title="Enter Your NEET 2025 Details"
           btn="Start Analysis"
         />
+        </div>
       );
     }
 
