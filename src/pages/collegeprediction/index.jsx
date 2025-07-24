@@ -85,7 +85,7 @@ const collegeData = [
     // AYUSH Govt
     { name: 'Ayurveda College, Pariyaram', course: 'BAMS_Govt', lastRanks: { SM: 13155, EW: 22153, EZ: 17517, MU: 16228, LA: 21492, DV: 24516, VK: 15212, BH: 15579, BX: 17658, SC: 22832, ST: 27443 } },
     { name: 'Govt. Homoeopathic College, Kozhikkode', course: 'BHMS_Govt', lastRanks: { SM: 11602, EW: 23811, EZ: 15881, MU: 12665, LA: 21192, DV: 23916, VK: 16371, BH: 15384, SC: 26084, ST: 26726 } },
-    { name: 'Markaz Unani Medical College, Kozhikode', course: 'BUMS_Self', lastRanks: { SM: 37966, MU: 39187 } },
+    { name: 'Markaz Unani Medical College, Kozhikkode', course: 'BUMS_Self', lastRanks: { SM: 37966, MU: 39187 } },
     { name: 'Santhigiri Siddha College, TVPM', course: 'BSMS_Self', lastRanks: { EZ: 39185 } },
 ];
 
@@ -105,8 +105,8 @@ const courseTitles = {
 // 2. THE COLLEGE PREDICTOR COMPONENT
 // This contains the main logic and UI for the predictor.
 // ====================================================================
-const CollegePredictor = () => {
-    const [rank, setRank] = useState('');
+const CollegePredictor = ({ initialRank }) => {
+    const [rank, setRank] = useState(initialRank || '');
     const [category, setCategory] = useState('');
     const [results, setResults] = useState(null);
     const [activeAccordion, setActiveAccordion] = useState(null);
@@ -124,10 +124,10 @@ const CollegePredictor = () => {
         
         const getChance = (cutoff, currentRank) => {
             if (currentRank > 0 && cutoff) {
-                if (currentRank <= cutoff) return { text: 'High Chance', class: 'chance-high', order: 1 };
-                if (currentRank <= cutoff * 1.15) return { text: 'Borderline', class: 'chance-borderline', order: 2 };
+                if (currentRank <= cutoff) return { text: 'High Chance', class: 'bg-green-100 text-green-800', order: 1 };
+                if (currentRank <= cutoff * 1.15) return { text: 'Borderline', class: 'bg-yellow-100 text-yellow-800', order: 2 };
             }
-            return { text: 'Low Chance', class: 'chance-low', order: 3 };
+            return { text: 'Low Chance', class: 'bg-red-100 text-red-800', order: 3 };
         };
 
         const processedResults = Object.keys(courseTitles).map(courseKey => {
@@ -224,24 +224,26 @@ const CollegePredictor = () => {
                     <div className="space-y-2">
                         {results.map(result => (
                              <div key={result.courseKey} className="border border-gray-200 rounded-lg">
-                                <button onClick={() => toggleAccordion(result.courseKey)} className="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors">
+                                <button onClick={() => toggleAccordion(result.courseKey)} className="w-full flex items-center justify-between p-4 text-left font-semibold text-slate-800 bg-slate-50 hover:bg-slate-100 transition-colors rounded-t-lg">
                                     <span>{result.title}</span>
-                                    <span className={`px-3 py-1 text-sm rounded-full ${result.overallChance.class}`}>{result.overallChance.text}</span>
+                                    <span className={`inline-block px-3 py-1 text-sm rounded-full ${result.overallChance.class}`}>{result.overallChance.text}</span>
                                 </button>
-                                <div className={`accordion-content bg-white p-4 border-t border-gray-200 ${activeAccordion === result.courseKey ? 'open' : ''}`}>
-                                     <ul className="space-y-3">
-                                        {result.colleges.length > 0 ? (
-                                            result.colleges.map(college => (
-                                                 <li key={college.name} className="flex items-center justify-between text-sm p-3 rounded-md border border-slate-200">
-                                                    <span className="flex-1 pr-4 font-medium text-slate-700">{college.name}</span>
-                                                    <div className="text-right">
-                                                        <span className={`text-xs font-semibold ${college.chance.class}`}>{college.chance.text}</span>
-                                                        <span className="block text-xs text-slate-500 font-normal">Cutoff ({college.displayCategory}): {college.displayCutoff}</span>
-                                                    </div>
-                                                </li>
-                                            ))
-                                        ) : ( <p className="text-sm text-slate-500 p-3">No data available for this course and category.</p> )}
-                                    </ul>
+                                <div className={`accordion-content overflow-hidden transition-all duration-300 ease-in-out ${activeAccordion === result.courseKey ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                    <div className="p-4 border-t border-gray-200">
+                                        <ul className="space-y-3">
+                                            {result.colleges.length > 0 ? (
+                                                result.colleges.map(college => (
+                                                    <li key={college.name} className="flex items-center justify-between text-sm p-3 rounded-md border border-slate-200 hover:border-slate-300 transition-colors">
+                                                        <span className="flex-1 pr-4 font-medium text-slate-700">{college.name}</span>
+                                                        <div className="text-right">
+                                                            <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${college.chance.class}`}>{college.chance.text}</span>
+                                                            <span className="block text-xs text-slate-500 font-normal mt-1">Cutoff ({college.displayCategory}): {college.displayCutoff}</span>
+                                                        </div>
+                                                    </li>
+                                                ))
+                                            ) : ( <p className="text-sm text-slate-500 p-3">No data available for this course and category.</p> )}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -324,6 +326,7 @@ const CollegePredictor = () => {
 export default function collegePrediction() {
   // This state controls which component is visible.
   const [isPredictorUnlocked, setIsPredictorUnlocked] = useState(false);
+  const [initialRank, setInitialRank] = useState('');
   const toast = useToast();
   
   const handlePreFormSuccess = async (data) => {
@@ -341,6 +344,7 @@ export default function collegePrediction() {
                 }
               );
               if (response.status === 200) {
+                setInitialRank(data.rank); // Store the rank
                 setIsPredictorUnlocked(true);
                 toast({
                     status: "success",
@@ -368,10 +372,10 @@ export default function collegePrediction() {
     <div className="bg-slate-100 min-h-screen py-12 font-sans w-full">
       <main >
         {isPredictorUnlocked ? (
-          <CollegePredictor />
+          <CollegePredictor initialRank={initialRank} />
         ) : (
           
-          <NeetDetailsForm rank title="DOPA College Predictor" subheading="Enter your NEET details to predict colleges" btn="Predict Colleges" onSubmit={handlePreFormSuccess}/>
+          <NeetDetailsForm rank title="Kerala College Predictor" subheading="Enter your KEAM Rank to predict colleges" btn="Predict Colleges" onSubmit={handlePreFormSuccess}/>
         )}
       </main>
 
