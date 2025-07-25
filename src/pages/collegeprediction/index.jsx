@@ -1,5 +1,5 @@
 import NeetDetailsForm from '@/Components/NeetDetailsForm';
-import { starpiInstance } from '@/config/strapiInstance';
+import { authenticatedStrapiInstance } from '@/config/strapiInstance';
 import React, { useState } from 'react';
 import { useToast } from "@chakra-ui/react";
 
@@ -331,13 +331,7 @@ export default function collegePrediction() {
   
   const handlePreFormSuccess = async (data) => {
             try {
-              starpiInstance.defaults.headers.common[
-                "Authorization"
-              ] = `Bearer ${process.env.NEXT_PUBLIC_STRAPIE_TOKEN}`;
-              starpiInstance.defaults.headers.common["Content-Type"] =
-                "application/json";
-        
-              const response = await starpiInstance.post(
+              const response = await authenticatedStrapiInstance.post(
                 "/api/college-prection-neet-scores",
                 {
                   data: data,
