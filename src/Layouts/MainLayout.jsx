@@ -4,39 +4,18 @@ import Head from "next/head";
 import styles from "./MainLayout.module.scss";
 import { IoLogoWhatsapp } from "react-icons/io";
 import Popup from "@/Components/popupLayout/Popup";
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Form from "@/Components/Form/Form";
 import { useRouter } from "next/router";
 import StickyBanner from "@/Components/StickyBanner/StickyBanner";
 
 export default function MainLayout({ children }) {
-  // let popupRef = useRef();
-  // const handlePopup = (type) => {
-  //   if (type == 1) {
-  //     popupRef.current.style.display = "flex";
-  //   } else {
-  //     popupRef.current.style.display = "none";
-  //     localStorage.setItem("ipop", true);
-  //   }
-  // };
+  const [isBannerVisible, setIsBannerVisible] = useState(true);
 
-  // function handleSessionClose() {
-  //   localStorage.removeItem("ipop");
-  // }
-
-  // const router = useRouter();
-
-  // useEffect(() => {
-  //   // let popStat = localStorage.getItem("ipop");
-  //   // if (router.pathname === "/" && !popStat) {
-  //   //   handlePopup(1);
-  //   // }
-  //   window.addEventListener("beforeunload", handleSessionClose);
-  //   return () => {
-  //     window.removeEventListener("beforeunload", handleSessionClose);
-  //   };
-  // }, []);
+  const handleBannerVisibility = (visible) => {
+    setIsBannerVisible(visible);
+  };
 
   return (
     <>
@@ -48,10 +27,10 @@ export default function MainLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <StickyBanner />
+      <StickyBanner onVisibilityChange={handleBannerVisibility} />
       <MainNavbar />
       
-      <main>
+      <main className={`${styles.mainContent} ${isBannerVisible ? styles.withBanner : ''}`}>
         {children}
       </main>
       

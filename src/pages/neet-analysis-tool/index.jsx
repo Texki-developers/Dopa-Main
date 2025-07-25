@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import NeetDetailsForm from "@/Components/NeetDetailsForm";
-import { starpiInstance } from "@/config/strapiInstance";
+import { authenticatedStrapiInstance } from "@/config/strapiInstance";
 import { useToast } from "@chakra-ui/react";
 
 
@@ -191,13 +191,7 @@ export default function DopaReattemptAnalyzer() {
         console.log(data);
         setLoading(true);
         try {
-          starpiInstance.defaults.headers.common[
-            "Authorization"
-          ] = `Bearer ${process.env.NEXT_PUBLIC_STRAPIE_TOKEN}`;
-          starpiInstance.defaults.headers.common["Content-Type"] =
-            "application/json";
-    
-          const response = await starpiInstance.post(
+          const response = await authenticatedStrapiInstance.post(
             "/api/neetanalysistools",
             {
               data: data,
