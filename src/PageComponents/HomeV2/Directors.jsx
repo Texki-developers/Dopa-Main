@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 export default function Directors({ description, directors, image, alt }) {
   return (
     <Center>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 px-4 md:px-20 md:pt-[3rem] items-start common-space-x w-full">
         <motion.div 
           className="relative flex flex-col gap-4 pt-3 order-2 md:order-1"

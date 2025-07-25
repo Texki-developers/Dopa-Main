@@ -27,48 +27,31 @@ export default function DopaUpdates({ updates }) {
     },
   };
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" },
-    viewport: { once: true, margin: "-100px" }
-  };
-
-  const navButtonVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
-    transition: { duration: 0.3 },
-    whileHover: { scale: 1.1 }
-  };
-
   return (
     <Center>
-      <motion.div 
-        className="p-4 md:px-16 relative common-space-x w-full"
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-      >
-        <motion.div 
-          className="flex flex-col gap-2 pb-8"
-          variants={fadeInUp}
-        >
+      <div className="p-4 md:px-16 relative common-space-x w-full">
+        <div className="flex flex-col gap-2 pb-8">
           <motion.h1 
             className="font-bold text-4xl"
-            variants={fadeInUp}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
             DOPA Updates
           </motion.h1>
-          <motion.p variants={fadeInUp}>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             Explore what's been happening?
           </motion.p>
-        </motion.div>
+        </div>
         <motion.div 
           className="relative"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Swiper {...swiperParams}>
             {updates &&
@@ -95,7 +78,9 @@ export default function DopaUpdates({ updates }) {
           </Swiper>
           <motion.div 
             className="absolute inset-y-0 left-2 md:left-4 flex items-center justify-center z-10"
-            {...navButtonVariants}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
           >
             <motion.div 
               className="gallery-custom-prev transition-[all_0.3s_ease] text-white hover:text-black bg-black hover:bg-white cursor-pointer p-[0.3rem] rotate-[180deg] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full"
@@ -107,7 +92,9 @@ export default function DopaUpdates({ updates }) {
           </motion.div>
           <motion.div 
             className="absolute inset-y-0 right-2 md:right-4 flex items-center justify-center z-10"
-            {...navButtonVariants}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
           >
             <motion.div 
               className="gallery-custom-next transition-[all_0.3s_ease] text-white bg-black hover:bg-white hover:text-black cursor-pointer p-[0.3rem] border-[2px] border-white text-[1rem] sm:text-[1.5rem] rounded-full"
@@ -118,7 +105,7 @@ export default function DopaUpdates({ updates }) {
             </motion.div>
           </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </Center>
   );
 }
