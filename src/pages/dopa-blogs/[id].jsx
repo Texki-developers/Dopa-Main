@@ -357,7 +357,7 @@ export async function getStaticProps({ params }) {
 
     // Fetch recommended blogs (excluding current blog)
     const currentBlog = response.data.data;
-    const recommendedResponse = await starpiInstance.get(
+    const recommendedResponse = await authenticatedStrapiInstance.get(
       `/api/dopa-blogs?populate=*&filters[id][$ne]=${params.id}&pagination[limit]=3&sort=publishedAt:desc`
     );
 
