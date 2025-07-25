@@ -9,7 +9,6 @@ import Image from "next/image";
 import React from "react";
 
 export default function index({ pageData }) {
-  console.log({ pageData });
   return (
     <MainLayout>
       <CustomizableBanner
