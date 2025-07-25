@@ -5,7 +5,6 @@ import React from "react";
 import { MdOutlineStar } from "react-icons/md";
 
 export default function IntegratedTestimonialCard({ data }) {
-  console.log({ data });
   return (
     <VStack className="p-6 rounded-lg bg-white gap-4 select-none h-[100%]">
       <HStack className="text-[#F8A401] text-[1.1rem]">
