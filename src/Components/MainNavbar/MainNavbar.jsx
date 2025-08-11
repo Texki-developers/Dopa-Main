@@ -28,8 +28,11 @@ export default function MainNavbar() {
       </Link>
       {windowWidth && (
         <ul className={style.navLinks}>
-             <li>
+          <li>
             <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/dopa-blogs">DOPA Blogs</Link>
           </li>
           <li>
             <Link href="/dopa-app">DOPA App</Link>

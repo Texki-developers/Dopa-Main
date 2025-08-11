@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useMemo, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -95,6 +96,18 @@ const renderRichText = (content) => {
 
 export default function BlogPost({ blog, recommendedBlogs, error }) {
   const router = useRouter();
+  const title = blog?.data?.attributes?.blogtitle || 'Blog Post';
+  const shareUrl = useMemo(() => {
+    const path = typeof router?.asPath === 'string' ? router.asPath : '';
+    // Prefer configured site URL; fall back to window.origin on client
+    const origin =
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      (typeof window !== 'undefined' ? window.location.origin : '');
+    if (!origin) return path; // SSR fallback; client buttons will still get correct URL post-hydration
+    return `${origin}${path}`;
+  }, [router?.asPath]);
+  const shareText = `${title} - ${shareUrl}`;
+  const [copied, setCopied] = useState(false);
 
   if (router.isFallback) {
     return (
@@ -151,9 +164,11 @@ export default function BlogPost({ blog, recommendedBlogs, error }) {
         <meta name="description" content={blog?.data?.attributes?.description || ''} />
         <meta property="og:title" content={blog?.data?.attributes?.blogtitle || 'Blog Post'} />
         <meta property="og:description" content={blog?.data?.attributes?.description || ''} />
+        {shareUrl && <meta property="og:url" content={shareUrl} />}
         {blog?.data?.attributes?.thumbnail?.data && (
           <meta property="og:image" content={`${process.env.NEXT_PUBLIC_STRAPIE_IMAGE}${blog?.data?.attributes?.thumbnail?.data?.attributes?.url}`} />
         )}
+        {shareUrl && <link rel="canonical" href={shareUrl} />}
       </Head>
 
       <main className="min-h-screen bg-white mt-[3rem]">
@@ -197,6 +212,61 @@ export default function BlogPost({ blog, recommendedBlogs, error }) {
               <h1 className="text-4xl font-bold text-darkBlue mb-8">
                 {blog?.data?.attributes?.blogtitle || 'Untitled Blog'}
               </h1>
+              {/* Share buttons */}
+              <div className="flex items-center gap-3 mb-8">
+                <span className="text-sm text-gray-500">Share:</span>
+                <a
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(title)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 rounded-lg bg-[#1877F2] text-white hover:opacity-90 transition"
+                  aria-label="Share on Facebook"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-2">
+                    <path d="M22 12.06C22 6.48 17.52 2 11.94 2S1.88 6.48 1.88 12.06C1.88 17.08 5.56 21.2 10.36 22v-7.03H7.9v-2.91h2.46V9.8c0-2.43 1.45-3.77 3.67-3.77 1.06 0 2.16.19 2.16.19v2.37h-1.22c-1.2 0-1.58.75-1.58 1.52v1.83h2.69l-.43 2.91h-2.26V22c4.8-.8 8.48-4.92 8.48-9.94Z" />
+                  </svg>
+                  Facebook
+                </a>
+                <a
+                  href={`https://wa.me/?text=${encodeURIComponent(shareText)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 rounded-lg bg-[#25D366] text-white hover:opacity-90 transition"
+                  aria-label="Share on WhatsApp"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5 mr-2">
+                    <path d="M19.11 17.19c-.29-.14-1.69-.83-1.95-.93-.26-.1-.45-.14-.65.14-.19.29-.75.93-.92 1.12-.17.19-.34.22-.63.07-.29-.14-1.23-.45-2.35-1.43-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.12-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.65-1.56-.9-2.14-.24-.58-.49-.5-.65-.51h-.55c-.19 0-.51.07-.78.36-.26.29-1 1-1 2.43 0 1.43 1.02 2.81 1.16 3 .14.19 2 3.05 4.86 4.28.68.29 1.21.46 1.63.59.68.22 1.29.19 1.78.12.54-.08 1.69-.69 1.93-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z" />
+                  </svg>
+                  WhatsApp
+                </a>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(shareUrl);
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 1500);
+                    } catch (e) {
+                      // Fallback for older browsers
+                      const el = document.createElement('input');
+                      el.value = shareUrl;
+                      document.body.appendChild(el);
+                      el.select();
+                      document.execCommand('copy');
+                      document.body.removeChild(el);
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 1500);
+                    }
+                  }}
+                  className="inline-flex items-center px-4 py-2 rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 transition"
+                  aria-label="Copy link"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 mr-2">
+                    <path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                  </svg>
+                  {copied ? 'Copied!' : 'Copy link'}
+                </button>
+              </div>
             </motion.div>
 
             {blog?.data?.attributes?.thumbnail?.data && (
