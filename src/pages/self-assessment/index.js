@@ -309,31 +309,71 @@ export default function AssessmentPage() {
             return;
         }
 
-        // Set PDF options
+        // Create a new PDF document
         const pdf = new jsPDF('p', 'mm', 'a4');
-        const pdfWidth = pdf.internal.pageSize.getWidth() - 20; // Add margins
-        const pageHeight = pdf.internal.pageSize.getHeight() - 20;
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+        const margin = 10; // 10mm margin on all sides
+        const contentWidth = pageWidth - 2 * margin;
         
-        // Get the report element and its sections
-        const element = reportRef.current;
-        const sections = element.querySelectorAll('div > div');
+        // Get all report sections
+        const reportSections = reportRef.current.querySelectorAll('.report-section');
+        let currentY = margin;
         
-        // Process each section
-        for (let i = 0; i < sections.length; i++) {
-            const section = sections[i];
-            const canvas = await html2canvas(section, { scale: 2 });
-            const imgData = canvas.toDataURL('image/png');
-            const imgProps = pdf.getImageProperties(imgData);
-            const imgHeight = (imgProps.height * pdfWidth) / imgProps.width;
-            
-            // Add new page if needed (except for first page)
-            if (i > 0) {
+        // Add a function to check if we need a new page
+        const checkPageBreak = (heightNeeded) => {
+            if (currentY + heightNeeded > pageHeight - margin) {
                 pdf.addPage();
+                currentY = margin;
             }
+        };
+        
+        // Process each section one by one
+        for (const section of reportSections) {
+            // Create a temporary container for the section
+            const tempContainer = document.createElement('div');
+            tempContainer.style.position = 'absolute';
+            tempContainer.style.left = '-9999px';
+            tempContainer.style.width = `${contentWidth}mm`;
+            tempContainer.style.padding = '10px';
+            tempContainer.style.backgroundColor = 'white';
+            tempContainer.appendChild(section.cloneNode(true));
+            document.body.appendChild(tempContainer);
             
-            // Add image to PDF
-            pdf.addImage(imgData, 'PNG', 10, 10, pdfWidth, imgHeight);
+            // Convert section to canvas
+            const canvas = await html2canvas(tempContainer.firstChild, {
+                scale: 2,
+                useCORS: true,
+                allowTaint: true,
+                width: contentWidth * 3.78, // Convert mm to pixels (1mm ≈ 3.78px at 96dpi)
+                windowWidth: contentWidth * 3.78,
+                logging: false
+            });
+            
+            // Calculate dimensions
+            const imgData = canvas.toDataURL('image/png');
+            const imgHeight = (canvas.height * contentWidth) / canvas.width;
+            
+            // Check if we need a new page for this section
+            checkPageBreak(imgHeight + 5); // Add small margin between sections
+            
+            // Add the section to the PDF
+            pdf.addImage(
+                imgData,
+                'PNG',
+                margin,
+                currentY,
+                contentWidth,
+                imgHeight
+            );
+            
+            currentY += imgHeight + 5; // Add small margin between sections
+            
+            // Clean up
+            document.body.removeChild(tempContainer);
         }
+        
+        // Save the PDF
         pdf.save(`${(userData.name || 'User').replace(/ /g, '_')}_NEET_Report.pdf`);
     };
 
@@ -711,7 +751,7 @@ export default function AssessmentPage() {
                             
                             {/* Render feedback sections */}
                             {q10Answers.length > 0 && (
-                                <>
+                                <div className="report-section">
                                 <h2 className="text-xl sm:text-2xl font-bold mb-4" style={{color: 'rgb(0, 32, 91)'}}>💡 Guidance for Your Challenges</h2>
                                 <div className="space-y-4 mb-8">
                                     {q10Answers.map((challenge, index) => (
@@ -721,11 +761,11 @@ export default function AssessmentPage() {
                                         </div>
                                     ))}
                                 </div>
-                                </>
+                                </div>
                             )}
                             
                             {reportData.critical.length > 0 && (
-                                <>
+                                <div className="report-section">
                                 <h2 className="text-xl sm:text-2xl font-bold mb-4" style={{color: 'rgb(0, 32, 91)'}}>🔴 Critical Areas to Address Immediately</h2>
                                 <div className="space-y-4 mb-8">
                                     {reportData.critical.map((item, index) => (
@@ -736,11 +776,11 @@ export default function AssessmentPage() {
                                         </div>
                                     ))}
                                 </div>
-                                </>
+                                </div>
                             )}
                             
                             {reportData.attention.length > 0 && (
-                                 <>
+                                 <div className="report-section">
                                 <h2 className="text-xl sm:text-2xl font-bold text-orange-600 mb-4">🟠 Areas to Focus On</h2>
                                 <div className="space-y-4 mb-8">
                                     {reportData.attention.map((item, index) => (
@@ -751,11 +791,11 @@ export default function AssessmentPage() {
                                         </div>
                                     ))}
                                 </div>
-                                </>
+                                </div>
                             )}
                             
                             {reportData.ontrack.length > 0 && (
-                                <>
+                                <div className="report-section">
                                 <h2 className="text-xl sm:text-2xl font-bold mb-4" style={{color: '#0369a1'}}>✅ Your Strengths</h2>
                                 <div className="space-y-4 mb-8">
                                     {reportData.ontrack.map((item, index) => (
@@ -765,7 +805,7 @@ export default function AssessmentPage() {
                                         </div>
                                     ))}
                                 </div>
-                                </>
+                                </div>
                             )}
 
                             {/* Counseling & Actions */}
