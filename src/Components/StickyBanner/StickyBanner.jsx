@@ -38,7 +38,7 @@ const StickyBanner = ({ onVisibilityChange }) => {
         >
           <motion.div 
             className={styles.banner} 
-            onClick={() => handleBannerClick('/collegeprediction')}
+            onClick={() => handleBannerClick('/self-assessment')}
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
@@ -49,10 +49,10 @@ const StickyBanner = ({ onVisibilityChange }) => {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
                 />
-                <span className={styles.highlight}>COLLEGE PREDICTION 2025: </span>
-                <span className={styles.bold}>Find your dream medical college based on your rank</span>
+                <span className={styles.highlight}>SELF ASSESSMENT 2025 </span>
+                <span className={styles.bold}>Take the assessment to know your strengths and weaknesses</span>
                 <span className={styles.cta}>
-                  Predict Now
+                  Take Assessment
                   <motion.span 
                     className={styles.newBadge}
                     animate={{ scale: [1, 1.1, 1] }}
@@ -64,7 +64,7 @@ const StickyBanner = ({ onVisibilityChange }) => {
             </div>
           </motion.div>
 
-          <motion.div 
+          {/* <motion.div 
             className={styles.banner} 
             onClick={() => handleBannerClick('/neet-analysis-tool')}
             whileHover={{ scale: 1.01 }}
@@ -90,7 +90,7 @@ const StickyBanner = ({ onVisibilityChange }) => {
                 </span>
               </span>
             </div>
-          </motion.div>
+          </motion.div> */}
           
           <motion.button 
             className={styles.closeButton} 
