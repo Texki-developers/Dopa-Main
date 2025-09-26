@@ -385,11 +385,7 @@ export default function BlogPost({ blog, recommendedBlogs, error }) {
 
 export async function getStaticPaths() {
   try {
-    starpiInstance.defaults.headers.common["Authorization"] = 
-      `Bearer ${process.env.NEXT_PUBLIC_STRAPIE_TOKEN}`;
-    starpiInstance.defaults.headers.common["Content-Type"] = "application/json";
-
-    const response = await starpiInstance.get(
+    const response = await authenticatedStrapiInstance.get(
       "/api/dopa-blogs?fields[0]=id&pagination[pageSize]=100"
     );
 
