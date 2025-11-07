@@ -23,9 +23,27 @@
 .navLinks {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
     list-style: none;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    .storeLink {
+      background: var(--color-primary);
+      color: white !important;
+      padding: 0.5rem 1rem !important;
+      border-radius: 20px;
+      font-weight: 600 !important;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(25, 135, 164, 0.3);
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(25, 135, 164, 0.4);
+        background: #14738e;
+      }
+    }
     li{
         height: 100%;
         display: flex;
