@@ -29,9 +29,6 @@ export default function MainNavbar() {
       {windowWidth && (
         <ul className={style.navLinks}>
           <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
             <Link href="/dopa-blogs">DOPA Blogs</Link>
           </li>
           <li>
@@ -160,6 +157,16 @@ export default function MainNavbar() {
           </li>
           <li>
             <Link href="/dopa-contact">Contact Us</Link>
+          </li>
+          <li>
+            <a 
+              href="https://store.dopacoaching.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={style.storeLink}
+            >
+              DOPA STORE
+            </a>
           </li>
           {/* <li onClick={() => push("/contact")}>
             <PrimaryButton addon={"btnBlueGradient"}>
