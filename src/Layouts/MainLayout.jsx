@@ -26,8 +26,8 @@ export default function MainLayout({ children }) {
         <meta name="google-site-verification" content="RKvR80ZgxDSmi8-OyiMqt6EN0YzItjXgf6z-Nzpeenk" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      
-      <StickyBanner onVisibilityChange={handleBannerVisibility} />
+{/*       
+      <StickyBanner onVisibilityChange={handleBannerVisibility} /> */}
       <MainNavbar />
       
       <main className={`${styles.mainContent} ${isBannerVisible ? styles.withBanner : ''}`}>
