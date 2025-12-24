@@ -4,6 +4,7 @@ import Head from "next/head";
 import styles from "./MainLayout.module.scss";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { useState } from "react";
+import StickyBanner from "@/Components/StickyBanner/StickyBanner";
 
 export default function MainLayout({ children }) {
   const [isBannerVisible, setIsBannerVisible] = useState(true);
