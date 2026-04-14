@@ -38,7 +38,7 @@ const StickyBanner = ({ onVisibilityChange }) => {
         >
           <motion.div 
             className={styles.banner} 
-            onClick={() => handleBannerClick('/dopa-neet-productivity-check')}
+            onClick={() => handleBannerClick('/dopa-ceat-assessment-tool')}
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
@@ -49,8 +49,8 @@ const StickyBanner = ({ onVisibilityChange }) => {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
                 />
-                <span className={styles.highlight}>NEET PRODUCTIVITY CHECK </span>
-                <span className={styles.bold}>Is Your Studying Productive?</span>
+                <span className={styles.highlight}>Competitive exam aptitude tool</span>
+                <span className={styles.bold}>Discover your genuine scientific aptitude</span>
                 <span className={styles.cta}>
                   Check Now
                   <motion.span 
