@@ -137,6 +137,7 @@ export default function CeatAssesmentTool() {
     // Component State
     const [lang, setLang] = useState('en');
     const [step, setStep] = useState(1);
+    
     const [formData, setFormData] = useState({ studentName: '', contactNumber: '', currentClass: '', district: '', careerPlan: '', familyPro: '' });
     
     // Store the option index instead of value
@@ -214,28 +215,6 @@ export default function CeatAssesmentTool() {
                 }
             });
             if (!isValid) showToast('err_req');
-        } else if (step >= 2 && step <= 4) {
-            const sectionMap = { 2: 'A', 3: 'B', 4: 'C' };
-            const section = sectionMap[step];
-            const questions = i18n.en[`q${section}`];
-            
-            questions.forEach((_, idx) => {
-                if (answers[`q_${section}_${idx}`] === undefined) {
-                    isValid = false;
-                    newErrors[`q_${section}_${idx}`] = true;
-                }
-            });
-
-            if (!isValid) {
-                showToast('err_ans');
-                // Scroll to first error using refs
-                const firstErrorKey = Object.keys(newErrors)[0];
-                const errorBlockRef = questionRefs.current[`block_${section}_${firstErrorKey.split('_')[2]}`];
-                if (errorBlockRef) {
-                    const y = errorBlockRef.getBoundingClientRect().top + window.scrollY - 120;
-                    window.scrollTo({ top: y, behavior: 'smooth' });
-                }
-            }
         }
 
         setErrors(newErrors);
@@ -249,9 +228,11 @@ export default function CeatAssesmentTool() {
         if (step === 1) {
             handleFormSubmit();
         } 
-        // If on step 4 (last question section), calculate results and submit
+        // If on step 4 (last question section), calculate results and move to loading
         else if (step === 4) {
             calculateResults();
+            setStep(5);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (step < totalSteps) {
             setStep(s => s + 1);
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -319,6 +300,8 @@ export default function CeatAssesmentTool() {
                 }
             );
             
+
+            
             if (response.status === 200) {
                 toast({
                     title: "Great!",
@@ -346,10 +329,10 @@ export default function CeatAssesmentTool() {
                 });
             }
         } catch (error) {
-            console.error(error);
+           
             toast({   
                 title: "Ugh no!",
-                description: "Something went wrong!",
+                description: `Something went wrong! ${error.response?.data?.error?.message || error.message}`,
                 status: "error",
                 duration: 5000,
                 isClosable: true,
@@ -441,7 +424,8 @@ export default function CeatAssesmentTool() {
                     
                     {/* Step 1: Lead Capture */}
                     {step === 1 && (
-                        <div className="animate-slide-up">
+                        <>
+                            <div className="animate-slide-up">
                             <div className="text-center mb-10">
                                 <h2 className="text-[#000080] text-2xl md:text-3xl font-extrabold mb-3">{t.step1_title}</h2>
                                 <p className="text-slate-500 max-w-lg mx-auto mb-5">{t.step1_desc}</p>
@@ -485,13 +469,23 @@ export default function CeatAssesmentTool() {
                                     </select>
                                 </div>
                                 <div className="md:col-span-2">
-                                    <button type="submit" className="w-full min-h-[54px] px-8 bg-[#000080] hover:bg-[#000055] text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95 flex items-center justify-center gap-2">
-                                        {t.btn_start}
-                                        <FaArrowRight size={20} />
+                                    <button type="submit" disabled={isSubmitting} className="w-full min-h-[54px] px-8 bg-[#000080] hover:bg-[#000055] disabled:bg-[#000040] disabled:cursor-not-allowed text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all active:scale-95 disabled:transform-none flex items-center justify-center gap-2">
+                                        {isSubmitting ? (
+                                            <>
+                                                <FaSpinner size={20} className="animate-spin" />
+                                                Submitting...
+                                            </>
+                                        ) : (
+                                            <>
+                                                {t.btn_start}
+                                                <FaArrowRight size={20} />
+                                            </>
+                                        )}
                                     </button>
                                 </div>
                             </form>
                         </div>
+                        </>
                     )}
 
                     {/* Steps 2-4: Questions */}
@@ -618,14 +612,12 @@ export default function CeatAssesmentTool() {
                 </main>
 
                 {/* Footer Navigation */}
-                {step >= 1 && step <= 4 && (
+                {step > 1 && step <= 4 && (
                     <footer className="bg-slate-50 border-t border-slate-200 p-5 md:px-10 md:py-6 flex flex-col-reverse md:flex-row gap-4 justify-between items-center z-10">
-                        {step > 1 ? (
-                            <button onClick={prevStep} className="flex items-center justify-center gap-2 w-full md:w-auto min-h-[54px] px-8 bg-white text-slate-500 border-2 border-slate-200 hover:border-slate-300 hover:text-slate-800 font-bold rounded-xl transition-colors active:scale-95">
-                                <FaArrowLeft size={20} />
-                                {t.btn_prev}
-                            </button>
-                        ) : <div />}
+                        <button onClick={prevStep} className="flex items-center justify-center gap-2 w-full md:w-auto min-h-[54px] px-8 bg-white text-slate-500 border-2 border-slate-200 hover:border-slate-300 hover:text-slate-800 font-bold rounded-xl transition-colors active:scale-95">
+                            <FaArrowLeft size={20} />
+                            {t.btn_prev}
+                        </button>
                         <button 
                             onClick={nextStep} 
                             disabled={isSubmitting}
@@ -638,7 +630,7 @@ export default function CeatAssesmentTool() {
                                 </>
                             ) : (
                                 <>
-                                    {step === 1 ? t.btn_start : step === 4 ? t.btn_submit : t.btn_next}
+                                    {step === 4 ? t.btn_submit : t.btn_next}
                                     {step !== 4 && <FaArrowRight size={20} />}
                                 </>
                             )}
