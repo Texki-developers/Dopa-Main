@@ -181,8 +181,16 @@ export default function CeatAssesmentTool() {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-        if (errors[name]) setErrors(prev => ({ ...prev, [name]: false }));
+        
+        // Phone number validation - require exactly 10 digits
+        if (name === 'contactNumber') {
+            const phoneValue = value.replace(/\D/g, '').substring(0, 10);
+            setFormData(prev => ({ ...prev, [name]: phoneValue }));
+            if (errors[name]) setErrors(prev => ({ ...prev, [name]: false }));
+        } else {
+            setFormData(prev => ({ ...prev, [name]: value }));
+            if (errors[name]) setErrors(prev => ({ ...prev, [name]: false }));
+        }
     };
 
     const handleOptionChange = (section, index, optIndex) => {
@@ -210,6 +218,11 @@ export default function CeatAssesmentTool() {
             const requiredFields = ['studentName', 'contactNumber', 'currentClass', 'district'];
             requiredFields.forEach(field => {
                 if (!formData[field].trim()) {
+                    isValid = false;
+                    newErrors[field] = true;
+                }
+                // Additional validation for phone number - require exactly 10 digits
+                if (field === 'contactNumber' && formData[field].trim().length !== 10) {
                     isValid = false;
                     newErrors[field] = true;
                 }
@@ -442,7 +455,7 @@ export default function CeatAssesmentTool() {
                                 </div>
                                 <div>
                                     <label className="block font-semibold mb-2">{t.lbl_phone} <span className="text-red-500">*</span></label>
-                                    <input type="tel" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange} placeholder="+91" className={`w-full min-h-[48px] p-3 border-2 rounded-xl text-base bg-slate-50 focus:outline-none focus:border-[#00B7EB] focus:ring-4 focus:ring-[#00B7EB]/10 transition-all ${errors.contactNumber ? 'border-red-400 bg-red-50 animate-pulse' : 'border-slate-200'}`} />
+                                    <input type="tel" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange} placeholder="9876543210" pattern="\d{10}" maxLength="10" className={`w-full min-h-[48px] p-3 border-2 rounded-xl text-base bg-slate-50 focus:outline-none focus:border-[#00B7EB] focus:ring-4 focus:ring-[#00B7EB]/10 transition-all ${errors.contactNumber ? 'border-red-400 bg-red-50 animate-pulse' : 'border-slate-200'}`} />
                                 </div>
                                 <div>
                                     <label className="block font-semibold mb-2">{t.lbl_class} <span className="text-red-500">*</span></label>
